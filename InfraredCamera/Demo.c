@@ -115,7 +115,7 @@ void socket_serve()
 
         if (strcmp(buffer, CMD_SHOOT) == 0)
         {
-            shutter = false;
+            shutter = true;
         }
 
         // int response = 0;
