@@ -1,0 +1,42 @@
+[0.570s] Invoking command in '/home/xs/UAV/ROS2/cmd_handler': PYTHONPATH=/home/xs/UAV/ROS2/build/cmd_handler/prefix_override:/home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/cmd_handler build --build-base /home/xs/UAV/ROS2/build/cmd_handler/build install --record /home/xs/UAV/ROS2/build/cmd_handler/install.log --single-version-externally-managed install_data
+[0.746s] running egg_info
+[0.746s] creating ../build/cmd_handler/cmd_handler.egg-info
+[0.746s] writing ../build/cmd_handler/cmd_handler.egg-info/PKG-INFO
+[0.746s] writing dependency_links to ../build/cmd_handler/cmd_handler.egg-info/dependency_links.txt
+[0.746s] writing entry points to ../build/cmd_handler/cmd_handler.egg-info/entry_points.txt
+[0.746s] writing requirements to ../build/cmd_handler/cmd_handler.egg-info/requires.txt
+[0.746s] writing top-level names to ../build/cmd_handler/cmd_handler.egg-info/top_level.txt
+[0.747s] writing manifest file '../build/cmd_handler/cmd_handler.egg-info/SOURCES.txt'
+[0.770s] reading manifest file '../build/cmd_handler/cmd_handler.egg-info/SOURCES.txt'
+[0.770s] writing manifest file '../build/cmd_handler/cmd_handler.egg-info/SOURCES.txt'
+[0.770s] running build
+[0.771s] running build_py
+[0.771s] creating /home/xs/UAV/ROS2/build/cmd_handler/build
+[0.771s] creating /home/xs/UAV/ROS2/build/cmd_handler/build/lib
+[0.771s] creating /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler
+[0.771s] copying cmd_handler/cmd_publisher.py -> /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler
+[0.771s] copying cmd_handler/__init__.py -> /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler
+[0.771s] copying cmd_handler/cmd_subscriber.py -> /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler
+[0.771s] running install
+[0.772s] running install_lib
+[0.772s] creating /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler
+[0.772s] copying /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler/cmd_publisher.py -> /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler
+[0.773s] copying /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler/__init__.py -> /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler
+[0.773s] copying /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler/cmd_subscriber.py -> /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler
+[0.773s] byte-compiling /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler/cmd_publisher.py to cmd_publisher.cpython-38.pyc
+[0.774s] byte-compiling /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler/__init__.py to __init__.cpython-38.pyc
+[0.774s] byte-compiling /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler/cmd_subscriber.py to cmd_subscriber.cpython-38.pyc
+[0.774s] running install_data
+[0.774s] creating /home/xs/UAV/ROS2/install/cmd_handler/share/ament_index
+[0.774s] creating /home/xs/UAV/ROS2/install/cmd_handler/share/ament_index/resource_index
+[0.774s] creating /home/xs/UAV/ROS2/install/cmd_handler/share/ament_index/resource_index/packages
+[0.775s] copying resource/cmd_handler -> /home/xs/UAV/ROS2/install/cmd_handler/share/ament_index/resource_index/packages
+[0.775s] copying package.xml -> /home/xs/UAV/ROS2/install/cmd_handler/share/cmd_handler
+[0.775s] copying launch/gps_pubsub.launch.py -> /home/xs/UAV/ROS2/install/cmd_handler/share/cmd_handler
+[0.775s] running install_egg_info
+[0.776s] Copying ../build/cmd_handler/cmd_handler.egg-info to /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler-0.0.0-py3.8.egg-info
+[0.777s] running install_scripts
+[0.789s] Installing cmd_publisher script to /home/xs/UAV/ROS2/install/cmd_handler/lib/cmd_handler
+[0.789s] Installing cmd_subscriber script to /home/xs/UAV/ROS2/install/cmd_handler/lib/cmd_handler
+[0.789s] writing list of installed files to '/home/xs/UAV/ROS2/build/cmd_handler/install.log'
+[0.804s] Invoked command in '/home/xs/UAV/ROS2/cmd_handler' returned '0': PYTHONPATH=/home/xs/UAV/ROS2/build/cmd_handler/prefix_override:/home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/cmd_handler build --build-base /home/xs/UAV/ROS2/build/cmd_handler/build install --record /home/xs/UAV/ROS2/build/cmd_handler/install.log --single-version-externally-managed install_data

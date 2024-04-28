@@ -102,11 +102,16 @@ void socket_serve()
     }
     char buffer[BUFFER_SIZE];
 
+    // int cnt = 0;
     while (1)
     {
         int len = recvfrom(sockfd, (char *)buffer, BUFFER_SIZE, MSG_WAITALL, (struct sockaddr *)&client_addr, &addr_len);
         buffer[len] = '\0';
         printf("Received message from %s:%d: %s\n", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port), buffer);
+
+        // FILE *file = fopen("/home/xs/UAV/InfraredCamera/test", "a");
+        // fprintf(file, "%d\n", cnt++);
+        // fclose(file);
 
         if (strcmp(buffer, CMD_SHOOT) == 0)
         {
@@ -127,6 +132,9 @@ double tick(void)
 
 int main(void)
 {   
+
+    // socket_serve();
+
     // Setting a Log Level
     guide_usb_setloglevel(LOG_LEVEL_INFO);
 
@@ -146,12 +154,8 @@ int main(void)
         }
     }
 
-    // int cnt = 0;
     while (1)
     {
-        // FILE *file = fopen("/home/xs/InfraredCamera/test", "a");
-        // fprintf(file, "%d\n", cnt++);
-        // fclose(file);
 
         gd_dev_handle = libusb_open_device_with_vid_pid(NULL, 0x04b4, 0xf7f7);
         if (gd_dev_handle == NULL)

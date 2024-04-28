@@ -1,0 +1,40 @@
+running egg_info
+creating ../build/cmd_handler/cmd_handler.egg-info
+writing ../build/cmd_handler/cmd_handler.egg-info/PKG-INFO
+writing dependency_links to ../build/cmd_handler/cmd_handler.egg-info/dependency_links.txt
+writing entry points to ../build/cmd_handler/cmd_handler.egg-info/entry_points.txt
+writing requirements to ../build/cmd_handler/cmd_handler.egg-info/requires.txt
+writing top-level names to ../build/cmd_handler/cmd_handler.egg-info/top_level.txt
+writing manifest file '../build/cmd_handler/cmd_handler.egg-info/SOURCES.txt'
+reading manifest file '../build/cmd_handler/cmd_handler.egg-info/SOURCES.txt'
+writing manifest file '../build/cmd_handler/cmd_handler.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/xs/UAV/ROS2/build/cmd_handler/build
+creating /home/xs/UAV/ROS2/build/cmd_handler/build/lib
+creating /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler
+copying cmd_handler/cmd_publisher.py -> /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler
+copying cmd_handler/__init__.py -> /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler
+copying cmd_handler/cmd_subscriber.py -> /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler
+running install
+running install_lib
+creating /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler
+copying /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler/cmd_publisher.py -> /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler
+copying /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler/__init__.py -> /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler
+copying /home/xs/UAV/ROS2/build/cmd_handler/build/lib/cmd_handler/cmd_subscriber.py -> /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler
+byte-compiling /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler/cmd_publisher.py to cmd_publisher.cpython-38.pyc
+byte-compiling /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler/cmd_subscriber.py to cmd_subscriber.cpython-38.pyc
+running install_data
+creating /home/xs/UAV/ROS2/install/cmd_handler/share/ament_index
+creating /home/xs/UAV/ROS2/install/cmd_handler/share/ament_index/resource_index
+creating /home/xs/UAV/ROS2/install/cmd_handler/share/ament_index/resource_index/packages
+copying resource/cmd_handler -> /home/xs/UAV/ROS2/install/cmd_handler/share/ament_index/resource_index/packages
+copying package.xml -> /home/xs/UAV/ROS2/install/cmd_handler/share/cmd_handler
+copying launch/gps_pubsub.launch.py -> /home/xs/UAV/ROS2/install/cmd_handler/share/cmd_handler
+running install_egg_info
+Copying ../build/cmd_handler/cmd_handler.egg-info to /home/xs/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages/cmd_handler-0.0.0-py3.8.egg-info
+running install_scripts
+Installing cmd_publisher script to /home/xs/UAV/ROS2/install/cmd_handler/lib/cmd_handler
+Installing cmd_subscriber script to /home/xs/UAV/ROS2/install/cmd_handler/lib/cmd_handler
+writing list of installed files to '/home/xs/UAV/ROS2/build/cmd_handler/install.log'
