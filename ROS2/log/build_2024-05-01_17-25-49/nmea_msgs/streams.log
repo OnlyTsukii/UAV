@@ -1,0 +1,91 @@
+[0.024s] Invoking command in '/home/xs/UAV/ROS2/build/nmea_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/nmea_msgs -- -j8 -l8
+[0.537s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.537s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.537s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.537s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[0.537s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.537s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.537s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.538s] -- Found std_msgs: 2.2.4 (/opt/ros/galactic/share/std_msgs/cmake)
+[0.538s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.538s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)
+[0.538s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.557s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.577s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[0.577s] -- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+[0.596s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.596s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[0.596s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[0.631s] -- Configuring done
+[0.687s] -- Generating done
+[0.690s] -- Build files have been written to: /home/xs/UAV/ROS2/build/nmea_msgs
+[0.712s] [35m[1mScanning dependencies of target nmea_msgs__cpp[0m
+[0.716s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.720s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.529s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_generator_c[0m
+[1.536s] [  2%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__functions.c.o[0m
+[1.536s] [  3%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.c.o[0m
+[1.537s] [  4%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.o[0m
+[1.545s] [  5%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o[0m
+[1.550s] In file included from [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.h:19[m[K,
+[1.550s]                  from [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.c:4[m[K:
+[1.550s] [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Knmea_msgs/msg/detail/nav_sat_fix__struct.h: 没有那个文件或目录
+[1.550s]    22 | #include [01;31m[K"nmea_msgs/msg/detail/nav_sat_fix__struct.h"[m[K
+[1.550s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.550s] compilation terminated.
+[1.551s] make[2]: *** [CMakeFiles/nmea_msgs__rosidl_generator_c.dir/build.make:268：CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.c.o] 错误 1
+[1.551s] make[2]: *** 正在等待未完成的任务....
+[1.551s] [  6%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o[0m
+[1.555s] [  7%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o[0m
+[1.558s] [  8%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.o[0m
+[1.561s] [  8%] Built target nmea_msgs__cpp
+[1.574s] [  9%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.579s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.583s] [ 11%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.599s] make[1]: *** [CMakeFiles/Makefile2:327：CMakeFiles/nmea_msgs__rosidl_generator_c.dir/all] 错误 2
+[1.599s] make[1]: *** 正在等待未完成的任务....
+[2.018s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_cpp[0m
+[2.031s] [ 12%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/pixel_point__type_support.cpp.o[0m
+[2.032s] [ 13%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/sentence__type_support.cpp.o[0m
+[2.032s] [ 15%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gps_fix__type_support.cpp.o[0m
+[2.033s] [ 15%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/defect_box__type_support.cpp.o[0m
+[2.035s] [ 16%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgsa__type_support.cpp.o[0m
+[2.042s] [ 17%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgga__type_support.cpp.o[0m
+[2.098s] In file included from [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_cpp/nmea_msgs/msg/gps_fix__type_support.cpp:7[m[K:
+[2.098s] [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_cpp/nmea_msgs/msg/detail/gps_fix__struct.hpp:19:10:[m[K [01;31m[Kfatal error: [m[Knmea_msgs/msg/detail/nav_sat_fix__struct.hpp: 没有那个文件或目录
+[2.098s]    19 | #include [01;31m[K"nmea_msgs/msg/detail/nav_sat_fix__struct.hpp"[m[K
+[2.098s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.098s] compilation terminated.
+[2.101s] make[2]: *** [CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/build.make:141：CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gps_fix__type_support.cpp.o] 错误 1
+[2.101s] make[2]: *** 正在等待未完成的任务....
+[2.201s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_introspection_cpp[0m
+[2.220s] [ 18%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__type_support.cpp.o[0m
+[2.235s] [ 19%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__type_support.cpp.o[0m
+[2.278s] In file included from [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__type_support.cpp:12[m[K:
+[2.278s] [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_cpp/nmea_msgs/msg/detail/gps_fix__struct.hpp:19:10:[m[K [01;31m[Kfatal error: [m[Knmea_msgs/msg/detail/nav_sat_fix__struct.hpp: 没有那个文件或目录
+[2.279s]    19 | #include [01;31m[K"nmea_msgs/msg/detail/nav_sat_fix__struct.hpp"[m[K
+[2.279s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.279s] compilation terminated.
+[2.280s] make[2]: *** [CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/build.make:173：CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__type_support.cpp.o] 错误 1
+[2.280s] make[2]: *** 正在等待未完成的任务....
+[2.346s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[2.361s] [ 22%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/sentence__type_support.cpp.o[0m
+[2.361s] [ 22%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gps_fix__type_support.cpp.o[0m
+[2.362s] [ 22%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/defect_box__type_support.cpp.o[0m
+[2.362s] [ 22%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/pixel_point__type_support.cpp.o[0m
+[2.362s] [ 23%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgga__type_support.cpp.o[0m
+[2.369s] [ 24%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsa__type_support.cpp.o[0m
+[2.372s] make[1]: *** [CMakeFiles/Makefile2:239：CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/all] 错误 2
+[2.381s] [ 25%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgst__type_support.cpp.o[0m
+[2.413s] In file included from [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+[2.413s]                  from [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gps_fix__type_support.cpp:4[m[K:
+[2.413s] [01m[K/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_cpp/nmea_msgs/msg/detail/gps_fix__struct.hpp:19:10:[m[K [01;31m[Kfatal error: [m[Knmea_msgs/msg/detail/nav_sat_fix__struct.hpp: 没有那个文件或目录
+[2.413s]    19 | #include [01;31m[K"nmea_msgs/msg/detail/nav_sat_fix__struct.hpp"[m[K
+[2.413s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.414s] compilation terminated.
+[2.414s] make[2]: *** [CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make:173：CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gps_fix__type_support.cpp.o] 错误 1
+[2.415s] make[2]: *** 正在等待未完成的任务....
+[2.555s] make[1]: *** [CMakeFiles/Makefile2:383：CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/all] 错误 2
+[2.847s] make[1]: *** [CMakeFiles/Makefile2:410：CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/all] 错误 2
+[2.847s] make: *** [Makefile:141：all] 错误 2
+[2.849s] Invoked command in '/home/xs/UAV/ROS2/build/nmea_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/nmea_msgs -- -j8 -l8

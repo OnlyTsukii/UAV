@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nmea_msgs__cpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/defect_box.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__builder.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__struct.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__traits.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__builder.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__struct.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__traits.hpp"
@@ -18,6 +22,12 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__builder.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__struct.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__traits.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/gps_fix__builder.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/gps_fix__struct.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/gps_fix__traits.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/pixel_point__builder.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/pixel_point__struct.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/pixel_point__traits.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__builder.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__struct.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__traits.hpp"
@@ -27,6 +37,8 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/nmea_msgs/msg/gpgsv.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/gpgsv_satellite.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/gprmc.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/pixel_point.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp"
 )
 

@@ -4,7 +4,7 @@ import socket
 
 import rclpy.logging
 from rclpy.node import Node
-from std_msgs.msg import Int16
+from std_msgs.msg import Int32
 
 
 SERVER_IP = '127.0.0.1'
@@ -17,9 +17,9 @@ class Cmd_Subscriber(Node):
 
     def __init__(self):
         super().__init__("cmd_subscriber")
-        self.subscriber = self.create_subscription(Int16, "ctrl_cmd", self.cmd_callback, 10)
+        self.subscriber = self.create_subscription(Int32, "ctrl_cmd", self.cmd_callback, 10)
 
-    def cmd_callback(self, msg: Int16):
+    def cmd_callback(self, msg: Int32):
         print(f"Receive message: {msg.data}")
         self.send_data(str(msg.data))
 

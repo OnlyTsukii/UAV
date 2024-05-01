@@ -1,0 +1,21 @@
+running egg_info
+writing ../build/tf_converter/tf_converter.egg-info/PKG-INFO
+writing dependency_links to ../build/tf_converter/tf_converter.egg-info/dependency_links.txt
+writing entry points to ../build/tf_converter/tf_converter.egg-info/entry_points.txt
+writing requirements to ../build/tf_converter/tf_converter.egg-info/requires.txt
+writing top-level names to ../build/tf_converter/tf_converter.egg-info/top_level.txt
+reading manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+writing manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+running build
+running build_py
+copying tf_converter/tf_converter.py -> /home/xs/UAV/ROS2/build/tf_converter/build/lib/tf_converter
+running install
+running install_lib
+copying /home/xs/UAV/ROS2/build/tf_converter/build/lib/tf_converter/tf_converter.py -> /home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter
+byte-compiling /home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter/tf_converter.py to tf_converter.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../build/tf_converter/tf_converter.egg-info to /home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/xs/UAV/ROS2/build/tf_converter/install.log'

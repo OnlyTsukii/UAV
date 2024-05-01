@@ -1,0 +1,618 @@
+[0.000000] (-) TimerEvent: {}
+[0.000594] (ctrl_relayer) JobQueued: {'identifier': 'ctrl_relayer', 'dependencies': OrderedDict()}
+[0.000855] (nmea_msgs) JobQueued: {'identifier': 'nmea_msgs', 'dependencies': OrderedDict()}
+[0.000909] (object_detector) JobQueued: {'identifier': 'object_detector', 'dependencies': OrderedDict()}
+[0.000940] (tf_converter) JobQueued: {'identifier': 'tf_converter', 'dependencies': OrderedDict()}
+[0.000962] (gps_handler) JobQueued: {'identifier': 'gps_handler', 'dependencies': OrderedDict([('nmea_msgs', '/home/xs/UAV/ROS2/install/nmea_msgs')])}
+[0.000995] (nmea_msgs) JobStarted: {'identifier': 'nmea_msgs'}
+[0.006713] (ctrl_relayer) JobStarted: {'identifier': 'ctrl_relayer'}
+[0.011009] (object_detector) JobStarted: {'identifier': 'object_detector'}
+[0.016290] (tf_converter) JobStarted: {'identifier': 'tf_converter'}
+[0.022274] (nmea_msgs) JobProgress: {'identifier': 'nmea_msgs', 'progress': 'cmake'}
+[0.023270] (nmea_msgs) JobProgress: {'identifier': 'nmea_msgs', 'progress': 'build'}
+[0.023329] (nmea_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xs/UAV/ROS2/build/nmea_msgs', '--', '-j8', '-l8'], 'cwd': '/home/xs/UAV/ROS2/build/nmea_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('C_INCLUDE_PATH', '/usr/include/libusb-1.0:/usr/include/libusb-1.0:'), ('no_proxy', 'localhost, 127.0.0.1'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'xs'), ('SSH_CLIENT', '192.168.137.1 5738 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/xs/UAV/ROS2/install/nmea_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('BROWSER', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/xs'), ('OLDPWD', '/home/xs/UAV'), ('TERM_PROGRAM_VERSION', '1.88.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-e08d8401-f302-44bd-8f09-930959c84178.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://192.168.137.1:5555'), ('COLCON_PREFIX_PATH', '/home/xs/UAV/ROS2/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'xs'), ('http_proxy', 'http://192.168.137.1:5555'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a9dec91ba3.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/nmea_msgs:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/xs/UAV/ROS2/build/nmea_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.137.1 5738 192.168.137.2 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xs/UAV/ROS2/install/nmea_msgs:/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic')]), 'shell': False}
+[0.100128] (-) TimerEvent: {}
+[0.200562] (-) TimerEvent: {}
+[0.300868] (-) TimerEvent: {}
+[0.361603] (nmea_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.361999] (nmea_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.363158] (nmea_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.363358] (nmea_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)\n'}
+[0.363418] (nmea_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.363462] (nmea_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[0.363503] (nmea_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.363543] (nmea_msgs) StdoutLine: {'line': b'-- Found std_msgs: 2.2.4 (/opt/ros/galactic/share/std_msgs/cmake)\n'}
+[0.363583] (nmea_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)\n'}
+[0.363623] (nmea_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.401070] (-) TimerEvent: {}
+[0.499008] (nmea_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)\n'}
+[0.501226] (-) TimerEvent: {}
+[0.601481] (-) TimerEvent: {}
+[0.701854] (-) TimerEvent: {}
+[0.728426] (nmea_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.801959] (-) TimerEvent: {}
+[0.840397] (nmea_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.865883] (nmea_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[0.866264] (nmea_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)\n'}
+[0.879820] (ctrl_relayer) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/ctrl_relayer', 'build', '--build-base', '/home/xs/UAV/ROS2/build/ctrl_relayer/build', 'install', '--record', '/home/xs/UAV/ROS2/build/ctrl_relayer/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/xs/UAV/ROS2/ctrl_relayer', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'C_INCLUDE_PATH': '/usr/include/libusb-1.0:/usr/include/libusb-1.0:', 'no_proxy': 'localhost, 127.0.0.1', 'LANGUAGE': 'zh_CN:en_US:en', 'USER': 'xs', 'SSH_CLIENT': '192.168.137.1 5738 22', 'LC_TIME': 'zh_CN.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/xs/UAV/ROS2/install/nmea_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib', 'BROWSER': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/xs', 'OLDPWD': '/home/xs/UAV', 'TERM_PROGRAM_VERSION': '1.88.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-e08d8401-f302-44bd-8f09-930959c84178.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'https_proxy': 'http://192.168.137.1:5555', 'COLCON_PREFIX_PATH': '/home/xs/UAV/ROS2/install', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'xs', 'http_proxy': 'http://192.168.137.1:5555', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'zh_CN.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'zh_CN.UTF-8', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-a9dec91ba3.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/nmea_msgs:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/xs/UAV/ROS2/build/ctrl_relayer', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 5738 192.168.137.2 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/xs/UAV/ROS2/build/ctrl_relayer/prefix_override:/home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/xs/UAV/ROS2/install/nmea_msgs'}, 'shell': False}
+[0.882563] (object_detector) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/object_detector', 'build', '--build-base', '/home/xs/UAV/ROS2/build/object_detector/build', 'install', '--record', '/home/xs/UAV/ROS2/build/object_detector/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/xs/UAV/ROS2/object_detector', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'C_INCLUDE_PATH': '/usr/include/libusb-1.0:/usr/include/libusb-1.0:', 'no_proxy': 'localhost, 127.0.0.1', 'LANGUAGE': 'zh_CN:en_US:en', 'USER': 'xs', 'SSH_CLIENT': '192.168.137.1 5738 22', 'LC_TIME': 'zh_CN.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/xs/UAV/ROS2/install/nmea_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib', 'BROWSER': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/xs', 'OLDPWD': '/home/xs/UAV', 'TERM_PROGRAM_VERSION': '1.88.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-e08d8401-f302-44bd-8f09-930959c84178.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'https_proxy': 'http://192.168.137.1:5555', 'COLCON_PREFIX_PATH': '/home/xs/UAV/ROS2/install', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'xs', 'http_proxy': 'http://192.168.137.1:5555', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'zh_CN.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'zh_CN.UTF-8', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-a9dec91ba3.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/nmea_msgs:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/xs/UAV/ROS2/build/object_detector', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 5738 192.168.137.2 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/xs/UAV/ROS2/build/object_detector/prefix_override:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/xs/UAV/ROS2/install/nmea_msgs'}, 'shell': False}
+[0.885418] (tf_converter) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/tf_converter', 'build', '--build-base', '/home/xs/UAV/ROS2/build/tf_converter/build', 'install', '--record', '/home/xs/UAV/ROS2/build/tf_converter/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/xs/UAV/ROS2/tf_converter', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'C_INCLUDE_PATH': '/usr/include/libusb-1.0:/usr/include/libusb-1.0:', 'no_proxy': 'localhost, 127.0.0.1', 'LANGUAGE': 'zh_CN:en_US:en', 'USER': 'xs', 'SSH_CLIENT': '192.168.137.1 5738 22', 'LC_TIME': 'zh_CN.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/xs/UAV/ROS2/install/nmea_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib', 'BROWSER': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/xs', 'OLDPWD': '/home/xs/UAV', 'TERM_PROGRAM_VERSION': '1.88.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-e08d8401-f302-44bd-8f09-930959c84178.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'https_proxy': 'http://192.168.137.1:5555', 'COLCON_PREFIX_PATH': '/home/xs/UAV/ROS2/install', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'xs', 'http_proxy': 'http://192.168.137.1:5555', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'zh_CN.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'zh_CN.UTF-8', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-a9dec91ba3.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/nmea_msgs:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/xs/UAV/ROS2/build/tf_converter', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 5738 192.168.137.2 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/xs/UAV/ROS2/build/tf_converter/prefix_override:/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/xs/UAV/ROS2/install/nmea_msgs'}, 'shell': False}
+[0.888135] (nmea_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.888597] (nmea_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[0.888951] (nmea_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[0.902054] (-) TimerEvent: {}
+[0.944285] (nmea_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.997788] (nmea_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[0.999771] (nmea_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/xs/UAV/ROS2/build/nmea_msgs\n'}
+[1.002143] (-) TimerEvent: {}
+[1.022818] (nmea_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.032422] (nmea_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.056354] (object_detector) StdoutLine: {'line': b'running egg_info\n'}
+[1.056989] (object_detector) StdoutLine: {'line': b'writing ../build/object_detector/object_detector.egg-info/PKG-INFO\n'}
+[1.057175] (object_detector) StdoutLine: {'line': b'writing dependency_links to ../build/object_detector/object_detector.egg-info/dependency_links.txt\n'}
+[1.057258] (object_detector) StdoutLine: {'line': b'writing entry points to ../build/object_detector/object_detector.egg-info/entry_points.txt\n'}
+[1.057364] (object_detector) StdoutLine: {'line': b'writing requirements to ../build/object_detector/object_detector.egg-info/requires.txt\n'}
+[1.057464] (object_detector) StdoutLine: {'line': b'writing top-level names to ../build/object_detector/object_detector.egg-info/top_level.txt\n'}
+[1.070461] (tf_converter) StdoutLine: {'line': b'running egg_info\n'}
+[1.071237] (tf_converter) StdoutLine: {'line': b'writing ../build/tf_converter/tf_converter.egg-info/PKG-INFO\n'}
+[1.071484] (tf_converter) StdoutLine: {'line': b'writing dependency_links to ../build/tf_converter/tf_converter.egg-info/dependency_links.txt\n'}
+[1.071610] (tf_converter) StdoutLine: {'line': b'writing entry points to ../build/tf_converter/tf_converter.egg-info/entry_points.txt\n'}
+[1.071714] (tf_converter) StdoutLine: {'line': b'writing requirements to ../build/tf_converter/tf_converter.egg-info/requires.txt\n'}
+[1.071812] (tf_converter) StdoutLine: {'line': b'writing top-level names to ../build/tf_converter/tf_converter.egg-info/top_level.txt\n'}
+[1.079285] (ctrl_relayer) StdoutLine: {'line': b'running egg_info\n'}
+[1.079942] (ctrl_relayer) StdoutLine: {'line': b'writing ../build/ctrl_relayer/ctrl_relayer.egg-info/PKG-INFO\n'}
+[1.080149] (ctrl_relayer) StdoutLine: {'line': b'writing dependency_links to ../build/ctrl_relayer/ctrl_relayer.egg-info/dependency_links.txt\n'}
+[1.080266] (ctrl_relayer) StdoutLine: {'line': b'writing entry points to ../build/ctrl_relayer/ctrl_relayer.egg-info/entry_points.txt\n'}
+[1.080381] (ctrl_relayer) StdoutLine: {'line': b'writing requirements to ../build/ctrl_relayer/ctrl_relayer.egg-info/requires.txt\n'}
+[1.080478] (ctrl_relayer) StdoutLine: {'line': b'writing top-level names to ../build/ctrl_relayer/ctrl_relayer.egg-info/top_level.txt\n'}
+[1.083156] (object_detector) StdoutLine: {'line': b"reading manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'\n"}
+[1.083750] (object_detector) StdoutLine: {'line': b"writing manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'\n"}
+[1.083898] (object_detector) StdoutLine: {'line': b'running build\n'}
+[1.083978] (object_detector) StdoutLine: {'line': b'running build_py\n'}
+[1.084073] (object_detector) StdoutLine: {'line': b'running install\n'}
+[1.084689] (object_detector) StdoutLine: {'line': b'running install_lib\n'}
+[1.085698] (object_detector) StdoutLine: {'line': b'running install_data\n'}
+[1.085817] (object_detector) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.087011] (object_detector) StdoutLine: {'line': b"removing '/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.087214] (object_detector) StdoutLine: {'line': b'Copying ../build/object_detector/object_detector.egg-info to /home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector-0.0.0-py3.8.egg-info\n'}
+[1.087703] (object_detector) StdoutLine: {'line': b'running install_scripts\n'}
+[1.100375] (object_detector) StdoutLine: {'line': b'Installing dft_publisher script to /home/xs/UAV/ROS2/install/object_detector/lib/object_detector\n'}
+[1.100609] (object_detector) StdoutLine: {'line': b"writing list of installed files to '/home/xs/UAV/ROS2/build/object_detector/install.log'\n"}
+[1.102238] (-) TimerEvent: {}
+[1.108431] (ctrl_relayer) StdoutLine: {'line': b"reading manifest file '../build/ctrl_relayer/ctrl_relayer.egg-info/SOURCES.txt'\n"}
+[1.109258] (ctrl_relayer) StdoutLine: {'line': b"writing manifest file '../build/ctrl_relayer/ctrl_relayer.egg-info/SOURCES.txt'\n"}
+[1.109424] (ctrl_relayer) StdoutLine: {'line': b'running build\n'}
+[1.109506] (ctrl_relayer) StdoutLine: {'line': b'running build_py\n'}
+[1.109616] (ctrl_relayer) StdoutLine: {'line': b'running install\n'}
+[1.110593] (ctrl_relayer) StdoutLine: {'line': b'running install_lib\n'}
+[1.111922] (ctrl_relayer) StdoutLine: {'line': b'running install_data\n'}
+[1.112085] (ctrl_relayer) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.113672] (ctrl_relayer) StdoutLine: {'line': b"removing '/home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.113879] (ctrl_relayer) StdoutLine: {'line': b'Copying ../build/ctrl_relayer/ctrl_relayer.egg-info to /home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer-0.0.0-py3.8.egg-info\n'}
+[1.114531] (ctrl_relayer) StdoutLine: {'line': b'running install_scripts\n'}
+[1.116522] (tf_converter) StdoutLine: {'line': b"reading manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'\n"}
+[1.117568] (tf_converter) StdoutLine: {'line': b"writing manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'\n"}
+[1.117809] (tf_converter) StdoutLine: {'line': b'running build\n'}
+[1.117912] (tf_converter) StdoutLine: {'line': b'running build_py\n'}
+[1.117986] (tf_converter) StdoutLine: {'line': b'running install\n'}
+[1.118978] (object_detector) CommandEnded: {'returncode': 0}
+[1.119331] (tf_converter) StdoutLine: {'line': b'running install_lib\n'}
+[1.120646] (tf_converter) StdoutLine: {'line': b'running install_data\n'}
+[1.120755] (tf_converter) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.122699] (tf_converter) StdoutLine: {'line': b"removing '/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.122880] (tf_converter) StdoutLine: {'line': b'Copying ../build/tf_converter/tf_converter.egg-info to /home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter-0.0.0-py3.8.egg-info\n'}
+[1.123744] (tf_converter) StdoutLine: {'line': b'running install_scripts\n'}
+[1.127624] (object_detector) JobEnded: {'identifier': 'object_detector', 'rc': 0}
+[1.129918] (ctrl_relayer) StdoutLine: {'line': b'Installing cmd_subscriber script to /home/xs/UAV/ROS2/install/ctrl_relayer/lib/ctrl_relayer\n'}
+[1.130196] (ctrl_relayer) StdoutLine: {'line': b"writing list of installed files to '/home/xs/UAV/ROS2/build/ctrl_relayer/install.log'\n"}
+[1.144868] (tf_converter) StdoutLine: {'line': b"writing list of installed files to '/home/xs/UAV/ROS2/build/tf_converter/install.log'\n"}
+[1.148215] (ctrl_relayer) CommandEnded: {'returncode': 0}
+[1.152404] (ctrl_relayer) JobEnded: {'identifier': 'ctrl_relayer', 'rc': 0}
+[1.168171] (tf_converter) CommandEnded: {'returncode': 0}
+[1.171942] (tf_converter) JobEnded: {'identifier': 'tf_converter', 'rc': 0}
+[1.202410] (-) TimerEvent: {}
+[1.302704] (-) TimerEvent: {}
+[1.403015] (-) TimerEvent: {}
+[1.503327] (-) TimerEvent: {}
+[1.603582] (-) TimerEvent: {}
+[1.703835] (-) TimerEvent: {}
+[1.709879] (nmea_msgs) StdoutLine: {'line': b'[  1%] Built target nmea_msgs__cpp\n'}
+[1.716973] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_generator_c\x1b[0m\n'}
+[1.718012] (nmea_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.718214] (nmea_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.718286] (nmea_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.737341] (nmea_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.c.o\x1b[0m\n'}
+[1.737626] (nmea_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__functions.c.o\x1b[0m\n'}
+[1.737728] (nmea_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o\x1b[0m\n'}
+[1.738223] (nmea_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o\x1b[0m\n'}
+[1.740524] (nmea_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.o\x1b[0m\n'}
+[1.784685] (nmea_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o\x1b[0m\n'}
+[1.786325] (nmea_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.o\x1b[0m\n'}
+[1.787916] (nmea_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c.o\x1b[0m\n'}
+[1.791443] (nmea_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c.o\x1b[0m\n'}
+[1.792195] (nmea_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c.o\x1b[0m\n'}
+[1.803933] (-) TimerEvent: {}
+[1.838959] (nmea_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking C shared library libnmea_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[1.870994] (nmea_msgs) StdoutLine: {'line': b'[ 15%] Built target nmea_msgs__rosidl_generator_c\n'}
+[1.879217] (nmea_msgs) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.883659] (nmea_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.904027] (-) TimerEvent: {}
+[2.004299] (-) TimerEvent: {}
+[2.104572] (-) TimerEvent: {}
+[2.204835] (-) TimerEvent: {}
+[2.213431] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.231245] (nmea_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/pixel_point__type_support.cpp.o\x1b[0m\n'}
+[2.231637] (nmea_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/defect_box__type_support.cpp.o\x1b[0m\n'}
+[2.231751] (nmea_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gps_fix__type_support.cpp.o\x1b[0m\n'}
+[2.239551] (nmea_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/sentence__type_support.cpp.o\x1b[0m\n'}
+[2.304948] (-) TimerEvent: {}
+[2.405291] (-) TimerEvent: {}
+[2.428335] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.454233] (nmea_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__type_support.cpp.o\x1b[0m\n'}
+[2.505401] (-) TimerEvent: {}
+[2.549643] (nmea_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__type_support.cpp.o\x1b[0m\n'}
+[2.563154] (nmea_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp.o\x1b[0m\n'}
+[2.567640] (nmea_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgga__type_support.cpp.o\x1b[0m\n'}
+[2.581321] (nmea_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgsa__type_support.cpp.o\x1b[0m\n'}
+[2.589487] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.605509] (-) TimerEvent: {}
+[2.651666] (nmea_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gps_fix__type_support.cpp.o\x1b[0m\n'}
+[2.705619] (-) TimerEvent: {}
+[2.752702] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[2.797604] (nmea_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gps_fix__type_support.cpp.o\x1b[0m\n'}
+[2.805768] (-) TimerEvent: {}
+[2.809226] (nmea_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/pixel_point__type_support.cpp.o\x1b[0m\n'}
+[2.833129] (nmea_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defect_box__type_support.cpp.o\x1b[0m\n'}
+[2.867834] (nmea_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/sentence__type_support.cpp.o\x1b[0m\n'}
+[2.879918] (nmea_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o\x1b[0m\n'}
+[2.880142] (nmea_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o\x1b[0m\n'}
+[2.884627] (nmea_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgst__type_support.cpp.o\x1b[0m\n'}
+[2.886155] (nmea_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgsv__type_support.cpp.o\x1b[0m\n'}
+[2.905887] (-) TimerEvent: {}
+[2.906461] (nmea_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgga__type_support.cpp.o\x1b[0m\n'}
+[2.910902] (nmea_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgsv_satellite__type_support.cpp.o\x1b[0m\n'}
+[2.938877] (nmea_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgsa__type_support.cpp.o\x1b[0m\n'}
+[2.957650] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.972389] (nmea_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgst__type_support.cpp.o\x1b[0m\n'}
+[3.006008] (-) TimerEvent: {}
+[3.006458] (nmea_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgsv__type_support.cpp.o\x1b[0m\n'}
+[3.036533] (nmea_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gps_fix__type_support.c.o\x1b[0m\n'}
+[3.041435] (nmea_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgsv_satellite__type_support.cpp.o\x1b[0m\n'}
+[3.074468] (nmea_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gprmc__type_support.cpp.o\x1b[0m\n'}
+[3.083567] (nmea_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/pixel_point__type_support.c.o\x1b[0m\n'}
+[3.106125] (-) TimerEvent: {}
+[3.107046] (nmea_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.120073] (nmea_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/defect_box__type_support.c.o\x1b[0m\n'}
+[3.127685] (nmea_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/pixel_point__type_support.cpp.o\x1b[0m\n'}
+[3.157881] (nmea_msgs) StdoutLine: {'line': b'[ 46%] Built target nmea_msgs__rosidl_typesupport_c\n'}
+[3.159720] (nmea_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/sentence__type_support.c.o\x1b[0m\n'}
+[3.167920] (nmea_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgga__type_support.c.o\x1b[0m\n'}
+[3.196921] (nmea_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgsa__type_support.c.o\x1b[0m\n'}
+[3.198388] (nmea_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o\x1b[0m\n'}
+[3.206263] (-) TimerEvent: {}
+[3.206689] (nmea_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgst__type_support.c.o\x1b[0m\n'}
+[3.207876] (nmea_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gprmc__type_support.cpp.o\x1b[0m\n'}
+[3.208802] (nmea_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgsv__type_support.c.o\x1b[0m\n'}
+[3.217086] (nmea_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp.o\x1b[0m\n'}
+[3.240689] (nmea_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp.o\x1b[0m\n'}
+[3.241916] (nmea_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp.o\x1b[0m\n'}
+[3.243044] (nmea_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support.c.o\x1b[0m\n'}
+[3.247942] (nmea_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gprmc__type_support.c.o\x1b[0m\n'}
+[3.281432] (nmea_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp.o\x1b[0m\n'}
+[3.281684] (nmea_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking C shared library libnmea_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.306377] (-) TimerEvent: {}
+[3.320925] (nmea_msgs) StdoutLine: {'line': b'[ 60%] Built target nmea_msgs__rosidl_typesupport_introspection_c\n'}
+[3.330391] (nmea_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/defect_box__type_support.cpp.o\x1b[0m\n'}
+[3.406507] (-) TimerEvent: {}
+[3.507070] (-) TimerEvent: {}
+[3.545284] (nmea_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.549209] (nmea_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/sentence__type_support.cpp.o\x1b[0m\n'}
+[3.550079] (nmea_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgga__type_support.cpp.o\x1b[0m\n'}
+[3.572280] (nmea_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsa__type_support.cpp.o\x1b[0m\n'}
+[3.594339] (nmea_msgs) StdoutLine: {'line': b'[ 64%] Built target nmea_msgs__rosidl_typesupport_cpp\n'}
+[3.604805] (nmea_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgst__type_support.cpp.o\x1b[0m\n'}
+[3.607191] (-) TimerEvent: {}
+[3.611640] (nmea_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsv__type_support.cpp.o\x1b[0m\n'}
+[3.618968] (nmea_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsv_satellite__type_support.cpp.o\x1b[0m\n'}
+[3.624813] (nmea_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.707326] (-) TimerEvent: {}
+[3.751182] (nmea_msgs) StdoutLine: {'line': b'[ 68%] Built target nmea_msgs__rosidl_typesupport_introspection_cpp\n'}
+[3.767730] (nmea_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gprmc__type_support.cpp.o\x1b[0m\n'}
+[3.807439] (-) TimerEvent: {}
+[3.907971] (-) TimerEvent: {}
+[4.008546] (-) TimerEvent: {}
+[4.108841] (-) TimerEvent: {}
+[4.171966] (nmea_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.209024] (-) TimerEvent: {}
+[4.236272] (nmea_msgs) StdoutLine: {'line': b'[ 70%] Built target nmea_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[4.244974] (nmea_msgs) StdoutLine: {'line': b'[ 71%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.309189] (-) TimerEvent: {}
+[4.409508] (-) TimerEvent: {}
+[4.509835] (-) TimerEvent: {}
+[4.610148] (-) TimerEvent: {}
+[4.710478] (-) TimerEvent: {}
+[4.745099] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[4.763748] (nmea_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__type_support_c.cpp.o\x1b[0m\n'}
+[4.763966] (nmea_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o\x1b[0m\n'}
+[4.764040] (nmea_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.o\x1b[0m\n'}
+[4.764138] (nmea_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/pixel_point__type_support_c.cpp.o\x1b[0m\n'}
+[4.764613] (nmea_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defect_box__type_support_c.cpp.o\x1b[0m\n'}
+[4.764775] (nmea_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o\x1b[0m\n'}
+[4.766534] (nmea_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o\x1b[0m\n'}
+[4.770958] (nmea_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.o\x1b[0m\n'}
+[4.813782] (-) TimerEvent: {}
+[4.914259] (-) TimerEvent: {}
+[5.014761] (-) TimerEvent: {}
+[5.115345] (-) TimerEvent: {}
+[5.148450] (nmea_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.o\x1b[0m\n'}
+[5.152813] (nmea_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.o\x1b[0m\n'}
+[5.215462] (-) TimerEvent: {}
+[5.315816] (-) TimerEvent: {}
+[5.388243] (nmea_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[5.415929] (-) TimerEvent: {}
+[5.451839] (nmea_msgs) StdoutLine: {'line': b'[ 82%] Built target nmea_msgs__rosidl_typesupport_fastrtps_c\n'}
+[5.465766] (nmea_msgs) StdoutLine: {'line': b'[ 82%] Built target nmea_msgs\n'}
+[5.477148] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__py\x1b[0m\n'}
+[5.488337] (nmea_msgs) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.516051] (-) TimerEvent: {}
+[5.616312] (-) TimerEvent: {}
+[5.716669] (-) TimerEvent: {}
+[5.816982] (-) TimerEvent: {}
+[5.917304] (-) TimerEvent: {}
+[6.017659] (-) TimerEvent: {}
+[6.117993] (-) TimerEvent: {}
+[6.218335] (-) TimerEvent: {}
+[6.318660] (-) TimerEvent: {}
+[6.419011] (-) TimerEvent: {}
+[6.519365] (-) TimerEvent: {}
+[6.566780] (nmea_msgs) StdoutLine: {'line': b'[ 83%] Built target nmea_msgs__py\n'}
+[6.575450] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__python\x1b[0m\n'}
+[6.597099] (nmea_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o\x1b[0m\n'}
+[6.597463] (nmea_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c.o\x1b[0m\n'}
+[6.597576] (nmea_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o\x1b[0m\n'}
+[6.597645] (nmea_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c.o\x1b[0m\n'}
+[6.597866] (nmea_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o\x1b[0m\n'}
+[6.598202] (nmea_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c.o\x1b[0m\n'}
+[6.602869] (nmea_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o\x1b[0m\n'}
+[6.605359] (nmea_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.o\x1b[0m\n'}
+[6.619479] (-) TimerEvent: {}
+[6.699914] (nmea_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.o\x1b[0m\n'}
+[6.703022] (nmea_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.o\x1b[0m\n'}
+[6.719586] (-) TimerEvent: {}
+[6.784853] (nmea_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so\x1b[0m\n'}
+[6.819690] (-) TimerEvent: {}
+[6.824243] (nmea_msgs) StdoutLine: {'line': b'[ 94%] Built target nmea_msgs__python\n'}
+[6.832949] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[6.833149] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[6.833228] (nmea_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[6.846202] (nmea_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.846404] (nmea_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.846473] (nmea_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[6.919795] (-) TimerEvent: {}
+[6.921202] (nmea_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.921338] (nmea_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.921406] (nmea_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.950526] (nmea_msgs) StdoutLine: {'line': b'[100%] Built target nmea_msgs__rosidl_typesupport_c__pyext\n'}
+[6.950741] (nmea_msgs) StdoutLine: {'line': b'[100%] Built target nmea_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[6.972753] (nmea_msgs) StdoutLine: {'line': b'[100%] Built target nmea_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.981075] (nmea_msgs) CommandEnded: {'returncode': 0}
+[7.019946] (-) TimerEvent: {}
+[7.086160] (nmea_msgs) JobProgress: {'identifier': 'nmea_msgs', 'progress': 'install'}
+[7.093800] (nmea_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/xs/UAV/ROS2/build/nmea_msgs'], 'cwd': '/home/xs/UAV/ROS2/build/nmea_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('C_INCLUDE_PATH', '/usr/include/libusb-1.0:/usr/include/libusb-1.0:'), ('no_proxy', 'localhost, 127.0.0.1'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'xs'), ('SSH_CLIENT', '192.168.137.1 5738 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/xs/UAV/ROS2/install/nmea_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('BROWSER', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/xs'), ('OLDPWD', '/home/xs/UAV'), ('TERM_PROGRAM_VERSION', '1.88.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-e08d8401-f302-44bd-8f09-930959c84178.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://192.168.137.1:5555'), ('COLCON_PREFIX_PATH', '/home/xs/UAV/ROS2/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'xs'), ('http_proxy', 'http://192.168.137.1:5555'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a9dec91ba3.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/nmea_msgs:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/xs/UAV/ROS2/build/nmea_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.137.1 5738 192.168.137.2 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xs/UAV/ROS2/install/nmea_msgs:/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic')]), 'shell': False}
+[7.101141] (nmea_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.101283] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/ament_index/resource_index/rosidl_interfaces/nmea_msgs\n'}
+[7.101384] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs\n'}
+[7.101431] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg\n'}
+[7.101475] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsv.h\n'}
+[7.101566] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgga.h\n'}
+[7.101612] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/defect_box.h\n'}
+[7.101654] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgst.h\n'}
+[7.101718] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gprmc.h\n'}
+[7.101761] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/sentence.h\n'}
+[7.101802] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail\n'}
+[7.101844] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__struct.h\n'}
+[7.101885] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__struct.h\n'}
+[7.101950] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__functions.h\n'}
+[7.102030] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__functions.c\n'}
+[7.102073] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__functions.c\n'}
+[7.102127] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__type_support.h\n'}
+[7.102169] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__functions.h\n'}
+[7.102213] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__struct.h\n'}
+[7.102276] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__functions.h\n'}
+[7.102350] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__struct.h\n'}
+[7.102393] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__type_support.h\n'}
+[7.102435] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__functions.h\n'}
+[7.102506] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__type_support.h\n'}
+[7.102546] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__functions.h\n'}
+[7.102616] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__type_support.h\n'}
+[7.102658] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__type_support.h\n'}
+[7.102721] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__struct.h\n'}
+[7.102785] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__type_support.h\n'}
+[7.102849] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__type_support.h\n'}
+[7.102914] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__functions.h\n'}
+[7.102978] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__struct.h\n'}
+[7.103041] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__functions.h\n'}
+[7.103104] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__struct.h\n'}
+[7.103168] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__struct.h\n'}
+[7.103233] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__struct.h\n'}
+[7.103301] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__type_support.h\n'}
+[7.103365] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__functions.c\n'}
+[7.103428] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__functions.c\n'}
+[7.103491] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__type_support.h\n'}
+[7.103555] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__functions.c\n'}
+[7.103618] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__functions.c\n'}
+[7.103680] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__struct.h\n'}
+[7.103742] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__functions.c\n'}
+[7.103804] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__functions.c\n'}
+[7.103864] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__type_support.h\n'}
+[7.103924] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__functions.h\n'}
+[7.103985] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__functions.h\n'}
+[7.104048] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__functions.c\n'}
+[7.104110] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__functions.c\n'}
+[7.104177] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__functions.h\n'}
+[7.104241] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsa.h\n'}
+[7.104304] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsv_satellite.h\n'}
+[7.104373] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.104415] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gps_fix.h\n'}
+[7.104477] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/pixel_point.h\n'}
+[7.104541] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/library_path.sh\n'}
+[7.104605] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/library_path.dsv\n'}
+[7.104778] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_generator_c.so\n'}
+[7.105015] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_generator_c.so" to ""\n'}
+[7.105086] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs\n'}
+[7.105130] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg\n'}
+[7.105193] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail\n'}
+[7.105251] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105322] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105382] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105423] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105493] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105536] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105597] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105662] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105724] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105789] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h\n'}
+[7.105847] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.105972] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[7.106232] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[7.106304] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs\n'}
+[7.106347] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg\n'}
+[7.106409] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail\n'}
+[7.106473] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.106544] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.106588] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.106658] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.106701] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.106764] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.106828] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.106890] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.106954] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.107019] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.107089] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/dds_fastrtps\n'}
+[7.107133] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[7.107235] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.107537] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[7.107610] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs\n'}
+[7.107655] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg\n'}
+[7.107718] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.107793] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail\n'}
+[7.107837] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_introspection_c.h\n'}
+[7.107880] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__type_support.c\n'}
+[7.107950] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__type_support.c\n'}
+[7.107994] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__type_support.c\n'}
+[7.108059] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__type_support.c\n'}
+[7.108113] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__type_support.c\n'}
+[7.108154] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_introspection_c.h\n'}
+[7.108217] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_c.h\n'}
+[7.108282] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h\n'}
+[7.108347] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__type_support.c\n'}
+[7.108406] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_c.h\n'}
+[7.108470] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_introspection_c.h\n'}
+[7.108533] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_introspection_c.h\n'}
+[7.108589] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__type_support.c\n'}
+[7.108650] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_introspection_c.h\n'}
+[7.108713] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_c.h\n'}
+[7.108777] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_introspection_c.h\n'}
+[7.108831] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__type_support.c\n'}
+[7.108894] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__type_support.c\n'}
+[7.108956] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__type_support.c\n'}
+[7.109142] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_c.so\n'}
+[7.109371] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[7.109491] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_c.so\n'}
+[7.109679] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_c.so" to ""\n'}
+[7.109734] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs\n'}
+[7.109806] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg\n'}
+[7.109860] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/pixel_point.hpp\n'}
+[7.109912] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsv_satellite.hpp\n'}
+[7.109952] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/defect_box.hpp\n'}
+[7.110020] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgst.hpp\n'}
+[7.110075] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail\n'}
+[7.110115] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__builder.hpp\n'}
+[7.110177] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__builder.hpp\n'}
+[7.110241] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__struct.hpp\n'}
+[7.110305] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__struct.hpp\n'}
+[7.110369] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__struct.hpp\n'}
+[7.110433] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__traits.hpp\n'}
+[7.110496] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__builder.hpp\n'}
+[7.110558] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__builder.hpp\n'}
+[7.110621] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__struct.hpp\n'}
+[7.110684] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__builder.hpp\n'}
+[7.110748] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__struct.hpp\n'}
+[7.110810] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__traits.hpp\n'}
+[7.110869] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__builder.hpp\n'}
+[7.110932] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__traits.hpp\n'}
+[7.110994] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__struct.hpp\n'}
+[7.111055] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__struct.hpp\n'}
+[7.111120] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__traits.hpp\n'}
+[7.111181] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__struct.hpp\n'}
+[7.111240] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__traits.hpp\n'}
+[7.111387] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__traits.hpp\n'}
+[7.111432] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__builder.hpp\n'}
+[7.111541] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__builder.hpp\n'}
+[7.111636] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__builder.hpp\n'}
+[7.111679] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__traits.hpp\n'}
+[7.111752] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__struct.hpp\n'}
+[7.111796] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__traits.hpp\n'}
+[7.111868] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__traits.hpp\n'}
+[7.111910] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__traits.hpp\n'}
+[7.111953] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__struct.hpp\n'}
+[7.111994] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__builder.hpp\n'}
+[7.112050] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsv.hpp\n'}
+[7.112117] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gps_fix.hpp\n'}
+[7.112161] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/sentence.hpp\n'}
+[7.112204] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgga.hpp\n'}
+[7.112246] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gprmc.hpp\n'}
+[7.112301] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsa.hpp\n'}
+[7.112370] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs\n'}
+[7.112414] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg\n'}
+[7.112456] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail\n'}
+[7.112498] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__type_support.cpp\n'}
+[7.112540] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__type_support.cpp\n'}
+[7.112602] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__type_support.cpp\n'}
+[7.112654] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.112705] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.112745] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__type_support.cpp\n'}
+[7.112787] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__type_support.cpp\n'}
+[7.112830] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.112887] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.112945] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.112996] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__type_support.cpp\n'}
+[7.113038] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__type_support.cpp\n'}
+[7.113080] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__type_support.cpp\n'}
+[7.113136] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__type_support.cpp\n'}
+[7.113205] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.113246] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp\n'}
+[7.113289] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.113345] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.113399] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.113439] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.113540] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[7.113881] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[7.113964] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_cpp.so\n'}
+[7.114158] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[7.114213] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/pythonpath.sh\n'}
+[7.114270] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/pythonpath.dsv\n'}
+[7.114324] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/__init__.py\n'}
+[7.120027] (-) TimerEvent: {}
+[7.136847] (nmea_msgs) StdoutLine: {'line': b"Compiling '/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/__init__.py'...\n"}
+[7.139505] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg\n'}
+[7.139652] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsv_s.c\n'}
+[7.139732] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_sentence_s.c\n'}
+[7.139779] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsv.py\n'}
+[7.139837] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsa_s.c\n'}
+[7.139891] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gps_fix.py\n'}
+[7.139943] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgst.py\n'}
+[7.140000] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gprmc.py\n'}
+[7.140055] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgga_s.c\n'}
+[7.140100] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsa.py\n'}
+[7.140154] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_defect_box_s.c\n'}
+[7.140207] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgga.py\n'}
+[7.140264] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_pixel_point_s.c\n'}
+[7.140320] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/__init__.py\n'}
+[7.140375] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gprmc_s.c\n'}
+[7.140429] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_defect_box.py\n'}
+[7.140482] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsv_satellite_s.c\n'}
+[7.140536] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_sentence.py\n'}
+[7.140592] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_pixel_point.py\n'}
+[7.140647] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsv_satellite.py\n'}
+[7.140703] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gps_fix_s.c\n'}
+[7.140764] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgst_s.c\n'}
+[7.141034] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[7.141344] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[7.141583] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[7.141917] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[7.142102] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[7.142384] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[7.142497] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__python.so\n'}
+[7.142739] (nmea_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__python.so" to ""\n'}
+[7.142793] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/GpsFix.idl\n'}
+[7.142872] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/PixelPoint.idl\n'}
+[7.142932] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/DefectBox.idl\n'}
+[7.143010] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Sentence.idl\n'}
+[7.143079] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgga.idl\n'}
+[7.143146] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgsa.idl\n'}
+[7.143200] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgst.idl\n'}
+[7.143274] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgsv.idl\n'}
+[7.143317] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/GpgsvSatellite.idl\n'}
+[7.143359] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gprmc.idl\n'}
+[7.143399] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/GpsFix.msg\n'}
+[7.143439] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/PixelPoint.msg\n'}
+[7.143479] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/DefectBox.msg\n'}
+[7.143597] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Sentence.msg\n'}
+[7.143665] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgga.msg\n'}
+[7.143734] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgsa.msg\n'}
+[7.143800] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgst.msg\n'}
+[7.143857] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgsv.msg\n'}
+[7.143925] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/GpgsvSatellite.msg\n'}
+[7.143978] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gprmc.msg\n'}
+[7.144020] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/ament_index/resource_index/package_run_dependencies/nmea_msgs\n'}
+[7.144088] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/ament_index/resource_index/parent_prefix_path/nmea_msgs\n'}
+[7.144135] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/ament_prefix_path.sh\n'}
+[7.144214] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/ament_prefix_path.dsv\n'}
+[7.144268] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/path.sh\n'}
+[7.144323] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/path.dsv\n'}
+[7.144366] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/local_setup.bash\n'}
+[7.144422] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/local_setup.sh\n'}
+[7.144464] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/local_setup.zsh\n'}
+[7.144504] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/local_setup.dsv\n'}
+[7.144545] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.dsv\n'}
+[7.144612] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/ament_index/resource_index/packages/nmea_msgs\n'}
+[7.144653] (nmea_msgs) StdoutLine: {'line': b'-- Old export file "/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_generator_cExport.cmake" will be replaced.  Removing files [/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_generator_cExport-noconfig.cmake].\n'}
+[7.144714] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_generator_cExport.cmake\n'}
+[7.144755] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[7.144910] (nmea_msgs) StdoutLine: {'line': b'-- Old export file "/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cExport.cmake" will be replaced.  Removing files [/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake].\n'}
+[7.144971] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[7.145040] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[7.145220] (nmea_msgs) StdoutLine: {'line': b'-- Old export file "/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cExport.cmake" will be replaced.  Removing files [/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cExport-noconfig.cmake].\n'}
+[7.145281] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cExport.cmake\n'}
+[7.145346] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[7.145512] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_generator_cppExport.cmake\n'}
+[7.145733] (nmea_msgs) StdoutLine: {'line': b'-- Old export file "/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cppExport.cmake" will be replaced.  Removing files [/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake].\n'}
+[7.145793] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[7.145855] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[7.146040] (nmea_msgs) StdoutLine: {'line': b'-- Old export file "/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cppExport.cmake" will be replaced.  Removing files [/home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cppExport-noconfig.cmake].\n'}
+[7.146099] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[7.146163] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[7.146238] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[7.146319] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.146399] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.146459] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.146538] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.146613] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.146658] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.146699] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgsConfig.cmake\n'}
+[7.146739] (nmea_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgsConfig-version.cmake\n'}
+[7.146778] (nmea_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.xml\n'}
+[7.148304] (nmea_msgs) CommandEnded: {'returncode': 0}
+[7.220167] (-) TimerEvent: {}
+[7.256034] (nmea_msgs) JobEnded: {'identifier': 'nmea_msgs', 'rc': 0}
+[7.256993] (gps_handler) JobStarted: {'identifier': 'gps_handler'}
+[7.320304] (-) TimerEvent: {}
+[7.420708] (-) TimerEvent: {}
+[7.521032] (-) TimerEvent: {}
+[7.621364] (-) TimerEvent: {}
+[7.710610] (gps_handler) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/gps_handler', 'build', '--build-base', '/home/xs/UAV/ROS2/build/gps_handler/build', 'install', '--record', '/home/xs/UAV/ROS2/build/gps_handler/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/xs/UAV/ROS2/gps_handler', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'C_INCLUDE_PATH': '/usr/include/libusb-1.0:/usr/include/libusb-1.0:', 'no_proxy': 'localhost, 127.0.0.1', 'LANGUAGE': 'zh_CN:en_US:en', 'USER': 'xs', 'SSH_CLIENT': '192.168.137.1 5738 22', 'LC_TIME': 'zh_CN.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/xs/UAV/ROS2/install/nmea_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib', 'BROWSER': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/xs', 'OLDPWD': '/home/xs/UAV', 'TERM_PROGRAM_VERSION': '1.88.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-e08d8401-f302-44bd-8f09-930959c84178.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'https_proxy': 'http://192.168.137.1:5555', 'COLCON_PREFIX_PATH': '/home/xs/UAV/ROS2/install', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'xs', 'http_proxy': 'http://192.168.137.1:5555', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/xs/.vscode-server/cli/servers/Stable-e170252f762678dec6ca2cc69aba1570769a5d39/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'zh_CN.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'zh_CN.UTF-8', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-a9dec91ba3.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/xs/UAV/ROS2/install/tf_converter:/home/xs/UAV/ROS2/install/object_detector:/home/xs/UAV/ROS2/install/gps_handler:/home/xs/UAV/ROS2/install/nmea_msgs:/home/xs/UAV/ROS2/install/ctrl_relayer:/opt/ros/galactic', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/xs/UAV/ROS2/build/gps_handler', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 5738 192.168.137.2 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/xs/UAV/ROS2/build/gps_handler/prefix_override:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/xs/UAV/ROS2/install/nmea_msgs'}, 'shell': False}
+[7.721533] (-) TimerEvent: {}
+[7.821858] (-) TimerEvent: {}
+[7.862351] (gps_handler) StdoutLine: {'line': b'running egg_info\n'}
+[7.862701] (gps_handler) StdoutLine: {'line': b'writing ../build/gps_handler/gps_handler.egg-info/PKG-INFO\n'}
+[7.862793] (gps_handler) StdoutLine: {'line': b'writing dependency_links to ../build/gps_handler/gps_handler.egg-info/dependency_links.txt\n'}
+[7.862865] (gps_handler) StdoutLine: {'line': b'writing entry points to ../build/gps_handler/gps_handler.egg-info/entry_points.txt\n'}
+[7.862939] (gps_handler) StdoutLine: {'line': b'writing requirements to ../build/gps_handler/gps_handler.egg-info/requires.txt\n'}
+[7.862988] (gps_handler) StdoutLine: {'line': b'writing top-level names to ../build/gps_handler/gps_handler.egg-info/top_level.txt\n'}
+[7.886110] (gps_handler) StdoutLine: {'line': b"reading manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'\n"}
+[7.886621] (gps_handler) StdoutLine: {'line': b"writing manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'\n"}
+[7.886709] (gps_handler) StdoutLine: {'line': b'running build\n'}
+[7.886760] (gps_handler) StdoutLine: {'line': b'running build_py\n'}
+[7.887098] (gps_handler) StdoutLine: {'line': b'running install\n'}
+[7.887734] (gps_handler) StdoutLine: {'line': b'running install_lib\n'}
+[7.888895] (gps_handler) StdoutLine: {'line': b'running install_data\n'}
+[7.888984] (gps_handler) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.890327] (gps_handler) StdoutLine: {'line': b"removing '/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-2.0.0-py3.8.egg-info' (and everything under it)\n"}
+[7.890431] (gps_handler) StdoutLine: {'line': b'Copying ../build/gps_handler/gps_handler.egg-info to /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-2.0.0-py3.8.egg-info\n'}
+[7.890936] (gps_handler) StdoutLine: {'line': b'running install_scripts\n'}
+[7.901739] (gps_handler) StdoutLine: {'line': b'Installing nmea_serial_driver script to /home/xs/UAV/ROS2/install/gps_handler/lib/gps_handler\n'}
+[7.901915] (gps_handler) StdoutLine: {'line': b"writing list of installed files to '/home/xs/UAV/ROS2/build/gps_handler/install.log'\n"}
+[7.917050] (gps_handler) CommandEnded: {'returncode': 0}
+[7.920926] (gps_handler) JobEnded: {'identifier': 'gps_handler', 'rc': 0}
+[7.921369] (-) EventReactorShutdown: {}

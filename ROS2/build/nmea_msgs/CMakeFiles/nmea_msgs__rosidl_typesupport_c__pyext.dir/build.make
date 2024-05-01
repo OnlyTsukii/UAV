@@ -85,6 +85,16 @@ rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_6
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/librmw.so
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/librosidl_runtime_c.so
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: libnmea_msgs__rosidl_generator_c.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_generator_c.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_cpp.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_generator_c.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_typesupport_c.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libstd_msgs__rosidl_generator_c.so
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/libstd_msgs__rosidl_typesupport_c.so
@@ -104,6 +114,8 @@ rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_6
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/lib/librcutils.so
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/share/std_msgs/cmake/../../../lib/libstd_msgs__python.so
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/share/builtin_interfaces/cmake/../../../lib/libbuiltin_interfaces__python.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/share/sensor_msgs/cmake/../../../lib/libsensor_msgs__python.so
+rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: /opt/ros/galactic/share/geometry_msgs/cmake/../../../lib/libgeometry_msgs__python.so
 rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so: CMakeFiles/nmea_msgs__rosidl_typesupport_c__pyext.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nmea_msgs__rosidl_typesupport_c__pyext.dir/link.txt --verbose=$(VERBOSE)

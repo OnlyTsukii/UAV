@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nmea_msgs/msg/PixelPoint.msg
+// generated code does not contain a copyright notice
+
+
+module nmea_msgs {
+  module msg {
+    struct PixelPoint {
+      float x;
+
+      float y;
+    };
+  };
+};

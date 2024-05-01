@@ -13,3 +13,4 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 tf_converter/__init__.py
+tf_converter/tf_converter.py

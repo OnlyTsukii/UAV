@@ -56,6 +56,9 @@ include nmea_msgs__py/CMakeFiles/nmea_msgs__py.dir/progress.make
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_introspection_c.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_c.c
+nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gps_fix.py
+nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_pixel_point.py
+nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defect_box.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_sentence.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgga.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsa.py
@@ -64,6 +67,9 @@ nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsv
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gprmc.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/__init__.py
+nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c
+nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c
+nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c
@@ -86,6 +92,9 @@ rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/rosidl_generator_py/resource/_msg.py.em
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/rosidl_generator_py/resource/_srv.py.em
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/GpsFix.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/PixelPoint.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/DefectBox.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/Sentence.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/Gpgga.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/Gpgsa.idl
@@ -125,6 +134,63 @@ rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/BatteryState.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/CameraInfo.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/ChannelFloat32.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/CompressedImage.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/FluidPressure.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/Illuminance.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/Image.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/Imu.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/JointState.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/Joy.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/JoyFeedback.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/JoyFeedbackArray.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/LaserEcho.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/LaserScan.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/MagneticField.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/MultiDOFJointState.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/MultiEchoLaserScan.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/NavSatFix.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/NavSatStatus.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/PointCloud.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/PointCloud2.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/PointField.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/Range.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/RegionOfInterest.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/RelativeHumidity.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/Temperature.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/msg/TimeReference.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/sensor_msgs/srv/SetCameraInfo.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Accel.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/AccelStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/AccelWithCovariance.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/AccelWithCovarianceStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Inertia.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/InertiaStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Point.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Point32.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/PointStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Polygon.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/PolygonStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Pose.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Pose2D.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/PoseArray.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/PoseStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/PoseWithCovariance.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/PoseWithCovarianceStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Quaternion.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/QuaternionStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Transform.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/TransformStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Twist.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/TwistStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/TwistWithCovariance.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/TwistWithCovarianceStamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Vector3.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Vector3Stamped.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/Wrench.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/geometry_msgs/msg/WrenchStamped.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/xs/UAV/ROS2/build/nmea_msgs/nmea_msgs__py && /usr/bin/python3 /opt/ros/galactic/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -133,6 +199,15 @@ rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_introspection_c
 
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_c.c: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_c.c
+
+rosidl_generator_py/nmea_msgs/msg/_gps_fix.py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_gps_fix.py
+
+rosidl_generator_py/nmea_msgs/msg/_pixel_point.py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_pixel_point.py
+
+rosidl_generator_py/nmea_msgs/msg/_defect_box.py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_defect_box.py
 
 rosidl_generator_py/nmea_msgs/msg/_sentence.py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_sentence.py
@@ -157,6 +232,15 @@ rosidl_generator_py/nmea_msgs/msg/_gprmc.py: rosidl_generator_py/nmea_msgs/_nmea
 
 rosidl_generator_py/nmea_msgs/msg/__init__.py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/__init__.py
+
+rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c
+
+rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c
+
+rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c
 
 rosidl_generator_py/nmea_msgs/msg/_sentence_s.c: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
@@ -183,6 +267,9 @@ nmea_msgs__py: nmea_msgs__py/CMakeFiles/nmea_msgs__py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_introspection_c.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_c.c
+nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gps_fix.py
+nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_pixel_point.py
+nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defect_box.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_sentence.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgga.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsa.py
@@ -191,6 +278,9 @@ nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsv.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gprmc.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/__init__.py
+nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c
+nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c
+nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c

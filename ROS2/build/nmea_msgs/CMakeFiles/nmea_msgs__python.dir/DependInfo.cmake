@@ -4,12 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c.o"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.o"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.o"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.o"
+  "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c.o"
+  "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c.o"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

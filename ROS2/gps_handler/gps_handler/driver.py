@@ -4,7 +4,8 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import NavSatFix, NavSatStatus, TimeReference
 from geometry_msgs.msg import TwistStamped, QuaternionStamped
-from std_msgs.msg import Int16
+from std_msgs.msg import Int32
+from nmea_msgs.msg import GpsFix
 from tf_transformations import quaternion_from_euler
 from gps_handler.checksum_utils import check_nmea_checksum
 from gps_handler import parser
@@ -14,12 +15,12 @@ class Ros2NMEADriver(Node):
     def __init__(self):
         super().__init__('nmea_navsat_driver')
 
-        self.fix_pub = self.create_publisher(NavSatFix, 'fix', 10)
+        self.fix_pub = self.create_publisher(GpsFix, 'fix', 10)
         self.vel_pub = self.create_publisher(TwistStamped, 'vel', 10)
         self.heading_pub = self.create_publisher(QuaternionStamped, 'heading', 10)
         self.time_ref_pub = self.create_publisher(TimeReference, 'time_reference', 10)
 
-        self.ctrl_publisher = self.create_publisher(Int16, "ctrl_cmd", 10)
+        self.ctrl_publisher = self.create_publisher(Int32, "ctrl_cmd", 10)
 
         self.pre_lat = float("nan")
         self.pre_lon = float("nan")
@@ -28,6 +29,8 @@ class Ros2NMEADriver(Node):
         self.lat_dif_thr = 0.00000905
         self.lon_dif_thr = 0.0000103
         self.alt_dif_thr = 1.0
+
+        self.msg_id = 0
 
         self.time_ref_source = self.declare_parameter('time_ref_source', 'gps').value
         self.use_RMC = self.declare_parameter('useRMC', False).value
@@ -168,7 +171,12 @@ class Ros2NMEADriver(Node):
             current_fix.position_covariance[4] = (hdop * self.lat_std_dev) ** 2
             current_fix.position_covariance[8] = (2 * hdop * self.alt_std_dev) ** 2  # FIXME
 
-            self.fix_pub.publish(current_fix)
+            fix = GpsFix()
+            fix.gps_fix = current_fix
+            fix.msg_id = self.msg_id
+            self.fix_pub.publish(fix)
+
+            self.msg_id = (self.msg_id + 1) % 256
 
             if not math.isnan(data['utc_time']):
                 current_time_ref.time_ref = rclpy.time.Time(seconds=data['utc_time']).to_msg()
@@ -213,7 +221,12 @@ class Ros2NMEADriver(Node):
                 current_fix.position_covariance_type = \
                     NavSatFix.COVARIANCE_TYPE_UNKNOWN
 
-                self.fix_pub.publish(current_fix)
+                fix = GpsFix()
+                fix.gps_fix = current_fix
+                fix.msg_id = self.msg_id
+                self.fix_pub.publish(fix)
+
+                self.msg_id = (self.msg_id + 1) % 256
 
                 if not math.isnan(data['utc_time']):
                     current_time_ref.time_ref = rclpy.time.Time(seconds=data['utc_time']).to_msg()
@@ -227,6 +240,7 @@ class Ros2NMEADriver(Node):
                 current_vel.twist.linear.x = data['speed'] * math.sin(data['true_course'])
                 current_vel.twist.linear.y = data['speed'] * math.cos(data['true_course'])
                 self.vel_pub.publish(current_vel)
+
         elif 'GST' in parsed_sentence:
             data = parsed_sentence['GST']
 
@@ -261,8 +275,8 @@ class Ros2NMEADriver(Node):
 
             if lon_cur_thr >= self.lon_dif_thr or lat_cur_thr >= self.lat_dif_thr \
                 or alt_cur_thr >= self.alt_dif_thr:
-                ctrl_cmd = Int16()
-                ctrl_cmd.data = 1
+                ctrl_cmd = Int32()
+                ctrl_cmd.data = self.msg_id
                 self.ctrl_publisher.publish(ctrl_cmd)
                 self.get_logger().info(f"Publish IR camera control message { ctrl_cmd.data }")
 

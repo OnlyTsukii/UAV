@@ -1,6 +1,9 @@
 {
   "package_name": "nmea_msgs",
   "non_idl_tuples": [
+    "/home/xs/UAV/ROS2/nmea_msgs:msg/GpsFix.msg",
+    "/home/xs/UAV/ROS2/nmea_msgs:msg/PixelPoint.msg",
+    "/home/xs/UAV/ROS2/nmea_msgs:msg/DefectBox.msg",
     "/home/xs/UAV/ROS2/nmea_msgs:msg/Sentence.msg",
     "/home/xs/UAV/ROS2/nmea_msgs:msg/Gpgga.msg",
     "/home/xs/UAV/ROS2/nmea_msgs:msg/Gpgsa.msg",

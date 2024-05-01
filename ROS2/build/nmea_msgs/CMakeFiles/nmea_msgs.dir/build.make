@@ -53,6 +53,9 @@ CMAKE_BINARY_DIR = /home/xs/UAV/ROS2/build/nmea_msgs
 # Include the progress variables for this target.
 include CMakeFiles/nmea_msgs.dir/progress.make
 
+CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/GpsFix.msg
+CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/PixelPoint.msg
+CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/DefectBox.msg
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Sentence.msg
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gpgga.msg
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gpgsa.msg
@@ -90,6 +93,34 @@ CMakeFiles/nmea_msgs: /opt/ros/galactic/share/std_msgs/msg/UInt64.idl
 CMakeFiles/nmea_msgs: /opt/ros/galactic/share/std_msgs/msg/UInt64MultiArray.idl
 CMakeFiles/nmea_msgs: /opt/ros/galactic/share/std_msgs/msg/UInt8.idl
 CMakeFiles/nmea_msgs: /opt/ros/galactic/share/std_msgs/msg/UInt8MultiArray.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/BatteryState.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/CameraInfo.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/ChannelFloat32.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/CompressedImage.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/FluidPressure.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/Illuminance.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/Image.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/Imu.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/JointState.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/Joy.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/JoyFeedback.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/JoyFeedbackArray.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/LaserEcho.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/LaserScan.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/MagneticField.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/MultiDOFJointState.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/MultiEchoLaserScan.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/NavSatFix.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/NavSatStatus.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/PointCloud.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/PointCloud2.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/PointField.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/Range.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/RegionOfInterest.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/RelativeHumidity.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/Temperature.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/msg/TimeReference.idl
+CMakeFiles/nmea_msgs: /opt/ros/galactic/share/sensor_msgs/srv/SetCameraInfo.idl
 
 
 nmea_msgs: CMakeFiles/nmea_msgs

@@ -1,7 +1,7 @@
 set(_AMENT_PACKAGE_NAME "nmea_msgs")
 set(nmea_msgs_VERSION "2.0.0")
 set(nmea_msgs_MAINTAINER "Ed Venator <evenator@gmail.com>")
-set(nmea_msgs_BUILD_DEPENDS "std_msgs" "rosidl_default_generators" "builtin_interfaces")
+set(nmea_msgs_BUILD_DEPENDS "std_msgs" "rosidl_default_generators" "sensor_msgs" "builtin_interfaces")
 set(nmea_msgs_BUILDTOOL_DEPENDS "ament_cmake" "rosidl_default_generators")
 set(nmea_msgs_BUILD_EXPORT_DEPENDS "builtin_interfaces")
 set(nmea_msgs_BUILDTOOL_EXPORT_DEPENDS )

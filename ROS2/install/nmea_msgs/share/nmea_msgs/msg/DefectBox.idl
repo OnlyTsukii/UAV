@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nmea_msgs/msg/DefectBox.msg
+// generated code does not contain a copyright notice
+
+#include "nmea_msgs/msg/PixelPoint.idl"
+
+module nmea_msgs {
+  module msg {
+    struct DefectBox {
+      int32 defect_id;
+
+      float img_width;
+
+      float img_height;
+
+      nmea_msgs::msg::PixelPoint center;
+
+      nmea_msgs::msg::PixelPoint top_left;
+
+      nmea_msgs::msg::PixelPoint top_right;
+
+      nmea_msgs::msg::PixelPoint bottom_left;
+
+      nmea_msgs::msg::PixelPoint bottom_right;
+    };
+  };
+};

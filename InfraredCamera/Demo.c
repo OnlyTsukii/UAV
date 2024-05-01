@@ -24,7 +24,6 @@
 
 #define PORT        8889
 #define BUFFER_SIZE 64
-#define CMD_SHOOT   "1"
 
 #define YOLO_IP   "127.0.0.1"
 #define YOLO_PORT 8890
@@ -54,7 +53,9 @@
 int sockfd;
 struct sockaddr_in server_addr, client_addr;
 socklen_t addr_len = 0;
+
 bool shutter = false;
+char* ctrl_id = NULL;
 
 int client_socketfd;
 struct sockaddr_in yolo_addr;
@@ -135,10 +136,8 @@ void socket_serve()
         // fprintf(file, "%d\n", cnt++);
         // fclose(file);
 
-        if (strcmp(buffer, CMD_SHOOT) == 0)
-        {
-            shutter = true;
-        }
+        shutter = true;
+        ctrl_id = buffer;
 
         // int response = 0;
         // sendto(sockfd, &response, 1, MSG_CONFIRM, (const struct sockaddr *)&client_addr, addr_len);
@@ -154,6 +153,16 @@ double tick(void)
 
 int main(void)
 {   
+    // socket_client_init();
+
+    // int num = 10;
+    // char *file_name = "/home/xs/UAV/ROS2/bus.jpg";
+    // while(0 < num--) {
+    //     sendto(client_socketfd, file_name, strlen(file_name), 0, (struct sockaddr *)&yolo_addr, sizeof(yolo_addr));
+    //     printf("Send message %s to server \n", file_name);
+    //     usleep(1000000);
+    // }
+    // return 0;
 
     // socket_serve();
 
@@ -476,7 +485,10 @@ int frameCallBack(int id, guide_usb_frame_data_t *pVideoData)
 
             bmp_img_write(&img, file_name);
             bmp_img_free(&img);
-
+            
+            strcat(file_name, ":");
+            strcat(file_name, ctrl_id);
+            
             sendto(client_socketfd, file_name, strlen(file_name), 0, (struct sockaddr *)&yolo_addr, sizeof(yolo_addr));
             printf("Send message %s to server \n", file_name);
         }

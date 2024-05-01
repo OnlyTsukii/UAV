@@ -34,6 +34,12 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/opt/ros/galactic/include/builtin_interfaces/msg/dds_fastrtps_c"
   "/opt/ros/galactic/include/builtin_interfaces/srv/dds_fastrtps_c"
   "/opt/ros/galactic/include/builtin_interfaces/action/dds_fastrtps_c"
+  "/opt/ros/galactic/include/sensor_msgs/msg/dds_fastrtps_c"
+  "/opt/ros/galactic/include/sensor_msgs/srv/dds_fastrtps_c"
+  "/opt/ros/galactic/include/sensor_msgs/action/dds_fastrtps_c"
+  "/opt/ros/galactic/include/geometry_msgs/msg/dds_fastrtps_c"
+  "/opt/ros/galactic/include/geometry_msgs/srv/dds_fastrtps_c"
+  "/opt/ros/galactic/include/geometry_msgs/action/dds_fastrtps_c"
   "/opt/ros/galactic/include"
   "/opt/ros/galactic/include/foonathan_memory"
   )

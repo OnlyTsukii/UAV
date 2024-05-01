@@ -1,3 +1,5 @@
+msg/DefectBox.idl
+msg/DefectBox.msg
 msg/Gpgga.idl
 msg/Gpgga.msg
 msg/Gpgsa.idl
@@ -10,5 +12,9 @@ msg/GpgsvSatellite.idl
 msg/GpgsvSatellite.msg
 msg/Gprmc.idl
 msg/Gprmc.msg
+msg/GpsFix.idl
+msg/GpsFix.msg
+msg/PixelPoint.idl
+msg/PixelPoint.msg
 msg/Sentence.idl
 msg/Sentence.msg

@@ -1,0 +1,2 @@
+int32 msg_id
+sensor_msgs/NavSatFix gps_fix
