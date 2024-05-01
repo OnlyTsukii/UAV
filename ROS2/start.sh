@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/bin/bash
 
 source /home/ccl/UAV/ROS2/install/setup.bash
@@ -6,13 +5,26 @@ ros2 run cmd_handler cmd_publisher
 
 wait
 exit 0
-=======
 
-#!/bin/bash
 
-# export ROS_DOMAIN_ID=8
-# source /opt/ros/galactic/setup.bash
-source /home/xs/UAV/ROS2/install/setup.bash
-ros2 run cmd_handler cmd_subscriber
-# ros2 run cmd_handler cmd_publisher
->>>>>>> 2719dffe3818bec570c79fd9b1e41a553e6e6b92
+def print_boxes(xywh):
+    x, y, w, h = xywh
+
+    print(x, y, w, h)
+
+    x1 = "{:.5f}".format(x - w / 2)
+    y1 = "{:.5f}".format(y - h / 2)
+
+    x2 = "{:.5f}".format(x + w / 2)
+    y2 = "{:.5f}".format(y - h / 2)
+
+    x3 = "{:.5f}".format(x - w / 2)
+    y3 = "{:.5f}".format(y + h / 2)
+
+    x4 = "{:.5f}".format(x + w / 2)
+    y4 = "{:.5f}".format(y + h / 2)
+
+    print(f"[{x1}, {y1}] --- [{x2}, {y2}]")
+    print(f"                    |")
+    print(f"[{x3}, {y3}] --- [{x4}, {y4}]")
+    print()
