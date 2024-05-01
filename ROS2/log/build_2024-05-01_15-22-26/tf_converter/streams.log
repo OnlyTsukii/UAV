@@ -1,0 +1,20 @@
+[0.940s] Invoking command in '/home/xs/UAV/ROS2/tf_converter': PYTHONPATH=/home/xs/UAV/ROS2/build/tf_converter/prefix_override:/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/tf_converter build --build-base /home/xs/UAV/ROS2/build/tf_converter/build install --record /home/xs/UAV/ROS2/build/tf_converter/install.log --single-version-externally-managed install_data
+[1.104s] running egg_info
+[1.105s] writing ../build/tf_converter/tf_converter.egg-info/PKG-INFO
+[1.105s] writing dependency_links to ../build/tf_converter/tf_converter.egg-info/dependency_links.txt
+[1.105s] writing entry points to ../build/tf_converter/tf_converter.egg-info/entry_points.txt
+[1.105s] writing requirements to ../build/tf_converter/tf_converter.egg-info/requires.txt
+[1.105s] writing top-level names to ../build/tf_converter/tf_converter.egg-info/top_level.txt
+[1.134s] reading manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+[1.135s] writing manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+[1.135s] running build
+[1.135s] running build_py
+[1.135s] running install
+[1.136s] running install_lib
+[1.137s] running install_data
+[1.137s] running install_egg_info
+[1.139s] removing '/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter-0.0.0-py3.8.egg-info' (and everything under it)
+[1.139s] Copying ../build/tf_converter/tf_converter.egg-info to /home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter-0.0.0-py3.8.egg-info
+[1.140s] running install_scripts
+[1.155s] writing list of installed files to '/home/xs/UAV/ROS2/build/tf_converter/install.log'
+[1.182s] Invoked command in '/home/xs/UAV/ROS2/tf_converter' returned '0': PYTHONPATH=/home/xs/UAV/ROS2/build/tf_converter/prefix_override:/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/tf_converter build --build-base /home/xs/UAV/ROS2/build/tf_converter/build install --record /home/xs/UAV/ROS2/build/tf_converter/install.log --single-version-externally-managed install_data

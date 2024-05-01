@@ -1,4 +1,4 @@
-setuptools
-pyserial
 numpy
+pyserial
 pyyaml
+setuptools

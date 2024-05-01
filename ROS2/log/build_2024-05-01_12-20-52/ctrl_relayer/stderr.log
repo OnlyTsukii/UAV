@@ -1,5 +1,0 @@
-  File "/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer/cmd_subscriber.py", line 21
-    <<<<<<< HEAD:ROS2/build/ctrl_relayer/build/lib/ctrl_relayer/cmd_subscriber.py
-    ^
-SyntaxError: invalid syntax
-

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ccl/UAV/ROS2/build/nmea_msgs/nmea_msgs__py
+# Install script for directory: /home/xs/UAV/ROS2/build/nmea_msgs/nmea_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ccl/UAV/ROS2/install/nmea_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/xs/UAV/ROS2/install/nmea_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

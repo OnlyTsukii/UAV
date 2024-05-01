@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nmea_msgs/msg/Gpgsv.msg
+// generated code does not contain a copyright notice
+
+#include "nmea_msgs/msg/GpgsvSatellite.idl"
+#include "std_msgs/msg/Header.idl"
+
+module nmea_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Total number of satellites in view and data about satellites" "\n"
+      " Because the NMEA sentence is limited to 4 satellites per message, several" "\n"
+      " of these messages may need to be synthesized to get data about all visible" "\n"
+      " satellites.")
+    struct Gpgsv {
+      std_msgs::msg::Header header;
+
+      string message_id;
+
+      @verbatim (language="comment", text=
+        " Number of messages in this sequence")
+      uint8 n_msgs;
+
+      @verbatim (language="comment", text=
+        " This messages number in its sequence. The first message is number 1.")
+      uint8 msg_number;
+
+      @verbatim (language="comment", text=
+        " Number of satellites currently visible")
+      uint8 n_satellites;
+
+      @verbatim (language="comment", text=
+        " Up to 4 satellites are described in each message")
+      sequence<nmea_msgs::msg::GpgsvSatellite> satellites;
+    };
+  };
+};

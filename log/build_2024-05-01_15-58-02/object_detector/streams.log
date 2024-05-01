@@ -1,0 +1,37 @@
+[0.897s] Invoking command in '/home/xs/UAV/ROS2/object_detector': PYTHONPATH=/home/xs/UAV/build/object_detector/prefix_override:/home/xs/UAV/install/object_detector/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/object_detector build --build-base /home/xs/UAV/build/object_detector/build install --record /home/xs/UAV/build/object_detector/install.log --single-version-externally-managed install_data
+[1.066s] running egg_info
+[1.066s] creating ../../build/object_detector/object_detector.egg-info
+[1.067s] writing ../../build/object_detector/object_detector.egg-info/PKG-INFO
+[1.067s] writing dependency_links to ../../build/object_detector/object_detector.egg-info/dependency_links.txt
+[1.067s] writing entry points to ../../build/object_detector/object_detector.egg-info/entry_points.txt
+[1.067s] writing requirements to ../../build/object_detector/object_detector.egg-info/requires.txt
+[1.067s] writing top-level names to ../../build/object_detector/object_detector.egg-info/top_level.txt
+[1.068s] writing manifest file '../../build/object_detector/object_detector.egg-info/SOURCES.txt'
+[1.097s] reading manifest file '../../build/object_detector/object_detector.egg-info/SOURCES.txt'
+[1.098s] writing manifest file '../../build/object_detector/object_detector.egg-info/SOURCES.txt'
+[1.098s] running build
+[1.098s] running build_py
+[1.098s] creating /home/xs/UAV/build/object_detector/build
+[1.098s] creating /home/xs/UAV/build/object_detector/build/lib
+[1.098s] creating /home/xs/UAV/build/object_detector/build/lib/object_detector
+[1.100s] copying object_detector/dft_publisher.py -> /home/xs/UAV/build/object_detector/build/lib/object_detector
+[1.100s] copying object_detector/__init__.py -> /home/xs/UAV/build/object_detector/build/lib/object_detector
+[1.100s] running install
+[1.100s] running install_lib
+[1.100s] creating /home/xs/UAV/install/object_detector/lib/python3.8/site-packages/object_detector
+[1.100s] copying /home/xs/UAV/build/object_detector/build/lib/object_detector/dft_publisher.py -> /home/xs/UAV/install/object_detector/lib/python3.8/site-packages/object_detector
+[1.100s] copying /home/xs/UAV/build/object_detector/build/lib/object_detector/__init__.py -> /home/xs/UAV/install/object_detector/lib/python3.8/site-packages/object_detector
+[1.101s] byte-compiling /home/xs/UAV/install/object_detector/lib/python3.8/site-packages/object_detector/dft_publisher.py to dft_publisher.cpython-38.pyc
+[1.102s] byte-compiling /home/xs/UAV/install/object_detector/lib/python3.8/site-packages/object_detector/__init__.py to __init__.cpython-38.pyc
+[1.102s] running install_data
+[1.102s] creating /home/xs/UAV/install/object_detector/share/ament_index
+[1.103s] creating /home/xs/UAV/install/object_detector/share/ament_index/resource_index
+[1.103s] creating /home/xs/UAV/install/object_detector/share/ament_index/resource_index/packages
+[1.103s] copying resource/object_detector -> /home/xs/UAV/install/object_detector/share/ament_index/resource_index/packages
+[1.103s] copying package.xml -> /home/xs/UAV/install/object_detector/share/object_detector
+[1.103s] running install_egg_info
+[1.104s] Copying ../../build/object_detector/object_detector.egg-info to /home/xs/UAV/install/object_detector/lib/python3.8/site-packages/object_detector-0.0.0-py3.8.egg-info
+[1.104s] running install_scripts
+[1.115s] Installing dft_publisher script to /home/xs/UAV/install/object_detector/lib/object_detector
+[1.115s] writing list of installed files to '/home/xs/UAV/build/object_detector/install.log'
+[1.156s] Invoked command in '/home/xs/UAV/ROS2/object_detector' returned '0': PYTHONPATH=/home/xs/UAV/build/object_detector/prefix_override:/home/xs/UAV/install/object_detector/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/object_detector build --build-base /home/xs/UAV/build/object_detector/build install --record /home/xs/UAV/build/object_detector/install.log --single-version-externally-managed install_data

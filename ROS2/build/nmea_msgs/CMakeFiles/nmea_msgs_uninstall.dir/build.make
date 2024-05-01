@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ccl/UAV/ROS2/nmea_msgs
+CMAKE_SOURCE_DIR = /home/xs/UAV/ROS2/nmea_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ccl/UAV/ROS2/build/nmea_msgs
+CMAKE_BINARY_DIR = /home/xs/UAV/ROS2/build/nmea_msgs
 
 # Utility rule file for nmea_msgs_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ccl/UAV/ROS2/build/nmea_msgs
 include CMakeFiles/nmea_msgs_uninstall.dir/progress.make
 
 CMakeFiles/nmea_msgs_uninstall:
-	/usr/bin/cmake -P /home/ccl/UAV/ROS2/build/nmea_msgs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/xs/UAV/ROS2/build/nmea_msgs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 nmea_msgs_uninstall: CMakeFiles/nmea_msgs_uninstall
 nmea_msgs_uninstall: CMakeFiles/nmea_msgs_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/nmea_msgs_uninstall.dir/clean:
 .PHONY : CMakeFiles/nmea_msgs_uninstall.dir/clean
 
 CMakeFiles/nmea_msgs_uninstall.dir/depend:
-	cd /home/ccl/UAV/ROS2/build/nmea_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ccl/UAV/ROS2/nmea_msgs /home/ccl/UAV/ROS2/nmea_msgs /home/ccl/UAV/ROS2/build/nmea_msgs /home/ccl/UAV/ROS2/build/nmea_msgs /home/ccl/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xs/UAV/ROS2/build/nmea_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/nmea_msgs /home/xs/UAV/ROS2/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nmea_msgs_uninstall.dir/depend
 

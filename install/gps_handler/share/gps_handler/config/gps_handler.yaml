@@ -1,0 +1,8 @@
+gps_handler:
+  ros__parameters:
+    vid: 0x0001
+    pid: 0x0002
+    baud: 9600
+    frame_id: "gps"
+    time_ref_source: "gps"
+    useRMC: False

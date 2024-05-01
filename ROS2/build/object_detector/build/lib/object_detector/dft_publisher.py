@@ -3,8 +3,7 @@ import threading
 
 from rclpy.node import Node
 from std_msgs.msg import Int16
-from object_detector.yolov5 import detect
-
+from ultralytics import YOLO
 
 
 class Dft_Publisher(Node):
@@ -19,9 +18,20 @@ class Dft_Publisher(Node):
         self.get_logger().info(f"Publishing message {msg.data}")
 
 
-def detector(weights, imgz):
-    print("Detector started")
-    detect.run(weights=weights, imgsz=imgz)
+def detect():
+
+    model = YOLO('yolov8n.pt')  
+
+    source = 'https://ultralytics.com/images/bus.jpg'
+
+    results = model(source, stream=True)  
+
+    for result in results:
+        boxes = result.boxes  # Boxes object for bounding box outputs
+        masks = result.masks  # Masks object for segmentation masks outputs
+        keypoints = result.keypoints  # Keypoints object for pose outputs
+        probs = result.probs  # Probs object for classification outputs
+        result.save(filename='result.jpg')  # save to disk
 
 
 def main(args=None):
@@ -29,8 +39,7 @@ def main(args=None):
 
     dft_publisher = Dft_Publisher()
 
-    detect_thread = threading.Thread(target=detect.run, args=('weights/anomaly_detect.pt', 416))
-    detect_thread.start()
+    detect()
 
     rclpy.spin(dft_publisher)
 

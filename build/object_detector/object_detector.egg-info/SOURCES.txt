@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/object_detector/object_detector.egg-info/PKG-INFO
+../../build/object_detector/object_detector.egg-info/SOURCES.txt
+../../build/object_detector/object_detector.egg-info/dependency_links.txt
+../../build/object_detector/object_detector.egg-info/entry_points.txt
+../../build/object_detector/object_detector.egg-info/requires.txt
+../../build/object_detector/object_detector.egg-info/top_level.txt
+../../build/object_detector/object_detector.egg-info/zip-safe
+object_detector/__init__.py
+object_detector/dft_publisher.py
+resource/object_detector
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

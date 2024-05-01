@@ -4,6 +4,7 @@ setup.py
 ../build/tf_converter/tf_converter.egg-info/PKG-INFO
 ../build/tf_converter/tf_converter.egg-info/SOURCES.txt
 ../build/tf_converter/tf_converter.egg-info/dependency_links.txt
+../build/tf_converter/tf_converter.egg-info/entry_points.txt
 ../build/tf_converter/tf_converter.egg-info/requires.txt
 ../build/tf_converter/tf_converter.egg-info/top_level.txt
 ../build/tf_converter/tf_converter.egg-info/zip-safe

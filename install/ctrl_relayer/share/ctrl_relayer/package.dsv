@@ -1,0 +1,6 @@
+source;share/ctrl_relayer/hook/pythonpath.ps1
+source;share/ctrl_relayer/hook/pythonpath.dsv
+source;share/ctrl_relayer/hook/pythonpath.sh
+source;share/ctrl_relayer/hook/ament_prefix_path.ps1
+source;share/ctrl_relayer/hook/ament_prefix_path.dsv
+source;share/ctrl_relayer/hook/ament_prefix_path.sh

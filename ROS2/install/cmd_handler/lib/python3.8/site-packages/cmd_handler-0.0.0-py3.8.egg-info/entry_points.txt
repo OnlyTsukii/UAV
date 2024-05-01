@@ -1,4 +1,0 @@
-[console_scripts]
-cmd_publisher = cmd_handler.cmd_publisher:main
-cmd_subscriber = cmd_handler.cmd_subscriber:main
-

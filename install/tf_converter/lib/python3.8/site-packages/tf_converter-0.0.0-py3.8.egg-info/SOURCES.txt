@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/tf_converter/tf_converter.egg-info/PKG-INFO
+../../build/tf_converter/tf_converter.egg-info/SOURCES.txt
+../../build/tf_converter/tf_converter.egg-info/dependency_links.txt
+../../build/tf_converter/tf_converter.egg-info/entry_points.txt
+../../build/tf_converter/tf_converter.egg-info/requires.txt
+../../build/tf_converter/tf_converter.egg-info/top_level.txt
+../../build/tf_converter/tf_converter.egg-info/zip-safe
+resource/tf_converter
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+tf_converter/__init__.py
