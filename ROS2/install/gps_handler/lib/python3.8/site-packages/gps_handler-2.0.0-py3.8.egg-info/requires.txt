@@ -1,0 +1,4 @@
+setuptools
+pyserial
+numpy
+pyyaml

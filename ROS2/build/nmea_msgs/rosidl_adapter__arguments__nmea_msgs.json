@@ -1,0 +1,12 @@
+{
+  "package_name": "nmea_msgs",
+  "non_idl_tuples": [
+    "/home/ccl/UAV/ROS2/nmea_msgs:msg/Sentence.msg",
+    "/home/ccl/UAV/ROS2/nmea_msgs:msg/Gpgga.msg",
+    "/home/ccl/UAV/ROS2/nmea_msgs:msg/Gpgsa.msg",
+    "/home/ccl/UAV/ROS2/nmea_msgs:msg/Gpgst.msg",
+    "/home/ccl/UAV/ROS2/nmea_msgs:msg/Gpgsv.msg",
+    "/home/ccl/UAV/ROS2/nmea_msgs:msg/GpgsvSatellite.msg",
+    "/home/ccl/UAV/ROS2/nmea_msgs:msg/Gprmc.msg"
+  ]
+}

@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nmea_msgs/msg/Sentence.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module nmea_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " A message representing a single NMEA0183 sentence.")
+    struct Sentence {
+      @verbatim (language="comment", text=
+        " header.stamp is the ROS Time when the sentence was read." "\n"
+        " header.frame_id is the frame of reference reported by the satellite" "\n"
+        "        receiver, usually the location of the antenna.  This is a" "\n"
+        "        Euclidean frame relative to the vehicle, not a reference" "\n"
+        "        ellipsoid.")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " This should only contain ASCII characters in order to be a valid NMEA0183 sentence.")
+      string sentence;
+    };
+  };
+};

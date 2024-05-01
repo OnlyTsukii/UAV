@@ -1,0 +1,36 @@
+running egg_info
+creating ../build/ctrl_relayer/ctrl_relayer.egg-info
+writing ../build/ctrl_relayer/ctrl_relayer.egg-info/PKG-INFO
+writing dependency_links to ../build/ctrl_relayer/ctrl_relayer.egg-info/dependency_links.txt
+writing entry points to ../build/ctrl_relayer/ctrl_relayer.egg-info/entry_points.txt
+writing requirements to ../build/ctrl_relayer/ctrl_relayer.egg-info/requires.txt
+writing top-level names to ../build/ctrl_relayer/ctrl_relayer.egg-info/top_level.txt
+writing manifest file '../build/ctrl_relayer/ctrl_relayer.egg-info/SOURCES.txt'
+reading manifest file '../build/ctrl_relayer/ctrl_relayer.egg-info/SOURCES.txt'
+writing manifest file '../build/ctrl_relayer/ctrl_relayer.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ccl/UAV/ROS2/build/ctrl_relayer/build
+creating /home/ccl/UAV/ROS2/build/ctrl_relayer/build/lib
+creating /home/ccl/UAV/ROS2/build/ctrl_relayer/build/lib/ctrl_relayer
+copying ctrl_relayer/cmd_subscriber.py -> /home/ccl/UAV/ROS2/build/ctrl_relayer/build/lib/ctrl_relayer
+copying ctrl_relayer/__init__.py -> /home/ccl/UAV/ROS2/build/ctrl_relayer/build/lib/ctrl_relayer
+running install
+running install_lib
+creating /home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer
+copying /home/ccl/UAV/ROS2/build/ctrl_relayer/build/lib/ctrl_relayer/cmd_subscriber.py -> /home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer
+copying /home/ccl/UAV/ROS2/build/ctrl_relayer/build/lib/ctrl_relayer/__init__.py -> /home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer
+byte-compiling /home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer/cmd_subscriber.py to cmd_subscriber.cpython-38.pyc
+byte-compiling /home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/ccl/UAV/ROS2/install/ctrl_relayer/share/ament_index
+creating /home/ccl/UAV/ROS2/install/ctrl_relayer/share/ament_index/resource_index
+creating /home/ccl/UAV/ROS2/install/ctrl_relayer/share/ament_index/resource_index/packages
+copying resource/ctrl_relayer -> /home/ccl/UAV/ROS2/install/ctrl_relayer/share/ament_index/resource_index/packages
+copying package.xml -> /home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer
+copying launch/ctrl_relayer.launch.py -> /home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer
+running install_egg_info
+Copying ../build/ctrl_relayer/ctrl_relayer.egg-info to /home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages/ctrl_relayer-0.0.0-py3.8.egg-info
+running install_scripts
+Installing cmd_subscriber script to /home/ccl/UAV/ROS2/install/ctrl_relayer/lib/ctrl_relayer
+writing list of installed files to '/home/ccl/UAV/ROS2/build/ctrl_relayer/install.log'

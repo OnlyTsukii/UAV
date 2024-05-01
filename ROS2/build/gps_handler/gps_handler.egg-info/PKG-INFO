@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: gps_handler
+Version: 2.0.0
+Summary: Package to parse NMEA strings and publish a very simple GPS message.
+Author: Eric Perko
+Maintainer: Ed Venator
+License: BSD
+Keywords: ROS2
+Requires-Dist: setuptools
+Requires-Dist: pyserial
+Requires-Dist: numpy
+Requires-Dist: pyyaml

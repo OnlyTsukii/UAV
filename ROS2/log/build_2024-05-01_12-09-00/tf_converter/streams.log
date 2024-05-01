@@ -1,0 +1,32 @@
+[1.887s] Invoking command in '/home/ccl/UAV/ROS2/tf_converter': PYTHONPATH=/home/ccl/UAV/ROS2/build/tf_converter/prefix_override:/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/tf_converter build --build-base /home/ccl/UAV/ROS2/build/tf_converter/build install --record /home/ccl/UAV/ROS2/build/tf_converter/install.log --single-version-externally-managed install_data
+[2.270s] running egg_info
+[2.270s] creating ../build/tf_converter/tf_converter.egg-info
+[2.295s] writing ../build/tf_converter/tf_converter.egg-info/PKG-INFO
+[2.296s] writing dependency_links to ../build/tf_converter/tf_converter.egg-info/dependency_links.txt
+[2.296s] writing requirements to ../build/tf_converter/tf_converter.egg-info/requires.txt
+[2.297s] writing top-level names to ../build/tf_converter/tf_converter.egg-info/top_level.txt
+[2.464s] writing manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+[2.517s] reading manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+[2.518s] writing manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+[2.518s] running build
+[2.518s] running build_py
+[2.518s] creating /home/ccl/UAV/ROS2/build/tf_converter/build
+[2.519s] creating /home/ccl/UAV/ROS2/build/tf_converter/build/lib
+[2.519s] creating /home/ccl/UAV/ROS2/build/tf_converter/build/lib/tf_converter
+[2.519s] copying tf_converter/__init__.py -> /home/ccl/UAV/ROS2/build/tf_converter/build/lib/tf_converter
+[2.519s] running install
+[2.523s] running install_lib
+[2.548s] creating /home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter
+[2.548s] copying /home/ccl/UAV/ROS2/build/tf_converter/build/lib/tf_converter/__init__.py -> /home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter
+[2.549s] byte-compiling /home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter/__init__.py to __init__.cpython-38.pyc
+[2.549s] running install_data
+[2.550s] creating /home/ccl/UAV/ROS2/install/tf_converter/share/ament_index
+[2.550s] creating /home/ccl/UAV/ROS2/install/tf_converter/share/ament_index/resource_index
+[2.550s] creating /home/ccl/UAV/ROS2/install/tf_converter/share/ament_index/resource_index/packages
+[2.550s] copying resource/tf_converter -> /home/ccl/UAV/ROS2/install/tf_converter/share/ament_index/resource_index/packages
+[2.550s] copying package.xml -> /home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter
+[2.551s] running install_egg_info
+[2.579s] Copying ../build/tf_converter/tf_converter.egg-info to /home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter-0.0.0-py3.8.egg-info
+[2.581s] running install_scripts
+[2.650s] writing list of installed files to '/home/ccl/UAV/ROS2/build/tf_converter/install.log'
+[2.670s] Invoked command in '/home/ccl/UAV/ROS2/tf_converter' returned '0': PYTHONPATH=/home/ccl/UAV/ROS2/build/tf_converter/prefix_override:/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/tf_converter build --build-base /home/ccl/UAV/ROS2/build/tf_converter/build install --record /home/ccl/UAV/ROS2/build/tf_converter/install.log --single-version-externally-managed install_data

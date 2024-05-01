@@ -22,36 +22,42 @@
 #include <libusb.h>
 #include <arpa/inet.h>
 
-#define PORT 8889
+#define PORT        8889
 #define BUFFER_SIZE 64
-#define CMD_SHOOT "1"
+#define CMD_SHOOT   "1"
 
-#define WIDTH 640
-#define HEIGHT 512
+#define YOLO_IP   "127.0.0.1"
+#define YOLO_PORT 8890
 
-#define DEV_TYPE 0             // COIN612R
-#define LENS_TYPE 2            // 13mm
-#define CONV_NUM WIDTH *HEIGHT // Number of temperature conversions
+#define WIDTH   640
+#define HEIGHT  512
+
+#define DEV_TYPE    0           // COIN612R
+#define LENS_TYPE   2           // 13mm
+#define CONV_NUM WIDTH *HEIGHT  // Number of temperature conversions
 
 #define VIDEO_FRAME_RATE 30
-#define INPUT_FILE_NAME "/home/xs/InfraredCamera/images/output%d.bmp"
-#define OUTPUT_FILE_NAME "/home/xs/InfraredCamera/output.mp4"
+#define INPUT_FILE_NAME "/home/ccl/UAV/InfraredCamera/images/output%d.bmp"
+#define OUTPUT_FILE_NAME "/home/ccl//UAV/InfraredCamera/output.mp4"
 #define VIDEO_FORMAT "yuv420p"
 #define CONSTANT_RATE_FACTOR 10
 
-#define IMAGE_FOLDER "/home/xs/InfraredCamera/images"
-#define TEMP_FOLDER "/home/xs/InfraredCamera/temp"
+#define IMAGE_FOLDER "/home/ccl//UAV/InfraredCamera/images"
+#define TEMP_FOLDER "/home/ccl//UAV//InfraredCamera/temp"
 
-#define IMAGE_PREFIX "/home/xs/InfraredCamera/images/output"
+#define IMAGE_PREFIX "/home/ccl//UAV/InfraredCamera/images/output"
 #define IMAGE_SUBFIX ".bmp"
 
-#define TEMPMAT_PREFIX "/home/xs/InfraredCamera/temp/temp_mat"
+#define TEMPMAT_PREFIX "/home/ccl//UAV/InfraredCamera/temp/temp_mat"
 #define TEMPMAT_SUBFIX ".txt"
 
 int sockfd;
 struct sockaddr_in server_addr, client_addr;
 socklen_t addr_len = 0;
 bool shutter = false;
+
+int client_socketfd;
+struct sockaddr_in yolo_addr;
 
 SDL_Overlay *Overlay;
 SDL_Surface *Surface;
@@ -73,12 +79,28 @@ int temp_idx = 0;
 int bmp_idx = 0;
 
 void socket_serve();
+void socket_client_init();
 int serailCallBack(int id, guide_usb_serial_data_t *pSerialData);
 int connectStatusCallBack(int id, guide_usb_device_status_e deviceStatus);
 int frameCallBack(int id, guide_usb_frame_data_t *pVideoData);
 // void img2video(char *input_files, int framerate, char *output_file, char *video_format, int crf);
 int clear_folder(char *dirname);
 
+
+void socket_client_init(){
+    if ((client_socketfd = socket(AF_INET, SOCK_DGRAM, 0)) == -1) {
+        printf("Create socket failed");
+        return;
+    }
+
+    memset(&yolo_addr, 0, sizeof(yolo_addr));
+    yolo_addr.sin_family = AF_INET;
+    yolo_addr.sin_port = htons(YOLO_PORT);
+    if (inet_pton(AF_INET, YOLO_IP, &yolo_addr.sin_addr) <= 0) {
+        printf("Invalid IP address");
+        return;
+    }
+}
 
 void socket_serve()
 {
@@ -154,8 +176,12 @@ int main(void)
         }
     }
 
+    // // int cnt = 0;
     while (1)
     {
+        // FILE *file = fopen("/home/ccl/InfraredCamera/test", "a");
+        // fprintf(file, "%d\n", cnt++);
+        // fclose(file);
 
         gd_dev_handle = libusb_open_device_with_vid_pid(NULL, 0x04b4, 0xf7f7);
         if (gd_dev_handle == NULL)
@@ -171,6 +197,8 @@ int main(void)
             break;
         }
     }
+
+    socket_client_init();
 
     // Clear old images first
     int ret = clear_folder(TEMP_FOLDER);
@@ -448,6 +476,9 @@ int frameCallBack(int id, guide_usb_frame_data_t *pVideoData)
 
             bmp_img_write(&img, file_name);
             bmp_img_free(&img);
+
+            sendto(client_socketfd, file_name, strlen(file_name), 0, (struct sockaddr *)&yolo_addr, sizeof(yolo_addr));
+            printf("Send message %s to server \n", file_name);
         }
 
         // memcpy(yuv422Data, pVideoData->frame_yuv_data, WIDTH * HEIGHT * 2);

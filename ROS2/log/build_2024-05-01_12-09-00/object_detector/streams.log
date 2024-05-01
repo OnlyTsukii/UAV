@@ -1,0 +1,60 @@
+[1.976s] Invoking command in '/home/ccl/UAV/ROS2/object_detector': PYTHONPATH=/home/ccl/UAV/ROS2/build/object_detector/prefix_override:/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_detector build --build-base /home/ccl/UAV/ROS2/build/object_detector/build install --record /home/ccl/UAV/ROS2/build/object_detector/install.log --single-version-externally-managed install_data
+[2.381s] running egg_info
+[2.381s] creating ../build/object_detector/object_detector.egg-info
+[2.431s] writing ../build/object_detector/object_detector.egg-info/PKG-INFO
+[2.432s] writing dependency_links to ../build/object_detector/object_detector.egg-info/dependency_links.txt
+[2.432s] writing entry points to ../build/object_detector/object_detector.egg-info/entry_points.txt
+[2.433s] writing requirements to ../build/object_detector/object_detector.egg-info/requires.txt
+[2.434s] writing top-level names to ../build/object_detector/object_detector.egg-info/top_level.txt
+[2.735s] writing manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'
+[2.795s] reading manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'
+[2.795s] writing manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'
+[2.796s] running build
+[2.796s] running build_py
+[2.796s] creating /home/ccl/UAV/ROS2/build/object_detector/build
+[2.802s] creating /home/ccl/UAV/ROS2/build/object_detector/build/lib
+[2.803s] creating /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector
+[2.803s] copying object_detector/dft_publisher.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector
+[2.804s] copying object_detector/__init__.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector
+[2.804s] creating /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5
+[2.805s] copying object_detector/yolov5/export.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5
+[2.805s] copying object_detector/yolov5/train.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5
+[2.805s] copying object_detector/yolov5/hubconf.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5
+[2.806s] copying object_detector/yolov5/val.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5
+[2.806s] copying object_detector/yolov5/__init__.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5
+[2.806s] copying object_detector/yolov5/detect.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5
+[2.806s] copying object_detector/yolov5/benchmarks.py -> /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5
+[2.806s] running install
+[2.810s] running install_lib
+[2.837s] creating /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector
+[2.837s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/dft_publisher.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector
+[2.837s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/__init__.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector
+[2.837s] creating /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5
+[2.838s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5/export.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5
+[2.838s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5/train.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5
+[2.838s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5/hubconf.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5
+[2.838s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5/val.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5
+[2.838s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5/__init__.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5
+[2.839s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5/detect.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5
+[2.839s] copying /home/ccl/UAV/ROS2/build/object_detector/build/lib/object_detector/yolov5/benchmarks.py -> /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5
+[2.840s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/dft_publisher.py to dft_publisher.cpython-38.pyc
+[2.841s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/__init__.py to __init__.cpython-38.pyc
+[2.841s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5/export.py to export.cpython-38.pyc
+[2.850s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5/train.py to train.cpython-38.pyc
+[2.856s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5/hubconf.py to hubconf.cpython-38.pyc
+[2.857s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5/val.py to val.cpython-38.pyc
+[2.860s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5/__init__.py to __init__.cpython-38.pyc
+[2.860s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5/detect.py to detect.cpython-38.pyc
+[2.862s] byte-compiling /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/yolov5/benchmarks.py to benchmarks.cpython-38.pyc
+[2.863s] running install_data
+[2.863s] creating /home/ccl/UAV/ROS2/install/object_detector/share/ament_index
+[2.863s] creating /home/ccl/UAV/ROS2/install/object_detector/share/ament_index/resource_index
+[2.864s] creating /home/ccl/UAV/ROS2/install/object_detector/share/ament_index/resource_index/packages
+[2.864s] copying resource/object_detector -> /home/ccl/UAV/ROS2/install/object_detector/share/ament_index/resource_index/packages
+[2.864s] copying package.xml -> /home/ccl/UAV/ROS2/install/object_detector/share/object_detector
+[2.864s] running install_egg_info
+[2.891s] Copying ../build/object_detector/object_detector.egg-info to /home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector-0.0.0-py3.8.egg-info
+[2.893s] running install_scripts
+[2.959s] Installing dft_publisher script to /home/ccl/UAV/ROS2/install/object_detector/lib/object_detector
+[2.960s] writing list of installed files to '/home/ccl/UAV/ROS2/build/object_detector/install.log'
+[2.980s] Invoked command in '/home/ccl/UAV/ROS2/object_detector' returned '0': PYTHONPATH=/home/ccl/UAV/ROS2/build/object_detector/prefix_override:/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_detector build --build-base /home/ccl/UAV/ROS2/build/object_detector/build install --record /home/ccl/UAV/ROS2/build/object_detector/install.log --single-version-externally-managed install_data

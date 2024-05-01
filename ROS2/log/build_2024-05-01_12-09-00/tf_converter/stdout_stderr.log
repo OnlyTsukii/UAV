@@ -1,0 +1,30 @@
+running egg_info
+creating ../build/tf_converter/tf_converter.egg-info
+writing ../build/tf_converter/tf_converter.egg-info/PKG-INFO
+writing dependency_links to ../build/tf_converter/tf_converter.egg-info/dependency_links.txt
+writing requirements to ../build/tf_converter/tf_converter.egg-info/requires.txt
+writing top-level names to ../build/tf_converter/tf_converter.egg-info/top_level.txt
+writing manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+reading manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+writing manifest file '../build/tf_converter/tf_converter.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ccl/UAV/ROS2/build/tf_converter/build
+creating /home/ccl/UAV/ROS2/build/tf_converter/build/lib
+creating /home/ccl/UAV/ROS2/build/tf_converter/build/lib/tf_converter
+copying tf_converter/__init__.py -> /home/ccl/UAV/ROS2/build/tf_converter/build/lib/tf_converter
+running install
+running install_lib
+creating /home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter
+copying /home/ccl/UAV/ROS2/build/tf_converter/build/lib/tf_converter/__init__.py -> /home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter
+byte-compiling /home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/ccl/UAV/ROS2/install/tf_converter/share/ament_index
+creating /home/ccl/UAV/ROS2/install/tf_converter/share/ament_index/resource_index
+creating /home/ccl/UAV/ROS2/install/tf_converter/share/ament_index/resource_index/packages
+copying resource/tf_converter -> /home/ccl/UAV/ROS2/install/tf_converter/share/ament_index/resource_index/packages
+copying package.xml -> /home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter
+running install_egg_info
+Copying ../build/tf_converter/tf_converter.egg-info to /home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/ccl/UAV/ROS2/build/tf_converter/install.log'

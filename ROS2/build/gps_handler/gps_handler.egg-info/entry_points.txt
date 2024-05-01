@@ -1,0 +1,2 @@
+[console_scripts]
+nmea_serial_driver = gps_handler.nodes.nmea_serial_driver:main
