@@ -10,13 +10,6 @@ setup.py
 ../build/object_detector/object_detector.egg-info/zip-safe
 object_detector/__init__.py
 object_detector/dft_publisher.py
-object_detector/yolov5/__init__.py
-object_detector/yolov5/benchmarks.py
-object_detector/yolov5/detect.py
-object_detector/yolov5/export.py
-object_detector/yolov5/hubconf.py
-object_detector/yolov5/train.py
-object_detector/yolov5/val.py
 resource/object_detector
 test/test_copyright.py
 test/test_flake8.py

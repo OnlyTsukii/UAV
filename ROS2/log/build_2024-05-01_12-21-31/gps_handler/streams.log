@@ -1,0 +1,32 @@
+[1.248s] Invoking command in '/home/ccl/UAV/ROS2/gps_handler': PYTHONPATH=/home/ccl/UAV/ROS2/build/gps_handler/prefix_override:/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/ccl/UAV/ROS2/build/gps_handler/build install --record /home/ccl/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data
+[1.577s] running egg_info
+[1.601s] writing ../build/gps_handler/gps_handler.egg-info/PKG-INFO
+[1.602s] writing dependency_links to ../build/gps_handler/gps_handler.egg-info/dependency_links.txt
+[1.602s] writing entry points to ../build/gps_handler/gps_handler.egg-info/entry_points.txt
+[1.602s] writing requirements to ../build/gps_handler/gps_handler.egg-info/requires.txt
+[1.602s] writing top-level names to ../build/gps_handler/gps_handler.egg-info/top_level.txt
+[1.814s] reading manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[1.815s] writing manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[1.816s] running build
+[1.816s] running build_py
+[1.816s] copying gps_handler/__init__.py -> /home/ccl/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.816s] copying gps_handler/parser.py -> /home/ccl/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.817s] copying gps_handler/checksum_utils.py -> /home/ccl/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.817s] copying gps_handler/driver.py -> /home/ccl/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.817s] copying gps_handler/nodes/nmea_serial_driver.py -> /home/ccl/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes
+[1.818s] copying gps_handler/nodes/__init__.py -> /home/ccl/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes
+[1.818s] copying gps_handler/nodes/gps_path.py -> /home/ccl/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes
+[1.818s] running install
+[1.822s] running install_lib
+[1.847s] running install_data
+[1.848s] copying resource/gps_handler -> /home/ccl/UAV/ROS2/install/gps_handler/share/ament_index/resource_index/packages
+[1.848s] copying package.xml -> /home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler
+[1.848s] copying launch/gps_handler.launch.py -> /home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/launch
+[1.848s] copying config/gps_handler.yaml -> /home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/config
+[1.849s] running install_egg_info
+[1.875s] removing '/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-2.0.0-py3.8.egg-info' (and everything under it)
+[1.875s] Copying ../build/gps_handler/gps_handler.egg-info to /home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-2.0.0-py3.8.egg-info
+[1.877s] running install_scripts
+[1.941s] Installing nmea_serial_driver script to /home/ccl/UAV/ROS2/install/gps_handler/lib/gps_handler
+[1.941s] writing list of installed files to '/home/ccl/UAV/ROS2/build/gps_handler/install.log'
+[1.962s] Invoked command in '/home/ccl/UAV/ROS2/gps_handler' returned '0': PYTHONPATH=/home/ccl/UAV/ROS2/build/gps_handler/prefix_override:/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/ccl/UAV/ROS2/build/gps_handler/build install --record /home/ccl/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data

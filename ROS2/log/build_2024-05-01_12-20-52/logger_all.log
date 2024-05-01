@@ -1,0 +1,343 @@
+[0.243s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.243s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5ef3d39c70>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5ef3d39c70>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f5ef3cecee0>)
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.294s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ccl/UAV/ROS2'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extensions ['ignore', 'ignore_ament_install']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extension 'ignore'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extension 'ignore_ament_install'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extensions ['colcon_pkg']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extension 'colcon_pkg'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extensions ['colcon_meta']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extension 'colcon_meta'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extensions ['ros']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(ctrl_relayer) by extension 'ros'
+[0.314s] DEBUG:colcon.colcon_core.package_identification:Package 'ctrl_relayer' with type 'ros.ament_python' and name 'ctrl_relayer'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extensions ['ignore', 'ignore_ament_install']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extension 'ignore'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extension 'ignore_ament_install'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extensions ['colcon_pkg']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extension 'colcon_pkg'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extensions ['colcon_meta']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extension 'colcon_meta'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extensions ['ros']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(gps_handler) by extension 'ros'
+[0.315s] DEBUG:colcon.colcon_core.package_identification:Package 'gps_handler' with type 'ros.ament_python' and name 'gps_handler'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extension 'colcon_meta'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extensions ['ros']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(nmea_msgs) by extension 'ros'
+[0.317s] DEBUG:colcon.colcon_core.package_identification:Package 'nmea_msgs' with type 'ros.ament_cmake' and name 'nmea_msgs'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extension 'ignore_ament_install'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extensions ['colcon_pkg']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extension 'colcon_pkg'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(object_detector) by extension 'ros'
+[0.318s] DEBUG:colcon.colcon_core.package_identification:Package 'object_detector' with type 'ros.ament_python' and name 'object_detector'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extensions ['colcon_pkg']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(tf_converter) by extension 'ros'
+[0.320s] DEBUG:colcon.colcon_core.package_identification:Package 'tf_converter' with type 'ros.ament_python' and name 'tf_converter'
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.344s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/ccl/UAV/ROS2/install
+[0.346s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 277 installed packages in /opt/ros/galactic
+[0.349s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'cmake_target' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'cmake_clean_first' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'cmake_force_configure' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'ament_cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ctrl_relayer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.415s] DEBUG:colcon.colcon_core.verb:Building package 'ctrl_relayer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ccl/UAV/ROS2/build/ctrl_relayer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ccl/UAV/ROS2/install/ctrl_relayer', 'merge_install': False, 'path': '/home/ccl/UAV/ROS2/ctrl_relayer', 'symlink_install': False, 'test_result_base': None}
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'cmake_target' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'nmea_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.415s] DEBUG:colcon.colcon_core.verb:Building package 'nmea_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ccl/UAV/ROS2/build/nmea_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ccl/UAV/ROS2/install/nmea_msgs', 'merge_install': False, 'path': '/home/ccl/UAV/ROS2/nmea_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'cmake_args' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'cmake_target' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'cmake_clean_cache' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'cmake_clean_first' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'cmake_force_configure' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'ament_cmake_args' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'catkin_cmake_args' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'object_detector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.416s] DEBUG:colcon.colcon_core.verb:Building package 'object_detector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ccl/UAV/ROS2/build/object_detector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ccl/UAV/ROS2/install/object_detector', 'merge_install': False, 'path': '/home/ccl/UAV/ROS2/object_detector', 'symlink_install': False, 'test_result_base': None}
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'cmake_args' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'cmake_target' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'cmake_clean_first' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'cmake_force_configure' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'ament_cmake_args' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'tf_converter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.417s] DEBUG:colcon.colcon_core.verb:Building package 'tf_converter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ccl/UAV/ROS2/build/tf_converter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ccl/UAV/ROS2/install/tf_converter', 'merge_install': False, 'path': '/home/ccl/UAV/ROS2/tf_converter', 'symlink_install': False, 'test_result_base': None}
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'cmake_target' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'cmake_clean_cache' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'cmake_clean_first' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'cmake_force_configure' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'ament_cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'catkin_cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'gps_handler' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.417s] DEBUG:colcon.colcon_core.verb:Building package 'gps_handler' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ccl/UAV/ROS2/build/gps_handler', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ccl/UAV/ROS2/install/gps_handler', 'merge_install': False, 'path': '/home/ccl/UAV/ROS2/gps_handler', 'symlink_install': False, 'test_result_base': None}
+[0.417s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.419s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.419s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ccl/UAV/ROS2/nmea_msgs' with build type 'ament_cmake'
+[0.420s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ccl/UAV/ROS2/nmea_msgs'
+[0.423s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.423s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.423s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.432s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ccl/UAV/ROS2/ctrl_relayer' with build type 'ament_python'
+[0.434s] Level 1:colcon.colcon_core.shell:create_environment_hook('ctrl_relayer', 'ament_prefix_path')
+[0.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/hook/ament_prefix_path.ps1'
+[0.438s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/hook/ament_prefix_path.dsv'
+[0.439s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/hook/ament_prefix_path.sh'
+[0.440s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.440s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.450s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ccl/UAV/ROS2/object_detector' with build type 'ament_python'
+[0.453s] Level 1:colcon.colcon_core.shell:create_environment_hook('object_detector', 'ament_prefix_path')
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/hook/ament_prefix_path.ps1'
+[0.457s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/hook/ament_prefix_path.dsv'
+[0.458s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/hook/ament_prefix_path.sh'
+[0.459s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.459s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.474s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ccl/UAV/ROS2/tf_converter' with build type 'ament_python'
+[0.475s] Level 1:colcon.colcon_core.shell:create_environment_hook('tf_converter', 'ament_prefix_path')
+[0.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/hook/ament_prefix_path.ps1'
+[0.483s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/hook/ament_prefix_path.dsv'
+[0.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/hook/ament_prefix_path.sh'
+[0.488s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.488s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ccl/UAV/ROS2/build/nmea_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ccl/UAV/ROS2/install/tf_converter:/home/ccl/UAV/ROS2/install/object_detector:/home/ccl/UAV/ROS2/install/gps_handler:/home/ccl/UAV/ROS2/install/ctrl_relayer:/home/ccl/UAV/ROS2/install/cmd_handler:/opt/ros/galactic /usr/bin/cmake --build /home/ccl/UAV/ROS2/build/nmea_msgs -- -j8 -l8
+[0.783s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ccl/UAV/ROS2/ctrl_relayer'
+[0.785s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.785s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.060s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ccl/UAV/ROS2/object_detector'
+[1.062s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.062s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.327s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ccl/UAV/ROS2/tf_converter'
+[1.329s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.329s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ccl/UAV/ROS2/build/nmea_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ccl/UAV/ROS2/install/tf_converter:/home/ccl/UAV/ROS2/install/object_detector:/home/ccl/UAV/ROS2/install/gps_handler:/home/ccl/UAV/ROS2/install/ctrl_relayer:/home/ccl/UAV/ROS2/install/cmd_handler:/opt/ros/galactic /usr/bin/cmake --build /home/ccl/UAV/ROS2/build/nmea_msgs -- -j8 -l8
+[1.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ccl/UAV/ROS2/build/nmea_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ccl/UAV/ROS2/install/tf_converter:/home/ccl/UAV/ROS2/install/object_detector:/home/ccl/UAV/ROS2/install/gps_handler:/home/ccl/UAV/ROS2/install/ctrl_relayer:/home/ccl/UAV/ROS2/install/cmd_handler:/opt/ros/galactic /usr/bin/cmake --install /home/ccl/UAV/ROS2/build/nmea_msgs
+[2.018s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nmea_msgs)
+[2.025s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ccl/UAV/ROS2/build/nmea_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ccl/UAV/ROS2/install/tf_converter:/home/ccl/UAV/ROS2/install/object_detector:/home/ccl/UAV/ROS2/install/gps_handler:/home/ccl/UAV/ROS2/install/ctrl_relayer:/home/ccl/UAV/ROS2/install/cmd_handler:/opt/ros/galactic /usr/bin/cmake --install /home/ccl/UAV/ROS2/build/nmea_msgs
+[2.031s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs' for CMake module files
+[2.032s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs' for CMake config files
+[2.033s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_msgs', 'cmake_prefix_path')
+[2.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/cmake_prefix_path.ps1'
+[2.034s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/cmake_prefix_path.dsv'
+[2.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/cmake_prefix_path.sh'
+[2.036s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/lib'
+[2.036s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_msgs', 'ld_library_path_lib')
+[2.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/ld_library_path_lib.ps1'
+[2.038s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/ld_library_path_lib.dsv'
+[2.039s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/ld_library_path_lib.sh'
+[2.039s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/bin'
+[2.039s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/lib/pkgconfig/nmea_msgs.pc'
+[2.040s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages'
+[2.040s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_msgs', 'pythonpath')
+[2.040s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/pythonpath.ps1'
+[2.041s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/pythonpath.dsv'
+[2.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/pythonpath.sh'
+[2.042s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/bin'
+[2.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.ps1'
+[2.043s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.dsv'
+[2.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.sh'
+[2.045s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.bash'
+[2.045s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.zsh'
+[2.046s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ccl/UAV/ROS2/install/nmea_msgs/share/colcon-core/packages/nmea_msgs)
+[2.302s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ccl/UAV/ROS2/ctrl_relayer': PYTHONPATH=/home/ccl/UAV/ROS2/build/ctrl_relayer/prefix_override:/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/ctrl_relayer build --build-base /home/ccl/UAV/ROS2/build/ctrl_relayer/build install --record /home/ccl/UAV/ROS2/build/ctrl_relayer/install.log --single-version-externally-managed install_data
+[2.306s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ccl/UAV/ROS2/tf_converter': PYTHONPATH=/home/ccl/UAV/ROS2/build/tf_converter/prefix_override:/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/tf_converter build --build-base /home/ccl/UAV/ROS2/build/tf_converter/build install --record /home/ccl/UAV/ROS2/build/tf_converter/install.log --single-version-externally-managed install_data
+[2.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ccl/UAV/ROS2/object_detector': PYTHONPATH=/home/ccl/UAV/ROS2/build/object_detector/prefix_override:/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_detector build --build-base /home/ccl/UAV/ROS2/build/object_detector/build install --record /home/ccl/UAV/ROS2/build/object_detector/install.log --single-version-externally-managed install_data
+[2.516s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nmea_msgs)
+[2.517s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs' for CMake module files
+[2.518s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs' for CMake config files
+[2.519s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_msgs', 'cmake_prefix_path')
+[2.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/cmake_prefix_path.ps1'
+[2.520s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/cmake_prefix_path.dsv'
+[2.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/cmake_prefix_path.sh'
+[2.522s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/lib'
+[2.522s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_msgs', 'ld_library_path_lib')
+[2.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/ld_library_path_lib.ps1'
+[2.522s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/ld_library_path_lib.dsv'
+[2.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/ld_library_path_lib.sh'
+[2.523s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/bin'
+[2.524s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/lib/pkgconfig/nmea_msgs.pc'
+[2.524s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages'
+[2.524s] Level 1:colcon.colcon_core.shell:create_environment_hook('nmea_msgs', 'pythonpath')
+[2.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/pythonpath.ps1'
+[2.525s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/pythonpath.dsv'
+[2.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/hook/pythonpath.sh'
+[2.526s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/nmea_msgs/bin'
+[2.526s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.ps1'
+[2.527s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.dsv'
+[2.527s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.sh'
+[2.528s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.bash'
+[2.529s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.zsh'
+[2.529s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ccl/UAV/ROS2/install/nmea_msgs/share/colcon-core/packages/nmea_msgs)
+[2.530s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ccl/UAV/ROS2/gps_handler' with build type 'ament_python'
+[2.531s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_handler', 'ament_prefix_path')
+[2.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/hook/ament_prefix_path.ps1'
+[2.532s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/hook/ament_prefix_path.dsv'
+[2.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/hook/ament_prefix_path.sh'
+[2.534s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.534s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.823s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ccl/UAV/ROS2/gps_handler'
+[2.824s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.825s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.040s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/tf_converter' for CMake module files
+[3.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ccl/UAV/ROS2/tf_converter' returned '0': PYTHONPATH=/home/ccl/UAV/ROS2/build/tf_converter/prefix_override:/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/tf_converter build --build-base /home/ccl/UAV/ROS2/build/tf_converter/build install --record /home/ccl/UAV/ROS2/build/tf_converter/install.log --single-version-externally-managed install_data
+[3.042s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/tf_converter' for CMake config files
+[3.043s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/tf_converter/lib'
+[3.043s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/tf_converter/bin'
+[3.044s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/tf_converter/lib/pkgconfig/tf_converter.pc'
+[3.044s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages'
+[3.044s] Level 1:colcon.colcon_core.shell:create_environment_hook('tf_converter', 'pythonpath')
+[3.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/hook/pythonpath.ps1'
+[3.046s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/hook/pythonpath.dsv'
+[3.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/hook/pythonpath.sh'
+[3.047s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/tf_converter/bin'
+[3.047s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tf_converter)
+[3.047s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/package.ps1'
+[3.048s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/package.dsv'
+[3.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/package.sh'
+[3.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/package.bash'
+[3.050s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/tf_converter/share/tf_converter/package.zsh'
+[3.051s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ccl/UAV/ROS2/install/tf_converter/share/colcon-core/packages/tf_converter)
+[3.083s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/object_detector' for CMake module files
+[3.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ccl/UAV/ROS2/object_detector' returned '0': PYTHONPATH=/home/ccl/UAV/ROS2/build/object_detector/prefix_override:/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_detector build --build-base /home/ccl/UAV/ROS2/build/object_detector/build install --record /home/ccl/UAV/ROS2/build/object_detector/install.log --single-version-externally-managed install_data
+[3.085s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/object_detector' for CMake config files
+[3.086s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/object_detector/lib'
+[3.086s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/object_detector/bin'
+[3.087s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/object_detector/lib/pkgconfig/object_detector.pc'
+[3.087s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages'
+[3.087s] Level 1:colcon.colcon_core.shell:create_environment_hook('object_detector', 'pythonpath')
+[3.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/hook/pythonpath.ps1'
+[3.088s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/hook/pythonpath.dsv'
+[3.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/hook/pythonpath.sh'
+[3.089s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/object_detector/bin'
+[3.089s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(object_detector)
+[3.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/package.ps1'
+[3.090s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/package.dsv'
+[3.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/package.sh'
+[3.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/package.bash'
+[3.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/object_detector/share/object_detector/package.zsh'
+[3.093s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ccl/UAV/ROS2/install/object_detector/share/colcon-core/packages/object_detector)
+[3.099s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/ctrl_relayer' for CMake module files
+[3.100s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ccl/UAV/ROS2/ctrl_relayer' returned '0': PYTHONPATH=/home/ccl/UAV/ROS2/build/ctrl_relayer/prefix_override:/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/ctrl_relayer build --build-base /home/ccl/UAV/ROS2/build/ctrl_relayer/build install --record /home/ccl/UAV/ROS2/build/ctrl_relayer/install.log --single-version-externally-managed install_data
+[3.101s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/ctrl_relayer' for CMake config files
+[3.102s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/ctrl_relayer/lib'
+[3.102s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/ctrl_relayer/bin'
+[3.102s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/pkgconfig/ctrl_relayer.pc'
+[3.102s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages'
+[3.102s] Level 1:colcon.colcon_core.shell:create_environment_hook('ctrl_relayer', 'pythonpath')
+[3.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/hook/pythonpath.ps1'
+[3.103s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/hook/pythonpath.dsv'
+[3.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/hook/pythonpath.sh'
+[3.104s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/ctrl_relayer/bin'
+[3.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ctrl_relayer)
+[3.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/package.ps1'
+[3.105s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/package.dsv'
+[3.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/package.sh'
+[3.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/package.bash'
+[3.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/ctrl_relayer/share/ctrl_relayer/package.zsh'
+[3.107s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ccl/UAV/ROS2/install/ctrl_relayer/share/colcon-core/packages/ctrl_relayer)
+[3.756s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ccl/UAV/ROS2/gps_handler': PYTHONPATH=/home/ccl/UAV/ROS2/build/gps_handler/prefix_override:/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/ccl/UAV/ROS2/build/gps_handler/build install --record /home/ccl/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data
+[4.474s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/gps_handler' for CMake module files
+[4.474s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ccl/UAV/ROS2/gps_handler' returned '0': PYTHONPATH=/home/ccl/UAV/ROS2/build/gps_handler/prefix_override:/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/ctrl_relayer/lib/python3.8/site-packages:/home/ccl/UAV/ROS2/install/cmd_handler/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/ccl/UAV/ROS2/build/gps_handler/build install --record /home/ccl/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data
+[4.475s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/gps_handler' for CMake config files
+[4.477s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/gps_handler/lib'
+[4.477s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/gps_handler/bin'
+[4.477s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/gps_handler/lib/pkgconfig/gps_handler.pc'
+[4.478s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages'
+[4.478s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_handler', 'pythonpath')
+[4.478s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/hook/pythonpath.ps1'
+[4.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/hook/pythonpath.dsv'
+[4.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/hook/pythonpath.sh'
+[4.481s] Level 1:colcon.colcon_core.environment:checking '/home/ccl/UAV/ROS2/install/gps_handler/bin'
+[4.481s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gps_handler)
+[4.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/package.ps1'
+[4.482s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/package.dsv'
+[4.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/package.sh'
+[4.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/package.bash'
+[4.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/ccl/UAV/ROS2/install/gps_handler/share/gps_handler/package.zsh'
+[4.484s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ccl/UAV/ROS2/install/gps_handler/share/colcon-core/packages/gps_handler)
+[4.485s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.486s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.487s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.487s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.518s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.518s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.518s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.546s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.546s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ccl/UAV/ROS2/install/local_setup.ps1'
+[4.547s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ccl/UAV/ROS2/install/_local_setup_util_ps1.py'
+[4.548s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ccl/UAV/ROS2/install/setup.ps1'
+[4.550s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ccl/UAV/ROS2/install/local_setup.sh'
+[4.551s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ccl/UAV/ROS2/install/_local_setup_util_sh.py'
+[4.551s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ccl/UAV/ROS2/install/setup.sh'
+[4.553s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ccl/UAV/ROS2/install/local_setup.bash'
+[4.554s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ccl/UAV/ROS2/install/setup.bash'
+[4.555s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ccl/UAV/ROS2/install/local_setup.zsh'
+[4.556s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ccl/UAV/ROS2/install/setup.zsh'
