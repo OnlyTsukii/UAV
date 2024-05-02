@@ -15,7 +15,7 @@ class Ros2NMEADriver(Node):
     def __init__(self):
         super().__init__('nmea_navsat_driver')
 
-        self.fix_pub = self.create_publisher(GpsFix, 'fix', 10)
+        self.fix_pub = self.create_publisher(GpsFix, 'gps', 10)
         self.vel_pub = self.create_publisher(TwistStamped, 'vel', 10)
         self.heading_pub = self.create_publisher(QuaternionStamped, 'heading', 10)
         self.time_ref_pub = self.create_publisher(TimeReference, 'time_reference', 10)
@@ -30,7 +30,7 @@ class Ros2NMEADriver(Node):
         self.lon_dif_thr = 0.0000103
         self.alt_dif_thr = 1.0
 
-        self.msg_id = 0
+        self.gps_id = 0
 
         self.time_ref_source = self.declare_parameter('time_ref_source', 'gps').value
         self.use_RMC = self.declare_parameter('useRMC', False).value
@@ -173,10 +173,10 @@ class Ros2NMEADriver(Node):
 
             fix = GpsFix()
             fix.gps_fix = current_fix
-            fix.msg_id = self.msg_id
+            fix.gps_id = self.gps_id
             self.fix_pub.publish(fix)
 
-            self.msg_id = (self.msg_id + 1) % 256
+            self.gps_id = (self.gps_id + 1) % 256
 
             if not math.isnan(data['utc_time']):
                 current_time_ref.time_ref = rclpy.time.Time(seconds=data['utc_time']).to_msg()
@@ -223,10 +223,10 @@ class Ros2NMEADriver(Node):
 
                 fix = GpsFix()
                 fix.gps_fix = current_fix
-                fix.msg_id = self.msg_id
+                fix.gps_id = self.gps_id
                 self.fix_pub.publish(fix)
 
-                self.msg_id = (self.msg_id + 1) % 256
+                self.gps_id = (self.gps_id + 1) % 256
 
                 if not math.isnan(data['utc_time']):
                     current_time_ref.time_ref = rclpy.time.Time(seconds=data['utc_time']).to_msg()
@@ -276,7 +276,7 @@ class Ros2NMEADriver(Node):
             if lon_cur_thr >= self.lon_dif_thr or lat_cur_thr >= self.lat_dif_thr \
                 or alt_cur_thr >= self.alt_dif_thr:
                 ctrl_cmd = Int32()
-                ctrl_cmd.data = self.msg_id
+                ctrl_cmd.data = self.gps_id
                 self.ctrl_publisher.publish(ctrl_cmd)
                 self.get_logger().info(f"Publish IR camera control message { ctrl_cmd.data }")
 

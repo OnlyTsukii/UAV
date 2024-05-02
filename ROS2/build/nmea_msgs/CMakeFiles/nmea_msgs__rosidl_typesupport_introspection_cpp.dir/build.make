@@ -68,6 +68,7 @@ rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesu
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/nmea_msgs/msg/GpsFix.idl
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/nmea_msgs/msg/PixelPoint.idl
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/nmea_msgs/msg/DefectBox.idl
+rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/nmea_msgs/msg/Defects.idl
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/nmea_msgs/msg/Sentence.idl
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/nmea_msgs/msg/Gpgga.idl
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/nmea_msgs/msg/Gpgsa.idl
@@ -173,6 +174,9 @@ rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__rosidl_ty
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_cpp.hpp
 
+rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__rosidl_typesupport_introspection_cpp.hpp
+
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_cpp.hpp
 
@@ -202,6 +206,9 @@ rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__type_supp
 
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp
+
+rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp
 
 rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp
@@ -263,9 +270,22 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesuppor
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp.s
 
+CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
+CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.o: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp
+
+CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp > CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.i
+
+CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.s
+
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.i: cmake_force
@@ -278,7 +298,7 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesuppor
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.i: cmake_force
@@ -291,7 +311,7 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesuppor
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.i: cmake_force
@@ -304,7 +324,7 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesuppor
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp.o: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp.i: cmake_force
@@ -317,7 +337,7 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesuppor
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp.o: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp.i: cmake_force
@@ -330,7 +350,7 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesuppor
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp.o: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp.i: cmake_force
@@ -343,7 +363,7 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesuppor
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp.o: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp
 
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp.i: cmake_force
@@ -359,6 +379,7 @@ nmea_msgs__rosidl_typesupport_introspection_cpp_OBJECTS = \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__type_support.cpp.o" \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__type_support.cpp.o" \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp.o" \
+"CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.o" \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o" \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o" \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o" \
@@ -373,6 +394,7 @@ nmea_msgs__rosidl_typesupport_introspection_cpp_EXTERNAL_OBJECTS =
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__type_support.cpp.o
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__type_support.cpp.o
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp.o
+libnmea_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.o
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o
@@ -409,7 +431,7 @@ libnmea_msgs__rosidl_typesupport_introspection_cpp.so: /opt/ros/galactic/lib/lib
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: /opt/ros/galactic/lib/librcpputils.so
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: /opt/ros/galactic/lib/librcutils.so
 libnmea_msgs__rosidl_typesupport_introspection_cpp.so: CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library libnmea_msgs__rosidl_typesupport_introspection_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libnmea_msgs__rosidl_typesupport_introspection_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -424,6 +446,7 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/clean:
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_cpp.hpp
+CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_introspection_cpp.hpp
@@ -434,6 +457,7 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_ty
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__type_support.cpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__type_support.cpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp
+CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp

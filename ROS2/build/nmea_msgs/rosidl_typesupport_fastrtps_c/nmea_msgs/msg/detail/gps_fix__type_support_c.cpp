@@ -63,9 +63,9 @@ static bool _GpsFix__cdr_serialize(
     return false;
   }
   const _GpsFix__ros_msg_type * ros_message = static_cast<const _GpsFix__ros_msg_type *>(untyped_ros_message);
-  // Field name: msg_id
+  // Field name: gps_id
   {
-    cdr << ros_message->msg_id;
+    cdr << ros_message->gps_id;
   }
 
   // Field name: gps_fix
@@ -94,9 +94,9 @@ static bool _GpsFix__cdr_deserialize(
     return false;
   }
   _GpsFix__ros_msg_type * ros_message = static_cast<_GpsFix__ros_msg_type *>(untyped_ros_message);
-  // Field name: msg_id
+  // Field name: gps_id
   {
-    cdr >> ros_message->msg_id;
+    cdr >> ros_message->gps_id;
   }
 
   // Field name: gps_fix
@@ -130,9 +130,9 @@ size_t get_serialized_size_nmea_msgs__msg__GpsFix(
   (void)padding;
   (void)wchar_size;
 
-  // field.name msg_id
+  // field.name gps_id
   {
-    size_t item_size = sizeof(ros_message->msg_id);
+    size_t item_size = sizeof(ros_message->gps_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -164,7 +164,7 @@ size_t max_serialized_size_nmea_msgs__msg__GpsFix(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: msg_id
+  // member: gps_id
   {
     size_t array_size = 1;
 

@@ -1,0 +1,460 @@
+[0.026s] Invoking command in '/home/xs/UAV/ROS2/build/nmea_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/nmea_msgs -- -j8 -l8
+[0.355s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.355s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.355s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.355s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[0.355s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.355s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.355s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.355s] -- Found std_msgs: 2.2.4 (/opt/ros/galactic/share/std_msgs/cmake)
+[0.355s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[0.378s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.552s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)
+[0.776s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.887s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.909s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[0.910s] -- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+[0.928s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.928s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[0.928s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[0.987s] -- Configuring done
+[1.098s] -- Generating done
+[1.101s] -- Build files have been written to: /home/xs/UAV/ROS2/build/nmea_msgs
+[1.126s] [35m[1mScanning dependencies of target nmea_msgs__cpp[0m
+[1.127s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.135s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.817s] [  1%] Built target nmea_msgs__cpp
+[1.829s] [  3%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.829s] [  3%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.829s] [  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.983s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_generator_c[0m
+[2.024s] [  4%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.c.o[0m
+[2.027s] [  7%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__functions.c.o[0m
+[2.027s] [  7%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o[0m
+[2.027s] [  7%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.o[0m
+[2.035s] [  8%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o[0m
+[2.162s] [  8%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o[0m
+[2.162s] [  9%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.o[0m
+[2.166s] [ 10%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o[0m
+[2.168s] [ 11%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c.o[0m
+[2.174s] [ 12%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c.o[0m
+[2.219s] [ 13%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c.o[0m
+[2.259s] [ 14%] [32m[1mLinking C shared library libnmea_msgs__rosidl_generator_c.so[0m
+[2.317s] [ 14%] Built target nmea_msgs__rosidl_generator_c
+[2.331s] [ 16%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.331s] [ 16%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.669s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_cpp[0m
+[2.690s] [ 17%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/pixel_point__type_support.cpp.o[0m
+[2.698s] [ 18%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gps_fix__type_support.cpp.o[0m
+[2.701s] [ 19%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/defects__type_support.cpp.o[0m
+[2.706s] [ 20%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/defect_box__type_support.cpp.o[0m
+[2.938s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_introspection_cpp[0m
+[3.001s] [ 21%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gps_fix__type_support.cpp.o[0m
+[3.170s] [ 22%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgga__type_support.cpp.o[0m
+[3.176s] [ 23%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/sentence__type_support.cpp.o[0m
+[3.194s] [ 24%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgsa__type_support.cpp.o[0m
+[3.214s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[3.233s] [ 24%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgst__type_support.cpp.o[0m
+[3.251s] [ 25%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gps_fix__type_support.cpp.o[0m
+[3.315s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_c[0m
+[3.383s] [ 26%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gps_fix__type_support.cpp.o[0m
+[3.392s] [ 26%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/pixel_point__type_support.cpp.o[0m
+[3.445s] [ 27%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/pixel_point__type_support.cpp.o[0m
+[3.478s] [ 27%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defect_box__type_support.cpp.o[0m
+[3.511s] [ 28%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defect_box__type_support.cpp.o[0m
+[3.529s] [ 29%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o[0m
+[3.539s] [ 30%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/sentence__type_support.cpp.o[0m
+[3.574s] [ 31%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgsv__type_support.cpp.o[0m
+[3.575s] [ 32%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gpgsv_satellite__type_support.cpp.o[0m
+[3.584s] [ 33%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgga__type_support.cpp.o[0m
+[3.621s] [ 34%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgsa__type_support.cpp.o[0m
+[3.625s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_introspection_c[0m
+[3.651s] [ 35%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgst__type_support.cpp.o[0m
+[3.691s] [ 36%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gps_fix__type_support.c.o[0m
+[3.701s] [ 37%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgsv__type_support.cpp.o[0m
+[3.717s] [ 38%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/pixel_point__type_support.c.o[0m
+[3.757s] [ 39%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgsv_satellite__type_support.cpp.o[0m
+[3.772s] [ 41%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/defect_box__type_support.c.o[0m
+[3.780s] [ 42%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gprmc__type_support.cpp.o[0m
+[3.781s] [ 41%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/defects__type_support.c.o[0m
+[3.817s] [ 43%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/nmea_msgs/msg/gprmc__type_support.cpp.o[0m
+[3.831s] [ 44%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/defects__type_support.cpp.o[0m
+[3.837s] [ 45%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/sentence__type_support.c.o[0m
+[3.842s] [ 46%] [32m[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_c.so[0m
+[3.876s] [ 47%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/pixel_point__type_support.cpp.o[0m
+[3.887s] [ 48%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgga__type_support.c.o[0m
+[3.900s] [ 48%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgsa__type_support.c.o[0m
+[3.901s] [ 49%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgst__type_support.c.o[0m
+[3.905s] [ 50%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/sentence__type_support.cpp.o[0m
+[3.914s] [ 50%] Built target nmea_msgs__rosidl_typesupport_c
+[3.925s] [ 51%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgsv__type_support.c.o[0m
+[3.939s] [ 53%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support.c.o[0m
+[3.940s] [ 53%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsa__type_support.cpp.o[0m
+[3.941s] [ 54%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgga__type_support.cpp.o[0m
+[3.970s] [ 55%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/nmea_msgs/msg/detail/gprmc__type_support.c.o[0m
+[4.002s] [ 56%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/defect_box__type_support.cpp.o[0m
+[4.094s] [ 57%] [32m[1mLinking C shared library libnmea_msgs__rosidl_typesupport_introspection_c.so[0m
+[4.242s] [ 58%] [32m[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_cpp.so[0m
+[4.250s] [ 58%] Built target nmea_msgs__rosidl_typesupport_introspection_c
+[4.260s] [ 59%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgst__type_support.cpp.o[0m
+[4.262s] [ 60%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv__type_support.cpp.o[0m
+[4.338s] [ 60%] Built target nmea_msgs__rosidl_typesupport_cpp
+[4.353s] [ 61%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp.o[0m
+[4.358s] [ 62%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/defects__type_support.cpp.o[0m
+[4.358s] [ 63%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/nmea_msgs/msg/detail/gprmc__type_support.cpp.o[0m
+[4.376s] [ 64%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/sentence__type_support.cpp.o[0m
+[4.472s] [ 65%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgga__type_support.cpp.o[0m
+[4.612s] [ 66%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsa__type_support.cpp.o[0m
+[4.670s] [ 67%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgst__type_support.cpp.o[0m
+[4.718s] [ 68%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsv__type_support.cpp.o[0m
+[4.750s] [ 68%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsv_satellite__type_support.cpp.o[0m
+[4.752s] [ 69%] [32m[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[4.950s] [ 70%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gprmc__type_support.cpp.o[0m
+[4.973s] [ 70%] Built target nmea_msgs__rosidl_typesupport_introspection_cpp
+[5.407s] [ 71%] [32m[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.494s] [ 71%] Built target nmea_msgs__rosidl_typesupport_fastrtps_cpp
+[5.503s] [ 72%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[6.094s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_fastrtps_c[0m
+[6.115s] [ 74%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__type_support_c.cpp.o[0m
+[6.116s] [ 74%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o[0m
+[6.117s] [ 74%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.o[0m
+[6.118s] [ 75%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defect_box__type_support_c.cpp.o[0m
+[6.118s] [ 77%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/pixel_point__type_support_c.cpp.o[0m
+[6.119s] [ 77%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp.o[0m
+[6.120s] [ 78%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o[0m
+[6.123s] [ 79%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o[0m
+[6.550s] [ 80%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.o[0m
+[6.594s] [ 81%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.o[0m
+[6.602s] [ 82%] [32mBuilding CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.o[0m
+[6.883s] [ 83%] [32m[1mLinking CXX shared library libnmea_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[6.963s] [ 83%] Built target nmea_msgs__rosidl_typesupport_fastrtps_c
+[6.979s] [ 83%] Built target nmea_msgs
+[6.990s] [35m[1mScanning dependencies of target nmea_msgs__py[0m
+[7.005s] [ 84%] [34m[1mGenerating Python code for ROS interfaces[0m
+[8.219s] [ 84%] Built target nmea_msgs__py
+[8.230s] [35m[1mScanning dependencies of target nmea_msgs__python[0m
+[8.256s] [ 89%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c.o[0m
+[8.256s] [ 89%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c.o[0m
+[8.256s] [ 89%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o[0m
+[8.256s] [ 89%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.o[0m
+[8.257s] [ 89%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c.o[0m
+[8.261s] [ 90%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o[0m
+[8.264s] [ 91%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o[0m
+[8.271s] [ 92%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o[0m
+[8.391s] [ 92%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.o[0m
+[8.405s] [ 93%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.o[0m
+[8.413s] [ 94%] [32mBuilding C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.o[0m
+[8.501s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so[0m
+[8.538s] [ 95%] Built target nmea_msgs__python
+[8.547s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[8.547s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[8.547s] [35m[1mScanning dependencies of target nmea_msgs__rosidl_typesupport_c__pyext[0m
+[8.562s] [ 96%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[8.563s] [ 96%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[8.564s] [ 97%] [32mBuilding C object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[8.655s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[8.672s] [ 99%] [32m[1mLinking C shared library rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[8.675s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/nmea_msgs/nmea_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[8.684s] [100%] Built target nmea_msgs__rosidl_typesupport_c__pyext
+[8.701s] [100%] Built target nmea_msgs__rosidl_typesupport_introspection_c__pyext
+[8.724s] [100%] Built target nmea_msgs__rosidl_typesupport_fastrtps_c__pyext
+[8.732s] Invoked command in '/home/xs/UAV/ROS2/build/nmea_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/nmea_msgs -- -j8 -l8
+[8.845s] Invoking command in '/home/xs/UAV/ROS2/build/nmea_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/nmea_msgs
+[8.851s] -- Install configuration: ""
+[8.852s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/ament_index/resource_index/rosidl_interfaces/nmea_msgs
+[8.852s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs
+[8.852s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg
+[8.852s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsv.h
+[8.852s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgga.h
+[8.852s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/defect_box.h
+[8.852s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgst.h
+[8.852s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gprmc.h
+[8.852s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/defects.h
+[8.852s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/sentence.h
+[8.853s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__struct.h
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__struct.h
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__functions.h
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__functions.c
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__functions.c
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__type_support.h
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__functions.h
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__struct.h
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__functions.h
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__struct.h
+[8.853s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__type_support.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__struct.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__functions.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__type_support.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__functions.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__type_support.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__type_support.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__struct.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__type_support.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__functions.c
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__type_support.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__functions.h
+[8.854s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__functions.h
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__struct.h
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__functions.h
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__struct.h
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__struct.h
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__struct.h
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__type_support.h
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__functions.c
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__functions.c
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__type_support.h
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__functions.c
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__functions.c
+[8.855s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__struct.h
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__functions.c
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__type_support.h
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__functions.c
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__type_support.h
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__functions.h
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__functions.h
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__functions.c
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__functions.c
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__functions.h
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsa.h
+[8.856s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsv_satellite.h
+[8.856s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/rosidl_generator_c__visibility_control.h
+[8.857s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gps_fix.h
+[8.857s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/pixel_point.h
+[8.857s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/library_path.sh
+[8.857s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/library_path.dsv
+[8.857s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_generator_c.so
+[8.857s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_generator_c.so" to ""
+[8.857s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs
+[8.857s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg
+[8.857s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail
+[8.857s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_c.h
+[8.857s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_c.h
+[8.857s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
+[8.858s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[8.858s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_c.so
+[8.858s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[8.859s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs
+[8.859s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg
+[8.859s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_cpp.hpp
+[8.859s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_cpp.hpp
+[8.860s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_cpp.hpp
+[8.860s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/dds_fastrtps
+[8.860s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[8.860s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_cpp.so
+[8.860s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[8.860s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs
+[8.860s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg
+[8.860s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[8.860s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail
+[8.860s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_introspection_c.h
+[8.860s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__type_support.c
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__type_support.c
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__type_support.c
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__type_support.c
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__type_support.c
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_introspection_c.h
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_c.h
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__type_support.c
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_c.h
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__type_support.c
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_introspection_c.h
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_introspection_c.h
+[8.861s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__rosidl_typesupport_introspection_c.h
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__type_support.c
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_introspection_c.h
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_c.h
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_introspection_c.h
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__type_support.c
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__type_support.c
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__type_support.c
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_c.so
+[8.862s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_c.so" to ""
+[8.862s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_c.so
+[8.862s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_c.so" to ""
+[8.863s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs
+[8.863s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg
+[8.863s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/pixel_point.hpp
+[8.863s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/defects.hpp
+[8.863s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsv_satellite.hpp
+[8.863s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/defect_box.hpp
+[8.863s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgst.hpp
+[8.863s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail
+[8.863s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__builder.hpp
+[8.863s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__builder.hpp
+[8.863s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__struct.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__struct.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__struct.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__traits.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__builder.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__builder.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__struct.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__builder.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__struct.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__traits.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__builder.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__traits.hpp
+[8.864s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__struct.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__struct.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__traits.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__traits.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__struct.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__struct.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__traits.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__traits.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__builder.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__builder.hpp
+[8.865s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__builder.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__builder.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__traits.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__struct.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__traits.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__traits.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__traits.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__struct.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__builder.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsv.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gps_fix.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/sentence.hpp
+[8.866s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgga.hpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gprmc.hpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/gpgsa.hpp
+[8.867s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs
+[8.867s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg
+[8.867s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__type_support.cpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__type_support.cpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__type_support.cpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/sentence__rosidl_typesupport_introspection_cpp.hpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_cpp.hpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__type_support.cpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__type_support.cpp
+[8.867s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_introspection_cpp.hpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_cpp.hpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__type_support.cpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv__type_support.cpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__type_support.cpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__type_support.cpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_introspection_cpp.hpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__type_support.cpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_introspection_cpp.hpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_introspection_cpp.hpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__type_support.cpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_introspection_cpp.hpp
+[8.868s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/defects__rosidl_typesupport_introspection_cpp.hpp
+[8.869s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/include/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_introspection_cpp.hpp
+[8.869s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_cpp.so
+[8.869s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[8.869s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_cpp.so
+[8.869s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__rosidl_typesupport_cpp.so" to ""
+[8.869s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/pythonpath.sh
+[8.869s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/pythonpath.dsv
+[8.869s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/__init__.py
+[8.890s] Compiling '/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/__init__.py'...
+[8.893s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg
+[8.893s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsv_s.c
+[8.893s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_sentence_s.c
+[8.893s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsv.py
+[8.893s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsa_s.c
+[8.893s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gps_fix.py
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgst.py
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gprmc.py
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgga_s.c
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsa.py
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_defect_box_s.c
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgga.py
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_pixel_point_s.c
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/__init__.py
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_defects_s.c
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gprmc_s.c
+[8.894s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_defect_box.py
+[8.895s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsv_satellite_s.c
+[8.895s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_sentence.py
+[8.895s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_defects.py
+[8.895s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_pixel_point.py
+[8.895s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgsv_satellite.py
+[8.895s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gps_fix_s.c
+[8.895s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/msg/_gpgst_s.c
+[8.895s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[8.896s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[8.896s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[8.897s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[8.897s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[8.898s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages/nmea_msgs/nmea_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[8.898s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__python.so
+[8.898s] -- Set runtime path of "/home/xs/UAV/ROS2/install/nmea_msgs/lib/libnmea_msgs__python.so" to ""
+[8.899s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/GpsFix.idl
+[8.899s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/PixelPoint.idl
+[8.899s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/DefectBox.idl
+[8.899s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Defects.idl
+[8.899s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Sentence.idl
+[8.899s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgga.idl
+[8.899s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgsa.idl
+[8.899s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgst.idl
+[8.899s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgsv.idl
+[8.899s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/GpgsvSatellite.idl
+[8.899s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gprmc.idl
+[8.900s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/GpsFix.msg
+[8.900s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/PixelPoint.msg
+[8.900s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/DefectBox.msg
+[8.900s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Defects.msg
+[8.900s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Sentence.msg
+[8.900s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgga.msg
+[8.900s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgsa.msg
+[8.900s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgst.msg
+[8.900s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gpgsv.msg
+[8.900s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/GpgsvSatellite.msg
+[8.901s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/msg/Gprmc.msg
+[8.901s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/ament_index/resource_index/package_run_dependencies/nmea_msgs
+[8.901s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/ament_index/resource_index/parent_prefix_path/nmea_msgs
+[8.901s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/ament_prefix_path.sh
+[8.901s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/ament_prefix_path.dsv
+[8.901s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/path.sh
+[8.901s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/environment/path.dsv
+[8.901s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/local_setup.bash
+[8.901s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/local_setup.sh
+[8.901s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/local_setup.zsh
+[8.901s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/local_setup.dsv
+[8.901s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.dsv
+[8.902s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/ament_index/resource_index/packages/nmea_msgs
+[8.902s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_generator_cExport.cmake
+[8.902s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_generator_cExport-noconfig.cmake
+[8.902s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cExport.cmake
+[8.902s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[8.902s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cExport.cmake
+[8.902s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[8.903s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_generator_cppExport.cmake
+[8.903s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[8.903s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[8.903s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cppExport.cmake
+[8.903s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[8.904s] -- Installing: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake-extras.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgsConfig.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/cmake/nmea_msgsConfig-version.cmake
+[8.904s] -- Up-to-date: /home/xs/UAV/ROS2/install/nmea_msgs/share/nmea_msgs/package.xml
+[8.907s] Invoked command in '/home/xs/UAV/ROS2/build/nmea_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/nmea_msgs

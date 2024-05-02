@@ -28,9 +28,6 @@ extern "C"
 // Struct defined in msg/DefectBox in the package nmea_msgs.
 typedef struct nmea_msgs__msg__DefectBox
 {
-  int32_t defect_id;
-  float img_width;
-  float img_height;
   nmea_msgs__msg__PixelPoint center;
   nmea_msgs__msg__PixelPoint top_left;
   nmea_msgs__msg__PixelPoint top_right;

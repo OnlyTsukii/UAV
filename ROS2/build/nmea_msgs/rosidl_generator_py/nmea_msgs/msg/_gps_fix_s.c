@@ -54,13 +54,13 @@ bool nmea_msgs__msg__gps_fix__convert_from_py(PyObject * _pymsg, void * _ros_mes
     assert(strncmp("nmea_msgs.msg._gps_fix.GpsFix", full_classname_dest, 29) == 0);
   }
   nmea_msgs__msg__GpsFix * ros_message = _ros_message;
-  {  // msg_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "msg_id");
+  {  // gps_id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "gps_id");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->msg_id = (int32_t)PyLong_AsLong(field);
+    ros_message->gps_id = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
   {  // gps_fix
@@ -96,11 +96,11 @@ PyObject * nmea_msgs__msg__gps_fix__convert_to_py(void * raw_ros_message)
     }
   }
   nmea_msgs__msg__GpsFix * ros_message = (nmea_msgs__msg__GpsFix *)raw_ros_message;
-  {  // msg_id
+  {  // gps_id
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->msg_id);
+    field = PyLong_FromLong(ros_message->gps_id);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "msg_id", field);
+      int rc = PyObject_SetAttrString(_pymessage, "gps_id", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

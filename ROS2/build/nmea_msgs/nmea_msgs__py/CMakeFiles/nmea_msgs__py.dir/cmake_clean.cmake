@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/nmea_msgs/msg/__init__.py"
   "../rosidl_generator_py/nmea_msgs/msg/_defect_box.py"
   "../rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c"
+  "../rosidl_generator_py/nmea_msgs/msg/_defects.py"
+  "../rosidl_generator_py/nmea_msgs/msg/_defects_s.c"
   "../rosidl_generator_py/nmea_msgs/msg/_gpgga.py"
   "../rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c"
   "../rosidl_generator_py/nmea_msgs/msg/_gpgsa.py"

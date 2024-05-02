@@ -1,9 +1,13 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nmea_msgs__cpp"
   "rosidl_generator_cpp/nmea_msgs/msg/defect_box.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/defects.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__builder.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__struct.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__traits.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/defects__builder.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/defects__struct.hpp"
+  "rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__builder.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__struct.hpp"
   "rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__traits.hpp"

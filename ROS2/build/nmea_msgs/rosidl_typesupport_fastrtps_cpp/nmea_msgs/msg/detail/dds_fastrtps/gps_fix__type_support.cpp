@@ -55,8 +55,8 @@ cdr_serialize(
   const nmea_msgs::msg::GpsFix & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: msg_id
-  cdr << ros_message.msg_id;
+  // Member: gps_id
+  cdr << ros_message.gps_id;
   // Member: gps_fix
   sensor_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.gps_fix,
@@ -70,8 +70,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   nmea_msgs::msg::GpsFix & ros_message)
 {
-  // Member: msg_id
-  cdr >> ros_message.msg_id;
+  // Member: gps_id
+  cdr >> ros_message.gps_id;
 
   // Member: gps_fix
   sensor_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
@@ -93,9 +93,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: msg_id
+  // Member: gps_id
   {
-    size_t item_size = sizeof(ros_message.msg_id);
+    size_t item_size = sizeof(ros_message.gps_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -123,7 +123,7 @@ max_serialized_size_GpsFix(
   (void)full_bounded;
 
 
-  // Member: msg_id
+  // Member: gps_id
   {
     size_t array_size = 1;
 

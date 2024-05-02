@@ -65,6 +65,10 @@ CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/defect_box.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__builder.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__struct.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__traits.hpp
+CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/defects.hpp
+CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__builder.hpp
+CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__struct.hpp
+CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__builder.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__struct.hpp
@@ -113,6 +117,7 @@ rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: /opt/ros/galactic/share/rosidl_g
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/GpsFix.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/PixelPoint.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/DefectBox.idl
+rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Defects.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Sentence.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Gpgga.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Gpgsa.idl
@@ -245,6 +250,18 @@ rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__struct.hpp: rosidl_generat
 rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__traits.hpp
 
+rosidl_generator_cpp/nmea_msgs/msg/defects.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/defects.hpp
+
+rosidl_generator_cpp/nmea_msgs/msg/detail/defects__builder.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/defects__builder.hpp
+
+rosidl_generator_cpp/nmea_msgs/msg/detail/defects__struct.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/defects__struct.hpp
+
+rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp
+
 rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp
 
@@ -342,6 +359,10 @@ nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/defect_box.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__builder.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__struct.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defect_box__traits.hpp
+nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/defects.hpp
+nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__builder.hpp
+nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__struct.hpp
+nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__builder.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__struct.hpp

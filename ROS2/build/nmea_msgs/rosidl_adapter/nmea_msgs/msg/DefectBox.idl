@@ -7,12 +7,6 @@
 module nmea_msgs {
   module msg {
     struct DefectBox {
-      int32 defect_id;
-
-      float img_width;
-
-      float img_height;
-
       nmea_msgs::msg::PixelPoint center;
 
       nmea_msgs::msg::PixelPoint top_left;

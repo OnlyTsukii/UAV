@@ -42,7 +42,7 @@ struct GpsFix_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->msg_id = 0l;
+      this->gps_id = 0l;
     }
   }
 
@@ -52,23 +52,23 @@ struct GpsFix_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->msg_id = 0l;
+      this->gps_id = 0l;
     }
   }
 
   // field types and members
-  using _msg_id_type =
+  using _gps_id_type =
     int32_t;
-  _msg_id_type msg_id;
+  _gps_id_type gps_id;
   using _gps_fix_type =
     sensor_msgs::msg::NavSatFix_<ContainerAllocator>;
   _gps_fix_type gps_fix;
 
   // setters for named parameter idiom
-  Type & set__msg_id(
+  Type & set__gps_id(
     const int32_t & _arg)
   {
-    this->msg_id = _arg;
+    this->gps_id = _arg;
     return *this;
   }
   Type & set__gps_fix(
@@ -120,7 +120,7 @@ struct GpsFix_
   // comparison operators
   bool operator==(const GpsFix_ & other) const
   {
-    if (this->msg_id != other.msg_id) {
+    if (this->gps_id != other.gps_id) {
       return false;
     }
     if (this->gps_fix != other.gps_fix) {

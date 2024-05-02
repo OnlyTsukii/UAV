@@ -57,9 +57,6 @@ class DefectBox(metaclass=Metaclass_DefectBox):
     """Message class 'DefectBox'."""
 
     __slots__ = [
-        '_defect_id',
-        '_img_width',
-        '_img_height',
         '_center',
         '_top_left',
         '_top_right',
@@ -68,9 +65,6 @@ class DefectBox(metaclass=Metaclass_DefectBox):
     ]
 
     _fields_and_field_types = {
-        'defect_id': 'int32',
-        'img_width': 'float',
-        'img_height': 'float',
         'center': 'nmea_msgs/PixelPoint',
         'top_left': 'nmea_msgs/PixelPoint',
         'top_right': 'nmea_msgs/PixelPoint',
@@ -79,9 +73,6 @@ class DefectBox(metaclass=Metaclass_DefectBox):
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['nmea_msgs', 'msg'], 'PixelPoint'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['nmea_msgs', 'msg'], 'PixelPoint'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['nmea_msgs', 'msg'], 'PixelPoint'),  # noqa: E501
@@ -93,9 +84,6 @@ class DefectBox(metaclass=Metaclass_DefectBox):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.defect_id = kwargs.get('defect_id', int())
-        self.img_width = kwargs.get('img_width', float())
-        self.img_height = kwargs.get('img_height', float())
         from nmea_msgs.msg import PixelPoint
         self.center = kwargs.get('center', PixelPoint())
         from nmea_msgs.msg import PixelPoint
@@ -136,12 +124,6 @@ class DefectBox(metaclass=Metaclass_DefectBox):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.defect_id != other.defect_id:
-            return False
-        if self.img_width != other.img_width:
-            return False
-        if self.img_height != other.img_height:
-            return False
         if self.center != other.center:
             return False
         if self.top_left != other.top_left:
@@ -158,47 +140,6 @@ class DefectBox(metaclass=Metaclass_DefectBox):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
-
-    @property
-    def defect_id(self):
-        """Message field 'defect_id'."""
-        return self._defect_id
-
-    @defect_id.setter
-    def defect_id(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'defect_id' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'defect_id' field must be an integer in [-2147483648, 2147483647]"
-        self._defect_id = value
-
-    @property
-    def img_width(self):
-        """Message field 'img_width'."""
-        return self._img_width
-
-    @img_width.setter
-    def img_width(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'img_width' field must be of type 'float'"
-        self._img_width = value
-
-    @property
-    def img_height(self):
-        """Message field 'img_height'."""
-        return self._img_height
-
-    @img_height.setter
-    def img_height(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'img_height' field must be of type 'float'"
-        self._img_height = value
 
     @property
     def center(self):

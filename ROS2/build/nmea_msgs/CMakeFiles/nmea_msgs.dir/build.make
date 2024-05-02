@@ -56,6 +56,7 @@ include CMakeFiles/nmea_msgs.dir/progress.make
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/GpsFix.msg
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/PixelPoint.msg
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/DefectBox.msg
+CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Defects.msg
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Sentence.msg
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gpgga.msg
 CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gpgsa.msg

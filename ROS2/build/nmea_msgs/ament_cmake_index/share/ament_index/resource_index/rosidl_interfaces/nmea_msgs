@@ -1,5 +1,7 @@
 msg/DefectBox.idl
 msg/DefectBox.msg
+msg/Defects.idl
+msg/Defects.msg
 msg/Gpgga.idl
 msg/Gpgga.msg
 msg/Gpgsa.idl

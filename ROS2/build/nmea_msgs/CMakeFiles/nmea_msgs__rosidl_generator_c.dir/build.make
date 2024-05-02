@@ -73,6 +73,7 @@ rosidl_generator_c/nmea_msgs/msg/gps_fix.h: /opt/ros/galactic/share/rosidl_gener
 rosidl_generator_c/nmea_msgs/msg/gps_fix.h: rosidl_adapter/nmea_msgs/msg/GpsFix.idl
 rosidl_generator_c/nmea_msgs/msg/gps_fix.h: rosidl_adapter/nmea_msgs/msg/PixelPoint.idl
 rosidl_generator_c/nmea_msgs/msg/gps_fix.h: rosidl_adapter/nmea_msgs/msg/DefectBox.idl
+rosidl_generator_c/nmea_msgs/msg/gps_fix.h: rosidl_adapter/nmea_msgs/msg/Defects.idl
 rosidl_generator_c/nmea_msgs/msg/gps_fix.h: rosidl_adapter/nmea_msgs/msg/Sentence.idl
 rosidl_generator_c/nmea_msgs/msg/gps_fix.h: rosidl_adapter/nmea_msgs/msg/Gpgga.idl
 rosidl_generator_c/nmea_msgs/msg/gps_fix.h: rosidl_adapter/nmea_msgs/msg/Gpgsa.idl
@@ -205,6 +206,18 @@ rosidl_generator_c/nmea_msgs/msg/detail/defect_box__struct.h: rosidl_generator_c
 rosidl_generator_c/nmea_msgs/msg/detail/defect_box__type_support.h: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/detail/defect_box__type_support.h
 
+rosidl_generator_c/nmea_msgs/msg/defects.h: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/defects.h
+
+rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.h: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.h
+
+rosidl_generator_c/nmea_msgs/msg/detail/defects__struct.h: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/detail/defects__struct.h
+
+rosidl_generator_c/nmea_msgs/msg/detail/defects__type_support.h: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/detail/defects__type_support.h
+
 rosidl_generator_c/nmea_msgs/msg/sentence.h: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/sentence.h
 
@@ -298,6 +311,9 @@ rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__functions.c: rosidl_generat
 rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c
 
+rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c
+
 rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c: rosidl_generator_c/nmea_msgs/msg/gps_fix.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c
 
@@ -358,9 +374,22 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/de
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.s
 
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c
+
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c > CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.i
+
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.s
+
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.i: cmake_force
@@ -373,7 +402,7 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/de
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.i: cmake_force
@@ -386,7 +415,7 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/de
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.i: cmake_force
@@ -399,7 +428,7 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/de
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.o: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgst__functions.c.i: cmake_force
@@ -412,7 +441,7 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/de
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c.o: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv__functions.c.i: cmake_force
@@ -425,7 +454,7 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/de
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c.o: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsv_satellite__functions.c.i: cmake_force
@@ -438,7 +467,7 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/de
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c.o: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c
 
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gprmc__functions.c.i: cmake_force
@@ -454,6 +483,7 @@ nmea_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.c.o" \
 "CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__functions.c.o" \
 "CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.o" \
+"CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o" \
 "CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o" \
 "CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o" \
 "CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o" \
@@ -468,6 +498,7 @@ nmea_msgs__rosidl_generator_c_EXTERNAL_OBJECTS =
 libnmea_msgs__rosidl_generator_c.so: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.c.o
 libnmea_msgs__rosidl_generator_c.so: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__functions.c.o
 libnmea_msgs__rosidl_generator_c.so: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.o
+libnmea_msgs__rosidl_generator_c.so: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o
 libnmea_msgs__rosidl_generator_c.so: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c.o
 libnmea_msgs__rosidl_generator_c.so: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o
 libnmea_msgs__rosidl_generator_c.so: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c.o
@@ -504,7 +535,7 @@ libnmea_msgs__rosidl_generator_c.so: /opt/ros/galactic/lib/librosidl_runtime_c.s
 libnmea_msgs__rosidl_generator_c.so: /opt/ros/galactic/lib/librcpputils.so
 libnmea_msgs__rosidl_generator_c.so: /opt/ros/galactic/lib/librcutils.so
 libnmea_msgs__rosidl_generator_c.so: CMakeFiles/nmea_msgs__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C shared library libnmea_msgs__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C shared library libnmea_msgs__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nmea_msgs__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -528,6 +559,10 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msg
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.h
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/defect_box__struct.h
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/defect_box__type_support.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/defects.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/defects__struct.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/defects__type_support.h
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/sentence.h
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.h
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/sentence__struct.h
@@ -559,6 +594,7 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msg
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/gps_fix__functions.c
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__functions.c
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/sentence__functions.c
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/nmea_msgs/msg/detail/gpgsa__functions.c

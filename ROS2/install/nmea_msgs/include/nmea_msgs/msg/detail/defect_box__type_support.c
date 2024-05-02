@@ -45,52 +45,7 @@ void DefectBox__rosidl_typesupport_introspection_c__DefectBox_fini_function(void
   nmea_msgs__msg__DefectBox__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[8] = {
-  {
-    "defect_id",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(nmea_msgs__msg__DefectBox, defect_id),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "img_width",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(nmea_msgs__msg__DefectBox, img_width),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "img_height",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(nmea_msgs__msg__DefectBox, img_height),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
-  },
+static rosidl_typesupport_introspection_c__MessageMember DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[5] = {
   {
     "center",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -171,7 +126,7 @@ static rosidl_typesupport_introspection_c__MessageMember DefectBox__rosidl_types
 static const rosidl_typesupport_introspection_c__MessageMembers DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_members = {
   "nmea_msgs__msg",  // message namespace
   "DefectBox",  // message name
-  8,  // number of fields
+  5,  // number of fields
   sizeof(nmea_msgs__msg__DefectBox),
   DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array,  // message members
   DefectBox__rosidl_typesupport_introspection_c__DefectBox_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -189,15 +144,15 @@ static rosidl_message_type_support_t DefectBox__rosidl_typesupport_introspection
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_nmea_msgs
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, DefectBox)() {
+  DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, PixelPoint)();
+  DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[1].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, PixelPoint)();
+  DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[2].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, PixelPoint)();
   DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[3].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, PixelPoint)();
   DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[4].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, PixelPoint)();
-  DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[5].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, PixelPoint)();
-  DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[6].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, PixelPoint)();
-  DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_member_array[7].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nmea_msgs, msg, PixelPoint)();
   if (!DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_type_support_handle.typesupport_identifier) {
     DefectBox__rosidl_typesupport_introspection_c__DefectBox_message_type_support_handle.typesupport_identifier =

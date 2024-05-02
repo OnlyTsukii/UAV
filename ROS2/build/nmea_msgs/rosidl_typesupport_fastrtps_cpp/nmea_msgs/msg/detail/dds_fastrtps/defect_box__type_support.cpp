@@ -147,12 +147,6 @@ cdr_serialize(
   const nmea_msgs::msg::DefectBox & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: defect_id
-  cdr << ros_message.defect_id;
-  // Member: img_width
-  cdr << ros_message.img_width;
-  // Member: img_height
-  cdr << ros_message.img_height;
   // Member: center
   nmea_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.center,
@@ -182,15 +176,6 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   nmea_msgs::msg::DefectBox & ros_message)
 {
-  // Member: defect_id
-  cdr >> ros_message.defect_id;
-
-  // Member: img_width
-  cdr >> ros_message.img_width;
-
-  // Member: img_height
-  cdr >> ros_message.img_height;
-
   // Member: center
   nmea_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.center);
@@ -227,24 +212,6 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: defect_id
-  {
-    size_t item_size = sizeof(ros_message.defect_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: img_width
-  {
-    size_t item_size = sizeof(ros_message.img_width);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: img_height
-  {
-    size_t item_size = sizeof(ros_message.img_height);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // Member: center
 
   current_alignment +=
@@ -288,30 +255,6 @@ max_serialized_size_DefectBox(
   (void)wchar_size;
   (void)full_bounded;
 
-
-  // Member: defect_id
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: img_width
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Member: img_height
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
 
   // Member: center
   {

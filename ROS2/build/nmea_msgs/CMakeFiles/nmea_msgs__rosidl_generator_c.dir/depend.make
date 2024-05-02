@@ -9,6 +9,15 @@ CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/de
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__struct.h
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.c.o: rosidl_generator_c/nmea_msgs/msg/rosidl_generator_c__visibility_control.h
 
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: /opt/ros/galactic/include/rosidl_runtime_c/visibility_control.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/defect_box__struct.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/defects__struct.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__struct.h
+CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.c.o: rosidl_generator_c/nmea_msgs/msg/rosidl_generator_c__visibility_control.h
+
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o: rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o: /opt/ros/galactic/include/builtin_interfaces/msg/detail/time__struct.h
 CMakeFiles/nmea_msgs__rosidl_generator_c.dir/rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.c.o: /opt/ros/galactic/include/rosidl_runtime_c/primitives_sequence.h

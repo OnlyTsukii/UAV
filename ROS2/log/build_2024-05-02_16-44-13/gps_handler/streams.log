@@ -1,0 +1,24 @@
+[0.499s] Invoking command in '/home/xs/UAV/ROS2/gps_handler': AMENT_PREFIX_PATH=/home/xs/UAV/ROS2/install/nmea_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xs/UAV/ROS2/install/nmea_msgs LD_LIBRARY_PATH=/home/xs/UAV/ROS2/install/nmea_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xs/UAV/ROS2/build/gps_handler/prefix_override:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/xs/UAV/ROS2/build/gps_handler/build install --record /home/xs/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data
+[0.677s] running egg_info
+[0.678s] writing ../build/gps_handler/gps_handler.egg-info/PKG-INFO
+[0.678s] writing dependency_links to ../build/gps_handler/gps_handler.egg-info/dependency_links.txt
+[0.678s] writing entry points to ../build/gps_handler/gps_handler.egg-info/entry_points.txt
+[0.678s] writing requirements to ../build/gps_handler/gps_handler.egg-info/requires.txt
+[0.678s] writing top-level names to ../build/gps_handler/gps_handler.egg-info/top_level.txt
+[0.701s] reading manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[0.703s] writing manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[0.703s] running build
+[0.703s] running build_py
+[0.703s] copying gps_handler/driver.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[0.703s] running install
+[0.704s] running install_lib
+[0.705s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/driver.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler
+[0.705s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/driver.py to driver.cpython-38.pyc
+[0.708s] running install_data
+[0.708s] running install_egg_info
+[0.709s] removing '/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-2.0.0-py3.8.egg-info' (and everything under it)
+[0.710s] Copying ../build/gps_handler/gps_handler.egg-info to /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-2.0.0-py3.8.egg-info
+[0.711s] running install_scripts
+[0.724s] Installing nmea_serial_driver script to /home/xs/UAV/ROS2/install/gps_handler/lib/gps_handler
+[0.724s] writing list of installed files to '/home/xs/UAV/ROS2/build/gps_handler/install.log'
+[0.741s] Invoked command in '/home/xs/UAV/ROS2/gps_handler' returned '0': AMENT_PREFIX_PATH=/home/xs/UAV/ROS2/install/nmea_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xs/UAV/ROS2/install/nmea_msgs LD_LIBRARY_PATH=/home/xs/UAV/ROS2/install/nmea_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xs/UAV/ROS2/build/gps_handler/prefix_override:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/xs/UAV/ROS2/build/gps_handler/build install --record /home/xs/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data

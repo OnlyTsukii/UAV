@@ -7,7 +7,7 @@
 module nmea_msgs {
   module msg {
     struct GpsFix {
-      int32 msg_id;
+      int32 gps_id;
 
       sensor_msgs::msg::NavSatFix gps_fix;
     };

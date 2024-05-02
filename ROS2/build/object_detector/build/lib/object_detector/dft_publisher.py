@@ -6,7 +6,7 @@ import time
 
 from rclpy.node import Node
 from std_msgs.msg import Int16
-from nmea_msgs.msg import DefectBox, PixelPoint
+from nmea_msgs.msg import Defects, DefectBox, PixelPoint
 from ultralytics import YOLO
 from typing import Tuple
 
@@ -17,11 +17,11 @@ SERVER_PORT = 8890
 class Dft_Publisher(Node):
     def __init__(self):
         super().__init__("dft_publisher")
-        self.dft_publiser = self.create_publisher(DefectBox, "dft_box", 10)
+        self.dft_publiser = self.create_publisher(Defects, "dfts", 10)
         self.msg_queue = queue.Queue()
 
     def detect(self, source) -> map:
-        model = YOLO('yolov8n.pt')  
+        model = YOLO('defect.pt')  
         results = model(source, stream=True)  
         
         res = {}
@@ -59,6 +59,11 @@ class Dft_Publisher(Node):
                 self.publish_boxes(res['boxes'], res['img_size'], img_id)
 
     def publish_boxes(self, xywh, imgz, img_id):
+        dfts = Defects()
+        dfts.defect_id = img_id
+        dfts.img_width = imgz[0]
+        dfts.img_height = imgz[1]
+
         for box in xywh:
             x, y, w, h = box
 
@@ -78,10 +83,6 @@ class Dft_Publisher(Node):
             y = float("{:.5f}".format(y))
 
             dft_box = DefectBox()
-            dft_box.defect_id = img_id
-
-            dft_box.img_width = imgz[0]
-            dft_box.img_height = imgz[1]
 
             dft_box.center = PixelPoint( x=x, y=y )
             dft_box.top_left = PixelPoint( x=x1, y=y1 )
@@ -89,7 +90,7 @@ class Dft_Publisher(Node):
             dft_box.bottom_left = PixelPoint( x=x3, y=y3 )
             dft_box.bottom_right = PixelPoint( x=x4, y=y4 )
 
-            self.dft_publiser.publish(dft_box)
+            dfts.defects.append(dft_box)
 
             print('++++++++++++++++++++++++++++++++++++++++++++++++++++')
             print("Center:", x, y)
@@ -98,6 +99,8 @@ class Dft_Publisher(Node):
             print(f"[{x1}, {y1}] --- [{x2}, {y2}]")
             print(f"[{x3}, {y3}] --- [{x4}, {y4}]")
             print()
+
+        self.dft_publiser.publish(dfts)
 
 
 def main(args=None):

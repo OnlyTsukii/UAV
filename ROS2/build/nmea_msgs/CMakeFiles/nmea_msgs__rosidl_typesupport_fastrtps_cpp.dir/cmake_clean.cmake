@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/defect_box__type_support.cpp.o"
+  "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/defects__type_support.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgga__type_support.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsa__type_support.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgst__type_support.cpp.o"
@@ -12,6 +13,7 @@ file(REMOVE_RECURSE
   "libnmea_msgs__rosidl_typesupport_fastrtps_cpp.pdb"
   "libnmea_msgs__rosidl_typesupport_fastrtps_cpp.so"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/defect_box__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/defects__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgga__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgsa__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/gpgst__type_support.cpp"
@@ -22,6 +24,7 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/pixel_point__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/dds_fastrtps/sentence__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_cpp.hpp"

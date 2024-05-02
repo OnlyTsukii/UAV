@@ -96,9 +96,22 @@ CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c.s
 
+CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.o: CMakeFiles/nmea_msgs__python.dir/flags.make
+CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.o: rosidl_generator_py/nmea_msgs/msg/_defects_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defects_s.c
+
+CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defects_s.c > CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.i
+
+CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defects_s.c -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.s
+
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o: CMakeFiles/nmea_msgs__python.dir/flags.make
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o: rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o: CMakeFiles/nmea_msgs__python.dir/flags.make
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o: rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.s:
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o: CMakeFiles/nmea_msgs__python.dir/flags.make
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o: rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.s:
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o: CMakeFiles/nmea_msgs__python.dir/flags.make
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o: rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.s:
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.o: CMakeFiles/nmea_msgs__python.dir/flags.make
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.o: rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_s.c.s:
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.o: CMakeFiles/nmea_msgs__python.dir/flags.make
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.o: rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satellite_s.c.i: cmake_force
@@ -176,7 +189,7 @@ CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsv_satell
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.o: CMakeFiles/nmea_msgs__python.dir/flags.make
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.o: rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.o   -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c
 
 CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gprmc_s.c.i: cmake_force
@@ -192,6 +205,7 @@ nmea_msgs__python_OBJECTS = \
 "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c.o" \
 "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c.o" \
 "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c.o" \
+"CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.o" \
 "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o" \
 "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o" \
 "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o" \
@@ -206,6 +220,7 @@ nmea_msgs__python_EXTERNAL_OBJECTS =
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c.o
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c.o
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c.o
+rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.o
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_sentence_s.c.o
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o
@@ -249,7 +264,7 @@ rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: /opt/ros/galactic/lib/lib
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: /opt/ros/galactic/lib/librcpputils.so
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: /opt/ros/galactic/lib/librcutils.so
 rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so: CMakeFiles/nmea_msgs__python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C shared library rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C shared library rosidl_generator_py/nmea_msgs/libnmea_msgs__python.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nmea_msgs__python.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

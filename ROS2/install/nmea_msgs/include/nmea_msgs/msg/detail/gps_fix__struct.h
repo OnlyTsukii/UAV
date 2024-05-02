@@ -24,7 +24,7 @@ extern "C"
 // Struct defined in msg/GpsFix in the package nmea_msgs.
 typedef struct nmea_msgs__msg__GpsFix
 {
-  int32_t msg_id;
+  int32_t gps_id;
   sensor_msgs__msg__NavSatFix gps_fix;
 } nmea_msgs__msg__GpsFix;
 

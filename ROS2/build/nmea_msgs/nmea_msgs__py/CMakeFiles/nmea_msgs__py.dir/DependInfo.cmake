@@ -10,6 +10,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/__init__.py" "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defect_box.py" "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defects.py" "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_defects_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgga.py" "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c" "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/msg/_gpgsa.py" "/home/xs/UAV/ROS2/build/nmea_msgs/rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"

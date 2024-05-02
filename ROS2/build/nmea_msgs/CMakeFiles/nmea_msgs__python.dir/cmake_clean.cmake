@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c.o"
+  "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_defects_s.c.o"
   "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c.o"
   "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c.o"
   "CMakeFiles/nmea_msgs__python.dir/rosidl_generator_py/nmea_msgs/msg/_gpgst_s.c.o"

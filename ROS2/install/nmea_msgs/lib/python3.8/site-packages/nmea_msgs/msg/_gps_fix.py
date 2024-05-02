@@ -57,12 +57,12 @@ class GpsFix(metaclass=Metaclass_GpsFix):
     """Message class 'GpsFix'."""
 
     __slots__ = [
-        '_msg_id',
+        '_gps_id',
         '_gps_fix',
     ]
 
     _fields_and_field_types = {
-        'msg_id': 'int32',
+        'gps_id': 'int32',
         'gps_fix': 'sensor_msgs/NavSatFix',
     }
 
@@ -75,7 +75,7 @@ class GpsFix(metaclass=Metaclass_GpsFix):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.msg_id = kwargs.get('msg_id', int())
+        self.gps_id = kwargs.get('gps_id', int())
         from sensor_msgs.msg import NavSatFix
         self.gps_fix = kwargs.get('gps_fix', NavSatFix())
 
@@ -108,7 +108,7 @@ class GpsFix(metaclass=Metaclass_GpsFix):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.msg_id != other.msg_id:
+        if self.gps_id != other.gps_id:
             return False
         if self.gps_fix != other.gps_fix:
             return False
@@ -120,19 +120,19 @@ class GpsFix(metaclass=Metaclass_GpsFix):
         return copy(cls._fields_and_field_types)
 
     @property
-    def msg_id(self):
-        """Message field 'msg_id'."""
-        return self._msg_id
+    def gps_id(self):
+        """Message field 'gps_id'."""
+        return self._gps_id
 
-    @msg_id.setter
-    def msg_id(self, value):
+    @gps_id.setter
+    def gps_id(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'msg_id' field must be of type 'int'"
+                "The 'gps_id' field must be of type 'int'"
             assert value >= -2147483648 and value < 2147483648, \
-                "The 'msg_id' field must be an integer in [-2147483648, 2147483647]"
-        self._msg_id = value
+                "The 'gps_id' field must be an integer in [-2147483648, 2147483647]"
+        self._gps_id = value
 
     @property
     def gps_fix(self):

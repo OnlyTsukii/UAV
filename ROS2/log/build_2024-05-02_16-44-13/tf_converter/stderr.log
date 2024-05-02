@@ -1,0 +1,5 @@
+  File "/home/xs/UAV/ROS2/install/tf_converter/lib/python3.8/site-packages/tf_converter/tf_converter.py", line 94
+    dft_offset =
+                ^
+SyntaxError: invalid syntax
+

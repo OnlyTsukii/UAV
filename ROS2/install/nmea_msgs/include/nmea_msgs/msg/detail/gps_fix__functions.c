@@ -19,7 +19,7 @@ nmea_msgs__msg__GpsFix__init(nmea_msgs__msg__GpsFix * msg)
   if (!msg) {
     return false;
   }
-  // msg_id
+  // gps_id
   // gps_fix
   if (!sensor_msgs__msg__NavSatFix__init(&msg->gps_fix)) {
     nmea_msgs__msg__GpsFix__fini(msg);
@@ -34,7 +34,7 @@ nmea_msgs__msg__GpsFix__fini(nmea_msgs__msg__GpsFix * msg)
   if (!msg) {
     return;
   }
-  // msg_id
+  // gps_id
   // gps_fix
   sensor_msgs__msg__NavSatFix__fini(&msg->gps_fix);
 }
@@ -45,8 +45,8 @@ nmea_msgs__msg__GpsFix__are_equal(const nmea_msgs__msg__GpsFix * lhs, const nmea
   if (!lhs || !rhs) {
     return false;
   }
-  // msg_id
-  if (lhs->msg_id != rhs->msg_id) {
+  // gps_id
+  if (lhs->gps_id != rhs->gps_id) {
     return false;
   }
   // gps_fix
@@ -66,8 +66,8 @@ nmea_msgs__msg__GpsFix__copy(
   if (!input || !output) {
     return false;
   }
-  // msg_id
-  output->msg_id = input->msg_id;
+  // gps_id
+  output->gps_id = input->gps_id;
   // gps_fix
   if (!sensor_msgs__msg__NavSatFix__copy(
       &(input->gps_fix), &(output->gps_fix)))

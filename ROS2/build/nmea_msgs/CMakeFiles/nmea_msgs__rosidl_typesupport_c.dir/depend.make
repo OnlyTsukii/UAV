@@ -13,6 +13,19 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/ms
 CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defect_box__type_support.cpp.o: rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__struct.h
 CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defect_box__type_support.cpp.o: rosidl_typesupport_c/nmea_msgs/msg/rosidl_typesupport_c__visibility_control.h
 
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: /opt/ros/galactic/include/rosidl_runtime_c/message_type_support_struct.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: /opt/ros/galactic/include/rosidl_runtime_c/visibility_control.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: /opt/ros/galactic/include/rosidl_typesupport_c/identifier.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: /opt/ros/galactic/include/rosidl_typesupport_c/message_type_support_dispatch.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: /opt/ros/galactic/include/rosidl_typesupport_c/type_support_map.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: /opt/ros/galactic/include/rosidl_typesupport_c/visibility_control.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: /opt/ros/galactic/include/rosidl_typesupport_interface/macros.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: rosidl_generator_c/nmea_msgs/msg/detail/defect_box__struct.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: rosidl_generator_c/nmea_msgs/msg/detail/defects__struct.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: rosidl_generator_c/nmea_msgs/msg/detail/pixel_point__struct.h
+CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o: rosidl_typesupport_c/nmea_msgs/msg/rosidl_typesupport_c__visibility_control.h
+
 CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgga__type_support.cpp.o: rosidl_typesupport_c/nmea_msgs/msg/gpgga__type_support.cpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgga__type_support.cpp.o: /opt/ros/galactic/include/builtin_interfaces/msg/detail/time__struct.h
 CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgga__type_support.cpp.o: /opt/ros/galactic/include/rosidl_runtime_c/message_type_support_struct.h

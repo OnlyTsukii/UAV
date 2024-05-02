@@ -37,52 +37,7 @@ void DefectBox_fini_function(void * message_memory)
   typed_message->~DefectBox();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember DefectBox_message_member_array[8] = {
-  {
-    "defect_id",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(nmea_msgs::msg::DefectBox, defect_id),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "img_width",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(nmea_msgs::msg::DefectBox, img_width),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "img_height",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(nmea_msgs::msg::DefectBox, img_height),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
-  },
+static const ::rosidl_typesupport_introspection_cpp::MessageMember DefectBox_message_member_array[5] = {
   {
     "center",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -163,7 +118,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember DefectBox_mes
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers DefectBox_message_members = {
   "nmea_msgs::msg",  // message namespace
   "DefectBox",  // message name
-  8,  // number of fields
+  5,  // number of fields
   sizeof(nmea_msgs::msg::DefectBox),
   DefectBox_message_member_array,  // message members
   DefectBox_init_function,  // function to initialize message memory (memory has to be allocated)

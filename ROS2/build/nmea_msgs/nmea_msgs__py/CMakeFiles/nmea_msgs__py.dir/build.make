@@ -59,6 +59,7 @@ nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/_nmea_msgs
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gps_fix.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_pixel_point.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defect_box.py
+nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defects.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_sentence.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgga.py
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsa.py
@@ -70,6 +71,7 @@ nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/__init
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c
+nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defects_s.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c
 nmea_msgs__py/CMakeFiles/nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c
@@ -95,6 +97,7 @@ rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/GpsFix.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/PixelPoint.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/DefectBox.idl
+rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/Defects.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/Sentence.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/Gpgga.idl
 rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/nmea_msgs/msg/Gpgsa.idl
@@ -209,6 +212,9 @@ rosidl_generator_py/nmea_msgs/msg/_pixel_point.py: rosidl_generator_py/nmea_msgs
 rosidl_generator_py/nmea_msgs/msg/_defect_box.py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_defect_box.py
 
+rosidl_generator_py/nmea_msgs/msg/_defects.py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_defects.py
+
 rosidl_generator_py/nmea_msgs/msg/_sentence.py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_sentence.py
 
@@ -242,6 +248,9 @@ rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c: rosidl_generator_py/nmea_msg
 rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c
 
+rosidl_generator_py/nmea_msgs/msg/_defects_s.c: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_defects_s.c
+
 rosidl_generator_py/nmea_msgs/msg/_sentence_s.c: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
 
@@ -270,6 +279,7 @@ nmea_msgs__py: rosidl_generator_py/nmea_msgs/_nmea_msgs_s.ep.rosidl_typesupport_
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gps_fix.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_pixel_point.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defect_box.py
+nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defects.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_sentence.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgga.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsa.py
@@ -281,6 +291,7 @@ nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/__init__.py
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gps_fix_s.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_pixel_point_s.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defect_box_s.c
+nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_defects_s.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_sentence_s.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgga_s.c
 nmea_msgs__py: rosidl_generator_py/nmea_msgs/msg/_gpgsa_s.c

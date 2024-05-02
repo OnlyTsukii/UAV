@@ -60,33 +60,6 @@ bool nmea_msgs__msg__defect_box__convert_from_py(PyObject * _pymsg, void * _ros_
     assert(strncmp("nmea_msgs.msg._defect_box.DefectBox", full_classname_dest, 35) == 0);
   }
   nmea_msgs__msg__DefectBox * ros_message = _ros_message;
-  {  // defect_id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "defect_id");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->defect_id = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // img_width
-    PyObject * field = PyObject_GetAttrString(_pymsg, "img_width");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->img_width = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
-  {  // img_height
-    PyObject * field = PyObject_GetAttrString(_pymsg, "img_height");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->img_height = (float)PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // center
     PyObject * field = PyObject_GetAttrString(_pymsg, "center");
     if (!field) {
@@ -164,39 +137,6 @@ PyObject * nmea_msgs__msg__defect_box__convert_to_py(void * raw_ros_message)
     }
   }
   nmea_msgs__msg__DefectBox * ros_message = (nmea_msgs__msg__DefectBox *)raw_ros_message;
-  {  // defect_id
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->defect_id);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "defect_id", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // img_width
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->img_width);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "img_width", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // img_height
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->img_height);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "img_height", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // center
     PyObject * field = NULL;
     field = nmea_msgs__msg__pixel_point__convert_to_py(&ros_message->center);

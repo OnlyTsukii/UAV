@@ -36,15 +36,15 @@ private:
   ::nmea_msgs::msg::GpsFix msg_;
 };
 
-class Init_GpsFix_msg_id
+class Init_GpsFix_gps_id
 {
 public:
-  Init_GpsFix_msg_id()
+  Init_GpsFix_gps_id()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_GpsFix_gps_fix msg_id(::nmea_msgs::msg::GpsFix::_msg_id_type arg)
+  Init_GpsFix_gps_fix gps_id(::nmea_msgs::msg::GpsFix::_gps_id_type arg)
   {
-    msg_.msg_id = std::move(arg);
+    msg_.gps_id = std::move(arg);
     return Init_GpsFix_gps_fix(msg_);
   }
 
@@ -63,7 +63,7 @@ template<>
 inline
 auto build<::nmea_msgs::msg::GpsFix>()
 {
-  return nmea_msgs::msg::builder::Init_GpsFix_msg_id();
+  return nmea_msgs::msg::builder::Init_GpsFix_gps_id();
 }
 
 }  // namespace nmea_msgs

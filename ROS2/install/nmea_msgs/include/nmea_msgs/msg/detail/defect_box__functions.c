@@ -23,9 +23,6 @@ nmea_msgs__msg__DefectBox__init(nmea_msgs__msg__DefectBox * msg)
   if (!msg) {
     return false;
   }
-  // defect_id
-  // img_width
-  // img_height
   // center
   if (!nmea_msgs__msg__PixelPoint__init(&msg->center)) {
     nmea_msgs__msg__DefectBox__fini(msg);
@@ -60,9 +57,6 @@ nmea_msgs__msg__DefectBox__fini(nmea_msgs__msg__DefectBox * msg)
   if (!msg) {
     return;
   }
-  // defect_id
-  // img_width
-  // img_height
   // center
   nmea_msgs__msg__PixelPoint__fini(&msg->center);
   // top_left
@@ -79,18 +73,6 @@ bool
 nmea_msgs__msg__DefectBox__are_equal(const nmea_msgs__msg__DefectBox * lhs, const nmea_msgs__msg__DefectBox * rhs)
 {
   if (!lhs || !rhs) {
-    return false;
-  }
-  // defect_id
-  if (lhs->defect_id != rhs->defect_id) {
-    return false;
-  }
-  // img_width
-  if (lhs->img_width != rhs->img_width) {
-    return false;
-  }
-  // img_height
-  if (lhs->img_height != rhs->img_height) {
     return false;
   }
   // center
@@ -134,12 +116,6 @@ nmea_msgs__msg__DefectBox__copy(
   if (!input || !output) {
     return false;
   }
-  // defect_id
-  output->defect_id = input->defect_id;
-  // img_width
-  output->img_width = input->img_width;
-  // img_height
-  output->img_height = input->img_height;
   // center
   if (!nmea_msgs__msg__PixelPoint__copy(
       &(input->center), &(output->center)))

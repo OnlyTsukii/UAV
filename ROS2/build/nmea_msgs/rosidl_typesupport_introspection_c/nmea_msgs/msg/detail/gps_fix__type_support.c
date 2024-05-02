@@ -39,14 +39,14 @@ void GpsFix__rosidl_typesupport_introspection_c__GpsFix_fini_function(void * mes
 
 static rosidl_typesupport_introspection_c__MessageMember GpsFix__rosidl_typesupport_introspection_c__GpsFix_message_member_array[2] = {
   {
-    "msg_id",  // name
+    "gps_id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(nmea_msgs__msg__GpsFix, msg_id),  // bytes offset in struct
+    offsetof(nmea_msgs__msg__GpsFix, gps_id),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

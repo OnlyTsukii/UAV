@@ -16,6 +16,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
    "msg/GpsFix.msg"
    "msg/PixelPoint.msg"
    "msg/DefectBox.msg"
+   "msg/Defects.msg"
    "msg/Sentence.msg"
    "msg/Gpgga.msg"
    "msg/Gpgsa.msg"

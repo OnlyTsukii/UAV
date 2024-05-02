@@ -47,13 +47,7 @@ struct DefectBox_
     bottom_left(_init),
     bottom_right(_init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->defect_id = 0l;
-      this->img_width = 0.0f;
-      this->img_height = 0.0f;
-    }
+    (void)_init;
   }
 
   explicit DefectBox_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
@@ -63,25 +57,10 @@ struct DefectBox_
     bottom_left(_alloc, _init),
     bottom_right(_alloc, _init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->defect_id = 0l;
-      this->img_width = 0.0f;
-      this->img_height = 0.0f;
-    }
+    (void)_init;
   }
 
   // field types and members
-  using _defect_id_type =
-    int32_t;
-  _defect_id_type defect_id;
-  using _img_width_type =
-    float;
-  _img_width_type img_width;
-  using _img_height_type =
-    float;
-  _img_height_type img_height;
   using _center_type =
     nmea_msgs::msg::PixelPoint_<ContainerAllocator>;
   _center_type center;
@@ -99,24 +78,6 @@ struct DefectBox_
   _bottom_right_type bottom_right;
 
   // setters for named parameter idiom
-  Type & set__defect_id(
-    const int32_t & _arg)
-  {
-    this->defect_id = _arg;
-    return *this;
-  }
-  Type & set__img_width(
-    const float & _arg)
-  {
-    this->img_width = _arg;
-    return *this;
-  }
-  Type & set__img_height(
-    const float & _arg)
-  {
-    this->img_height = _arg;
-    return *this;
-  }
   Type & set__center(
     const nmea_msgs::msg::PixelPoint_<ContainerAllocator> & _arg)
   {
@@ -190,15 +151,6 @@ struct DefectBox_
   // comparison operators
   bool operator==(const DefectBox_ & other) const
   {
-    if (this->defect_id != other.defect_id) {
-      return false;
-    }
-    if (this->img_width != other.img_width) {
-      return false;
-    }
-    if (this->img_height != other.img_height) {
-      return false;
-    }
     if (this->center != other.center) {
       return false;
     }

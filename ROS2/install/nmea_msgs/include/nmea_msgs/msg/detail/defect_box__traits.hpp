@@ -27,36 +27,6 @@ inline void to_yaml(
   const nmea_msgs::msg::DefectBox & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: defect_id
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "defect_id: ";
-    value_to_yaml(msg.defect_id, out);
-    out << "\n";
-  }
-
-  // member: img_width
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "img_width: ";
-    value_to_yaml(msg.img_width, out);
-    out << "\n";
-  }
-
-  // member: img_height
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "img_height: ";
-    value_to_yaml(msg.img_height, out);
-    out << "\n";
-  }
-
   // member: center
   {
     if (indentation > 0) {

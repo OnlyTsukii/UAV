@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defect_box__type_support.cpp.o"
+  "CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgga__type_support.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgsa__type_support.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/nmea_msgs/msg/gpgst__type_support.cpp.o"
@@ -12,6 +13,7 @@ file(REMOVE_RECURSE
   "libnmea_msgs__rosidl_typesupport_c.pdb"
   "libnmea_msgs__rosidl_typesupport_c.so"
   "rosidl_typesupport_c/nmea_msgs/msg/defect_box__type_support.cpp"
+  "rosidl_typesupport_c/nmea_msgs/msg/defects__type_support.cpp"
   "rosidl_typesupport_c/nmea_msgs/msg/gpgga__type_support.cpp"
   "rosidl_typesupport_c/nmea_msgs/msg/gpgsa__type_support.cpp"
   "rosidl_typesupport_c/nmea_msgs/msg/gpgst__type_support.cpp"

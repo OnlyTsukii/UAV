@@ -104,6 +104,9 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_
  rosidl_generator_c/nmea_msgs/msg/detail/defect_box__functions.h
  rosidl_generator_c/nmea_msgs/msg/detail/defect_box__struct.h
  rosidl_generator_c/nmea_msgs/msg/detail/defect_box__type_support.h
+ rosidl_generator_c/nmea_msgs/msg/detail/defects__functions.h
+ rosidl_generator_c/nmea_msgs/msg/detail/defects__struct.h
+ rosidl_generator_c/nmea_msgs/msg/detail/defects__type_support.h
  rosidl_generator_c/nmea_msgs/msg/detail/gpgga__functions.h
  rosidl_generator_c/nmea_msgs/msg/detail/gpgga__struct.h
  rosidl_generator_c/nmea_msgs/msg/detail/gpgga__type_support.h

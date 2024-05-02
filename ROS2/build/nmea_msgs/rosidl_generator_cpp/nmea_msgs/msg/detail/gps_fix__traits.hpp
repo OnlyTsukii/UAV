@@ -23,13 +23,13 @@ inline void to_yaml(
   const nmea_msgs::msg::GpsFix & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: msg_id
+  // member: gps_id
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "msg_id: ";
-    value_to_yaml(msg.msg_id, out);
+    out << "gps_id: ";
+    value_to_yaml(msg.gps_id, out);
     out << "\n";
   }
 

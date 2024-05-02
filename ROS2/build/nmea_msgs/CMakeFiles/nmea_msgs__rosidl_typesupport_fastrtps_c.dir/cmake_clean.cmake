@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defect_box__type_support_c.cpp.o"
+  "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o"
   "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o"
@@ -13,6 +14,8 @@ file(REMOVE_RECURSE
   "libnmea_msgs__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defect_box__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_c.h"
