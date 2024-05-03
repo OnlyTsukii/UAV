@@ -9,10 +9,12 @@
 
   <depend>rclpy</depend>
   <depend>geometry_msgs</depend>
-  <depend>nmea_msgs</depend>
+  <depend>location_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>python3-numpy</depend>
   <depend>python3-serial</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2</depend>
   <depend>tf_transformations</depend>
   <depend>std_msgs</depend>
 

@@ -1,0 +1,21 @@
+[0.537s] Invoking command in '/home/xs/UAV/ROS2/object_detector': AMENT_PREFIX_PATH=/home/xs/UAV/ROS2/install/nmea_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xs/UAV/ROS2/install/nmea_msgs LD_LIBRARY_PATH=/home/xs/UAV/ROS2/install/nmea_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xs/UAV/ROS2/build/object_detector/prefix_override:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_detector build --build-base /home/xs/UAV/ROS2/build/object_detector/build install --record /home/xs/UAV/ROS2/build/object_detector/install.log --single-version-externally-managed install_data
+[0.683s] running egg_info
+[0.684s] writing ../build/object_detector/object_detector.egg-info/PKG-INFO
+[0.684s] writing dependency_links to ../build/object_detector/object_detector.egg-info/dependency_links.txt
+[0.684s] writing entry points to ../build/object_detector/object_detector.egg-info/entry_points.txt
+[0.684s] writing requirements to ../build/object_detector/object_detector.egg-info/requires.txt
+[0.684s] writing top-level names to ../build/object_detector/object_detector.egg-info/top_level.txt
+[0.706s] reading manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'
+[0.707s] writing manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'
+[0.707s] running build
+[0.707s] running build_py
+[0.707s] running install
+[0.708s] running install_lib
+[0.709s] running install_data
+[0.709s] running install_egg_info
+[0.710s] removing '/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector-0.0.0-py3.8.egg-info' (and everything under it)
+[0.710s] Copying ../build/object_detector/object_detector.egg-info to /home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector-0.0.0-py3.8.egg-info
+[0.711s] running install_scripts
+[0.723s] Installing dft_publisher script to /home/xs/UAV/ROS2/install/object_detector/lib/object_detector
+[0.723s] writing list of installed files to '/home/xs/UAV/ROS2/build/object_detector/install.log'
+[0.739s] Invoked command in '/home/xs/UAV/ROS2/object_detector' returned '0': AMENT_PREFIX_PATH=/home/xs/UAV/ROS2/install/nmea_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xs/UAV/ROS2/install/nmea_msgs LD_LIBRARY_PATH=/home/xs/UAV/ROS2/install/nmea_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xs/UAV/ROS2/build/object_detector/prefix_override:/home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/nmea_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/object_detector build --build-base /home/xs/UAV/ROS2/build/object_detector/build install --record /home/xs/UAV/ROS2/build/object_detector/install.log --single-version-externally-managed install_data

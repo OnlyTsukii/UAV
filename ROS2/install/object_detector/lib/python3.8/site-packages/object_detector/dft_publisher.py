@@ -5,14 +5,12 @@ import queue
 import time
 
 from rclpy.node import Node
-from std_msgs.msg import Int16
 from nmea_msgs.msg import Defects, DefectBox, PixelPoint
 from ultralytics import YOLO
-from typing import Tuple
 
 
 SERVER_IP   = '127.0.0.1'
-SERVER_PORT = 8890
+SERVER_PORT = 8899
 
 class Dft_Publisher(Node):
     def __init__(self):
@@ -30,6 +28,8 @@ class Dft_Publisher(Node):
             result.save(filename='result.jpg') 
             res['boxes'] = boxes.xywh
             res['img_size'] = result.orig_shape
+
+        self.get_logger().info(f"YOLOv8 detection finished.")
         return res
 
     def socket_serve(self):
@@ -40,7 +40,7 @@ class Dft_Publisher(Node):
             data, addr = sock.recvfrom(256)
             source = data.decode('utf-8')
 
-            print("Receive data %s from %s" % (source, addr))
+            self.get_logger().info("Receive data %s from %s" % (source, addr))
             self.msg_queue.put(source)
 
     def queue_handler(self):
@@ -49,7 +49,6 @@ class Dft_Publisher(Node):
                 time.sleep(1.0)
             else:
                 msg = self.msg_queue.get()
-                print(f"Get a message {msg} from queue")
 
                 i = msg.index(':')
                 path = msg[:i]
@@ -92,15 +91,16 @@ class Dft_Publisher(Node):
 
             dfts.defects.append(dft_box)
 
-            print('++++++++++++++++++++++++++++++++++++++++++++++++++++')
-            print("Center:", x, y)
-            print('-----------------------------------------------')
-            print("Corner:")
-            print(f"[{x1}, {y1}] --- [{x2}, {y2}]")
-            print(f"[{x3}, {y3}] --- [{x4}, {y4}]")
-            print()
+            # self.get_logger().info('++++++++++++++++++++++++++++++++++++++++++++++++++++')
+            # self.get_logger().info("Center:", x, y)
+            # self.get_logger().info('-----------------------------------------------')
+            # self.get_logger().info("Corner:")
+            # self.get_logger().info(f"[{x1}, {y1}] --- [{x2}, {y2}]")
+            # self.get_logger().info(f"[{x3}, {y3}] --- [{x4}, {y4}]")
+            # self.get_logger().info()
 
         self.dft_publiser.publish(dfts)
+        self.get_logger().info(f"Publishing defects message, id: {dfts.defect_id}.")
 
 
 def main(args=None):

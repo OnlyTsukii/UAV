@@ -1,1 +1,1 @@
-rclpy:std_msgs
+nmea_msgs:rclpy

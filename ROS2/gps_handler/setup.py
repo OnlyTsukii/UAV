@@ -7,7 +7,7 @@ SHARE_DIR = os.path.join("share", PACKAGE_NAME)
 
 setup(
     name=PACKAGE_NAME,
-    version='2.0.0',
+    version='0.0.0',
     packages=["gps_handler", "gps_handler.nodes"],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -27,6 +27,9 @@ setup(
     description='Package to parse NMEA strings and publish a very simple GPS message.',
     license='BSD',
     entry_points={
-        'console_scripts': ['nmea_serial_driver = gps_handler.nodes.nmea_serial_driver:main',],
+        'console_scripts': [
+            'nmea_serial_driver = gps_handler.nodes.nmea_serial_driver:main',
+            'gps_simulator = gps_handler.gps_simulator:main'
+        ],
     }
 )

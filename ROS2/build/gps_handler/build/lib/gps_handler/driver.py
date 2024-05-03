@@ -264,11 +264,7 @@ class Ros2NMEADriver(Node):
         else:
             return False
         
-        if self.pre_lon == float("nan"):
-            self.pre_lon = current_fix.longitude
-            self.pre_lat = current_fix.latitude
-            self.pre_alt = current_fix.altitude
-        else:
+        if self.pre_lon != float("nan"):
             lon_cur_thr = abs(current_fix.longitude - self.pre_lon)
             lat_cur_thr = abs(current_fix.latitude - self.pre_lat)
             alt_cur_thr = abs(current_fix.altitude - self.pre_alt)
@@ -278,7 +274,11 @@ class Ros2NMEADriver(Node):
                 ctrl_cmd = Int32()
                 ctrl_cmd.data = self.gps_id
                 self.ctrl_publisher.publish(ctrl_cmd)
-                self.get_logger().info(f"Publish IR camera control message { ctrl_cmd.data }")
+                self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
+
+        self.pre_lon = current_fix.longitude
+        self.pre_lat = current_fix.latitude
+        self.pre_alt = current_fix.altitude
 
         return True
 

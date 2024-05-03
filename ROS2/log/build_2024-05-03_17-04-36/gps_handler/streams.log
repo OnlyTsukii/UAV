@@ -1,0 +1,63 @@
+[0.909s] Invoking command in '/home/xs/UAV/ROS2/gps_handler': PYTHONPATH=/home/xs/UAV/ROS2/build/gps_handler/prefix_override:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/xs/UAV/ROS2/build/gps_handler/build install --record /home/xs/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data
+[1.078s] running egg_info
+[1.078s] creating ../build/gps_handler/gps_handler.egg-info
+[1.078s] writing ../build/gps_handler/gps_handler.egg-info/PKG-INFO
+[1.078s] writing dependency_links to ../build/gps_handler/gps_handler.egg-info/dependency_links.txt
+[1.078s] writing entry points to ../build/gps_handler/gps_handler.egg-info/entry_points.txt
+[1.078s] writing requirements to ../build/gps_handler/gps_handler.egg-info/requires.txt
+[1.079s] writing top-level names to ../build/gps_handler/gps_handler.egg-info/top_level.txt
+[1.079s] writing manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[1.105s] reading manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[1.105s] writing manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[1.106s] running build
+[1.106s] running build_py
+[1.106s] creating /home/xs/UAV/ROS2/build/gps_handler/build
+[1.106s] creating /home/xs/UAV/ROS2/build/gps_handler/build/lib
+[1.106s] creating /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.106s] copying gps_handler/checksum_utils.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.106s] copying gps_handler/driver.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.106s] copying gps_handler/parser.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.106s] copying gps_handler/gps_simulator.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.106s] copying gps_handler/__init__.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler
+[1.106s] creating /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes
+[1.107s] copying gps_handler/nodes/__init__.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes
+[1.107s] copying gps_handler/nodes/nmea_serial_driver.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes
+[1.107s] copying gps_handler/nodes/gps_path.py -> /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes
+[1.107s] running install
+[1.107s] running install_lib
+[1.108s] creating /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler
+[1.108s] creating /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/nodes
+[1.108s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes/__init__.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/nodes
+[1.109s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes/nmea_serial_driver.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/nodes
+[1.109s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/nodes/gps_path.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/nodes
+[1.109s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/checksum_utils.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler
+[1.109s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/driver.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler
+[1.109s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/parser.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler
+[1.109s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/gps_simulator.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler
+[1.109s] copying /home/xs/UAV/ROS2/build/gps_handler/build/lib/gps_handler/__init__.py -> /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler
+[1.109s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/nodes/__init__.py to __init__.cpython-38.pyc
+[1.110s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/nodes/nmea_serial_driver.py to nmea_serial_driver.cpython-38.pyc
+[1.111s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/nodes/gps_path.py to gps_path.cpython-38.pyc
+[1.111s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/checksum_utils.py to checksum_utils.cpython-38.pyc
+[1.112s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/driver.py to driver.cpython-38.pyc
+[1.113s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/parser.py to parser.cpython-38.pyc
+[1.114s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/gps_simulator.py to gps_simulator.cpython-38.pyc
+[1.114s] byte-compiling /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler/__init__.py to __init__.cpython-38.pyc
+[1.114s] running install_data
+[1.114s] creating /home/xs/UAV/ROS2/install/gps_handler/share/ament_index
+[1.114s] creating /home/xs/UAV/ROS2/install/gps_handler/share/ament_index/resource_index
+[1.114s] creating /home/xs/UAV/ROS2/install/gps_handler/share/ament_index/resource_index/packages
+[1.114s] copying resource/gps_handler -> /home/xs/UAV/ROS2/install/gps_handler/share/ament_index/resource_index/packages
+[1.114s] copying package.xml -> /home/xs/UAV/ROS2/install/gps_handler/share/gps_handler
+[1.114s] creating /home/xs/UAV/ROS2/install/gps_handler/share/gps_handler/launch
+[1.115s] copying launch/gps_simulator.launch.py -> /home/xs/UAV/ROS2/install/gps_handler/share/gps_handler/launch
+[1.115s] copying launch/gps_handler.launch.py -> /home/xs/UAV/ROS2/install/gps_handler/share/gps_handler/launch
+[1.115s] creating /home/xs/UAV/ROS2/install/gps_handler/share/gps_handler/config
+[1.115s] copying config/gps_handler.yaml -> /home/xs/UAV/ROS2/install/gps_handler/share/gps_handler/config
+[1.115s] running install_egg_info
+[1.116s] Copying ../build/gps_handler/gps_handler.egg-info to /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-0.0.0-py3.8.egg-info
+[1.116s] running install_scripts
+[1.135s] Installing gps_simulator script to /home/xs/UAV/ROS2/install/gps_handler/lib/gps_handler
+[1.135s] Installing nmea_serial_driver script to /home/xs/UAV/ROS2/install/gps_handler/lib/gps_handler
+[1.135s] writing list of installed files to '/home/xs/UAV/ROS2/build/gps_handler/install.log'
+[1.152s] Invoked command in '/home/xs/UAV/ROS2/gps_handler' returned '0': PYTHONPATH=/home/xs/UAV/ROS2/build/gps_handler/prefix_override:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/xs/UAV/ROS2/build/gps_handler/build install --record /home/xs/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data

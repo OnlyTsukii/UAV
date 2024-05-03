@@ -8,6 +8,7 @@ setup.py
 ../build/tf_converter/tf_converter.egg-info/requires.txt
 ../build/tf_converter/tf_converter.egg-info/top_level.txt
 ../build/tf_converter/tf_converter.egg-info/zip-safe
+launch/tf_converter.launch.py
 resource/tf_converter
 test/test_copyright.py
 test/test_flake8.py

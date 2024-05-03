@@ -21,14 +21,14 @@ def generate_launch_description():
 def main(argv):
     ld = generate_launch_description()
 
-    print('Starting introspection of launch description...')
-    print('')
+    # print('Starting introspection of launch description...')
+    # print('')
 
-    print(LaunchIntrospector().format_launch_description(ld))
+    # print(LaunchIntrospector().format_launch_description(ld))
 
-    print('')
-    print('Starting launch of launch description...')
-    print('')
+    # print('')
+    # print('Starting launch of launch description...')
+    # print('')
 
     ls = LaunchService()
     ls.include_launch_description(ld)

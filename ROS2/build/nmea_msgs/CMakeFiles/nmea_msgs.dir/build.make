@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xs/UAV/ROS2/nmea_msgs
+CMAKE_SOURCE_DIR = /home/xs/UAV/ROS2/location_msgs
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/xs/UAV/ROS2/build/nmea_msgs
@@ -53,17 +53,10 @@ CMAKE_BINARY_DIR = /home/xs/UAV/ROS2/build/nmea_msgs
 # Include the progress variables for this target.
 include CMakeFiles/nmea_msgs.dir/progress.make
 
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/GpsFix.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/PixelPoint.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/DefectBox.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Defects.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Sentence.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gpgga.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gpgsa.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gpgst.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gpgsv.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/GpgsvSatellite.msg
-CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/nmea_msgs/msg/Gprmc.msg
+CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/location_msgs/msg/GpsFix.msg
+CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/location_msgs/msg/PixelPoint.msg
+CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/location_msgs/msg/DefectBox.msg
+CMakeFiles/nmea_msgs: /home/xs/UAV/ROS2/location_msgs/msg/Defects.msg
 CMakeFiles/nmea_msgs: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 CMakeFiles/nmea_msgs: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 CMakeFiles/nmea_msgs: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -139,6 +132,6 @@ CMakeFiles/nmea_msgs.dir/clean:
 .PHONY : CMakeFiles/nmea_msgs.dir/clean
 
 CMakeFiles/nmea_msgs.dir/depend:
-	cd /home/xs/UAV/ROS2/build/nmea_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/nmea_msgs /home/xs/UAV/ROS2/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xs/UAV/ROS2/build/nmea_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nmea_msgs.dir/depend
 

@@ -51,6 +51,7 @@ class TF_Converter(Node):
         self.map['gps'] = msg
         if self.map.get('dfts') != None:
             self.queue.put(self.map)
+        self.get_logger().info(f"Got a gps message, id: {msg.gps_id}.")
         self.mutex.release()
             
     def dft_callback(self, msg: Defects):
@@ -58,6 +59,7 @@ class TF_Converter(Node):
         self.map['dfts'] = msg
         if self.map.get('gps') != None:
             self.queue.put(self.map)
+        self.get_logger().info(f"Got a defects message, id: {msg.defect_id}.")
         self.mutex.release()
 
     def handle_map(self):
@@ -94,8 +96,10 @@ class TF_Converter(Node):
                         [math.sin(rot_angle), -1 * math.cos(rot_angle)]
                     )
 
+                    dfts_abs_pos = []
+
                     for i, dft_pos in enumerate(dfts_rel_pos):
-                        x, y, z = dft_pos
+                        x, y = dft_pos
 
                         # Transform position from camera frame to uav frame
                         uav_x = x + t.transform.translation.x
@@ -106,10 +110,10 @@ class TF_Converter(Node):
                         target = numpy.dot(R, offset)
                         gps_e = gps_msg.longitude + target[0] * LON_PER_METER
                         gps_n = gps_msg.latitude + target[1] * LAT_PER_METER
-                        dfts_rel_pos[i] = (gps_e, gps_n, uav_z)
+                        dfts_abs_pos.append((gps_e, gps_n, SOLAR_PANEL_HEIGHT + SOOCHOW_GROUND_ALTITUDE))
                     
                     # Print the final absolute position of defects
-                    print(dfts_rel_pos)
+                    self.get_logger().info(f"Defects location finished, results: {dfts_abs_pos}")
 
                 except TransformException as ex:
                     self.get_logger().info(
@@ -119,7 +123,7 @@ class TF_Converter(Node):
     def rad(self, d):
         return d * math.pi / 180.0
     
-    def calc_dfts_pos(self, height, msg: Defects) -> List[Tuple[float, float, float]]:
+    def calc_dfts_pos(self, height, msg: Defects) -> List[Tuple[float, float]]:
         half_hon_rad = self.rad(CAM_HOR_ANGLE / 2)
         half_ver_rad = self.rad(CAM_VER_ANGLE / 2)
 
@@ -136,7 +140,7 @@ class TF_Converter(Node):
         for dft in msg.defects:
             x = dft.center.x - msg.img_width / 2
             y = msg.img_height / 2 - dft.center.y
-            res.append((scale_x * x, scale_y * y, height))
+            res.append((scale_x * x, scale_y * y))
 
         return res
     

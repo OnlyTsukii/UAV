@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xs/UAV/ROS2/nmea_msgs
+CMAKE_SOURCE_DIR = /home/xs/UAV/ROS2/location_msgs
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/xs/UAV/ROS2/build/nmea_msgs
@@ -69,34 +69,6 @@ CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/defects.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__builder.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__struct.hpp
 CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__builder.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__struct.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__traits.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgga.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__builder.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__struct.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__traits.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgsa.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__builder.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__struct.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__traits.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgst.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__builder.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__struct.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__traits.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgsv.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__builder.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__struct.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__traits.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgsv_satellite.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__builder.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__struct.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__traits.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gprmc.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__builder.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__struct.hpp
-CMakeFiles/nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__traits.hpp
 
 
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: /opt/ros/galactic/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -118,13 +90,6 @@ rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Gps
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/PixelPoint.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/DefectBox.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Defects.idl
-rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Sentence.idl
-rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Gpgga.idl
-rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Gpgsa.idl
-rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Gpgst.idl
-rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Gpgsv.idl
-rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/GpgsvSatellite.idl
-rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: rosidl_adapter/nmea_msgs/msg/Gprmc.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -262,90 +227,6 @@ rosidl_generator_cpp/nmea_msgs/msg/detail/defects__struct.hpp: rosidl_generator_
 rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp
 
-rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__builder.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__builder.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__struct.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__struct.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__traits.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/gpgga.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/gpgga.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__builder.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__builder.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__struct.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__struct.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__traits.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/gpgsa.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/gpgsa.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__builder.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__builder.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__struct.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__struct.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__traits.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/gpgst.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/gpgst.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__builder.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__builder.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__struct.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__struct.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__traits.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/gpgsv.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/gpgsv.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__builder.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__builder.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__struct.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__struct.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__traits.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/gpgsv_satellite.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/gpgsv_satellite.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__builder.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__builder.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__struct.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__struct.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__traits.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/gprmc.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/gprmc.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__builder.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__builder.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__struct.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__struct.hpp
-
-rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__traits.hpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__traits.hpp
-
 nmea_msgs__cpp: CMakeFiles/nmea_msgs__cpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gps_fix.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gps_fix__builder.hpp
@@ -363,34 +244,6 @@ nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/defects.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__builder.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__struct.hpp
 nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/defects__traits.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/sentence.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__builder.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__struct.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/sentence__traits.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgga.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__builder.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__struct.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgga__traits.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgsa.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__builder.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__struct.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsa__traits.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgst.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__builder.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__struct.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgst__traits.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgsv.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__builder.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__struct.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv__traits.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gpgsv_satellite.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__builder.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__struct.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gpgsv_satellite__traits.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/gprmc.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__builder.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__struct.hpp
-nmea_msgs__cpp: rosidl_generator_cpp/nmea_msgs/msg/detail/gprmc__traits.hpp
 nmea_msgs__cpp: CMakeFiles/nmea_msgs__cpp.dir/build.make
 
 .PHONY : nmea_msgs__cpp
@@ -405,6 +258,6 @@ CMakeFiles/nmea_msgs__cpp.dir/clean:
 .PHONY : CMakeFiles/nmea_msgs__cpp.dir/clean
 
 CMakeFiles/nmea_msgs__cpp.dir/depend:
-	cd /home/xs/UAV/ROS2/build/nmea_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/nmea_msgs /home/xs/UAV/ROS2/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xs/UAV/ROS2/build/nmea_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nmea_msgs__cpp.dir/depend
 

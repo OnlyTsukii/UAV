@@ -1,0 +1,23 @@
+[0.900s] Invoking command in '/home/xs/UAV/ROS2/gps_handler': PYTHONPATH=/home/xs/UAV/ROS2/build/gps_handler/prefix_override:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/xs/UAV/ROS2/build/gps_handler/build install --record /home/xs/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data
+[1.065s] running egg_info
+[1.066s] writing ../build/gps_handler/gps_handler.egg-info/PKG-INFO
+[1.066s] writing dependency_links to ../build/gps_handler/gps_handler.egg-info/dependency_links.txt
+[1.066s] writing entry points to ../build/gps_handler/gps_handler.egg-info/entry_points.txt
+[1.066s] writing requirements to ../build/gps_handler/gps_handler.egg-info/requires.txt
+[1.066s] writing top-level names to ../build/gps_handler/gps_handler.egg-info/top_level.txt
+[1.092s] reading manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[1.092s] writing manifest file '../build/gps_handler/gps_handler.egg-info/SOURCES.txt'
+[1.092s] running build
+[1.092s] running build_py
+[1.093s] running install
+[1.093s] running install_lib
+[1.094s] running install_data
+[1.095s] copying launch/gps_simulator.launch.py -> /home/xs/UAV/ROS2/install/gps_handler/share/gps_handler/launch
+[1.095s] running install_egg_info
+[1.096s] removing '/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-0.0.0-py3.8.egg-info' (and everything under it)
+[1.096s] Copying ../build/gps_handler/gps_handler.egg-info to /home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages/gps_handler-0.0.0-py3.8.egg-info
+[1.097s] running install_scripts
+[1.110s] Installing gps_simulator script to /home/xs/UAV/ROS2/install/gps_handler/lib/gps_handler
+[1.110s] Installing nmea_serial_driver script to /home/xs/UAV/ROS2/install/gps_handler/lib/gps_handler
+[1.110s] writing list of installed files to '/home/xs/UAV/ROS2/build/gps_handler/install.log'
+[1.135s] Invoked command in '/home/xs/UAV/ROS2/gps_handler' returned '0': PYTHONPATH=/home/xs/UAV/ROS2/build/gps_handler/prefix_override:/home/xs/UAV/ROS2/install/gps_handler/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/gps_handler build --build-base /home/xs/UAV/ROS2/build/gps_handler/build install --record /home/xs/UAV/ROS2/build/gps_handler/install.log --single-version-externally-managed install_data

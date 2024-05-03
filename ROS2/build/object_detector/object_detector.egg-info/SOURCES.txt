@@ -8,6 +8,7 @@ setup.py
 ../build/object_detector/object_detector.egg-info/requires.txt
 ../build/object_detector/object_detector.egg-info/top_level.txt
 ../build/object_detector/object_detector.egg-info/zip-safe
+launch/object_detector.launch.py
 object_detector/__init__.py
 object_detector/dft_publisher.py
 resource/object_detector

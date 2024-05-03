@@ -289,7 +289,7 @@ TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 _lib:FILEPATH=/opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
 
 //Path to a file.
-_numpy_h:FILEPATH=/usr/include/python3.8/numpy/numpyconfig.h
+_numpy_h:FILEPATH=/usr/include/numpy/numpyconfig.h
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/galactic/share/ament_cmake/cmake
@@ -370,7 +370,7 @@ geometry_msgs_DIR:PATH=/opt/ros/galactic/share/geometry_msgs/cmake
 nmea_msgs_BINARY_DIR:STATIC=/home/xs/UAV/ROS2/build/nmea_msgs
 
 //Value Computed by CMake
-nmea_msgs_SOURCE_DIR:STATIC=/home/xs/UAV/ROS2/nmea_msgs
+nmea_msgs_SOURCE_DIR:STATIC=/home/xs/UAV/ROS2/location_msgs
 
 //Dependencies for the target
 nmea_msgs__python_LIB_DEPENDS:STATIC=general;nmea_msgs__rosidl_generator_c;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;nmea_msgs__rosidl_typesupport_c;general;/opt/ros/galactic/share/std_msgs/cmake/../../../lib/libstd_msgs__python.so;general;/opt/ros/galactic/share/builtin_interfaces/cmake/../../../lib/libbuiltin_interfaces__python.so;general;/opt/ros/galactic/share/sensor_msgs/cmake/../../../lib/libsensor_msgs__python.so;general;/opt/ros/galactic/share/geometry_msgs/cmake/../../../lib/libgeometry_msgs__python.so;
@@ -562,7 +562,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/xs/UAV/ROS2/nmea_msgs
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/xs/UAV/ROS2/location_msgs
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

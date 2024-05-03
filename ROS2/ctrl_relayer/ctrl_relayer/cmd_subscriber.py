@@ -20,13 +20,13 @@ class Cmd_Subscriber(Node):
         self.subscriber = self.create_subscription(Int32, "ctrl_cmd", self.cmd_callback, 10)
 
     def cmd_callback(self, msg: Int32):
-        print(f"Receive message: {msg.data}")
-        self.send_data(str(msg.data))
+        self.get_logger().info(f"Receive control command: {msg.data}.")
+        # self.send_data(str(msg.data))
 
     def send_data(self, data):
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
             s.sendto(data.encode(), (SERVER_IP, SERVER_PORT))
-            print("send data")
+            self.get_logger().info(f"Command subscriber sends data to IR camera.")
             
             # data, addr = s.recvfrom(64)
             # resp = int.from_bytes(data, byteorder='big')

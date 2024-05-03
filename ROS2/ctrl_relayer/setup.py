@@ -23,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-                'cmd_subscriber = cmd_handler.cmd_subscriber:main',
+                'cmd_subscriber = ctrl_relayer.cmd_subscriber:main',
         ],
     },
 )

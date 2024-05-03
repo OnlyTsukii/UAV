@@ -27,6 +27,7 @@ ROTATION_ANGLE  = 20    # UNKNOWN
 LAT_PER_METER = 0.00000905
 LON_PER_METER = 0.0000103
 
+
 class TF_Converter(Node):
     def __init__(self):
         super().__init__("tf_converter")
@@ -50,6 +51,7 @@ class TF_Converter(Node):
         self.map['gps'] = msg
         if self.map.get('dfts') != None:
             self.queue.put(self.map)
+        self.get_logger().info(f"Got a gps message, id: {msg.gps_id}.")
         self.mutex.release()
             
     def dft_callback(self, msg: Defects):
@@ -57,6 +59,7 @@ class TF_Converter(Node):
         self.map['dfts'] = msg
         if self.map.get('gps') != None:
             self.queue.put(self.map)
+        self.get_logger().info(f"Got a defects message, id: {msg.defect_id}.")
         self.mutex.release()
 
     def handle_map(self):
@@ -93,8 +96,10 @@ class TF_Converter(Node):
                         [math.sin(rot_angle), -1 * math.cos(rot_angle)]
                     )
 
+                    dfts_abs_pos = []
+
                     for i, dft_pos in enumerate(dfts_rel_pos):
-                        x, y, z = dft_pos
+                        x, y = dft_pos
 
                         # Transform position from camera frame to uav frame
                         uav_x = x + t.transform.translation.x
@@ -105,20 +110,20 @@ class TF_Converter(Node):
                         target = numpy.dot(R, offset)
                         gps_e = gps_msg.longitude + target[0] * LON_PER_METER
                         gps_n = gps_msg.latitude + target[1] * LAT_PER_METER
-                        dfts_rel_pos[i] = (gps_e, gps_n, uav_z)
+                        dfts_abs_pos.append((gps_e, gps_n, SOLAR_PANEL_HEIGHT + SOOCHOW_GROUND_ALTITUDE))
                     
                     # Print the final absolute position of defects
-                    print(dfts_rel_pos)
+                    self.get_logger().info(f"Defects location finished, results: {dfts_abs_pos}")
 
                 except TransformException as ex:
                     self.get_logger().info(
                         f'Could not transform {from_frame_rel} to {to_frame_rel}: {ex}')
 
-    # Transform angle to radian
+    # Convert angle to radian
     def rad(self, d):
         return d * math.pi / 180.0
     
-    def calc_dfts_pos(self, height, msg: Defects) -> List[Tuple[float, float, float]]:
+    def calc_dfts_pos(self, height, msg: Defects) -> List[Tuple[float, float]]:
         half_hon_rad = self.rad(CAM_HOR_ANGLE / 2)
         half_ver_rad = self.rad(CAM_VER_ANGLE / 2)
 
@@ -135,60 +140,78 @@ class TF_Converter(Node):
         for dft in msg.defects:
             x = dft.center.x - msg.img_width / 2
             y = msg.img_height / 2 - dft.center.y
-            res.append((scale_x * x, scale_y * y, height))
+            res.append((scale_x * x, scale_y * y))
 
         return res
     
-    # def get_transform(self, msg: GpsFix) -> Tuple[float, float, float]:
-    #     if self.init_longitude == 0 and self.init_altitude == 0 \
-    #         and self.init_altitude == 0:
-    #         self.init_longitude = msg.longitude
-    #         self.init_latitude = msg.latitude
-    #         self.init_altitude = msg.altitude
+    def get_transform(self, msg: GpsFix) -> Tuple[float, float, float]:
+        if self.init_longitude == 0 and self.init_altitude == 0 \
+            and self.init_altitude == 0:
+            self.init_longitude = msg.longitude
+            self.init_latitude = msg.latitude
+            self.init_altitude = msg.altitude
 
-    #         return 0, 0, 0
-    #     else:
-    #         radLat1 = self.rad(self.init_latitude)
-    #         radLong1 = self.rad(self.init_longitude)
-    #         radLat2 = self.rad(msg.latitude)
-    #         radLong2 = self.rad(msg.longitude)
+            return 0, 0, 0
+        else:
+            radLat1 = self.rad(self.init_latitude)
+            radLong1 = self.rad(self.init_longitude)
+            radLat2 = self.rad(msg.latitude)
+            radLong2 = self.rad(msg.longitude)
             
-    #         delta_lat = radLat2 - radLat1
-    #         delta_long = 0
+            delta_lat = radLat2 - radLat1
+            delta_long = 0
             
-    #         if delta_lat > 0:
-    #             x = -2 * math.asin(math.sqrt(
-    #                 math.pow(math.sin(delta_lat / 2), 2) +
-    #                 math.cos(radLat1) * math.cos(radLat2) *
-    #                 math.pow(math.sin(delta_long / 2), 2)
-    #             ))
-    #         else:
-    #             x = -2 * math.asin(math.sqrt(
-    #                 math.pow(math.sin(delta_lat / 2), 2) +
-    #                 math.cos(radLat1) * math.cos(radLat2) *
-    #                 math.pow(math.sin(delta_long / 2), 2)
-    #             ))
-    #         x *= EARTH_RADIUS * 1000
+            if delta_lat > 0:
+                x = -2 * math.asin(math.sqrt(
+                    math.pow(math.sin(delta_lat / 2), 2) +
+                    math.cos(radLat1) * math.cos(radLat2) *
+                    math.pow(math.sin(delta_long / 2), 2)
+                ))
+            else:
+                x = -2 * math.asin(math.sqrt(
+                    math.pow(math.sin(delta_lat / 2), 2) +
+                    math.cos(radLat1) * math.cos(radLat2) *
+                    math.pow(math.sin(delta_long / 2), 2)
+                ))
+            x *= EARTH_RADIUS * 1000
             
-    #         delta_lat = 0
-    #         delta_long = radLong2 - radLong1
-    #         if delta_long > 0:
-    #             y = 2 * math.asin(math.sqrt(
-    #                 math.pow(math.sin(delta_lat / 2), 2) +
-    #                 math.cos(radLat2) * math.cos(radLat2) *
-    #                 math.pow(math.sin(delta_long / 2), 2)
-    #             ))
-    #         else:
-    #             y = -2 * math.asin(math.sqrt(
-    #                 math.pow(math.sin(delta_lat / 2), 2) +
-    #                 math.cos(radLat2) * math.cos(radLat2) *
-    #                 math.pow(math.sin(delta_long / 2), 2)
-    #             ))
-    #         y *= EARTH_RADIUS * 1000
+            delta_lat = 0
+            delta_long = radLong2 - radLong1
+            if delta_long > 0:
+                y = 2 * math.asin(math.sqrt(
+                    math.pow(math.sin(delta_lat / 2), 2) +
+                    math.cos(radLat2) * math.cos(radLat2) *
+                    math.pow(math.sin(delta_long / 2), 2)
+                ))
+            else:
+                y = -2 * math.asin(math.sqrt(
+                    math.pow(math.sin(delta_lat / 2), 2) +
+                    math.cos(radLat2) * math.cos(radLat2) *
+                    math.pow(math.sin(delta_long / 2), 2)
+                ))
+            y *= EARTH_RADIUS * 1000
             
-    #         # Must be the height relative to the current ground plane.
-    #         z = msg.altitude - SOOCHOW_GROUND_ALTITUDE
+            # Must be the height relative to the current ground plane.
+            z = msg.altitude - SOOCHOW_GROUND_ALTITUDE
 
-    #         return x, y, z
+            return x, y, z
+        
+        
+def main(args=None):
+    rclpy.init(args=args)
+
+    tf_converter = TF_Converter()
+
+    handle_threading = threading.Thread(target=tf_converter.handle_map)
+    handle_threading.start()
+
+    rclpy.spin(tf_converter)
+
+    tf_converter.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
             
     

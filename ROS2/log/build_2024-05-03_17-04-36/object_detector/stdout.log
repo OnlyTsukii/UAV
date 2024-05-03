@@ -1,0 +1,37 @@
+running egg_info
+creating ../build/object_detector/object_detector.egg-info
+writing ../build/object_detector/object_detector.egg-info/PKG-INFO
+writing dependency_links to ../build/object_detector/object_detector.egg-info/dependency_links.txt
+writing entry points to ../build/object_detector/object_detector.egg-info/entry_points.txt
+writing requirements to ../build/object_detector/object_detector.egg-info/requires.txt
+writing top-level names to ../build/object_detector/object_detector.egg-info/top_level.txt
+writing manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'
+reading manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'
+writing manifest file '../build/object_detector/object_detector.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/xs/UAV/ROS2/build/object_detector/build
+creating /home/xs/UAV/ROS2/build/object_detector/build/lib
+creating /home/xs/UAV/ROS2/build/object_detector/build/lib/object_detector
+copying object_detector/dft_publisher.py -> /home/xs/UAV/ROS2/build/object_detector/build/lib/object_detector
+copying object_detector/__init__.py -> /home/xs/UAV/ROS2/build/object_detector/build/lib/object_detector
+running install
+running install_lib
+creating /home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector
+copying /home/xs/UAV/ROS2/build/object_detector/build/lib/object_detector/dft_publisher.py -> /home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector
+copying /home/xs/UAV/ROS2/build/object_detector/build/lib/object_detector/__init__.py -> /home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector
+byte-compiling /home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/dft_publisher.py to dft_publisher.cpython-38.pyc
+byte-compiling /home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/xs/UAV/ROS2/install/object_detector/share/ament_index
+creating /home/xs/UAV/ROS2/install/object_detector/share/ament_index/resource_index
+creating /home/xs/UAV/ROS2/install/object_detector/share/ament_index/resource_index/packages
+copying resource/object_detector -> /home/xs/UAV/ROS2/install/object_detector/share/ament_index/resource_index/packages
+copying package.xml -> /home/xs/UAV/ROS2/install/object_detector/share/object_detector
+creating /home/xs/UAV/ROS2/install/object_detector/share/object_detector/launch
+copying launch/object_detector.launch.py -> /home/xs/UAV/ROS2/install/object_detector/share/object_detector/launch
+running install_egg_info
+Copying ../build/object_detector/object_detector.egg-info to /home/xs/UAV/ROS2/install/object_detector/lib/python3.8/site-packages/object_detector-0.0.0-py3.8.egg-info
+running install_scripts
+Installing dft_publisher script to /home/xs/UAV/ROS2/install/object_detector/lib/object_detector
+writing list of installed files to '/home/xs/UAV/ROS2/build/object_detector/install.log'

@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xs/UAV/ROS2/nmea_msgs
+CMAKE_SOURCE_DIR = /home/xs/UAV/ROS2/location_msgs
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/xs/UAV/ROS2/build/nmea_msgs
@@ -69,13 +69,6 @@ rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_f
 rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/PixelPoint.idl
 rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/DefectBox.idl
 rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/Defects.idl
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/Sentence.idl
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/Gpgga.idl
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/Gpgsa.idl
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/Gpgst.idl
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/Gpgsv.idl
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/GpgsvSatellite.idl
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/nmea_msgs/msg/Gprmc.idl
 rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -189,48 +182,6 @@ rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__rosidl_typesupport_f
 rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp
 
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_c.h
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_c.h
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_c.h
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_c.h
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_c.h
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_c.h
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_c.h
-
-rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp
-
 CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__type_support_c.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__type_support_c.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__type_support_c.cpp.o"
@@ -283,110 +234,12 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp.s
 
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp > CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.i
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.s
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp > CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.i
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.s
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp > CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.i
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.s
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp > CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.i
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.s
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp > CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.i
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.s
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp > CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.i
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.s
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.o: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.o -c /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp > CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.i
-
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/nmea_msgs/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp -o CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.s
-
 # Object files for target nmea_msgs__rosidl_typesupport_fastrtps_c
 nmea_msgs__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gps_fix__type_support_c.cpp.o" \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/pixel_point__type_support_c.cpp.o" \
 "CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defect_box__type_support_c.cpp.o" \
-"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp.o" \
-"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.o" \
-"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o" \
-"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o" \
-"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o" \
-"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.o" \
-"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.o" \
-"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.o"
+"CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp.o"
 
 # External object files for target nmea_msgs__rosidl_typesupport_fastrtps_c
 nmea_msgs__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
@@ -395,13 +248,6 @@ libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typ
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/pixel_point__type_support_c.cpp.o
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defect_box__type_support_c.cpp.o
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp.o
-libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp.o
-libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp.o
-libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp.o
-libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp.o
-libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp.o
-libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp.o
-libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp.o
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/build.make
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/galactic/lib/librosidl_typesupport_fastrtps_c.so
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/galactic/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
@@ -451,7 +297,7 @@ libnmea_msgs__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu/libssl
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/galactic/lib/libfastcdr.so.1.0.20
 libnmea_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libnmea_msgs__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libnmea_msgs__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -471,20 +317,6 @@ CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesuppo
 CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defect_box__type_support_c.cpp
 CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/defects__type_support_c.cpp
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__rosidl_typesupport_fastrtps_c.h
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/sentence__type_support_c.cpp
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__rosidl_typesupport_fastrtps_c.h
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgga__type_support_c.cpp
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__rosidl_typesupport_fastrtps_c.h
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsa__type_support_c.cpp
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__rosidl_typesupport_fastrtps_c.h
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgst__type_support_c.cpp
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__rosidl_typesupport_fastrtps_c.h
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv__type_support_c.cpp
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__rosidl_typesupport_fastrtps_c.h
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gpgsv_satellite__type_support_c.cpp
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__rosidl_typesupport_fastrtps_c.h
-CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/nmea_msgs/msg/detail/gprmc__type_support_c.cpp
-	cd /home/xs/UAV/ROS2/build/nmea_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/nmea_msgs /home/xs/UAV/ROS2/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xs/UAV/ROS2/build/nmea_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs /home/xs/UAV/ROS2/build/nmea_msgs/CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nmea_msgs__rosidl_typesupport_fastrtps_c.dir/depend
 
