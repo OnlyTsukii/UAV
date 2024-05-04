@@ -1,4 +1,0 @@
-[console_scripts]
-tf_converter = tf_converter.tf_converter:main
-uav2cam_broadcaster = tf_converter.uav2cam_broadcaster:main
-

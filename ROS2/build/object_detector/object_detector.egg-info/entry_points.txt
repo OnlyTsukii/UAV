@@ -1,3 +1,0 @@
-[console_scripts]
-dft_publisher = object_detector.dft_publisher:main
-

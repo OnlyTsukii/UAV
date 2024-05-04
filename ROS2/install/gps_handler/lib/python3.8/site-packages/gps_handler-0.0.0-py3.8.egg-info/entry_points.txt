@@ -1,4 +1,0 @@
-[console_scripts]
-gps_simulator = gps_handler.gps_simulator:main
-nmea_serial_driver = gps_handler.nodes.nmea_serial_driver:main
-
