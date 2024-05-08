@@ -100,7 +100,7 @@ class GPS_Simulator(Node):
             self.gps_id += 1
             # self.pre_lon = gps_fix.longitude
             # self.pre_lat = gps_fix.latitude
-            self.pre_alt = gps_fix.altitude
+            self.pre_alt = -1
 
 
 def main(args=None):

@@ -1,5 +1,6 @@
 import math
 import rclpy
+import time
 
 from rclpy.node import Node
 from sensor_msgs.msg import NavSatFix, NavSatStatus, TimeReference
@@ -277,10 +278,10 @@ class Ros2NMEADriver(Node):
                 self.fix_pub.publish(fix)
                 self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
 
-                file = open(LOCATION_PATH+'location'+str(fix.gps_id)+'.txt', "w")
-                file.write(message_to_yaml(fix))
-                file.write("\n")
-                file.close()
+                # file = open(LOCATION_PATH+'location'+str(fix.gps_id)+'.txt', "w")
+                # file.write(message_to_yaml(fix))
+                # file.write("\n")
+                # file.close()
 
                 ctrl_cmd = Int32()
                 ctrl_cmd.data = self.gps_id
@@ -292,17 +293,18 @@ class Ros2NMEADriver(Node):
                 # self.pre_lat = current_fix.latitude
                 self.pre_alt = current_fix.altitude
         else:
-            self.get_logger().info(f"current pre_alt: {self.pre_alt}")
+            time.sleep(2)
+            # self.get_logger().info(f"current pre_alt: {self.pre_alt}")
             fix = GpsFix()
             fix.gps_fix = current_fix
             fix.gps_id = self.gps_id
             self.fix_pub.publish(fix)
             self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
 
-            file = open(LOCATION_PATH+'location'+str(fix.gps_id)+'.txt', "w")
-            file.write(message_to_yaml(fix))
-            file.write("\n")
-            file.close()
+            # file = open(LOCATION_PATH+'location'+str(fix.gps_id)+'.txt', "w")
+            # file.write(message_to_yaml(fix))
+            # file.write("\n")
+            # file.close()
 
             ctrl_cmd = Int32()
             ctrl_cmd.data = self.gps_id

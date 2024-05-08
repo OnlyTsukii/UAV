@@ -42,7 +42,7 @@
 #define CONSTANT_RATE_FACTOR 10
 
 #define IMAGE_FOLDER "/home/xs/UAV/Camera/images"
-#define TEMP_FOLDER "/home/xs/UAV//Camera/temp"
+#define TEMP_FOLDER "/home/xs/UAV/Camera/temp"
 
 #define IMAGE_PREFIX "/home/xs/UAV/Camera/images/output"
 #define IMAGE_SUBFIX ".bmp"
@@ -53,12 +53,13 @@
 int sockfd;
 struct sockaddr_in server_addr, client_addr;
 socklen_t addr_len = 0;
-
-bool shutter = false;
-char *ctrl_id = NULL;
-
 int client_socketfd;
 struct sockaddr_in yolo_addr;
+
+pthread_mutex_t mutex;
+bool exit_flag = false;
+bool shutter = false;
+char *ctrl_id = NULL;
 
 SDL_Overlay *Overlay;
 SDL_Surface *Surface;
@@ -79,40 +80,24 @@ boolean flag = true;
 int temp_idx = 0;
 int bmp_idx = 0;
 
-pthread_mutex_t mutex;
-
-void socket_serve();
-void socket_client_init();
+int socket_serve();
+int socket_client_init();
 int serailCallBack(int id, guide_usb_serial_data_t *pSerialData);
 int connectStatusCallBack(int id, guide_usb_device_status_e deviceStatus);
 int frameCallBack(int id, guide_usb_frame_data_t *pVideoData);
-// void img2video(char *input_files, int framerate, char *output_file, char *video_format, int crf);
+int save_temp_matrix(guide_usb_frame_data_t *pVideoData);
+char *save_image(guide_usb_frame_data_t *pVideoData);
+void send_message(char *img_file_name);
 int clear_folder(char *dirname);
+int start_camera();
+// void img2video(char *input_files, int framerate, char *output_file, char *video_format, int crf);
 
-void socket_client_init()
-{
-    if ((client_socketfd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
-    {
-        printf("Create socket failed");
-        return;
-    }
-
-    memset(&yolo_addr, 0, sizeof(yolo_addr));
-    yolo_addr.sin_family = AF_INET;
-    yolo_addr.sin_port = htons(YOLO_PORT);
-    if (inet_pton(AF_INET, YOLO_IP, &yolo_addr.sin_addr) <= 0)
-    {
-        printf("Invalid IP address");
-        return;
-    }
-}
-
-void socket_serve()
+int socket_serve()
 {
     if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
     {
         printf("socket creation failed");
-        return;
+        return -1;
     }
 
     addr_len = sizeof(client_addr);
@@ -126,14 +111,14 @@ void socket_serve()
     if (bind(sockfd, (const struct sockaddr *)&server_addr, sizeof(server_addr)) == -1)
     {
         printf("bind failed");
-        return;
+        return -1;
     }
     char buffer[BUFFER_SIZE];
 
     printf("socket server is ready.");
 
     // int cnt = 0;
-    while (1)
+    while (exit_flag == false)
     {
         int len = recvfrom(sockfd, (char *)buffer, BUFFER_SIZE, MSG_WAITALL, (struct sockaddr *)&client_addr, &addr_len);
         buffer[len] = '\0';
@@ -141,10 +126,29 @@ void socket_serve()
 
         shutter = true;
         ctrl_id = buffer;
-
-        // int response = 0;
-        // sendto(sockfd, &response, 1, MSG_CONFIRM, (const struct sockaddr *)&client_addr, addr_len);
     }
+
+    return 0;
+}
+
+int socket_client_init()
+{
+    if ((client_socketfd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
+    {
+        printf("Create socket failed");
+        return -1;
+    }
+
+    memset(&yolo_addr, 0, sizeof(yolo_addr));
+    yolo_addr.sin_family = AF_INET;
+    yolo_addr.sin_port = htons(YOLO_PORT);
+    if (inet_pton(AF_INET, YOLO_IP, &yolo_addr.sin_addr) <= 0)
+    {
+        printf("Invalid IP address");
+        return -1;
+    }
+
+    return 0;
 }
 
 double tick(void)
@@ -154,23 +158,257 @@ double tick(void)
     return t.tv_sec + 1E-6 * t.tv_usec;
 }
 
-int main(void)
+int serailCallBack(int id, guide_usb_serial_data_t *pSerialData)
 {
-    // socket_client_init();
+    switch (id)
+    {
+    case 1:
+        printf("ID:%d---->data length:%d \n", id, pSerialData->serial_recv_data_length);
+        break;
+    case 2:
+        // printf("ID:%d---->data length:%d \n",id,pSerialData->serial_recv_data_length);
+        break;
+    }
+}
 
-    // int num = 10;
-    // char *file_name = "/home/xs/UAV/ROS2/bus.jpg";
-    // while(0 < num--) {
-    //     sendto(client_socketfd, file_name, strlen(file_name), 0, (struct sockaddr *)&yolo_addr, sizeof(yolo_addr));
-    //     printf("Send message %s to server \n", file_name);
-    //     usleep(1000000);
-    // }
-    // return 0;
+int connectStatusCallBack(int id, guide_usb_device_status_e deviceStatus)
+{
+    switch (id)
+    {
+    case 1:
+        switch (deviceStatus)
+        {
+        case DEVICE_CONNECT_OK:
+            printf("ID:%d VideoStream Capture start...\n", id);
+            break;
+        case DEVICE_DISCONNECT_OK:
+            printf("ID:%d VideoStream Capture end...\n", id);
+            exit_flag = true;
+            break;
+        }
+        break;
+    case 2:
+        switch (deviceStatus)
+        {
+        case DEVICE_CONNECT_OK:
+            printf("ID:%d VideoStream Capture start...\n", id);
+            break;
+        case DEVICE_DISCONNECT_OK:
+            printf("ID:%d VideoStream Capture end...\n", id);
+            break;
+        }
+        break;
+    }
+}
 
-    // socket_serve();
+void print_binary(short value)
+{
+    for (int i = 15; i >= 0; i--)
+    {
+        printf("%d", (value >> i) & 1);
+    }
+    printf("\n");
+}
 
+int frameCallBack(int id, guide_usb_frame_data_t *pVideoData)
+{
+    switch (id)
+    {
+    case 1:
+        FPS++;
+        if ((tick() - startTime) > 1)
+        {
+            startTime = tick();
+            // printf("FPS-------------------------%d\n", FPS);
+            FPS = 0;
+        }
+
+        // Shoot a picture
+        if (shutter)
+        {
+            shutter = false;
+
+            pthread_mutex_lock(&mutex);
+
+            // Save temperature matrix
+            save_temp_matrix(pVideoData);
+
+            // Convert binary array to bmp image
+            char *img_file_name = save_image(pVideoData);
+
+            // Send image path to YOLOv8 detector
+            send_message(img_file_name);
+
+            pthread_mutex_unlock(&mutex);
+        }
+
+        // memcpy(yuv422Data, pVideoData->frame_yuv_data, WIDTH * HEIGHT * 2);
+        // SDL_LockYUVOverlay(Overlay);
+        // memcpy(Overlay->pixels[0], yuv422Data, WIDTH * HEIGHT * 2);
+        // SDL_UnlockYUVOverlay(Overlay);
+        // SDL_DisplayYUVOverlay(Overlay, &Rect);
+    }
+}
+
+int save_temp_matrix(guide_usb_frame_data_t *pVideoData)
+{
+    pTemper = (float *)malloc(sizeof(float) * pVideoData->frame_src_data_length);
+    int ret = guide_measure_convertgray2temper(DEV_TYPE, LENS_TYPE, pVideoData->frame_src_data, (char *)pVideoData->paramLine,
+                                               CONV_NUM, m_param, pTemper);
+    if (ret == 0)
+    {
+        printf("Measure temperature success: ret %d \n", ret);
+    }
+    else
+    {
+        printf("Measure temperature failed: ret %d \n", ret);
+        return -1;
+    }
+
+    char *temp_file_name = malloc(sizeof(TEMPMAT_PREFIX) + sizeof(TEMPMAT_SUBFIX));
+    strcpy(temp_file_name, TEMPMAT_PREFIX);
+    strcat(temp_file_name, ctrl_id);
+    strcat(temp_file_name, TEMPMAT_SUBFIX);
+
+    FILE *file = fopen(temp_file_name, "w");
+
+    if (file == NULL)
+    {
+        printf("Open file failed\n");
+    }
+    else
+    {
+        for (int i = 0; i < HEIGHT; ++i)
+        {
+            for (int j = 0; j < WIDTH; ++j)
+            {
+                int index = i * WIDTH + j;
+                fprintf(file, "%f ", pTemper[index]);
+            }
+            fprintf(file, "\n");
+        }
+        fclose(file);
+    }
+
+    free(pTemper);
+    free(temp_file_name);
+
+    return 0;
+}
+
+char *save_image(guide_usb_frame_data_t *pVideoData)
+{
+    bmp_img img;
+    bmp_img_init_df(&img, WIDTH, HEIGHT);
+
+    for (unsigned int i = 0; i < HEIGHT; ++i)
+    {
+        for (unsigned int j = 0; j < WIDTH; ++j)
+        {
+            int index = WIDTH * i + j;
+
+            unsigned char y = pVideoData->frame_yuv_data[index] >> 8;
+            unsigned char u = 0, v = 0;
+            if (i % 2 == 0)
+            {
+                u = pVideoData->frame_yuv_data[index] & 0xFF;
+                v = pVideoData->frame_yuv_data[index + 1] & 0xFF;
+            }
+            else
+            {
+                u = pVideoData->frame_yuv_data[index - 1] & 0xFF;
+                v = pVideoData->frame_yuv_data[index] & 0xFF;
+            }
+
+            unsigned char r = y + 1.403 * (v - 128);
+            unsigned char g = y - 0.343 * (u - 128) - 0.714 * (v - 128);
+            unsigned char b = y + 1.770 * (u - 128);
+
+            r = r < 0 ? 0 : (r > 255) ? 255
+                                      : r;
+            g = g < 0 ? 0 : (g > 255) ? 255
+                                      : g;
+            b = b < 0 ? 0 : (b > 255) ? 255
+                                      : b;
+
+            bmp_pixel_init(&img.img_pixels[i][j], r, g, b);
+        }
+    }
+
+    char *img_file_name = malloc(sizeof(IMAGE_PREFIX) + sizeof(IMAGE_SUBFIX));
+    strcpy(img_file_name, IMAGE_PREFIX);
+    strcat(img_file_name, ctrl_id);
+    strcat(img_file_name, IMAGE_SUBFIX);
+
+    bmp_img_write(&img, img_file_name);
+    bmp_img_free(&img);
+
+    return img_file_name;
+}
+
+void send_message(char *img_file_name)
+{
+    char *img_path = malloc(sizeof(IMAGE_PREFIX) + sizeof(IMAGE_SUBFIX) + sizeof(char) * 11);
+    strcpy(img_path, img_file_name);
+    strcat(img_path, ":");
+
+    strcat(img_path, ctrl_id);
+
+    sendto(client_socketfd, img_path, strlen(img_path), 0, (struct sockaddr *)&yolo_addr, sizeof(yolo_addr));
+    printf("Send message %s to server \n", img_path);
+
+    free(img_file_name);
+    free(img_path);
+}
+
+int clear_folder(char *dirname)
+{
+    DIR *dir;
+    struct dirent *entry;
+
+    dir = opendir(dirname);
+    if (dir == NULL)
+    {
+        printf("Open folder failed\n");
+        return -1;
+    }
+
+    while ((entry = readdir(dir)) != NULL)
+    {
+        if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0)
+        {
+            char *filepath = malloc(strlen(dirname) + sizeof(char) * 20);
+            strcpy(filepath, dirname);
+            strcat(filepath, "/");
+            strcat(filepath, entry->d_name);
+
+            if (remove(filepath) != 0)
+            {
+                printf("Remove file failed\n");
+                closedir(dir);
+                free(filepath);
+                return -1;
+            }
+            free(filepath);
+        }
+    }
+
+    printf("Clear folder %s successfully\n", dirname);
+
+    closedir(dir);
+    return 0;
+}
+
+int start_camera()
+{
     // Setting a Log Level
-    guide_usb_setloglevel(LOG_LEVEL_INFO);
+    int ret = guide_usb_setloglevel(LOG_LEVEL_INFO);
+
+    if (ret != 0)
+    {
+        printf("Set log level failed.");
+        return -1;
+    }
 
     // USB device precheck
     while (1)
@@ -179,6 +417,7 @@ int main(void)
         if (ret < 0)
         {
             printf("libusb_init fail:%d\n", ret);
+            usleep(1000000);
             continue;
         }
         else
@@ -195,7 +434,7 @@ int main(void)
         // fprintf(file, "%d\n", cnt++);
         // fclose(file);
 
-        gd_dev_handle = libusb_open_device_with_vid_pid(NULL, 0x04b4, 0xf7f7);
+        gd_dev_handle = libusb_open_device_with_vid_pid(gd_ctx, 0x04b4, 0xf7f7);
         if (gd_dev_handle == NULL)
         {
             printf("libusb_open fail\n");
@@ -210,19 +449,23 @@ int main(void)
         }
     }
 
-    socket_client_init();
-
-    // Clear old images first
-    int ret = clear_folder(TEMP_FOLDER);
+    ret = socket_client_init();
     if (ret != 0)
     {
-        return 0;
+        return -1;
+    }
+
+    // Clear old images first
+    ret = clear_folder(TEMP_FOLDER);
+    if (ret != 0)
+    {
+        return -1;
     }
 
     ret = clear_folder(IMAGE_FOLDER);
     if (ret != 0)
     {
-        return 0;
+        return -1;
     }
 
     m_param = (guide_measure_external_param_t *)malloc(sizeof(guide_measure_external_param_t));
@@ -245,15 +488,17 @@ int main(void)
 
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER))
     {
-        fprintf(stderr, "Could not initialize SDL - %s\n", SDL_GetError());
-        exit(1);
+        printf("Could not initialize SDL - %s\n", SDL_GetError());
+        return -1;
     }
+
     Surface = SDL_SetVideoMode(WIDTH, HEIGHT, 24, SDL_SWSURFACE);
     if (!Surface)
     {
-        perror(" create vide omode error ! \n");
+        printf("Create video mode error ! \n");
         return -1;
     }
+
     Overlay = SDL_CreateYUVOverlay(WIDTH, HEIGHT, SDL_UYVY_OVERLAY, Surface);
     Rect.x = 0;
     Rect.y = 0;
@@ -327,194 +572,13 @@ int main(void)
 
     // img2video(INPUT_FILE_NAME, VIDEO_FRAME_RATE, OUTPUT_FILE_NAME, VIDEO_FORMAT, CONSTANT_RATE_FACTOR);
 
-    return ret;
+    return 0;
 }
 
-int serailCallBack(int id, guide_usb_serial_data_t *pSerialData)
+int main(void)
 {
-
-    switch (id)
-    {
-    case 1:
-        printf("ID:%d---->data length:%d \n", id, pSerialData->serial_recv_data_length);
-        break;
-    case 2:
-        // printf("ID:%d---->data length:%d \n",id,pSerialData->serial_recv_data_length);
-        break;
-    }
-}
-
-int connectStatusCallBack(int id, guide_usb_device_status_e deviceStatus)
-{
-    switch (id)
-    {
-    case 1:
-        switch (deviceStatus)
-        {
-        case DEVICE_CONNECT_OK:
-            printf("ID:%d VideoStream Capture start...\n", id);
-            break;
-        case DEVICE_DISCONNECT_OK:
-            printf("ID:%d VideoStream Capture end...\n", id);
-            break;
-        }
-        break;
-    case 2:
-        switch (deviceStatus)
-        {
-        case DEVICE_CONNECT_OK:
-            printf("ID:%d VideoStream Capture start...\n", id);
-            break;
-        case DEVICE_DISCONNECT_OK:
-            printf("ID:%d VideoStream Capture end...\n", id);
-            break;
-        }
-        break;
-    }
-}
-
-void print_binary(short value)
-{
-    for (int i = 15; i >= 0; i--)
-    {
-        printf("%d", (value >> i) & 1);
-    }
-    printf("\n");
-}
-
-int frameCallBack(int id, guide_usb_frame_data_t *pVideoData)
-{
-    switch (id)
-    {
-    case 1:
-        FPS++;
-        if ((tick() - startTime) > 1)
-        {
-            startTime = tick();
-            // printf("FPS-------------------------%d\n", FPS);
-            FPS = 0;
-        }
-
-        // Shoot a picture
-        if (shutter)
-        {
-            shutter = false;
-
-            pTemper = (float *)malloc(sizeof(float) * pVideoData->frame_src_data_length);
-            int ret = guide_measure_convertgray2temper(DEV_TYPE, LENS_TYPE, pVideoData->frame_src_data, (char *)pVideoData->paramLine,
-                                                       CONV_NUM, m_param, pTemper);
-            if (ret == 0)
-            {
-                printf("Measure temperature success: ret %d \n", ret);
-            }
-            else
-            {
-                printf("Measure temperature failed: ret %d \n", ret);
-            }
-
-            char temp_str[3];
-            sprintf(temp_str, "%d", temp_idx++);
-
-            char *temp_file_name = malloc(sizeof(TEMPMAT_PREFIX) + sizeof(TEMPMAT_SUBFIX));
-            strcpy(temp_file_name, TEMPMAT_PREFIX);
-            strcat(temp_file_name, temp_str);
-            strcat(temp_file_name, TEMPMAT_SUBFIX);
-
-            FILE *file = fopen(temp_file_name, "w");
-
-            if (file == NULL)
-            {
-                printf("Open file failed\n");
-            }
-            else
-            {
-                for (int i = 0; i < HEIGHT; ++i)
-                {
-                    for (int j = 0; j < WIDTH; ++j)
-                    {
-                        int index = i * WIDTH + j;
-                        fprintf(file, "%f ", pTemper[index]);
-                    }
-                    fprintf(file, "\n");
-                }
-                fclose(file);
-            }
-
-            free(pTemper);
-            free(temp_file_name);
-
-            // Convert binary array to bmp image
-            bmp_img img;
-            bmp_img_init_df(&img, WIDTH, HEIGHT);
-
-            for (unsigned int i = 0; i < HEIGHT; ++i)
-            {
-                for (unsigned int j = 0; j < WIDTH; ++j)
-                {
-                    int index = WIDTH * i + j;
-
-                    unsigned char y = pVideoData->frame_yuv_data[index] >> 8;
-                    unsigned char u = 0, v = 0;
-                    if (i % 2 == 0)
-                    {
-                        u = pVideoData->frame_yuv_data[index] & 0xFF;
-                        v = pVideoData->frame_yuv_data[index + 1] & 0xFF;
-                    }
-                    else
-                    {
-                        u = pVideoData->frame_yuv_data[index - 1] & 0xFF;
-                        v = pVideoData->frame_yuv_data[index] & 0xFF;
-                    }
-
-                    unsigned char r = y + 1.403 * (v - 128);
-                    unsigned char g = y - 0.343 * (u - 128) - 0.714 * (v - 128);
-                    unsigned char b = y + 1.770 * (u - 128);
-
-                    r = r < 0 ? 0 : (r > 255) ? 255
-                                              : r;
-                    g = g < 0 ? 0 : (g > 255) ? 255
-                                              : g;
-                    b = b < 0 ? 0 : (b > 255) ? 255
-                                              : b;
-
-                    bmp_pixel_init(&img.img_pixels[i][j], r, g, b);
-                }
-            }
-
-            char bmp_str[3];
-            sprintf(bmp_str, "%d", bmp_idx++);
-
-            char *img_file_name = malloc(sizeof(IMAGE_PREFIX) + sizeof(IMAGE_SUBFIX));
-            strcpy(img_file_name, IMAGE_PREFIX);
-            strcat(img_file_name, bmp_str);
-            strcat(img_file_name, IMAGE_SUBFIX);
-
-            bmp_img_write(&img, img_file_name);
-            bmp_img_free(&img);
-
-            char *img_path = malloc(sizeof(IMAGE_PREFIX) + sizeof(IMAGE_SUBFIX) + sizeof(char) * 8);
-            strcpy(img_path, img_file_name);
-            strcat(img_path, ":");
-
-            pthread_mutex_lock(&mutex);
-
-            strcat(img_path, ctrl_id);
-
-            sendto(client_socketfd, img_path, strlen(img_path), 0, (struct sockaddr *)&yolo_addr, sizeof(yolo_addr));
-            printf("Send message %s to server \n", img_path);
-
-            pthread_mutex_unlock(&mutex);
-
-            free(img_file_name);
-            free(img_path);
-        }
-
-        // memcpy(yuv422Data, pVideoData->frame_yuv_data, WIDTH * HEIGHT * 2);
-        // SDL_LockYUVOverlay(Overlay);
-        // memcpy(Overlay->pixels[0], yuv422Data, WIDTH * HEIGHT * 2);
-        // SDL_UnlockYUVOverlay(Overlay);
-        // SDL_DisplayYUVOverlay(Overlay, &Rect);
-    }
+    start_camera();
+    return 0;
 }
 
 // void img2video(char *input_files, int framerate, char *output_file, char *video_format, int crf)
@@ -545,39 +609,3 @@ int frameCallBack(int id, guide_usb_frame_data_t *pVideoData)
 //     printf("Executing command: %s\n", command);
 //     system(command);
 // }
-
-int clear_folder(char *dirname)
-{
-    DIR *dir;
-    struct dirent *entry;
-
-    dir = opendir(dirname);
-    if (dir == NULL)
-    {
-        printf("Open folder failed\n");
-        return -1;
-    }
-
-    while ((entry = readdir(dir)) != NULL)
-    {
-        if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0)
-        {
-            char filepath[20];
-            strcpy(filepath, dirname);
-            strcat(filepath, "/");
-            strcat(filepath, entry->d_name);
-
-            if (remove(filepath) != 0)
-            {
-                printf("Remove file failed\n");
-                closedir(dir);
-                return -1;
-            }
-        }
-    }
-
-    printf("Clear folder %s successfully\n", dirname);
-
-    closedir(dir);
-    return 0;
-}

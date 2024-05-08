@@ -95,10 +95,10 @@ class TF_Converter(Node):
             else:
                 gps_msg, dfts_msg = self.queue.get()
                 
-                # file = open(LOCATION_PATH+'location'+str(gps_msg.gps_id)+'.txt', "w")
-                # file.write(message_to_yaml(gps_msg))
-                # file.write("\n")
-                # file.close()
+                file = open(LOCATION_PATH+'location'+str(gps_msg.gps_id)+'.txt', "w")
+                file.write(message_to_yaml(gps_msg))
+                file.write("\n")
+                file.close()
 
                 continue
 

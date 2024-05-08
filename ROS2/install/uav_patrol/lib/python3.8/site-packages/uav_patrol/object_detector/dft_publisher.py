@@ -47,33 +47,8 @@ class Dft_Publisher(Node):
             res['boxes'] = boxes.xywh
             res['img_size'] = result.orig_shape
 
-        self.get_logger().info(f"YOLOv8 detection finished.")
+        self.get_logger().info(f"Object detection finished.")
         return res
-
-    def socket_serve(self):
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        sock.bind((SERVER_IP, SERVER_PORT))
-
-        while True:
-            data, addr = sock.recvfrom(256)
-            source = data.decode('utf-8')
-
-            self.get_logger().info("Receive data %s from %s" % (source, addr))
-            self.msg_queue.put(source)
-
-    def queue_handler(self):
-        while True:
-            if self.msg_queue.empty():
-                time.sleep(1.0)
-            else:
-                msg = self.msg_queue.get()
-
-                i = msg.index(':')
-                path = msg[:i]
-                img_id = int(msg[i+1:])
-
-                res = self.detect(path, img_id)
-                self.publish_boxes(res['boxes'], res['img_size'], img_id)
 
     def publish_boxes(self, xywh, imgz, img_id):
         dfts = Defects()
@@ -120,17 +95,46 @@ class Dft_Publisher(Node):
         self.dft_publiser.publish(dfts)
         self.get_logger().info(f"Publishing defects message, id: {dfts.defect_id}.")
 
+def socket_serve(node):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.bind((SERVER_IP, SERVER_PORT))
+
+    while True:
+        data, addr = sock.recvfrom(256)
+        source = data.decode('utf-8')
+
+        node.get_logger().info("Receive data %s from %s" % (source, addr))
+        node.msg_queue.put(source)
+
+def queue_handler(node):
+    while True:
+        if node.msg_queue.empty():
+            time.sleep(1.0)
+        else:
+            msg = node.msg_queue.get()
+
+            node.get_logger().info("Got a image path from queue")
+
+            i = msg.index(':')
+            path = msg[:i]
+            img_id = int(msg[i+1:])
+
+            res = node.detect(path, img_id)
+            node.publish_boxes(res['boxes'], res['img_size'], img_id)
+
 
 def main(args=None):
     rclpy.init(args=args)
 
     dft_publisher = Dft_Publisher()
 
-    queue_thread = threading.Thread(target=dft_publisher.queue_handler, args=())
+    queue_thread = threading.Thread(target=queue_handler, args=(dft_publisher, ))
     queue_thread.start()
 
-    dft_publisher.socket_serve()
-    # rclpy.spin(dft_publisher)
+    socket_thread = threading.Thread(target=socket_serve, args=(dft_publisher, ))
+    socket_thread.start()
+
+    rclpy.spin(dft_publisher)
 
     dft_publisher.destroy_node()
     rclpy.shutdown()

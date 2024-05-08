@@ -1,6 +1,0 @@
-Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/xs/UAV/ROS2/location_msgs -DCMAKE_INSTALL_PREFIX=/home/xs/UAV/ROS2/install/location_msgs
-Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/xs/UAV/ROS2/location_msgs -DCMAKE_INSTALL_PREFIX=/home/xs/UAV/ROS2/install/location_msgs
-Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/location_msgs -- -j8 -l8
-Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/location_msgs -- -j8 -l8
-Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/location_msgs
-Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/location_msgs
