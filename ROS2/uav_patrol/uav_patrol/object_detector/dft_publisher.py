@@ -22,6 +22,7 @@ class Dft_Publisher(Node):
         self.dft_publiser = self.create_publisher(Defects, "dfts", 10)
         self.msg_queue = queue.Queue()
         self.clear_folder(RESULTS_PATH)
+        self.model = YOLO(MODEL_PATH) 
 
     def clear_folder(self, folder_path):
         for filename in os.listdir(folder_path):
@@ -34,9 +35,8 @@ class Dft_Publisher(Node):
             except Exception as e:
                 print(f'Remove file {file_path} failed: {e}')
 
-    def detect(self, source, img_id) -> map:
-        model = YOLO(MODEL_PATH)  
-        results = model(source, stream=True)  
+    def detect(self, source, img_id) -> map: 
+        results = self.model(source, stream=True)  
         
         res = {}
         for result in results:

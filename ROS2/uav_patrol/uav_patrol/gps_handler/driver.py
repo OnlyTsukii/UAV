@@ -7,9 +7,12 @@ from geometry_msgs.msg import TwistStamped, QuaternionStamped
 from std_msgs.msg import Int32
 from location_msgs.msg import GpsFix
 from tf_transformations import quaternion_from_euler
-from gps_handler.checksum_utils import check_nmea_checksum
-from gps_handler import parser
+from uav_patrol.gps_handler.checksum_utils import check_nmea_checksum
+from uav_patrol.gps_handler import parser
+from rosidl_runtime_py.convert import message_to_yaml
 
+
+LOCATION_PATH = '/home/xs/UAV/ROS2/locations/'
 
 class Ros2NMEADriver(Node):
     def __init__(self):
@@ -22,13 +25,13 @@ class Ros2NMEADriver(Node):
 
         self.ctrl_publisher = self.create_publisher(Int32, "ctrl_cmd", 10)
 
-        self.pre_lat = float("nan")
-        self.pre_lon = float("nan")
-        self.pre_alt = float("nan")
+        self.pre_lat = 0
+        self.pre_lon = 0
+        self.pre_alt = 0
 
         self.lat_dif_thr = 0.00000905
         self.lon_dif_thr = 0.0000103
-        self.alt_dif_thr = 1.0
+        self.alt_dif_thr = 0.5
 
         self.gps_id = 0
 
@@ -46,9 +49,9 @@ class Ros2NMEADriver(Node):
 
         self.using_receiver_epe = False
 
-        self.lon_std_dev = float("nan")
-        self.lat_std_dev = float("nan")
-        self.alt_std_dev = float("nan")
+        self.lon_std_dev = 0
+        self.lat_std_dev = 0
+        self.alt_std_dev = 0
 
         """Format for this dictionary is the fix type from a GGA message as the key, with
         each entry containing a tuple consisting of a default estimated
@@ -171,12 +174,7 @@ class Ros2NMEADriver(Node):
             current_fix.position_covariance[4] = (hdop * self.lat_std_dev) ** 2
             current_fix.position_covariance[8] = (2 * hdop * self.alt_std_dev) ** 2  # FIXME
 
-            fix = GpsFix()
-            fix.gps_fix = current_fix
-            fix.gps_id = self.gps_id
-            self.fix_pub.publish(fix)
-
-            self.gps_id = (self.gps_id + 1) % 1024
+            self.send_ctrl(current_fix)
 
             if not math.isnan(data['utc_time']):
                 current_time_ref.time_ref = rclpy.time.Time(seconds=data['utc_time']).to_msg()
@@ -221,12 +219,7 @@ class Ros2NMEADriver(Node):
                 current_fix.position_covariance_type = \
                     NavSatFix.COVARIANCE_TYPE_UNKNOWN
 
-                fix = GpsFix()
-                fix.gps_fix = current_fix
-                fix.gps_id = self.gps_id
-                self.fix_pub.publish(fix)
-
-                self.gps_id = (self.gps_id + 1) % 256
+                self.send_ctrl(current_fix)
 
                 if not math.isnan(data['utc_time']):
                     current_time_ref.time_ref = rclpy.time.Time(seconds=data['utc_time']).to_msg()
@@ -263,24 +256,63 @@ class Ros2NMEADriver(Node):
                 self.heading_pub.publish(current_heading)
         else:
             return False
-        
-        if self.pre_lon != float("nan"):
-            lon_cur_thr = abs(current_fix.longitude - self.pre_lon)
-            lat_cur_thr = abs(current_fix.latitude - self.pre_lat)
-            alt_cur_thr = abs(current_fix.altitude - self.pre_alt)
 
-            if lon_cur_thr >= self.lon_dif_thr or lat_cur_thr >= self.lat_dif_thr \
-                or alt_cur_thr >= self.alt_dif_thr:
+        return True
+    
+    def send_ctrl(self, current_fix):
+        self.get_logger().info(f"current altitude {current_fix.altitude}")
+        if self.pre_alt != 0:
+            # lon_cur_dev = abs(current_fix.longitude - self.pre_lon)
+            # lat_cur_dev = abs(current_fix.latitude - self.pre_lat)
+            alt_cur_dev = abs(current_fix.altitude - self.pre_alt)
+
+            # self.get_logger().info(f"gps position deviation: {lon_cur_dev, lat_cur_dev, alt_cur_dev}")
+
+            # if lon_cur_dev >= self.lon_dif_thr or lat_cur_dev >= self.lat_dif_thr \
+            #     or alt_cur_dev >= self.alt_dif_thr:
+            if alt_cur_dev >= self.alt_dif_thr:
+                fix = GpsFix()
+                fix.gps_fix = current_fix
+                fix.gps_id = self.gps_id
+                self.fix_pub.publish(fix)
+                self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
+
+                file = open(LOCATION_PATH+'location'+str(fix.gps_id)+'.txt', "w")
+                file.write(message_to_yaml(fix))
+                file.write("\n")
+                file.close()
+
                 ctrl_cmd = Int32()
                 ctrl_cmd.data = self.gps_id
                 self.ctrl_publisher.publish(ctrl_cmd)
                 self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
 
-        self.pre_lon = current_fix.longitude
-        self.pre_lat = current_fix.latitude
-        self.pre_alt = current_fix.altitude
+                self.gps_id += 1
+                # self.pre_lon = current_fix.longitude
+                # self.pre_lat = current_fix.latitude
+                self.pre_alt = current_fix.altitude
+        else:
+            self.get_logger().info(f"current pre_alt: {self.pre_alt}")
+            fix = GpsFix()
+            fix.gps_fix = current_fix
+            fix.gps_id = self.gps_id
+            self.fix_pub.publish(fix)
+            self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
 
-        return True
+            file = open(LOCATION_PATH+'location'+str(fix.gps_id)+'.txt', "w")
+            file.write(message_to_yaml(fix))
+            file.write("\n")
+            file.close()
+
+            ctrl_cmd = Int32()
+            ctrl_cmd.data = self.gps_id
+            self.ctrl_publisher.publish(ctrl_cmd)
+            self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
+
+            self.gps_id += 1
+            # self.pre_lon = current_fix.longitude
+            # self.pre_lat = current_fix.latitude
+            self.pre_alt = -1
 
     """Helper method for getting the frame_id with the correct TF prefix"""
     def get_frame_id(self):

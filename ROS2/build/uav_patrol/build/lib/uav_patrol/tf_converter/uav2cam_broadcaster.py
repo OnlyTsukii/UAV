@@ -47,8 +47,8 @@ class StaticFramePublisher(Node):
         t.child_frame_id = 'camera'
 
         t.transform.translation.x = 0.0
-        t.transform.translation.y = 0.25
-        t.transform.translation.z = 0.2
+        t.transform.translation.y = 0.0
+        t.transform.translation.z = 0.0
         
         t.transform.rotation.x = 0.0
         t.transform.rotation.y = 0.0

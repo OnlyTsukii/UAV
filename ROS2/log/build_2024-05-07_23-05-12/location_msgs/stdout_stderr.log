@@ -41,48 +41,48 @@
 [  1%] [34m[1mGenerating C code for ROS interfaces[0m
 [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
 [  3%] Built target location_msgs__cpp
-[  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
-[  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
-[  9%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[  5%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[  9%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[  9%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
 [35m[1mScanning dependencies of target location_msgs__rosidl_generator_c[0m
-[ 16%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c.o[0m
-[ 16%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c.o[0m
-[ 16%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c.o[0m
 [ 16%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c.o[0m
 [ 18%] [32m[1mLinking C shared library liblocation_msgs__rosidl_generator_c.so[0m
 [ 18%] Built target location_msgs__rosidl_generator_c
 [ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
 [ 21%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
 [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_cpp[0m
+[35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_cpp[0m
 [ 23%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/pixel_point__type_support.cpp.o[0m
 [ 25%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp.o[0m
 [ 27%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defect_box__type_support.cpp.o[0m
 [ 29%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp.o[0m
-[35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_cpp[0m
 [ 30%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/gps_fix__type_support.cpp.o[0m
 [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_cpp[0m
 [ 32%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/gps_fix__type_support.cpp.o[0m
 [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_c[0m
 [ 34%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp.o[0m
-[ 38%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/pixel_point__type_support.cpp.o[0m
-[ 38%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/pixel_point__type_support.cpp.o[0m
-[ 40%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/pixel_point__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/pixel_point__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defect_box__type_support.cpp.o[0m
 [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_c[0m
-[ 41%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defect_box__type_support.cpp.o[0m
-[ 43%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c.o[0m
-[ 45%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_cpp.so[0m
-[ 47%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defects__type_support.cpp.o[0m
-[ 49%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c.o[0m
-[ 50%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__type_support.c.o[0m
-[ 52%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_c.so[0m
-[ 54%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/defect_box__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/pixel_point__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defects__type_support.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/defect_box__type_support.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/defects__type_support.cpp.o[0m
+[ 47%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_cpp.so[0m
+[ 49%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_c.so[0m
+[ 50%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c.o[0m
+[ 52%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c.o[0m
+[ 52%] Built target location_msgs__rosidl_typesupport_c
+[ 54%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__type_support.c.o[0m
 [ 56%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.o[0m
 [ 56%] Built target location_msgs__rosidl_typesupport_cpp
-[ 58%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/defects__type_support.cpp.o[0m
-[ 58%] Built target location_msgs__rosidl_typesupport_c
+[ 58%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/pixel_point__type_support.cpp.o[0m
 [ 60%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/defect_box__type_support.cpp.o[0m
-[ 61%] [32m[1mLinking C shared library liblocation_msgs__rosidl_typesupport_introspection_c.so[0m
-[ 63%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/defects__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/defects__type_support.cpp.o[0m
+[ 63%] [32m[1mLinking C shared library liblocation_msgs__rosidl_typesupport_introspection_c.so[0m
 [ 63%] Built target location_msgs__rosidl_typesupport_introspection_c
 [ 65%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_introspection_cpp.so[0m
 [ 65%] Built target location_msgs__rosidl_typesupport_introspection_cpp
@@ -90,10 +90,10 @@
 [ 67%] Built target location_msgs__rosidl_typesupport_fastrtps_cpp
 [ 69%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
 [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_c[0m
-[ 70%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp.o[0m
-[ 72%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o[0m
-[ 74%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__type_support_c.cpp.o[0m
-[ 76%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__type_support_c.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp.o[0m
 [ 78%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_c.so[0m
 [ 78%] Built target location_msgs__rosidl_typesupport_fastrtps_c
 [35m[1mScanning dependencies of target location_msgs[0m
@@ -102,19 +102,19 @@
 [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
 [ 80%] Built target location_msgs__py
 [35m[1mScanning dependencies of target location_msgs__python[0m
-[ 81%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_pixel_point_s.c.o[0m
-[ 83%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_defect_box_s.c.o[0m
-[ 85%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_gps_fix_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_gps_fix_s.c.o[0m
 [ 87%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_defects_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_pixel_point_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_defect_box_s.c.o[0m
 [ 89%] [32m[1mLinking C shared library rosidl_generator_py/location_msgs/liblocation_msgs__python.so[0m
 [ 89%] Built target location_msgs__python
-[35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_c__pyext[0m
 [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_c__pyext[0m
+[35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_c__pyext[0m
 [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
-[ 90%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_c.c.o[0m
-[ 92%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_c.c.o[0m
 [ 94%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
-[ 96%] [32m[1mLinking C shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 98%] [32m[1mLinking C shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
 [ 98%] [32m[1mLinking C shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
 [100%] [32m[1mLinking CXX shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
 [100%] Built target location_msgs__rosidl_typesupport_c__pyext

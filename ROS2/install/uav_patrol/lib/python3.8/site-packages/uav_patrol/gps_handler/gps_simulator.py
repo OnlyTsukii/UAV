@@ -29,14 +29,11 @@ class GPS_Simulator(Node):
         self.lon_dif_thr = 0.00001
         self.alt_dif_thr = 1.0
 
-        self.pre_lon = float("nan")
-        self.pre_lat = float("nan")
-        self.pre_alt = float("nan")
+        self.pre_lon = 0
+        self.pre_lat = 0
+        self.pre_alt = 0
 
     def timer_callback(self):
-        gps_msg = GpsFix()
-        gps_msg.gps_id = self.gps_id
-
         gps_fix = NavSatFix()
 
         header = Header()
@@ -53,35 +50,57 @@ class GPS_Simulator(Node):
         gps_fix.longitude = self.init_lon
         gps_fix.altitude = self.init_alt
 
-        self.init_lat += LAT_PER_METER
-        self.init_lon += LON_PER_METER
+        # self.init_lat += LAT_PER_METER
+        # self.init_lon += LON_PER_METER
+        self.init_alt += 1.0
 
         gps_fix.position_covariance = (51.84, 0.0, 0.0, 0.0, 51.84, 0.0, 0.0, 0.0, 829.44)
         gps_fix.position_covariance_type = NavSatFix.COVARIANCE_TYPE_APPROXIMATED
 
-        gps_msg.gps_fix = gps_fix
+        self.send_ctrl(gps_fix)
 
-        self.gps_publisher.publish(gps_msg)
+    def send_ctrl(self, gps_fix):
+        if self.pre_alt != 0:
+            # lon_cur_dev = abs(gps_fix.longitude - self.pre_lon)
+            # lat_cur_dev = abs(gps_fix.latitude - self.pre_lat)
+            alt_cur_dev = abs(gps_fix.altitude - self.pre_alt)
 
-        self.get_logger().info(f"Publishing gps message, gps_id: {gps_msg.gps_id}.")
+            # self.get_logger().info(f"gps position deviation: {lon_cur_dev, lat_cur_dev, alt_cur_dev}")
 
-        if self.pre_lon != float("nan"):
-            lon_cur_thr = abs(gps_fix.longitude - self.pre_lon)
-            lat_cur_thr = abs(gps_fix.latitude - self.pre_lat)
-            alt_cur_thr = abs(gps_fix.altitude - self.pre_alt)
+            # if lon_cur_dev >= self.lon_dif_thr or lat_cur_dev >= self.lat_dif_thr \
+            #     or alt_cur_dev >= self.alt_dif_thr:
+            if alt_cur_dev >= self.alt_dif_thr:
+                fix = GpsFix()
+                fix.gps_fix = gps_fix
+                fix.gps_id = self.gps_id
+                self.gps_publisher.publish(fix)
+                self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
 
-            if lon_cur_thr >= self.lon_dif_thr or lat_cur_thr >= self.lat_dif_thr \
-                or alt_cur_thr >= self.alt_dif_thr:
                 ctrl_cmd = Int32()
                 ctrl_cmd.data = self.gps_id
                 self.ctrl_publisher.publish(ctrl_cmd)
                 self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
 
-        self.pre_lon = gps_fix.longitude
-        self.pre_lat = gps_fix.latitude
-        self.pre_alt = gps_fix.altitude
+                self.gps_id += 1
+                # self.pre_lon = gps_fix.longitude
+                # self.pre_lat = gps_fix.latitude
+                self.pre_alt = gps_fix.altitude
+        else:
+            fix = GpsFix()
+            fix.gps_fix = gps_fix
+            fix.gps_id = self.gps_id
+            self.gps_publisher.publish(fix)
+            self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
 
-        self.gps_id = (self.gps_id + 1) % 1024 
+            ctrl_cmd = Int32()
+            ctrl_cmd.data = self.gps_id
+            self.ctrl_publisher.publish(ctrl_cmd)
+            self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
+
+            self.gps_id += 1
+            # self.pre_lon = gps_fix.longitude
+            # self.pre_lat = gps_fix.latitude
+            self.pre_alt = gps_fix.altitude
 
 
 def main(args=None):

@@ -3,6 +3,9 @@ import math
 import threading
 import time
 import numpy
+import os
+import shutil
+import json
 
 from queue import Queue
 from rclpy.node import Node
@@ -11,7 +14,11 @@ from typing import Tuple, List
 from tf2_ros import TransformException
 from tf2_ros.buffer import Buffer
 from tf2_ros.transform_listener import TransformListener
+from sensor_msgs.msg import NavSatFix
+from rosidl_runtime_py.convert import message_to_yaml
 
+
+LOCATION_PATH = '/home/xs/UAV/ROS2/locations/'
 
 # unit: m
 EARTH_RADIUS            = 6378.137     
@@ -46,6 +53,19 @@ class TF_Converter(Node):
         self.init_latitude = 0
         self.init_altitude = 0
 
+        self.clear_folder(LOCATION_PATH)
+
+    def clear_folder(self, folder_path):
+        for filename in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, filename)
+            try:
+                if os.path.isfile(file_path) or os.path.islink(file_path):
+                    os.unlink(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)
+            except Exception as e:
+                print(f'Remove file {file_path} failed: {e}')
+
     def gps_callback(self, msg: GpsFix):
         self.mutex.acquire()
         if self.map.get(msg.gps_id) == None:
@@ -53,7 +73,7 @@ class TF_Converter(Node):
         else:
             dfts_msg = self.map[msg.gps_id].get('dfts')
             self.queue.put((msg, dfts_msg))
-            self.map[msg.gps_id].clear()
+            self.map.clear()
         self.mutex.release()
         self.get_logger().info(f"Got a gps message, id: {msg.gps_id}.")
             
@@ -64,7 +84,7 @@ class TF_Converter(Node):
         else:
             gps_msg = self.map[msg.defect_id].get('gps')
             self.queue.put((gps_msg, msg))
-            self.map[msg.defect_id].clear()
+            self.map.clear()
         self.mutex.release()
         self.get_logger().info(f"Got a defects message, id: {msg.defect_id}.")
 
@@ -74,6 +94,13 @@ class TF_Converter(Node):
                 time.sleep(1.0)
             else:
                 gps_msg, dfts_msg = self.queue.get()
+                
+                # file = open(LOCATION_PATH+'location'+str(gps_msg.gps_id)+'.txt', "w")
+                # file.write(message_to_yaml(gps_msg))
+                # file.write("\n")
+                # file.close()
+
+                continue
 
                 if len(dfts_msg.defects) == 0:
                     self.get_logger().info('Received a defects message with empty defects.')
@@ -124,7 +151,21 @@ class TF_Converter(Node):
                         gps_e = gps_msg.gps_fix.longitude + target[0] * LON_PER_METER
                         gps_n = gps_msg.gps_fix.latitude + target[1] * LAT_PER_METER
                         dfts_abs_pos.append((gps_e, gps_n, SOLAR_PANEL_HEIGHT + SOOCHOW_GROUND_ALTITUDE))
+
+                    file = open(LOCATION_PATH+'location'+str(gps_msg.gps_id)+'.txt', "w")
                     
+                    for i, defect in enumerate(dfts_msg.defects):
+                        file.write("----------------------------------------------------------- \n")
+                        file.write("DEFECT POSITION IN IMAGE: \n")
+                        file.write(message_to_yaml(defect))
+                        file.write("\n")
+                        file.write("DEFECT POSITION IN WORLD: \n")
+                        file.write(str(dfts_abs_pos[i]))
+                        file.write("\n")
+                        file.write("\n")
+
+                    file.close()
+
                     # Print the final absolute position of defects
                     self.get_logger().info(f"Defects location finished, results: {dfts_abs_pos}")
 
