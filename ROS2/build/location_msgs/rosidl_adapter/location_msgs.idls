@@ -2,3 +2,4 @@
 /home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/PixelPoint.idl
 /home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/DefectBox.idl
 /home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Defects.idl
+/home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Yaw.idl

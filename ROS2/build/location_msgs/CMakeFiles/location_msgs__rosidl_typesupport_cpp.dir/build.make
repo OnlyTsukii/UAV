@@ -67,6 +67,7 @@ rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp: rosidl_adapt
 rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp: rosidl_adapter/location_msgs/msg/PixelPoint.idl
 rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp: rosidl_adapter/location_msgs/msg/DefectBox.idl
 rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp: rosidl_adapter/location_msgs/msg/Defects.idl
+rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp: rosidl_adapter/location_msgs/msg/Yaw.idl
 rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -168,6 +169,9 @@ rosidl_typesupport_cpp/location_msgs/msg/defect_box__type_support.cpp: rosidl_ty
 rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp: rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp
 
+rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp: rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp
+
 CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp.o: CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp.o: rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp.o"
@@ -220,12 +224,26 @@ CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/loca
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp -o CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp.s
 
+CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.o: CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.o: rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.o -c /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp
+
+CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp > CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.i
+
+CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp -o CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.s
+
 # Object files for target location_msgs__rosidl_typesupport_cpp
 location_msgs__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/pixel_point__type_support.cpp.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defect_box__type_support.cpp.o" \
-"CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp.o"
+"CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp.o" \
+"CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.o"
 
 # External object files for target location_msgs__rosidl_typesupport_cpp
 location_msgs__rosidl_typesupport_cpp_EXTERNAL_OBJECTS =
@@ -234,6 +252,7 @@ liblocation_msgs__rosidl_typesupport_cpp.so: CMakeFiles/location_msgs__rosidl_ty
 liblocation_msgs__rosidl_typesupport_cpp.so: CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/pixel_point__type_support.cpp.o
 liblocation_msgs__rosidl_typesupport_cpp.so: CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defect_box__type_support.cpp.o
 liblocation_msgs__rosidl_typesupport_cpp.so: CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp.o
+liblocation_msgs__rosidl_typesupport_cpp.so: CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.o
 liblocation_msgs__rosidl_typesupport_cpp.so: CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/build.make
 liblocation_msgs__rosidl_typesupport_cpp.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 liblocation_msgs__rosidl_typesupport_cpp.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_c.so
@@ -263,7 +282,7 @@ liblocation_msgs__rosidl_typesupport_cpp.so: /opt/ros/galactic/lib/librosidl_run
 liblocation_msgs__rosidl_typesupport_cpp.so: /opt/ros/galactic/lib/librcpputils.so
 liblocation_msgs__rosidl_typesupport_cpp.so: /opt/ros/galactic/lib/librcutils.so
 liblocation_msgs__rosidl_typesupport_cpp.so: CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library liblocation_msgs__rosidl_typesupport_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library liblocation_msgs__rosidl_typesupport_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -279,6 +298,7 @@ CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_
 CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/location_msgs/msg/pixel_point__type_support.cpp
 CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/location_msgs/msg/defect_box__type_support.cpp
 CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp
+CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp
 	cd /home/xs/UAV/ROS2/build/location_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/build/location_msgs /home/xs/UAV/ROS2/build/location_msgs /home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/depend
 

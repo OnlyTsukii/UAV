@@ -19,7 +19,11 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__builder.hpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__struct.hpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__traits.hpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/detail/yaw__builder.hpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/pixel_point.hpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/yaw.hpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
   )
 
 

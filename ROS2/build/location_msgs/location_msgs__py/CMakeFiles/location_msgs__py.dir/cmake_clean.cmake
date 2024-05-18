@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/location_msgs/msg/_gps_fix_s.c"
   "../rosidl_generator_py/location_msgs/msg/_pixel_point.py"
   "../rosidl_generator_py/location_msgs/msg/_pixel_point_s.c"
+  "../rosidl_generator_py/location_msgs/msg/_yaw.py"
+  "../rosidl_generator_py/location_msgs/msg/_yaw_s.c"
   "CMakeFiles/location_msgs__py"
 )
 

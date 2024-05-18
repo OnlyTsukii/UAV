@@ -113,4 +113,7 @@ CMakeFiles/location_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_g
  rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.h
  rosidl_generator_c/location_msgs/msg/detail/pixel_point__struct.h
  rosidl_generator_c/location_msgs/msg/detail/pixel_point__type_support.h
+ rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h
+ rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h
+ rosidl_generator_c/location_msgs/msg/detail/yaw__type_support.h
  rosidl_generator_c/location_msgs/msg/rosidl_generator_c__visibility_control.h

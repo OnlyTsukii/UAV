@@ -69,6 +69,7 @@ rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_type
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h: rosidl_adapter/location_msgs/msg/PixelPoint.idl
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h: rosidl_adapter/location_msgs/msg/DefectBox.idl
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h: rosidl_adapter/location_msgs/msg/Defects.idl
+rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h: rosidl_adapter/location_msgs/msg/Yaw.idl
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -170,6 +171,9 @@ rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__rosidl_t
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c: rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c
 
@@ -181,6 +185,9 @@ rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__type_sup
 
 rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c: rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c
+
+rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c: rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c
 
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c.o: CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c.o: rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c
@@ -234,12 +241,26 @@ CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c -o CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.s
 
+CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o: CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o: rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o   -c /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c
+
+CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c > CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.i
+
+CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c -o CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.s
+
 # Object files for target location_msgs__rosidl_typesupport_introspection_c
 location_msgs__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__type_support.c.o" \
-"CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.o"
+"CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.o" \
+"CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o"
 
 # External object files for target location_msgs__rosidl_typesupport_introspection_c
 location_msgs__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
@@ -248,6 +269,7 @@ liblocation_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/location_msg
 liblocation_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c.o
 liblocation_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__type_support.c.o
 liblocation_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.o
+liblocation_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o
 liblocation_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/build.make
 liblocation_msgs__rosidl_typesupport_introspection_c.so: liblocation_msgs__rosidl_generator_c.so
 liblocation_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_c.so
@@ -278,7 +300,7 @@ liblocation_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/galactic/lib/l
 liblocation_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/galactic/lib/librosidl_runtime_c.so
 liblocation_msgs__rosidl_typesupport_introspection_c.so: /opt/ros/galactic/lib/librcutils.so
 liblocation_msgs__rosidl_typesupport_introspection_c.so: CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library liblocation_msgs__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library liblocation_msgs__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -294,10 +316,12 @@ CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_c.h
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_c.h
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_c.h
+CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_c.h
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__type_support.c
 CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c
+CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c
 	cd /home/xs/UAV/ROS2/build/location_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/build/location_msgs /home/xs/UAV/ROS2/build/location_msgs /home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/depend
 

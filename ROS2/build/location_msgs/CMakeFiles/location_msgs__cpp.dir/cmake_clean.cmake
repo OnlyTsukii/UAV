@@ -14,8 +14,12 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__builder.hpp"
   "rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__struct.hpp"
   "rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__traits.hpp"
+  "rosidl_generator_cpp/location_msgs/msg/detail/yaw__builder.hpp"
+  "rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp"
+  "rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp"
   "rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp"
   "rosidl_generator_cpp/location_msgs/msg/pixel_point.hpp"
+  "rosidl_generator_cpp/location_msgs/msg/yaw.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

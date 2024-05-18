@@ -57,6 +57,7 @@ CMakeFiles/location_msgs: /home/xs/UAV/ROS2/location_msgs/msg/GpsFix.msg
 CMakeFiles/location_msgs: /home/xs/UAV/ROS2/location_msgs/msg/PixelPoint.msg
 CMakeFiles/location_msgs: /home/xs/UAV/ROS2/location_msgs/msg/DefectBox.msg
 CMakeFiles/location_msgs: /home/xs/UAV/ROS2/location_msgs/msg/Defects.msg
+CMakeFiles/location_msgs: /home/xs/UAV/ROS2/location_msgs/msg/Yaw.msg
 CMakeFiles/location_msgs: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 CMakeFiles/location_msgs: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 CMakeFiles/location_msgs: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/defects__type_support.cpp" "/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defects__type_support.cpp.o"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp" "/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp.o"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/pixel_point__type_support.cpp" "/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/pixel_point__type_support.cpp.o"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/yaw__type_support.cpp" "/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/yaw__type_support.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -30,6 +31,7 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/defect_box__type_support.cpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/defects__type_support.cpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/pixel_point__type_support.cpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/yaw__type_support.cpp" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp"
   )
 
 

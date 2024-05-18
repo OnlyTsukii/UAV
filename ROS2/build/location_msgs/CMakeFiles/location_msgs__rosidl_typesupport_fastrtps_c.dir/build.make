@@ -69,6 +69,7 @@ rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesuppo
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/location_msgs/msg/PixelPoint.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/location_msgs/msg/DefectBox.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/location_msgs/msg/Defects.idl
+rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/location_msgs/msg/Yaw.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -182,6 +183,12 @@ rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__rosidl_typesuppo
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp
 
+rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp
+
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp.o: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp.o"
@@ -234,12 +241,26 @@ CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp -o CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.s
 
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o -c /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp
+
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp > CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.i
+
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp -o CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.s
+
 # Object files for target location_msgs__rosidl_typesupport_fastrtps_c
 location_msgs__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__type_support_c.cpp.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp.o" \
-"CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o"
+"CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o" \
+"CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o"
 
 # External object files for target location_msgs__rosidl_typesupport_fastrtps_c
 location_msgs__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
@@ -248,6 +269,7 @@ liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__ro
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__type_support_c.cpp.o
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp.o
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o
+liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/build.make
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/galactic/lib/librosidl_typesupport_fastrtps_c.so
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/galactic/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
@@ -297,7 +319,7 @@ liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu/li
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/galactic/lib/libfastcdr.so.1.0.20
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -317,6 +339,8 @@ CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_types
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp
 	cd /home/xs/UAV/ROS2/build/location_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/build/location_msgs /home/xs/UAV/ROS2/build/location_msgs /home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend
 

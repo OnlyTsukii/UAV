@@ -1,19 +1,17 @@
 import math
 import rclpy
 import time
+import threading
 
 from rclpy.node import Node
 from sensor_msgs.msg import NavSatFix, NavSatStatus, TimeReference
 from geometry_msgs.msg import TwistStamped, QuaternionStamped
-from std_msgs.msg import Int32
-from location_msgs.msg import GpsFix
+from std_msgs.msg import Int32, Float32
+from location_msgs.msg import GpsFix, Yaw
 from tf_transformations import quaternion_from_euler
 from uav_patrol.gps_handler.checksum_utils import check_nmea_checksum
 from uav_patrol.gps_handler import parser
-from rosidl_runtime_py.convert import message_to_yaml
 
-
-LOCATION_PATH = '/home/xs/UAV/ROS2/locations/'
 
 class Ros2NMEADriver(Node):
     def __init__(self):
@@ -23,16 +21,22 @@ class Ros2NMEADriver(Node):
         self.vel_pub = self.create_publisher(TwistStamped, 'vel', 10)
         self.heading_pub = self.create_publisher(QuaternionStamped, 'heading', 10)
         self.time_ref_pub = self.create_publisher(TimeReference, 'time_reference', 10)
+        self.ctrl_pub = self.create_publisher(Int32, "ctrl_cmd", 10)
+        self.yaw_pub = self.create_publisher(Yaw, "yaw", 10)
 
-        self.ctrl_publisher = self.create_publisher(Int32, "ctrl_cmd", 10)
+        self.yaw_sub = self.create_subscription(Float32, "raw_yaw", self.yaw_callback, 10)
 
-        self.pre_lat = 0
-        self.pre_lon = 0
-        self.pre_alt = 0
+        self.current_yaw = 0
+        self.timestamp = 0 
+        self.mutex = threading.Lock()
 
-        self.lat_dif_thr = 0.00000905
-        self.lon_dif_thr = 0.0000103
-        self.alt_dif_thr = 0.5
+        # self.pre_lat = 0
+        # self.pre_lon = 0
+        # self.pre_alt = 0
+
+        # self.lat_dif_thr = 0.00000905
+        # self.lon_dif_thr = 0.0000103
+        # self.alt_dif_thr = 0.5
 
         self.gps_id = 0
 
@@ -50,9 +54,9 @@ class Ros2NMEADriver(Node):
 
         self.using_receiver_epe = False
 
-        self.lon_std_dev = 0
-        self.lat_std_dev = 0
-        self.alt_std_dev = 0
+        # self.lon_std_dev = 0
+        # self.lat_std_dev = 0
+        # self.alt_std_dev = 0
 
         """Format for this dictionary is the fix type from a GGA message as the key, with
         each entry containing a tuple consisting of a default estimated
@@ -101,6 +105,9 @@ class Ros2NMEADriver(Node):
                 NavSatFix.COVARIANCE_TYPE_APPROXIMATED
             ]
         }
+
+    def yaw_callback(self, msg):
+        self.current_yaw = msg.data
 
     # Returns True if we successfully did something with the passed in
     # nmea_string
@@ -261,60 +268,33 @@ class Ros2NMEADriver(Node):
         return True
     
     def send_ctrl(self, current_fix):
-        self.get_logger().info(f"current altitude {current_fix.altitude}")
-        if self.pre_alt != 0:
-            # lon_cur_dev = abs(current_fix.longitude - self.pre_lon)
-            # lat_cur_dev = abs(current_fix.latitude - self.pre_lat)
-            alt_cur_dev = abs(current_fix.altitude - self.pre_alt)
+        cur_ts = time.time()
+        ts_dev = ts_dev - self.timestamp
 
-            # self.get_logger().info(f"gps position deviation: {lon_cur_dev, lat_cur_dev, alt_cur_dev}")
+        if self.timestamp == 0 or ts_dev >= 2.9:
+            self.timestamp = cur_ts
 
-            # if lon_cur_dev >= self.lon_dif_thr or lat_cur_dev >= self.lat_dif_thr \
-            #     or alt_cur_dev >= self.alt_dif_thr:
-            if alt_cur_dev >= self.alt_dif_thr:
-                fix = GpsFix()
-                fix.gps_fix = current_fix
-                fix.gps_id = self.gps_id
-                self.fix_pub.publish(fix)
-                self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
-
-                # file = open(LOCATION_PATH+'location'+str(fix.gps_id)+'.txt', "w")
-                # file.write(message_to_yaml(fix))
-                # file.write("\n")
-                # file.close()
-
-                ctrl_cmd = Int32()
-                ctrl_cmd.data = self.gps_id
-                self.ctrl_publisher.publish(ctrl_cmd)
-                self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
-
-                self.gps_id += 1
-                # self.pre_lon = current_fix.longitude
-                # self.pre_lat = current_fix.latitude
-                self.pre_alt = current_fix.altitude
-        else:
-            time.sleep(2)
-            # self.get_logger().info(f"current pre_alt: {self.pre_alt}")
             fix = GpsFix()
             fix.gps_fix = current_fix
             fix.gps_id = self.gps_id
             self.fix_pub.publish(fix)
             self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
 
-            # file = open(LOCATION_PATH+'location'+str(fix.gps_id)+'.txt', "w")
-            # file.write(message_to_yaml(fix))
-            # file.write("\n")
-            # file.close()
-
             ctrl_cmd = Int32()
             ctrl_cmd.data = self.gps_id
-            self.ctrl_publisher.publish(ctrl_cmd)
-            self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
+            self.ctrl_pub.publish(ctrl_cmd)
+            self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd }")
+
+            yaw = Yaw()
+            yaw.yaw_id = self.gps_id
+            self.mutex.acquire()
+            yaw.yaw = self.current_yaw
+            self.mutex.release()
+            self.yaw_pub(yaw)
+            self.get_logger().info(f"Publishing Yaw message { yaw }")
 
             self.gps_id += 1
-            # self.pre_lon = current_fix.longitude
-            # self.pre_lat = current_fix.latitude
-            self.pre_alt = -1
+        
 
     """Helper method for getting the frame_id with the correct TF prefix"""
     def get_frame_id(self):

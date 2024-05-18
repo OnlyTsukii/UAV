@@ -74,6 +74,7 @@ rosidl_generator_c/location_msgs/msg/gps_fix.h: rosidl_adapter/location_msgs/msg
 rosidl_generator_c/location_msgs/msg/gps_fix.h: rosidl_adapter/location_msgs/msg/PixelPoint.idl
 rosidl_generator_c/location_msgs/msg/gps_fix.h: rosidl_adapter/location_msgs/msg/DefectBox.idl
 rosidl_generator_c/location_msgs/msg/gps_fix.h: rosidl_adapter/location_msgs/msg/Defects.idl
+rosidl_generator_c/location_msgs/msg/gps_fix.h: rosidl_adapter/location_msgs/msg/Yaw.idl
 rosidl_generator_c/location_msgs/msg/gps_fix.h: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/location_msgs/msg/gps_fix.h: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 rosidl_generator_c/location_msgs/msg/gps_fix.h: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -211,6 +212,18 @@ rosidl_generator_c/location_msgs/msg/detail/defects__struct.h: rosidl_generator_
 rosidl_generator_c/location_msgs/msg/detail/defects__type_support.h: rosidl_generator_c/location_msgs/msg/gps_fix.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/location_msgs/msg/detail/defects__type_support.h
 
+rosidl_generator_c/location_msgs/msg/yaw.h: rosidl_generator_c/location_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/location_msgs/msg/yaw.h
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h: rosidl_generator_c/location_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h: rosidl_generator_c/location_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__type_support.h: rosidl_generator_c/location_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/location_msgs/msg/detail/yaw__type_support.h
+
 rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c: rosidl_generator_c/location_msgs/msg/gps_fix.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c
 
@@ -222,6 +235,9 @@ rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c: rosidl_gene
 
 rosidl_generator_c/location_msgs/msg/detail/defects__functions.c: rosidl_generator_c/location_msgs/msg/gps_fix.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/location_msgs/msg/detail/defects__functions.c
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c: rosidl_generator_c/location_msgs/msg/gps_fix.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c
 
 CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c.o: CMakeFiles/location_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c.o: rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c
@@ -275,12 +291,26 @@ CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c -o CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.s
 
+CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o: CMakeFiles/location_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o: rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o   -c /home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c
+
+CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c > CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.i
+
+CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c -o CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.s
+
 # Object files for target location_msgs__rosidl_generator_c
 location_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c.o" \
 "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c.o" \
 "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c.o" \
-"CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o"
+"CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o" \
+"CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o"
 
 # External object files for target location_msgs__rosidl_generator_c
 location_msgs__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -289,6 +319,7 @@ liblocation_msgs__rosidl_generator_c.so: CMakeFiles/location_msgs__rosidl_genera
 liblocation_msgs__rosidl_generator_c.so: CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c.o
 liblocation_msgs__rosidl_generator_c.so: CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c.o
 liblocation_msgs__rosidl_generator_c.so: CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o
+liblocation_msgs__rosidl_generator_c.so: CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o
 liblocation_msgs__rosidl_generator_c.so: CMakeFiles/location_msgs__rosidl_generator_c.dir/build.make
 liblocation_msgs__rosidl_generator_c.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 liblocation_msgs__rosidl_generator_c.so: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_c.so
@@ -318,7 +349,7 @@ liblocation_msgs__rosidl_generator_c.so: /opt/ros/galactic/lib/librosidl_runtime
 liblocation_msgs__rosidl_generator_c.so: /opt/ros/galactic/lib/librcpputils.so
 liblocation_msgs__rosidl_generator_c.so: /opt/ros/galactic/lib/librcutils.so
 liblocation_msgs__rosidl_generator_c.so: CMakeFiles/location_msgs__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library liblocation_msgs__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library liblocation_msgs__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/location_msgs__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -346,10 +377,15 @@ CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/loca
 CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/defects__functions.h
 CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/defects__struct.h
 CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/defects__type_support.h
+CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/yaw.h
+CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h
+CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h
+CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/yaw__type_support.h
 CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c
 CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c
 CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c
 CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/defects__functions.c
+CMakeFiles/location_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c
 	cd /home/xs/UAV/ROS2/build/location_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/location_msgs /home/xs/UAV/ROS2/build/location_msgs /home/xs/UAV/ROS2/build/location_msgs /home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/location_msgs__rosidl_generator_c.dir/depend
 

@@ -60,11 +60,13 @@ location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msg
 location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_pixel_point.py
 location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_defect_box.py
 location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_defects.py
+location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_yaw.py
 location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/__init__.py
 location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_gps_fix_s.c
 location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_pixel_point_s.c
 location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_defect_box_s.c
 location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_defects_s.c
+location_msgs__py/CMakeFiles/location_msgs__py: rosidl_generator_py/location_msgs/msg/_yaw_s.c
 
 
 rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/lib/rosidl_generator_py/rosidl_generator_py
@@ -84,6 +86,7 @@ rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtp
 rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/location_msgs/msg/PixelPoint.idl
 rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/location_msgs/msg/DefectBox.idl
 rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/location_msgs/msg/Defects.idl
+rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/location_msgs/msg/Yaw.idl
 rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -194,6 +197,9 @@ rosidl_generator_py/location_msgs/msg/_defect_box.py: rosidl_generator_py/locati
 rosidl_generator_py/location_msgs/msg/_defects.py: rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/location_msgs/msg/_defects.py
 
+rosidl_generator_py/location_msgs/msg/_yaw.py: rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/location_msgs/msg/_yaw.py
+
 rosidl_generator_py/location_msgs/msg/__init__.py: rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/location_msgs/msg/__init__.py
 
@@ -209,6 +215,9 @@ rosidl_generator_py/location_msgs/msg/_defect_box_s.c: rosidl_generator_py/locat
 rosidl_generator_py/location_msgs/msg/_defects_s.c: rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/location_msgs/msg/_defects_s.c
 
+rosidl_generator_py/location_msgs/msg/_yaw_s.c: rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/location_msgs/msg/_yaw_s.c
+
 location_msgs__py: location_msgs__py/CMakeFiles/location_msgs__py
 location_msgs__py: rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 location_msgs__py: rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_introspection_c.c
@@ -217,11 +226,13 @@ location_msgs__py: rosidl_generator_py/location_msgs/msg/_gps_fix.py
 location_msgs__py: rosidl_generator_py/location_msgs/msg/_pixel_point.py
 location_msgs__py: rosidl_generator_py/location_msgs/msg/_defect_box.py
 location_msgs__py: rosidl_generator_py/location_msgs/msg/_defects.py
+location_msgs__py: rosidl_generator_py/location_msgs/msg/_yaw.py
 location_msgs__py: rosidl_generator_py/location_msgs/msg/__init__.py
 location_msgs__py: rosidl_generator_py/location_msgs/msg/_gps_fix_s.c
 location_msgs__py: rosidl_generator_py/location_msgs/msg/_pixel_point_s.c
 location_msgs__py: rosidl_generator_py/location_msgs/msg/_defect_box_s.c
 location_msgs__py: rosidl_generator_py/location_msgs/msg/_defects_s.c
+location_msgs__py: rosidl_generator_py/location_msgs/msg/_yaw_s.c
 location_msgs__py: location_msgs__py/CMakeFiles/location_msgs__py.dir/build.make
 
 .PHONY : location_msgs__py

@@ -18,6 +18,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
    "msg/PixelPoint.msg"
    "msg/DefectBox.msg"
    "msg/Defects.msg"
+   "msg/Yaw.msg"
    DEPENDENCIES std_msgs sensor_msgs
 )
 

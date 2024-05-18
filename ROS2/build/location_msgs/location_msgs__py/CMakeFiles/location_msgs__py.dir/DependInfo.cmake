@@ -16,6 +16,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/msg/_gps_fix_s.c" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/msg/_pixel_point.py" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/msg/_pixel_point_s.c" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/msg/_yaw.py" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/msg/_yaw_s.c" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

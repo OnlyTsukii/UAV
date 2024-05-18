@@ -6,11 +6,14 @@ import numpy
 import os
 import shutil
 import json
+from geopy.distance import geodesic
 
 from queue import Queue
+import rclpy.duration
 from rclpy.node import Node
-from location_msgs.msg import Defects, DefectBox, GpsFix
+from location_msgs.msg import Defects, DefectBox, GpsFix, Yaw
 from typing import Tuple, List
+import rclpy.time
 from tf2_ros import TransformException
 from tf2_ros.buffer import Buffer
 from tf2_ros.transform_listener import TransformListener
@@ -23,16 +26,16 @@ LOCATION_PATH = '/home/xs/UAV/ROS2/locations/'
 # unit: m
 EARTH_RADIUS            = 6378.137     
 SOOCHOW_GROUND_ALTITUDE = 7
-SOLAR_PANEL_HEIGHT      = 2
+SOLAR_PANEL_HEIGHT      = 0
 
 # unit: °
 CAM_HOR_ANGLE   = 32.9
 CAM_VER_ANGLE   = 26.6
-ROTATION_ANGLE  = 20    # UNKNOWN
+# ROTATION_ANGLE  = 20
 
 # unit: °/m
-LAT_PER_METER = 0.00000905
-LON_PER_METER = 0.0000103
+LAT_PER_METER = 0.000009019
+LON_PER_METER = 0.000010503
 
 
 class TF_Converter(Node):
@@ -41,6 +44,7 @@ class TF_Converter(Node):
 
         self.dft_subscriber = self.create_subscription(Defects, "dfts", self.dft_callback, 10)
         self.gps_subscriber = self.create_subscription(GpsFix, "gps", self.gps_callback, 10)
+        self.yaw_subscriber = self.create_subscription(Yaw, "yaw", self.yaw_callback, 10)
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
@@ -68,39 +72,52 @@ class TF_Converter(Node):
 
     def gps_callback(self, msg: GpsFix):
         self.mutex.acquire()
-        if self.map.get(msg.gps_id) == None:
+        if self.map.get(msg.gps_id) == None or \
+           self.map[msg.gps_id].get('dfts') == None or \
+           self.map[msg.gps_id].get('yaw') == None:
             self.map[msg.gps_id] = {'gps': msg}
         else:
             dfts_msg = self.map[msg.gps_id].get('dfts')
-            self.queue.put((msg, dfts_msg))
+            yaw_msg = self.map[msg.gps_id].get('yaw')
+            self.queue.put((msg, dfts_msg, yaw_msg))
             self.map.clear()
         self.mutex.release()
         self.get_logger().info(f"Got a gps message, id: {msg.gps_id}.")
             
     def dft_callback(self, msg: Defects):
         self.mutex.acquire()
-        if self.map.get(msg.defect_id) == None:
+        if self.map.get(msg.defect_id) == None or \
+           self.map[msg.defect_id].get('gps') == None or \
+           self.map[msg.defect_id].get('yaw') == None:
             self.map[msg.defect_id] = {'dfts': msg}
         else:
             gps_msg = self.map[msg.defect_id].get('gps')
-            self.queue.put((gps_msg, msg))
+            yaw_msg = self.map[msg.defect_id].get('yaw')
+            self.queue.put((gps_msg, msg, yaw_msg))
             self.map.clear()
         self.mutex.release()
         self.get_logger().info(f"Got a defects message, id: {msg.defect_id}.")
+
+    def yaw_callback(self, msg: Yaw):
+        self.mutex.acquire()
+        if self.map.get(msg.yaw_id) == None or \
+           self.map[msg.yaw_id].get('gps') == None or \
+           self.map[msg.yaw_id].get('dfts') == None:
+            self.map[msg.yaw_id] = {'yaw': msg}
+        else:
+            gps_msg = self.map[msg.yaw_id].get('gps')
+            dfts_msg = self.map[msg.yaw_id].get('dfts')
+            self.queue.put((gps_msg, dfts_msg, msg))
+            self.map.clear()
+        self.mutex.release()
+        self.get_logger().info(f"Got a yaw message, id: {msg.yaw_id}.")
 
     def handle_map(self):
         while True:
             if self.queue.empty():
                 time.sleep(1.0)
             else:
-                gps_msg, dfts_msg = self.queue.get()
-                
-                file = open(LOCATION_PATH+'location'+str(gps_msg.gps_id)+'.txt', "w")
-                file.write(message_to_yaml(gps_msg))
-                file.write("\n")
-                file.close()
-
-                continue
+                gps_msg, dfts_msg, yaw_msg = self.queue.get()
 
                 if len(dfts_msg.defects) == 0:
                     self.get_logger().info('Received a defects message with empty defects.')
@@ -109,6 +126,7 @@ class TF_Converter(Node):
                 self.get_logger().info("Got a GPS & Defects map, locating...")
                 self.get_logger().info(f"Gps fix: {gps_msg.gps_fix.longitude} {gps_msg.gps_fix.latitude} {gps_msg.gps_fix.altitude}.")
                 self.get_logger().info(f"Defects position: {dfts_msg.defects}.")
+                self.get_logger().info(f"Yaw: {yaw_msg.yaw}")
 
                 # _, _, uav_z = self.get_transform(gps_msg)
                 uav_z = gps_msg.gps_fix.altitude
@@ -124,13 +142,12 @@ class TF_Converter(Node):
                         rclpy.time.Time())
                     
                     # Height relative to the solar panel
-                    # height_diff = uav_z - t.transform.translation.z - SOLAR_PANEL_HEIGHT - SOOCHOW_GROUND_ALTITUDE
-                    height_diff = 1.0
+                    height_diff = uav_z + t.transform.translation.z - SOLAR_PANEL_HEIGHT - SOOCHOW_GROUND_ALTITUDE
                     # Calculate defects position relative to camera frame
                     dfts_rel_pos = self.calc_dfts_pos(height_diff, dfts_msg)
 
                     # UAV rotation matrix
-                    rot_angle = self.rad(ROTATION_ANGLE)
+                    rot_angle = self.rad(yaw_msg.yaw)
                     R = numpy.array([
                         [math.cos(rot_angle), -1 * math.sin(rot_angle)],
                         [math.sin(rot_angle), -1 * math.cos(rot_angle)]
@@ -152,6 +169,8 @@ class TF_Converter(Node):
                         gps_n = gps_msg.gps_fix.latitude + target[1] * LAT_PER_METER
                         dfts_abs_pos.append((gps_e, gps_n, SOLAR_PANEL_HEIGHT + SOOCHOW_GROUND_ALTITUDE))
 
+                    distance_x, distance_y, distance_z, distance_2d = self.get_distance(gps_msg)
+
                     file = open(LOCATION_PATH+'location'+str(gps_msg.gps_id)+'.txt', "w")
                     
                     for i, defect in enumerate(dfts_msg.defects):
@@ -161,6 +180,9 @@ class TF_Converter(Node):
                         file.write("\n")
                         file.write("DEFECT POSITION IN WORLD: \n")
                         file.write(str(dfts_abs_pos[i]))
+                        file.write("\n")
+                        file.write("DISTANCE FROM THE START POINT: \n")
+                        file.write(str((distance_x, distance_y, distance_z, distance_2d)))
                         file.write("\n")
                         file.write("\n")
 
@@ -198,57 +220,30 @@ class TF_Converter(Node):
 
         return res
     
-    def get_transform(self, msg: GpsFix) -> Tuple[float, float, float]:
+    def get_distance(self, msg: GpsFix) -> Tuple[float, float, float, float]:
         if self.init_longitude == 0 and self.init_altitude == 0 \
             and self.init_altitude == 0:
-            self.init_longitude = msg.longitude
-            self.init_latitude = msg.latitude
-            self.init_altitude = msg.altitude
+            self.init_longitude = msg.gps_fix.longitude
+            self.init_latitude = msg.gps_fix.latitude
+            self.init_altitude = msg.gps_fix.altitude
 
-            return 0, 0, 0
+            return 0, 0, 0, 0
         else:
-            radLat1 = self.rad(self.init_latitude)
-            radLong1 = self.rad(self.init_longitude)
-            radLat2 = self.rad(msg.latitude)
-            radLong2 = self.rad(msg.longitude)
-            
-            delta_lat = radLat2 - radLat1
-            delta_long = 0
-            
-            if delta_lat > 0:
-                x = -2 * math.asin(math.sqrt(
-                    math.pow(math.sin(delta_lat / 2), 2) +
-                    math.cos(radLat1) * math.cos(radLat2) *
-                    math.pow(math.sin(delta_long / 2), 2)
-                ))
-            else:
-                x = -2 * math.asin(math.sqrt(
-                    math.pow(math.sin(delta_lat / 2), 2) +
-                    math.cos(radLat1) * math.cos(radLat2) *
-                    math.pow(math.sin(delta_long / 2), 2)
-                ))
-            x *= EARTH_RADIUS * 1000
-            
-            delta_lat = 0
-            delta_long = radLong2 - radLong1
-            if delta_long > 0:
-                y = 2 * math.asin(math.sqrt(
-                    math.pow(math.sin(delta_lat / 2), 2) +
-                    math.cos(radLat2) * math.cos(radLat2) *
-                    math.pow(math.sin(delta_long / 2), 2)
-                ))
-            else:
-                y = -2 * math.asin(math.sqrt(
-                    math.pow(math.sin(delta_lat / 2), 2) +
-                    math.cos(radLat2) * math.cos(radLat2) *
-                    math.pow(math.sin(delta_long / 2), 2)
-                ))
-            y *= EARTH_RADIUS * 1000
-            
-            # Must be the height relative to the current ground plane.
-            z = msg.altitude - SOOCHOW_GROUND_ALTITUDE
+            point1 = (self.init_latitude, self.init_longitude)
+            point2 = (msg.gps_fix.latitude, msg.gps_fix.longitude)
 
-            return x, y, z
+            distance_2d = geodesic(point1, point2).m
+
+            avg_lat = (self.init_latitude + msg.gps_fix.latitude) / 2
+            avg_lon = (self.init_longitude + msg.gps_fix.longitude) / 2
+
+            x = geodesic((avg_lat, self.init_longitude), (avg_lat, msg.gps_fix.longitude)).m
+            y = geodesic((self.init_latitude, avg_lon), (msg.gps_fix.latitude, avg_lon)).m
+
+            # Must be the height relative to the current ground plane.
+            z = msg.gps_fix.altitude - SOOCHOW_GROUND_ALTITUDE
+
+            return x, y, z, distance_2d
         
         
 def main(args=None):

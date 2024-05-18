@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c" "/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.o"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c" "/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c.o"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c" "/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c.o"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c" "/home/xs/UAV/ROS2/build/location_msgs/CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -34,6 +35,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_c.h" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h"
   "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_c.h" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h"
+  "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c" "/home/xs/UAV/ROS2/build/location_msgs/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h"
   )
 
 

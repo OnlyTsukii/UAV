@@ -6,3 +6,5 @@ msg/GpsFix.idl
 msg/GpsFix.msg
 msg/PixelPoint.idl
 msg/PixelPoint.msg
+msg/Yaw.idl
+msg/Yaw.msg

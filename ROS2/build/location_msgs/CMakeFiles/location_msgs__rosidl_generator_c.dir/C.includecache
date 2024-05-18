@@ -60,6 +60,18 @@ stdlib.h
 string.h
 -
 
+/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c
+location_msgs/msg/detail/yaw__functions.h
+/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/location_msgs/msg/detail/yaw__functions.h
+assert.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+
 /opt/ros/galactic/include/builtin_interfaces/msg/detail/time__struct.h
 stdbool.h
 -
@@ -209,6 +221,26 @@ location_msgs/msg/detail/pixel_point__struct.h
 rosidl_generator_c/location_msgs/msg/detail/location_msgs/msg/detail/pixel_point__struct.h
 
 rosidl_generator_c/location_msgs/msg/detail/pixel_point__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/location_msgs/msg/detail/rosidl_runtime_c/visibility_control.h
+location_msgs/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/location_msgs/msg/detail/location_msgs/msg/rosidl_generator_c__visibility_control.h
+location_msgs/msg/detail/yaw__struct.h
+rosidl_generator_c/location_msgs/msg/detail/location_msgs/msg/detail/yaw__struct.h
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h
 stdbool.h
 -
 stddef.h

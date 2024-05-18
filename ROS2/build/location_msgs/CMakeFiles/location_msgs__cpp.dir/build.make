@@ -69,6 +69,10 @@ CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/defects.hp
 CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/defects__builder.hpp
 CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/defects__struct.hpp
 CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/defects__traits.hpp
+CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/yaw.hpp
+CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__builder.hpp
+CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp
+CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp
 
 
 rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: /opt/ros/galactic/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -90,6 +94,7 @@ rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: rosidl_adapter/location_msgs
 rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: rosidl_adapter/location_msgs/msg/PixelPoint.idl
 rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: rosidl_adapter/location_msgs/msg/DefectBox.idl
 rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: rosidl_adapter/location_msgs/msg/Defects.idl
+rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: rosidl_adapter/location_msgs/msg/Yaw.idl
 rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: /opt/ros/galactic/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: /opt/ros/galactic/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp: /opt/ros/galactic/share/std_msgs/msg/ByteMultiArray.idl
@@ -227,6 +232,18 @@ rosidl_generator_cpp/location_msgs/msg/detail/defects__struct.hpp: rosidl_genera
 rosidl_generator_cpp/location_msgs/msg/detail/defects__traits.hpp: rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/detail/defects__traits.hpp
 
+rosidl_generator_cpp/location_msgs/msg/yaw.hpp: rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/yaw.hpp
+
+rosidl_generator_cpp/location_msgs/msg/detail/yaw__builder.hpp: rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/detail/yaw__builder.hpp
+
+rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp: rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp
+
+rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp: rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp
+
 location_msgs__cpp: CMakeFiles/location_msgs__cpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/gps_fix.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/gps_fix__builder.hpp
@@ -244,6 +261,10 @@ location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/defects.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/defects__builder.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/defects__struct.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/defects__traits.hpp
+location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/yaw.hpp
+location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__builder.hpp
+location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp
+location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp
 location_msgs__cpp: CMakeFiles/location_msgs__cpp.dir/build.make
 
 .PHONY : location_msgs__cpp

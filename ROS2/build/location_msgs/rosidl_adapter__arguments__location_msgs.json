@@ -4,6 +4,7 @@
     "/home/xs/UAV/ROS2/location_msgs:msg/GpsFix.msg",
     "/home/xs/UAV/ROS2/location_msgs:msg/PixelPoint.msg",
     "/home/xs/UAV/ROS2/location_msgs:msg/DefectBox.msg",
-    "/home/xs/UAV/ROS2/location_msgs:msg/Defects.msg"
+    "/home/xs/UAV/ROS2/location_msgs:msg/Defects.msg",
+    "/home/xs/UAV/ROS2/location_msgs:msg/Yaw.msg"
   ]
 }

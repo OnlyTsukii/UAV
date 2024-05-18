@@ -45,6 +45,12 @@ location_msgs/msg/detail/defects__struct.h
 /home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/location_msgs/msg/detail/defects__struct.h
 location_msgs/msg/detail/defects__functions.h
 /home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/location_msgs/msg/detail/defects__functions.h
+location_msgs/msg/detail/yaw__type_support.h
+/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/location_msgs/msg/detail/yaw__type_support.h
+location_msgs/msg/detail/yaw__struct.h
+/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/location_msgs/msg/detail/yaw__struct.h
+location_msgs/msg/detail/yaw__functions.h
+/home/xs/UAV/ROS2/build/location_msgs/rosidl_generator_py/location_msgs/location_msgs/msg/detail/yaw__functions.h
 
 /opt/ros/galactic/include/builtin_interfaces/msg/detail/time__struct.h
 stdbool.h
@@ -739,6 +745,34 @@ stdint.h
 -
 
 rosidl_generator_c/location_msgs/msg/detail/pixel_point__type_support.h
+rosidl_typesupport_interface/macros.h
+rosidl_generator_c/location_msgs/msg/detail/rosidl_typesupport_interface/macros.h
+location_msgs/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/location_msgs/msg/detail/location_msgs/msg/rosidl_generator_c__visibility_control.h
+rosidl_runtime_c/message_type_support_struct.h
+rosidl_generator_c/location_msgs/msg/detail/rosidl_runtime_c/message_type_support_struct.h
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/location_msgs/msg/detail/rosidl_runtime_c/visibility_control.h
+location_msgs/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/location_msgs/msg/detail/location_msgs/msg/rosidl_generator_c__visibility_control.h
+location_msgs/msg/detail/yaw__struct.h
+rosidl_generator_c/location_msgs/msg/detail/location_msgs/msg/detail/yaw__struct.h
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+rosidl_generator_c/location_msgs/msg/detail/yaw__type_support.h
 rosidl_typesupport_interface/macros.h
 rosidl_generator_c/location_msgs/msg/detail/rosidl_typesupport_interface/macros.h
 location_msgs/msg/rosidl_generator_c__visibility_control.h

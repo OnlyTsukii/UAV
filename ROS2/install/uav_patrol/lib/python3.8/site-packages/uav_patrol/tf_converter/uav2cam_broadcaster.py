@@ -38,7 +38,8 @@ class StaticFramePublisher(Node):
 
         self.tf_static_broadcaster = StaticTransformBroadcaster(self)
         self.publish_transforms()
-
+    
+    # Convert camera frame to uav frame
     def publish_transforms(self):
         t = TransformStamped()
 
@@ -46,9 +47,9 @@ class StaticFramePublisher(Node):
         t.header.frame_id = 'uav'
         t.child_frame_id = 'camera'
 
-        t.transform.translation.x = 0.0
-        t.transform.translation.y = 0.0
-        t.transform.translation.z = 0.0
+        t.transform.translation.x = 0
+        t.transform.translation.y = -0.2
+        t.transform.translation.z = 0.1
         
         t.transform.rotation.x = 0.0
         t.transform.rotation.y = 0.0
