@@ -36,18 +36,18 @@
 #define CONV_NUM WIDTH *HEIGHT // Number of temperature conversions
 
 #define VIDEO_FRAME_RATE 30
-#define INPUT_FILE_NAME "/home/xs/UAV/Camera/images/output%d.bmp"
-#define OUTPUT_FILE_NAME "/home/xs//UAV/Camera/output.mp4"
-#define VIDEO_FORMAT "yuv420p"
-#define CONSTANT_RATE_FACTOR 10
+#define INPUT_FILE_NAME "/home/xs/UAV/Results/images/output%d.bmp"
+// #define OUTPUT_FILE_NAME "/home/xs//UAV/Camera/output.mp4"
+// #define VIDEO_FORMAT "yuv420p"
+// #define CONSTANT_RATE_FACTOR 10
 
-#define IMAGE_FOLDER "/home/xs/UAV/Camera/images"
-#define TEMP_FOLDER "/home/xs/UAV/Camera/temp"
+#define IMAGE_FOLDER "/home/xs/UAV/Results/images"
+#define TEMP_FOLDER "/home/xs/UAV/Results/temp"
 
-#define IMAGE_PREFIX "/home/xs/UAV/Camera/images/output"
+#define IMAGE_PREFIX "/home/xs/UAV/Results/images/output"
 #define IMAGE_SUBFIX ".bmp"
 
-#define TEMPMAT_PREFIX "/home/xs/UAV/Camera/temp/temp_mat"
+#define TEMPMAT_PREFIX "/home/xs/UAV/Results/temp/temp_mat"
 #define TEMPMAT_SUBFIX ".txt"
 
 int sockfd;

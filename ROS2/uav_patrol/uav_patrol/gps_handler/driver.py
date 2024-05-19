@@ -26,7 +26,7 @@ class Ros2NMEADriver(Node):
 
         self.yaw_sub = self.create_subscription(Float32, "raw_yaw", self.yaw_callback, 10)
 
-        self.current_yaw = 0
+        self.current_yaw = 20.0     # 20.0 for test, 0 in default
         self.timestamp = 0 
         self.mutex = threading.Lock()
 
@@ -269,9 +269,13 @@ class Ros2NMEADriver(Node):
     
     def send_ctrl(self, current_fix):
         cur_ts = time.time()
-        ts_dev = ts_dev - self.timestamp
+        ts_dev = cur_ts - self.timestamp
 
         if self.timestamp == 0 or ts_dev >= 2.9:
+            if self.timestamp == 0:
+                # Wait for defetcts publisher initialization to complete
+                time.sleep(2)
+
             self.timestamp = cur_ts
 
             fix = GpsFix()
@@ -290,7 +294,7 @@ class Ros2NMEADriver(Node):
             self.mutex.acquire()
             yaw.yaw = self.current_yaw
             self.mutex.release()
-            self.yaw_pub(yaw)
+            self.yaw_pub.publish(yaw)
             self.get_logger().info(f"Publishing Yaw message { yaw }")
 
             self.gps_id += 1

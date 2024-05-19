@@ -14,7 +14,7 @@ from ultralytics import YOLO
 SERVER_IP   = '127.0.0.1'
 SERVER_PORT = 8899
 MODEL_PATH = '/home/xs/UAV/ROS2/weights/defect.pt'
-RESULTS_PATH = '/home/xs/UAV/ROS2/results/'
+RESULTS_PATH = '/home/xs/UAV/Results/labels/'
 
 class Dft_Publisher(Node):
     def __init__(self):
@@ -36,7 +36,7 @@ class Dft_Publisher(Node):
                 print(f'Remove file {file_path} failed: {e}')
 
     def detect(self, source, img_id) -> map: 
-        results = self.model(source, stream=True)  
+        results = self.model(source, stream=True, imgsz=(640, 512))  
         
         res = {}
         for result in results:

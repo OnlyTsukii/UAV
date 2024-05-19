@@ -47,7 +47,7 @@ class StaticFramePublisher(Node):
         t.header.frame_id = 'uav'
         t.child_frame_id = 'camera'
 
-        t.transform.translation.x = 0
+        t.transform.translation.x = 0.0
         t.transform.translation.y = -0.2
         t.transform.translation.z = 0.1
         

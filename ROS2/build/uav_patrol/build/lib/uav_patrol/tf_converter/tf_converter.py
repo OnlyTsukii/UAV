@@ -6,8 +6,9 @@ import numpy
 import os
 import shutil
 import json
-from geopy.distance import geodesic
 
+from copy import deepcopy
+from geopy.distance import geodesic
 from queue import Queue
 import rclpy.duration
 from rclpy.node import Node
@@ -21,10 +22,9 @@ from sensor_msgs.msg import NavSatFix
 from rosidl_runtime_py.convert import message_to_yaml
 
 
-LOCATION_PATH = '/home/xs/UAV/ROS2/locations/'
+LOCATION_PATH = '/home/xs/UAV/Results/locations/'
 
-# unit: m
-EARTH_RADIUS            = 6378.137     
+# unit: m 
 SOOCHOW_GROUND_ALTITUDE = 7
 SOLAR_PANEL_HEIGHT      = 0
 
@@ -72,44 +72,53 @@ class TF_Converter(Node):
 
     def gps_callback(self, msg: GpsFix):
         self.mutex.acquire()
-        if self.map.get(msg.gps_id) == None or \
-           self.map[msg.gps_id].get('dfts') == None or \
-           self.map[msg.gps_id].get('yaw') == None:
-            self.map[msg.gps_id] = {'gps': msg}
-        else:
-            dfts_msg = self.map[msg.gps_id].get('dfts')
-            yaw_msg = self.map[msg.gps_id].get('yaw')
-            self.queue.put((msg, dfts_msg, yaw_msg))
-            self.map.clear()
-        self.mutex.release()
+        try:
+            if self.map.get(msg.gps_id) is None:
+                self.map[msg.gps_id] = {'gps': msg}
+            else:
+                if 'dfts' in self.map[msg.gps_id] and 'yaw' in self.map[msg.gps_id]:
+                    dfts_msg = self.map[msg.gps_id]['dfts']
+                    yaw_msg = self.map[msg.gps_id]['yaw']
+                    self.queue.put((msg, dfts_msg, yaw_msg))
+                    del self.map[msg.gps_id]
+                else:
+                    self.map[msg.gps_id]['gps'] = msg
+        finally:
+            self.mutex.release()
         self.get_logger().info(f"Got a gps message, id: {msg.gps_id}.")
-            
+
     def dft_callback(self, msg: Defects):
         self.mutex.acquire()
-        if self.map.get(msg.defect_id) == None or \
-           self.map[msg.defect_id].get('gps') == None or \
-           self.map[msg.defect_id].get('yaw') == None:
-            self.map[msg.defect_id] = {'dfts': msg}
-        else:
-            gps_msg = self.map[msg.defect_id].get('gps')
-            yaw_msg = self.map[msg.defect_id].get('yaw')
-            self.queue.put((gps_msg, msg, yaw_msg))
-            self.map.clear()
-        self.mutex.release()
+        try:
+            if self.map.get(msg.defect_id) is None:
+                self.map[msg.defect_id] = {'dfts': msg}
+            else:
+                if 'gps' in self.map[msg.defect_id] and 'yaw' in self.map[msg.defect_id]:
+                    gps_msg = self.map[msg.defect_id]['gps']
+                    yaw_msg = self.map[msg.defect_id]['yaw']
+                    self.queue.put((gps_msg, msg, yaw_msg))
+                    del self.map[msg.defect_id]
+                else:
+                    self.map[msg.defect_id]['dfts'] = msg
+        finally:
+            self.mutex.release()
         self.get_logger().info(f"Got a defects message, id: {msg.defect_id}.")
 
     def yaw_callback(self, msg: Yaw):
         self.mutex.acquire()
-        if self.map.get(msg.yaw_id) == None or \
-           self.map[msg.yaw_id].get('gps') == None or \
-           self.map[msg.yaw_id].get('dfts') == None:
-            self.map[msg.yaw_id] = {'yaw': msg}
-        else:
-            gps_msg = self.map[msg.yaw_id].get('gps')
-            dfts_msg = self.map[msg.yaw_id].get('dfts')
-            self.queue.put((gps_msg, dfts_msg, msg))
-            self.map.clear()
-        self.mutex.release()
+        try:
+            if self.map.get(msg.yaw_id) is None:
+                self.map[msg.yaw_id] = {'yaw': msg}
+            else:
+                if 'gps' in self.map[msg.yaw_id] and 'dfts' in self.map[msg.yaw_id]:
+                    gps_msg = self.map[msg.yaw_id]['gps']
+                    dfts_msg = self.map[msg.yaw_id]['dfts']
+                    self.queue.put((gps_msg, dfts_msg, msg))
+                    del self.map[msg.yaw_id]
+                else:
+                    self.map[msg.yaw_id]['yaw'] = msg
+        finally:
+            self.mutex.release()
         self.get_logger().info(f"Got a yaw message, id: {msg.yaw_id}.")
 
     def handle_map(self):
@@ -117,10 +126,14 @@ class TF_Converter(Node):
             if self.queue.empty():
                 time.sleep(1.0)
             else:
+                self.get_logger().info("Got a tuple from queue.")
                 gps_msg, dfts_msg, yaw_msg = self.queue.get()
 
                 if len(dfts_msg.defects) == 0:
                     self.get_logger().info('Received a defects message with empty defects.')
+                    continue
+                elif math.isnan(gps_msg.gps_fix.latitude) or math.isnan(gps_msg.gps_fix.longitude):
+                    self.get_logger().info("Got a invalid gps message.")
                     continue
 
                 self.get_logger().info("Got a GPS & Defects map, locating...")
@@ -135,7 +148,7 @@ class TF_Converter(Node):
                 to_frame_rel = 'camera'
 
                 try:
-                    # Get tranform from uav frame to camera frame
+                    # Get transform from uav frame to camera frame
                     t = self.tf_buffer.lookup_transform(
                         to_frame_rel,
                         from_frame_rel,
@@ -181,6 +194,7 @@ class TF_Converter(Node):
                         file.write("DEFECT POSITION IN WORLD: \n")
                         file.write(str(dfts_abs_pos[i]))
                         file.write("\n")
+                        file.write("\n")
                         file.write("DISTANCE FROM THE START POINT: \n")
                         file.write(str((distance_x, distance_y, distance_z, distance_2d)))
                         file.write("\n")
@@ -220,6 +234,7 @@ class TF_Converter(Node):
 
         return res
     
+    # Get distance from the start point 
     def get_distance(self, msg: GpsFix) -> Tuple[float, float, float, float]:
         if self.init_longitude == 0 and self.init_altitude == 0 \
             and self.init_altitude == 0:

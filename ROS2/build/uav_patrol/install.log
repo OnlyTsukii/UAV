@@ -35,7 +35,6 @@
 /home/xs/UAV/ROS2/install/uav_patrol/share/ament_index/resource_index/packages/uav_patrol
 /home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/package.xml
 /home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/uav_patrol.launch.py
-/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/gps_handler.launch.py
 /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol-0.0.0-py3.8.egg-info/PKG-INFO
 /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol-0.0.0-py3.8.egg-info/dependency_links.txt
 /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol-0.0.0-py3.8.egg-info/requires.txt
