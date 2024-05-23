@@ -1,6 +1,6 @@
 import os
 
-RESULTS_PREFIX = '/home/ccl/UAV/Results'
+RESULTS_PREFIX = '/home/xs/UAV/Results'
 
 def create_subdirectory(directory):
     try:

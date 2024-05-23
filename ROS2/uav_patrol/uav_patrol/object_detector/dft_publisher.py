@@ -14,7 +14,7 @@ from ultralytics import YOLO
 SERVER_IP   = '127.0.0.1'
 SERVER_PORT = 8899
 MODEL_PATH = '/home/xs/UAV/ROS2/weights/defect.pt'
-RESULTS_PREFIX = '/home/ccl/UAV/Results'
+RESULTS_PREFIX = '/home/xs/UAV/Results'
 
 class Dft_Publisher(Node):
     def __init__(self):

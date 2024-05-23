@@ -22,7 +22,7 @@ from sensor_msgs.msg import NavSatFix
 from rosidl_runtime_py.convert import message_to_yaml
 
 
-RESULTS_PREFIX = '/home/ccl/UAV/Results'
+RESULTS_PREFIX = '/home/xs/UAV/Results'
 
 # unit: m 
 SOOCHOW_GROUND_ALTITUDE = 7
