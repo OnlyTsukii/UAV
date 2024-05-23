@@ -21,7 +21,7 @@ extern "C"
 typedef struct location_msgs__msg__Yaw
 {
   int32_t yaw_id;
-  float yaw;
+  double yaw;
 } location_msgs__msg__Yaw;
 
 // Struct for a sequence of location_msgs__msg__Yaw.

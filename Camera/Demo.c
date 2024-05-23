@@ -354,7 +354,7 @@ char *save_image(guide_usb_frame_data_t *pVideoData)
 }
 
 void send_message(char *img_file_name)
-{
+{   
     char *img_path = malloc(strlen(img_file_name) + 10);
     strcpy(img_path, img_file_name);
     strcat(img_path, ":");
@@ -412,38 +412,38 @@ int start_camera()
     }
 
     // USB device precheck
-    // while (1)
-    // {
-    //     int ret = libusb_init(&gd_ctx);
-    //     if (ret < 0)
-    //     {
-    //         printf("libusb_init fail:%d\n", ret);
-    //         usleep(1000000);
-    //         continue;
-    //     }
-    //     else
-    //     {
-    //         printf("libusb_init ok\n");
-    //         break;
-    //     }
-    // }
+    while (1)
+    {
+        int ret = libusb_init(&gd_ctx);
+        if (ret < 0)
+        {
+            printf("libusb_init fail:%d\n", ret);
+            usleep(1000000);
+            continue;
+        }
+        else
+        {
+            printf("libusb_init ok\n");
+            break;
+        }
+    }
 
-    // while (1)
-    // {
-    //     gd_dev_handle = libusb_open_device_with_vid_pid(gd_ctx, 0x04b4, 0xf7f7);
-    //     if (gd_dev_handle == NULL)
-    //     {
-    //         printf("libusb_open fail\n");
-    //         usleep(1000000);
-    //         continue; // fail to open usb
-    //     }
-    //     else
-    //     {
-    //         printf("libusb_open ok\n");
-    //         libusb_close(gd_dev_handle);
-    //         break;
-    //     }
-    // }
+    while (1)
+    {
+        gd_dev_handle = libusb_open_device_with_vid_pid(gd_ctx, 0x04b4, 0xf7f7);
+        if (gd_dev_handle == NULL)
+        {
+            printf("libusb_open fail\n");
+            usleep(1000000);
+            continue; // fail to open usb
+        }
+        else
+        {
+            printf("libusb_open ok\n");
+            libusb_close(gd_dev_handle);
+            break;
+        }
+    }
 
     ret = socket_client_init();
     if (ret != 0)

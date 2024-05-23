@@ -14,26 +14,34 @@ from ultralytics import YOLO
 SERVER_IP   = '127.0.0.1'
 SERVER_PORT = 8899
 MODEL_PATH = '/home/xs/UAV/ROS2/weights/defect.pt'
-RESULTS_PATH = '/home/xs/UAV/Results/labels/'
+RESULTS_PREFIX = '/home/xs/UAV/Results'
 
 class Dft_Publisher(Node):
     def __init__(self):
         super().__init__("dft_publisher")
         self.dft_publiser = self.create_publisher(Defects, "dfts", 10)
         self.msg_queue = queue.Queue()
-        self.clear_folder(RESULTS_PATH)
+        self.path_prefix_length = 0
         self.model = YOLO(MODEL_PATH) 
 
-    def clear_folder(self, folder_path):
-        for filename in os.listdir(folder_path):
-            file_path = os.path.join(folder_path, filename)
-            try:
-                if os.path.isfile(file_path) or os.path.islink(file_path):
-                    os.unlink(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
-            except Exception as e:
-                print(f'Remove file {file_path} failed: {e}')
+    def get_directory(self) -> str:
+        try:
+            existing_numbers = [int(name[3:]) for name in os.listdir(RESULTS_PREFIX) if name.startswith("run")]
+
+            max_number = max(existing_numbers) if existing_numbers else -1
+
+            new_directory = os.path.join(RESULTS_PREFIX, "run{}".format(max_number), "labels")
+
+            if not os.path.exists(new_directory):
+                os.mkdir(new_directory)
+
+            new_directory = os.path.join(RESULTS_PREFIX, "run{}".format(max_number))
+
+            return new_directory
+
+        except Exception as e:
+            print("Error:", e)
+            return None
 
     def detect(self, source, img_id) -> map: 
         results = self.model(source, stream=True, imgsz=(640, 512))  
@@ -41,7 +49,7 @@ class Dft_Publisher(Node):
         res = {}
         for result in results:
             boxes = result.boxes  
-            save_path = RESULTS_PATH+'result'+str(img_id)+'.bmp'
+            save_path = self.get_directory() +'/labels/results'+str(img_id)+'.bmp'
             # self.get_logger().info(save_path)
             result.save(filename=save_path) 
             res['boxes'] = boxes.xywh

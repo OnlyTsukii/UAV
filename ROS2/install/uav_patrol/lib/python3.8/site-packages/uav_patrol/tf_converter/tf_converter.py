@@ -22,7 +22,7 @@ from sensor_msgs.msg import NavSatFix
 from rosidl_runtime_py.convert import message_to_yaml
 
 
-LOCATION_PATH = '/home/xs/UAV/Results/locations/'
+RESULTS_PREFIX = '/home/xs/UAV/Results'
 
 # unit: m 
 SOOCHOW_GROUND_ALTITUDE = 7
@@ -56,21 +56,39 @@ class TF_Converter(Node):
         self.init_longitude = 0
         self.init_latitude = 0
         self.init_altitude = 0
+        self.gps_count = 0
 
-        self.clear_folder(LOCATION_PATH)
+    def get_directory(self) -> str:
+        try:
+            existing_numbers = [int(name[3:]) for name in os.listdir(RESULTS_PREFIX) if name.startswith("run")]
+            max_number = max(existing_numbers) if existing_numbers else -1
+            new_directory = os.path.join(RESULTS_PREFIX, "run{}".format(max_number), "locations")
 
-    def clear_folder(self, folder_path):
-        for filename in os.listdir(folder_path):
-            file_path = os.path.join(folder_path, filename)
-            try:
-                if os.path.isfile(file_path) or os.path.islink(file_path):
-                    os.unlink(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
-            except Exception as e:
-                print(f'Remove file {file_path} failed: {e}')
+            if not os.path.exists(new_directory):
+                os.mkdir(new_directory)
+
+            new_directory = os.path.join(RESULTS_PREFIX, "run{}".format(max_number))
+
+            return new_directory
+
+        except Exception as e:
+            print("Error:", e)
+            return None
 
     def gps_callback(self, msg: GpsFix):
+
+        if self.init_latitude == 0 and self.init_longitude == 0 and self.init_altitude == 0 \
+            and msg.gps_fix.latitude != 0 and msg.gps_fix.longitude != 0:
+
+            # Wait until gps message becomes reliable 
+            self.gps_count += 1
+            if self.gps_count == 1:
+                self.init_longitude = msg.gps_fix.longitude
+                self.init_latitude = msg.gps_fix.latitude
+                self.init_altitude = msg.gps_fix.altitude
+
+                self.get_logger().info(f"Initial gps location has been set.")
+
         self.mutex.acquire()
         try:
             if self.map.get(msg.gps_id) is None:
@@ -180,11 +198,15 @@ class TF_Converter(Node):
                         target = numpy.dot(R, offset)
                         gps_e = gps_msg.gps_fix.longitude + target[0] * LON_PER_METER
                         gps_n = gps_msg.gps_fix.latitude + target[1] * LAT_PER_METER
-                        dfts_abs_pos.append((gps_e, gps_n, SOLAR_PANEL_HEIGHT + SOOCHOW_GROUND_ALTITUDE))
+                        dfts_abs_pos.append((gps_e, gps_n, self.init_altitude))
+                    
+                    location_path = self.get_directory()
+                    file = open(location_path+'/locations/location'+str(gps_msg.gps_id)+'.txt', "w")
 
-                    distance_x, distance_y, distance_z, distance_2d = self.get_distance(gps_msg)
-
-                    file = open(LOCATION_PATH+'location'+str(gps_msg.gps_id)+'.txt', "w")
+                    file.write(message_to_yaml(gps_msg))
+                    file.write("\n")
+                    file.write(message_to_yaml(yaw_msg))
+                    file.write("\n")
                     
                     for i, defect in enumerate(dfts_msg.defects):
                         file.write("----------------------------------------------------------- \n")
@@ -196,6 +218,7 @@ class TF_Converter(Node):
                         file.write("\n")
                         file.write("\n")
                         file.write("DISTANCE FROM THE START POINT: \n")
+                        distance_x, distance_y, distance_z, distance_2d = self.get_distance(dfts_abs_pos[i])
                         file.write(str((distance_x, distance_y, distance_z, distance_2d)))
                         file.write("\n")
                         file.write("\n")
@@ -235,30 +258,22 @@ class TF_Converter(Node):
         return res
     
     # Get distance from the start point 
-    def get_distance(self, msg: GpsFix) -> Tuple[float, float, float, float]:
-        if self.init_longitude == 0 and self.init_altitude == 0 \
-            and self.init_altitude == 0:
-            self.init_longitude = msg.gps_fix.longitude
-            self.init_latitude = msg.gps_fix.latitude
-            self.init_altitude = msg.gps_fix.altitude
+    def get_distance(self, dft_abs_pos) -> Tuple[float, float, float, float]:
+        lon, lat, alt = dft_abs_pos
+        point1 = (self.init_latitude, self.init_longitude)
+        point2 = (lat, lon)
 
-            return 0, 0, 0, 0
-        else:
-            point1 = (self.init_latitude, self.init_longitude)
-            point2 = (msg.gps_fix.latitude, msg.gps_fix.longitude)
+        distance_2d = geodesic(point1, point2).m
 
-            distance_2d = geodesic(point1, point2).m
+        avg_lat = (self.init_latitude + lat) / 2
+        avg_lon = (self.init_longitude + lon) / 2
 
-            avg_lat = (self.init_latitude + msg.gps_fix.latitude) / 2
-            avg_lon = (self.init_longitude + msg.gps_fix.longitude) / 2
+        x = geodesic((avg_lat, self.init_longitude), (avg_lat, lon)).m
+        y = geodesic((self.init_latitude, avg_lon), (lat, avg_lon)).m
 
-            x = geodesic((avg_lat, self.init_longitude), (avg_lat, msg.gps_fix.longitude)).m
-            y = geodesic((self.init_latitude, avg_lon), (msg.gps_fix.latitude, avg_lon)).m
+        z = alt - self.init_altitude
 
-            # Must be the height relative to the current ground plane.
-            z = msg.gps_fix.altitude - SOOCHOW_GROUND_ALTITUDE
-
-            return x, y, z, distance_2d
+        return x, y, z, distance_2d
         
         
 def main(args=None):

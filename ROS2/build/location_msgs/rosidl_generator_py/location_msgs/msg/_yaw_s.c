@@ -65,7 +65,7 @@ bool location_msgs__msg__yaw__convert_from_py(PyObject * _pymsg, void * _ros_mes
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->yaw = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->yaw = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 

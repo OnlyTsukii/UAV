@@ -59,12 +59,12 @@ class Yaw(metaclass=Metaclass_Yaw):
 
     _fields_and_field_types = {
         'yaw_id': 'int32',
-        'yaw': 'float',
+        'yaw': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):

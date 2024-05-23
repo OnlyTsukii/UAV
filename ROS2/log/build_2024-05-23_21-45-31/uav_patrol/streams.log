@@ -1,0 +1,48 @@
+[1.120s] Invoking command in '/home/xs/UAV/ROS2/uav_patrol': PYTHONPATH=/home/xs/UAV/ROS2/build/uav_patrol/prefix_override:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/uav_patrol build --build-base /home/xs/UAV/ROS2/build/uav_patrol/build install --record /home/xs/UAV/ROS2/build/uav_patrol/install.log --single-version-externally-managed install_data
+[1.435s] running egg_info
+[1.461s] writing ../build/uav_patrol/uav_patrol.egg-info/PKG-INFO
+[1.461s] writing dependency_links to ../build/uav_patrol/uav_patrol.egg-info/dependency_links.txt
+[1.462s] writing entry points to ../build/uav_patrol/uav_patrol.egg-info/entry_points.txt
+[1.463s] writing requirements to ../build/uav_patrol/uav_patrol.egg-info/requires.txt
+[1.463s] writing top-level names to ../build/uav_patrol/uav_patrol.egg-info/top_level.txt
+[1.672s] reading manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'
+[1.674s] writing manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'
+[1.674s] running build
+[1.674s] running build_py
+[1.674s] copying uav_patrol/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol
+[1.674s] copying uav_patrol/ctrl_relayer/cmd_subscriber.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/ctrl_relayer
+[1.675s] copying uav_patrol/ctrl_relayer/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/ctrl_relayer
+[1.676s] copying uav_patrol/gps_handler/gps_simulator.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler
+[1.676s] copying uav_patrol/gps_handler/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler
+[1.676s] copying uav_patrol/gps_handler/parser.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler
+[1.676s] copying uav_patrol/gps_handler/checksum_utils.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler
+[1.677s] copying uav_patrol/gps_handler/driver.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler
+[1.677s] copying uav_patrol/gps_handler/nodes/nmea_serial_driver.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes
+[1.677s] copying uav_patrol/gps_handler/nodes/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes
+[1.677s] copying uav_patrol/gps_handler/nodes/gps_path.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes
+[1.677s] copying uav_patrol/object_detector/dft_publisher.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/object_detector
+[1.678s] copying uav_patrol/object_detector/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/object_detector
+[1.678s] copying uav_patrol/tf_converter/world2uav_broadcaster.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[1.678s] copying uav_patrol/tf_converter/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[1.679s] copying uav_patrol/tf_converter/uav2cam_broadcaster.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[1.679s] copying uav_patrol/tf_converter/tf_converter.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[1.681s] running install
+[1.684s] running install_lib
+[1.710s] copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/tf_converter.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter
+[1.712s] byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter/tf_converter.py to tf_converter.cpython-38.pyc
+[1.714s] running install_data
+[1.715s] copying resource/uav_patrol -> /home/xs/UAV/ROS2/install/uav_patrol/share/ament_index/resource_index/packages
+[1.715s] copying package.xml -> /home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol
+[1.715s] copying launch/uav_patrol.launch.py -> /home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol
+[1.715s] running install_egg_info
+[1.741s] removing '/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol-0.0.0-py3.8.egg-info' (and everything under it)
+[1.741s] Copying ../build/uav_patrol/uav_patrol.egg-info to /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol-0.0.0-py3.8.egg-info
+[1.743s] running install_scripts
+[1.808s] Installing cmd_subscriber script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[1.808s] Installing dft_publisher script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[1.808s] Installing gps_simulator script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[1.808s] Installing nmea_serial_driver script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[1.809s] Installing tf_converter script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[1.809s] Installing uav2cam_broadcaster script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[1.810s] writing list of installed files to '/home/xs/UAV/ROS2/build/uav_patrol/install.log'
+[1.828s] Invoked command in '/home/xs/UAV/ROS2/uav_patrol' returned '0': PYTHONPATH=/home/xs/UAV/ROS2/build/uav_patrol/prefix_override:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/uav_patrol build --build-base /home/xs/UAV/ROS2/build/uav_patrol/build install --record /home/xs/UAV/ROS2/build/uav_patrol/install.log --single-version-externally-managed install_data

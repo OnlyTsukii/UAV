@@ -38,7 +38,7 @@ struct Yaw_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->yaw_id = 0l;
-      this->yaw = 0.0f;
+      this->yaw = 0.0;
     }
   }
 
@@ -49,7 +49,7 @@ struct Yaw_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->yaw_id = 0l;
-      this->yaw = 0.0f;
+      this->yaw = 0.0;
     }
   }
 
@@ -58,7 +58,7 @@ struct Yaw_
     int32_t;
   _yaw_id_type yaw_id;
   using _yaw_type =
-    float;
+    double;
   _yaw_type yaw;
 
   // setters for named parameter idiom
@@ -69,7 +69,7 @@ struct Yaw_
     return *this;
   }
   Type & set__yaw(
-    const float & _arg)
+    const double & _arg)
   {
     this->yaw = _arg;
     return *this;

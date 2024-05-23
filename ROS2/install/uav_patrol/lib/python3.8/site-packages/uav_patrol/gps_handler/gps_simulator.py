@@ -2,9 +2,9 @@ import rclpy
 import rclpy.logging
 
 from rclpy.node import Node
-from std_msgs.msg import Header, Int32
+from std_msgs.msg import Header, Int32, Float64
 from sensor_msgs.msg import NavSatFix, NavSatStatus
-from location_msgs.msg import GpsFix
+from location_msgs.msg import GpsFix, Yaw
 
 
 LAT_PER_METER = 0.00000905
@@ -17,21 +17,18 @@ class GPS_Simulator(Node):
 
         self.gps_publisher = self.create_publisher(GpsFix, "gps", 10)
         self.ctrl_publisher = self.create_publisher(Int32, "ctrl_cmd", 10)
+        self.yaw_publisher = self.create_publisher(Yaw, "yaw", 10)
 
-        self.timer = self.create_timer(2, self.timer_callback)
+        self.timer = self.create_timer(3, self.timer_callback)
         self.gps_id = 0
 
         self.init_lon = 120.652158
         self.init_lat = 31.307415
-        self.init_alt = 10.0
+        self.init_alt = 0.0
 
         self.lat_dif_thr = 0.000009
         self.lon_dif_thr = 0.00001
         self.alt_dif_thr = 1.0
-
-        self.pre_lon = 0
-        self.pre_lat = 0
-        self.pre_alt = 0
 
     def timer_callback(self):
         gps_fix = NavSatFix()
@@ -50,8 +47,8 @@ class GPS_Simulator(Node):
         gps_fix.longitude = self.init_lon
         gps_fix.altitude = self.init_alt
 
-        # self.init_lat += LAT_PER_METER
-        # self.init_lon += LON_PER_METER
+        self.init_lat += LAT_PER_METER
+        self.init_lon += LON_PER_METER
         self.init_alt += 1.0
 
         gps_fix.position_covariance = (51.84, 0.0, 0.0, 0.0, 51.84, 0.0, 0.0, 0.0, 829.44)
@@ -60,47 +57,25 @@ class GPS_Simulator(Node):
         self.send_ctrl(gps_fix)
 
     def send_ctrl(self, gps_fix):
-        if self.pre_alt != 0:
-            # lon_cur_dev = abs(gps_fix.longitude - self.pre_lon)
-            # lat_cur_dev = abs(gps_fix.latitude - self.pre_lat)
-            alt_cur_dev = abs(gps_fix.altitude - self.pre_alt)
+        fix = GpsFix()
+        fix.gps_fix = gps_fix
+        fix.gps_id = self.gps_id
 
-            # self.get_logger().info(f"gps position deviation: {lon_cur_dev, lat_cur_dev, alt_cur_dev}")
+        self.gps_publisher.publish(fix)
+        self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
 
-            # if lon_cur_dev >= self.lon_dif_thr or lat_cur_dev >= self.lat_dif_thr \
-            #     or alt_cur_dev >= self.alt_dif_thr:
-            if alt_cur_dev >= self.alt_dif_thr:
-                fix = GpsFix()
-                fix.gps_fix = gps_fix
-                fix.gps_id = self.gps_id
-                self.gps_publisher.publish(fix)
-                self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
+        yaw = Yaw()
+        yaw.yaw_id = self.gps_id
+        yaw.yaw = 0.0
+        self.yaw_publisher.publish(yaw)
+        self.get_logger().info(f"Publishing Yaw message { yaw }")
 
-                ctrl_cmd = Int32()
-                ctrl_cmd.data = self.gps_id
-                self.ctrl_publisher.publish(ctrl_cmd)
-                self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
+        ctrl_cmd = Int32()
+        ctrl_cmd.data = self.gps_id
+        self.ctrl_publisher.publish(ctrl_cmd)
+        self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
 
-                self.gps_id += 1
-                # self.pre_lon = gps_fix.longitude
-                # self.pre_lat = gps_fix.latitude
-                self.pre_alt = gps_fix.altitude
-        else:
-            fix = GpsFix()
-            fix.gps_fix = gps_fix
-            fix.gps_id = self.gps_id
-            self.gps_publisher.publish(fix)
-            self.get_logger().info(f"Publishing GPS message {fix.gps_id}")
-
-            ctrl_cmd = Int32()
-            ctrl_cmd.data = self.gps_id
-            self.ctrl_publisher.publish(ctrl_cmd)
-            self.get_logger().info(f"Publishing IR camera control message { ctrl_cmd.data }")
-
-            self.gps_id += 1
-            # self.pre_lon = gps_fix.longitude
-            # self.pre_lat = gps_fix.latitude
-            self.pre_alt = -1
+        self.gps_id += 1
 
 
 def main(args=None):

@@ -5,4 +5,3 @@ gps_simulator = uav_patrol.gps_handler.gps_simulator:main
 nmea_serial_driver = uav_patrol.gps_handler.nodes.nmea_serial_driver:main
 tf_converter = uav_patrol.tf_converter.tf_converter:main
 uav2cam_broadcaster = uav_patrol.tf_converter.uav2cam_broadcaster:main
-

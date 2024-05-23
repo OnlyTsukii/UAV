@@ -87,6 +87,8 @@ class TF_Converter(Node):
                 self.init_latitude = msg.gps_fix.latitude
                 self.init_altitude = msg.gps_fix.altitude
 
+                self.get_logger().info(f"Initial gps location has been set.")
+
         self.mutex.acquire()
         try:
             if self.map.get(msg.gps_id) is None:
@@ -199,7 +201,7 @@ class TF_Converter(Node):
                         dfts_abs_pos.append((gps_e, gps_n, self.init_altitude))
                     
                     location_path = self.get_directory()
-                    file = open(location_path+'location'+str(gps_msg.gps_id)+'.txt', "w")
+                    file = open(location_path+'/locations/location'+str(gps_msg.gps_id)+'.txt', "w")
 
                     file.write(message_to_yaml(gps_msg))
                     file.write("\n")

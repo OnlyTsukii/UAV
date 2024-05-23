@@ -1,0 +1,189 @@
+[0.024s] Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/location_msgs -- -j8 -l8
+[0.138s] [  1%] Built target location_msgs__cpp
+[0.142s] [ 12%] Built target location_msgs__rosidl_generator_c
+[0.190s] [ 41%] Built target location_msgs__rosidl_typesupport_introspection_cpp
+[0.190s] [ 41%] Built target location_msgs__rosidl_typesupport_cpp
+[0.191s] [ 46%] Built target location_msgs__rosidl_typesupport_c
+[0.195s] [ 57%] Built target location_msgs__rosidl_typesupport_fastrtps_cpp
+[0.240s] [ 68%] Built target location_msgs__rosidl_typesupport_introspection_c
+[0.249s] [ 79%] Built target location_msgs__rosidl_typesupport_fastrtps_c
+[0.289s] [ 79%] Built target location_msgs
+[0.333s] [ 80%] Built target location_msgs__py
+[0.382s] [ 90%] Built target location_msgs__python
+[0.432s] [ 93%] Built target location_msgs__rosidl_typesupport_c__pyext
+[0.434s] [ 96%] Built target location_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.436s] [100%] Built target location_msgs__rosidl_typesupport_introspection_c__pyext
+[0.457s] Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/location_msgs -- -j8 -l8
+[0.791s] Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/location_msgs
+[0.804s] -- Install configuration: ""
+[0.805s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/rosidl_interfaces/location_msgs
+[0.805s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[0.805s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[0.805s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[0.805s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__struct.h
+[0.806s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__functions.h
+[0.806s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__struct.h
+[0.806s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.h
+[0.807s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__functions.h
+[0.807s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__functions.c
+[0.807s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.h
+[0.807s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__struct.h
+[0.807s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.h
+[0.807s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__functions.h
+[0.807s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.h
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__functions.h
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.h
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__functions.c
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__functions.c
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__struct.h
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__functions.c
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__struct.h
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__functions.h
+[0.808s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__functions.c
+[0.809s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/pixel_point.h
+[0.809s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defect_box.h
+[0.809s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/yaw.h
+[0.809s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defects.h
+[0.809s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.809s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/gps_fix.h
+[0.809s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/library_path.sh
+[0.810s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/library_path.dsv
+[0.810s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_generator_c.so
+[0.810s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[0.810s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[0.810s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.811s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[0.811s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_c.h
+[0.811s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_c.h
+[0.811s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
+[0.811s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_c.h
+[0.811s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+[0.811s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_c.so
+[0.812s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[0.812s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[0.812s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[0.813s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_cpp.hpp
+[0.813s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_cpp.hpp
+[0.813s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_cpp.hpp
+[0.813s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/dds_fastrtps
+[0.814s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_cpp.hpp
+[0.814s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_cpp.hpp
+[0.814s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.814s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.815s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[0.815s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[0.815s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.816s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[0.816s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_c.h
+[0.816s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.c
+[0.816s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.c
+[0.816s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.c
+[0.816s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h
+[0.816s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_c.h
+[0.817s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.c
+[0.817s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_c.h
+[0.817s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.c
+[0.817s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_c.h
+[0.817s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_c.so
+[0.818s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_c.so
+[0.819s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[0.820s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[0.820s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/gps_fix.hpp
+[0.820s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/yaw.hpp
+[0.821s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[0.821s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__struct.hpp
+[0.821s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__builder.hpp
+[0.821s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__traits.hpp
+[0.821s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__builder.hpp
+[0.822s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__builder.hpp
+[0.822s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__traits.hpp
+[0.822s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__builder.hpp
+[0.822s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__struct.hpp
+[0.822s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__traits.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__struct.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__builder.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__struct.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__traits.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__traits.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__struct.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defects.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defect_box.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/pixel_point.hpp
+[0.823s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[0.824s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[0.824s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[0.824s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_cpp.hpp
+[0.824s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.cpp
+[0.824s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_cpp.hpp
+[0.824s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.cpp
+[0.824s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.cpp
+[0.824s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_cpp.hpp
+[0.825s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_cpp.hpp
+[0.825s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.cpp
+[0.825s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.cpp
+[0.825s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
+[0.825s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_cpp.so
+[0.825s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_cpp.so
+[0.826s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/pythonpath.sh
+[0.826s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/pythonpath.dsv
+[0.827s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/__init__.py
+[0.867s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg
+[0.868s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defects_s.c
+[0.868s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_gps_fix_s.c
+[0.868s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/__init__.py
+[0.868s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_pixel_point_s.c
+[0.868s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_gps_fix.py
+[0.868s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_yaw.py
+[0.868s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defect_box_s.c
+[0.868s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_pixel_point.py
+[0.869s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defect_box.py
+[0.869s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defects.py
+[0.869s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_yaw_s.c
+[0.869s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[0.871s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[0.873s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[0.874s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__python.so
+[0.875s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/GpsFix.idl
+[0.876s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/PixelPoint.idl
+[0.876s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/DefectBox.idl
+[0.876s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Defects.idl
+[0.876s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Yaw.idl
+[0.876s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/GpsFix.msg
+[0.877s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/PixelPoint.msg
+[0.877s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/DefectBox.msg
+[0.877s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Defects.msg
+[0.877s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Yaw.msg
+[0.877s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/package_run_dependencies/location_msgs
+[0.878s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/parent_prefix_path/location_msgs
+[0.878s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/ament_prefix_path.sh
+[0.878s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/ament_prefix_path.dsv
+[0.878s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/path.sh
+[0.878s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/path.dsv
+[0.878s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.bash
+[0.878s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.sh
+[0.879s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.zsh
+[0.879s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.dsv
+[0.879s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.dsv
+[0.879s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/packages/location_msgs
+[0.879s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cExport.cmake
+[0.879s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.880s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.880s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.880s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cExport.cmake
+[0.880s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.880s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cppExport.cmake
+[0.880s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.881s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.881s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cppExport.cmake
+[0.881s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.882s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake-extras.cmake
+[0.882s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.882s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.882s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.882s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.883s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.883s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.883s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgsConfig.cmake
+[0.883s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgsConfig-version.cmake
+[0.883s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.xml
+[0.886s] Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/location_msgs
