@@ -21,6 +21,7 @@
 #include <unistd.h>
 #include <libusb.h>
 #include <arpa/inet.h>
+#include <dirent.h>
 
 #define PORT 8889
 #define BUFFER_SIZE 64
@@ -41,14 +42,18 @@
 // #define VIDEO_FORMAT "yuv420p"
 // #define CONSTANT_RATE_FACTOR 10
 
-#define IMAGE_FOLDER "/home/xs/UAV/Results/images"
-#define TEMP_FOLDER "/home/xs/UAV/Results/temp"
+#define IMAGE_FOLDER_PREFIX "/home/xs/UAV/"
+#define TEMP_FOLDER_PREFIX "/home/xs/UAV/"
 
-#define IMAGE_PREFIX "/home/xs/UAV/Results/images/output"
+#define RESULTS_DIRECTORY "/home/xs/UAV/Results"
+
+#define IMAGE_PREFIX "output"
 #define IMAGE_SUBFIX ".bmp"
 
-#define TEMPMAT_PREFIX "/home/xs/UAV/Results/temp/temp_mat"
+#define TEMPMAT_PREFIX "temp_mat"
 #define TEMPMAT_SUBFIX ".txt"
+
+char* save_dir_name = NULL;
 
 int sockfd;
 struct sockaddr_in server_addr, client_addr;
@@ -88,7 +93,7 @@ int frameCallBack(int id, guide_usb_frame_data_t *pVideoData);
 int save_temp_matrix(guide_usb_frame_data_t *pVideoData);
 char *save_image(guide_usb_frame_data_t *pVideoData);
 void send_message(char *img_file_name);
-int clear_folder(char *dirname);
+char* create_subdirectory(char* dir_name);
 int start_camera();
 // void img2video(char *input_files, int framerate, char *output_file, char *video_format, int crf);
 
@@ -231,7 +236,7 @@ int frameCallBack(int id, guide_usb_frame_data_t *pVideoData)
             pthread_mutex_lock(&mutex);
 
             // Save temperature matrix
-            save_temp_matrix(pVideoData);
+            // save_temp_matrix(pVideoData);
 
             // Convert binary array to bmp image
             char *img_file_name = save_image(pVideoData);
@@ -335,8 +340,10 @@ char *save_image(guide_usb_frame_data_t *pVideoData)
         }
     }
 
-    char *img_file_name = malloc(sizeof(IMAGE_PREFIX) + sizeof(IMAGE_SUBFIX));
-    strcpy(img_file_name, IMAGE_PREFIX);
+    char *img_file_name = malloc(strlen(save_dir_name) + 1 + sizeof(IMAGE_PREFIX) + 5 + sizeof(IMAGE_SUBFIX));
+    strcpy(img_file_name, save_dir_name);
+    strcat(img_file_name, "/");
+    strcat(img_file_name, IMAGE_PREFIX);
     strcat(img_file_name, ctrl_id);
     strcat(img_file_name, IMAGE_SUBFIX);
 
@@ -348,10 +355,9 @@ char *save_image(guide_usb_frame_data_t *pVideoData)
 
 void send_message(char *img_file_name)
 {
-    char *img_path = malloc(sizeof(IMAGE_PREFIX) + sizeof(IMAGE_SUBFIX) + sizeof(char) * 11);
+    char *img_path = malloc(strlen(img_file_name) + 10);
     strcpy(img_path, img_file_name);
     strcat(img_path, ":");
-
     strcat(img_path, ctrl_id);
 
     sendto(client_socketfd, img_path, strlen(img_path), 0, (struct sockaddr *)&yolo_addr, sizeof(yolo_addr));
@@ -361,42 +367,37 @@ void send_message(char *img_file_name)
     free(img_path);
 }
 
-int clear_folder(char *dirname)
-{
-    DIR *dir;
-    struct dirent *entry;
-
-    dir = opendir(dirname);
-    if (dir == NULL)
-    {
-        printf("Open folder failed\n");
-        return -1;
+char* create_subdirectory(char* directory) {
+    DIR *dir = opendir(directory);
+    if (dir == NULL) {
+        perror("Error opening directory");
+        return NULL;
     }
 
-    while ((entry = readdir(dir)) != NULL)
-    {
-        if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0)
-        {
-            char *filepath = malloc(strlen(dirname) + sizeof(char) * 20);
-            strcpy(filepath, dirname);
-            strcat(filepath, "/");
-            strcat(filepath, entry->d_name);
-
-            if (remove(filepath) != 0)
-            {
-                printf("Remove file failed\n");
-                closedir(dir);
-                free(filepath);
-                return -1;
+    int max_number = -1;
+    struct dirent *entry;
+    while ((entry = readdir(dir)) != NULL) {
+        if (entry->d_type == DT_DIR) {
+            if (strncmp(entry->d_name, "run", 3) == 0) {
+                int num = atoi(entry->d_name + 3);
+                if (num > max_number) {
+                    max_number = num;
+                }
             }
-            free(filepath);
         }
     }
-
-    printf("Clear folder %s successfully\n", dirname);
-
     closedir(dir);
-    return 0;
+
+    char new_directory[256];
+    snprintf(new_directory, sizeof(new_directory), "%s/run%d", directory, max_number + 1);
+
+    if (mkdir(new_directory, 0777) == -1) {
+        perror("Error creating directory");
+        return NULL;
+    }
+
+    char* result = strdup(new_directory);
+    return result;
 }
 
 int start_camera()
@@ -411,43 +412,38 @@ int start_camera()
     }
 
     // USB device precheck
-    while (1)
-    {
-        int ret = libusb_init(&gd_ctx);
-        if (ret < 0)
-        {
-            printf("libusb_init fail:%d\n", ret);
-            usleep(1000000);
-            continue;
-        }
-        else
-        {
-            printf("libusb_init ok\n");
-            break;
-        }
-    }
+    // while (1)
+    // {
+    //     int ret = libusb_init(&gd_ctx);
+    //     if (ret < 0)
+    //     {
+    //         printf("libusb_init fail:%d\n", ret);
+    //         usleep(1000000);
+    //         continue;
+    //     }
+    //     else
+    //     {
+    //         printf("libusb_init ok\n");
+    //         break;
+    //     }
+    // }
 
-    // // int cnt = 0;
-    while (1)
-    {
-        // FILE *file = fopen("/home/xs/Camera/test", "a");
-        // fprintf(file, "%d\n", cnt++);
-        // fclose(file);
-
-        gd_dev_handle = libusb_open_device_with_vid_pid(gd_ctx, 0x04b4, 0xf7f7);
-        if (gd_dev_handle == NULL)
-        {
-            printf("libusb_open fail\n");
-            usleep(1000000);
-            continue; // fail to open usb
-        }
-        else
-        {
-            printf("libusb_open ok\n");
-            libusb_close(gd_dev_handle);
-            break;
-        }
-    }
+    // while (1)
+    // {
+    //     gd_dev_handle = libusb_open_device_with_vid_pid(gd_ctx, 0x04b4, 0xf7f7);
+    //     if (gd_dev_handle == NULL)
+    //     {
+    //         printf("libusb_open fail\n");
+    //         usleep(1000000);
+    //         continue; // fail to open usb
+    //     }
+    //     else
+    //     {
+    //         printf("libusb_open ok\n");
+    //         libusb_close(gd_dev_handle);
+    //         break;
+    //     }
+    // }
 
     ret = socket_client_init();
     if (ret != 0)
@@ -455,18 +451,19 @@ int start_camera()
         return -1;
     }
 
-    // Clear old images first
-    ret = clear_folder(TEMP_FOLDER);
-    if (ret != 0)
-    {
+    char * dir_name = create_subdirectory(RESULTS_DIRECTORY);
+    printf("save results to %s \n ", dir_name);
+
+    char new_directory[256];
+    snprintf(new_directory, sizeof(new_directory), "%s/images", dir_name);
+
+    if (mkdir(new_directory, 0777) == -1) {
+        perror("Error creating directory");
         return -1;
     }
 
-    ret = clear_folder(IMAGE_FOLDER);
-    if (ret != 0)
-    {
-        return -1;
-    }
+    save_dir_name = strdup(new_directory);
+    printf("save_dir_name: %s \n", save_dir_name);
 
     m_param = (guide_measure_external_param_t *)malloc(sizeof(guide_measure_external_param_t));
     m_param->emiss = 98;
