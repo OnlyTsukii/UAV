@@ -82,7 +82,7 @@ class TF_Converter(Node):
 
             # Wait until gps message becomes reliable 
             self.gps_count += 1
-            if self.gps_count == 10:
+            if self.gps_count == 6:
                 self.init_longitude = msg.gps_fix.longitude
                 self.init_latitude = msg.gps_fix.latitude
                 self.init_altitude = msg.gps_fix.altitude
@@ -259,6 +259,10 @@ class TF_Converter(Node):
     
     # Get distance from the start point 
     def get_distance(self, dft_abs_pos) -> Tuple[float, float, float, float]:
+
+        if self.init_latitude == 0 and self.init_longitude == 0 and self.init_altitude == 0:
+            return 0.0, 0.0, 0.0, 0.0
+        
         lon, lat, alt = dft_abs_pos
         point1 = (self.init_latitude, self.init_longitude)
         point2 = (lat, lon)
