@@ -40,4 +40,9 @@ def generate_launch_description():
             executable='gps_simulator',
             name='gps_simulator'
         ),
+        # Node(
+        #     package='uav_patrol',
+        #     executable='gps_handler',
+        #     name='gps_handler'
+        # ),
     ])

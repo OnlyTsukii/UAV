@@ -1,0 +1,319 @@
+[0.008s] Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/xs/UAV/ROS2/location_msgs -DCMAKE_INSTALL_PREFIX=/home/xs/UAV/ROS2/install/location_msgs
+[0.131s] -- The C compiler identification is GNU 9.4.0
+[0.236s] -- The CXX compiler identification is GNU 9.4.0
+[0.239s] -- Check for working C compiler: /usr/bin/cc
+[0.291s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.292s] -- Detecting C compiler ABI info
+[0.338s] -- Detecting C compiler ABI info - done
+[0.347s] -- Detecting C compile features
+[0.347s] -- Detecting C compile features - done
+[0.349s] -- Check for working CXX compiler: /usr/bin/c++
+[0.402s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.403s] -- Detecting CXX compiler ABI info
+[0.465s] -- Detecting CXX compiler ABI info - done
+[0.473s] -- Detecting CXX compile features
+[0.473s] -- Detecting CXX compile features - done
+[0.476s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.495s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.495s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.553s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[0.556s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.562s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.634s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.656s] -- Found FastRTPS: /opt/ros/galactic/include  
+[0.713s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.734s] -- Found std_msgs: 2.2.4 (/opt/ros/galactic/share/std_msgs/cmake)
+[0.759s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[0.854s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.994s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)
+[1.193s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.292s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.309s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.310s] -- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+[1.329s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[1.329s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.329s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.329s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.343s] -- Found PythonExtra: .so  
+[1.415s] -- Configuring done
+[1.464s] -- Generating done
+[1.466s] -- Build files have been written to: /home/xs/UAV/ROS2/build/location_msgs
+[1.471s] Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/xs/UAV/ROS2/location_msgs -DCMAKE_INSTALL_PREFIX=/home/xs/UAV/ROS2/install/location_msgs
+[1.473s] Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/location_msgs -- -j8 -l8
+[1.500s] [35m[1mScanning dependencies of target location_msgs__cpp[0m
+[1.501s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.509s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.761s] [  3%] Built target location_msgs__cpp
+[1.771s] [  4%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.771s] [  6%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.771s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.810s] [35m[1mScanning dependencies of target location_msgs__rosidl_generator_c[0m
+[1.827s] [ 11%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c.o[0m
+[1.827s] [ 11%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o[0m
+[1.827s] [ 14%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c.o[0m
+[1.827s] [ 15%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o[0m
+[1.827s] [ 12%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c.o[0m
+[1.880s] [ 17%] [32m[1mLinking C shared library liblocation_msgs__rosidl_generator_c.so[0m
+[1.916s] [ 17%] Built target location_msgs__rosidl_generator_c
+[1.925s] [ 19%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.926s] [ 20%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.041s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_cpp[0m
+[2.048s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_cpp[0m
+[2.057s] [ 22%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/gps_fix__type_support.cpp.o[0m
+[2.065s] [ 25%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/pixel_point__type_support.cpp.o[0m
+[2.065s] [ 25%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/pixel_point__type_support.cpp.o[0m
+[2.065s] [ 28%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp.o[0m
+[2.065s] [ 26%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defect_box__type_support.cpp.o[0m
+[2.104s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[2.124s] [ 30%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/gps_fix__type_support.cpp.o[0m
+[2.219s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_c[0m
+[2.235s] [ 31%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp.o[0m
+[2.269s] [ 33%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/pixel_point__type_support.cpp.o[0m
+[2.301s] [ 34%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defect_box__type_support.cpp.o[0m
+[2.333s] [ 36%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defects__type_support.cpp.o[0m
+[2.366s] [ 38%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/yaw__type_support.cpp.o[0m
+[2.375s] [ 39%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp.o[0m
+[2.378s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_c[0m
+[2.381s] [ 41%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.o[0m
+[2.395s] [ 44%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/defect_box__type_support.cpp.o[0m
+[2.395s] [ 44%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/defects__type_support.cpp.o[0m
+[2.395s] [ 46%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c.o[0m
+[2.396s] [ 47%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_c.so[0m
+[2.413s] [ 49%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/yaw__type_support.cpp.o[0m
+[2.434s] [ 50%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c.o[0m
+[2.451s] [ 50%] Built target location_msgs__rosidl_typesupport_c
+[2.461s] [ 52%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__type_support.c.o[0m
+[2.469s] [ 53%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.o[0m
+[2.499s] [ 55%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o[0m
+[2.508s] [ 57%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/pixel_point__type_support.cpp.o[0m
+[2.536s] [ 58%] [32m[1mLinking C shared library liblocation_msgs__rosidl_typesupport_introspection_c.so[0m
+[2.576s] [ 58%] Built target location_msgs__rosidl_typesupport_introspection_c
+[2.585s] [ 60%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/defect_box__type_support.cpp.o[0m
+[2.596s] [ 61%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/defects__type_support.cpp.o[0m
+[2.701s] [ 65%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/yaw__type_support.cpp.o[0m
+[2.701s] [ 65%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_cpp.so[0m
+[2.739s] [ 65%] Built target location_msgs__rosidl_typesupport_cpp
+[2.770s] [ 66%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[2.831s] [ 66%] Built target location_msgs__rosidl_typesupport_introspection_cpp
+[3.015s] [ 68%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.081s] [ 68%] Built target location_msgs__rosidl_typesupport_fastrtps_cpp
+[3.089s] [ 69%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.309s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_c[0m
+[3.323s] [ 71%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp.o[0m
+[3.325s] [ 74%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__type_support_c.cpp.o[0m
+[3.325s] [ 76%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp.o[0m
+[3.325s] [ 76%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o[0m
+[3.325s] [ 77%] [32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o[0m
+[3.653s] [ 79%] [32m[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[3.720s] [ 79%] Built target location_msgs__rosidl_typesupport_fastrtps_c
+[3.727s] [35m[1mScanning dependencies of target location_msgs[0m
+[3.734s] [ 79%] Built target location_msgs
+[3.741s] [35m[1mScanning dependencies of target location_msgs__py[0m
+[3.749s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.242s] [ 80%] Built target location_msgs__py
+[4.248s] [35m[1mScanning dependencies of target location_msgs__python[0m
+[4.278s] [ 84%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_gps_fix_s.c.o[0m
+[4.278s] [ 84%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_defect_box_s.c.o[0m
+[4.279s] [ 87%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_pixel_point_s.c.o[0m
+[4.279s] [ 85%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_yaw_s.c.o[0m
+[4.280s] [ 88%] [32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_defects_s.c.o[0m
+[4.377s] [ 90%] [32m[1mLinking C shared library rosidl_generator_py/location_msgs/liblocation_msgs__python.so[0m
+[4.408s] [ 90%] Built target location_msgs__python
+[4.415s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[4.416s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_c__pyext[0m
+[4.416s] [35m[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.428s] [ 92%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[4.430s] [ 95%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.430s] [ 95%] [32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.492s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[4.493s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[4.494s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[4.521s] [100%] Built target location_msgs__rosidl_typesupport_c__pyext
+[4.521s] [100%] Built target location_msgs__rosidl_typesupport_introspection_c__pyext
+[4.543s] [100%] Built target location_msgs__rosidl_typesupport_fastrtps_c__pyext
+[4.551s] Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/location_msgs -- -j8 -l8
+[4.616s] Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/location_msgs
+[4.623s] -- Install configuration: ""
+[4.623s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/rosidl_interfaces/location_msgs
+[4.623s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[4.623s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[4.623s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/yaw.h
+[4.623s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defect_box.h
+[4.623s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defects.h
+[4.623s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[4.623s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__functions.c
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__struct.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__functions.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__struct.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__struct.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__struct.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__functions.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__functions.c
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__functions.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.h
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__functions.c
+[4.624s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__functions.h
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__functions.c
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__functions.c
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__struct.h
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.h
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__functions.h
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/gps_fix.h
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/pixel_point.h
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/library_path.sh
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/library_path.dsv
+[4.625s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_generator_c.so
+[4.625s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_generator_c.so" to ""
+[4.626s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[4.626s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[4.626s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[4.626s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_c.h
+[4.626s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_c.h
+[4.626s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_c.h
+[4.626s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+[4.626s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h
+[4.626s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.626s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_c.so
+[4.626s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[4.626s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[4.626s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[4.627s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_cpp.hpp
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_cpp.hpp
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_cpp.hpp
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_cpp.hpp
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_cpp.hpp
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/dds_fastrtps
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_cpp.so
+[4.627s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.627s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[4.627s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[4.627s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.627s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.c
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.c
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_c.h
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_c.h
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.c
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.c
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_c.h
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_c.h
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.c
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_c.so
+[4.628s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_c.so" to ""
+[4.628s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_c.so
+[4.628s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_c.so" to ""
+[4.629s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[4.629s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/yaw.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/pixel_point.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defects.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defect_box.hpp
+[4.629s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__builder.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__traits.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__builder.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__struct.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__builder.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__traits.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__struct.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__struct.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__traits.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__struct.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__struct.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__traits.hpp
+[4.629s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__builder.hpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__traits.hpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__builder.hpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/gps_fix.hpp
+[4.630s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs
+[4.630s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg
+[4.630s] -- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.cpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.cpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_cpp.hpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.cpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_cpp.hpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.cpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_cpp.hpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.cpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_cpp.hpp
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_cpp.so
+[4.630s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[4.630s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_cpp.so
+[4.631s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_cpp.so" to ""
+[4.631s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/pythonpath.sh
+[4.631s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/pythonpath.dsv
+[4.631s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/__init__.py
+[4.651s] Compiling '/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/__init__.py'...
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_gps_fix.py
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_yaw.py
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defect_box_s.c
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_pixel_point_s.c
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/__init__.py
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defects_s.c
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defect_box.py
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_yaw_s.c
+[4.654s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defects.py
+[4.655s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_pixel_point.py
+[4.655s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_gps_fix_s.c
+[4.655s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[4.655s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[4.655s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[4.656s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[4.656s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[4.656s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[4.656s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__python.so
+[4.656s] -- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__python.so" to ""
+[4.656s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/GpsFix.idl
+[4.656s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/PixelPoint.idl
+[4.656s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/DefectBox.idl
+[4.656s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Defects.idl
+[4.656s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Yaw.idl
+[4.656s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/GpsFix.msg
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/PixelPoint.msg
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/DefectBox.msg
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Defects.msg
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Yaw.msg
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/package_run_dependencies/location_msgs
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/parent_prefix_path/location_msgs
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/ament_prefix_path.sh
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/ament_prefix_path.dsv
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/path.sh
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/path.dsv
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.bash
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.sh
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.zsh
+[4.657s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.dsv
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.dsv
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/packages/location_msgs
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cExport.cmake
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cExport-noconfig.cmake
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cExport.cmake
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cExport.cmake
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cppExport.cmake
+[4.658s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cppExport.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake-extras.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgsConfig.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgsConfig-version.cmake
+[4.659s] -- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.xml
+[4.661s] Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/location_msgs

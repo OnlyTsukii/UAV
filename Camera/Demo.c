@@ -53,7 +53,7 @@
 #define TEMPMAT_PREFIX "temp_mat"
 #define TEMPMAT_SUBFIX ".txt"
 
-char* save_dir_name = NULL;
+char *save_dir_name = NULL;
 
 int sockfd;
 struct sockaddr_in server_addr, client_addr;
@@ -93,7 +93,7 @@ int frameCallBack(int id, guide_usb_frame_data_t *pVideoData);
 int save_temp_matrix(guide_usb_frame_data_t *pVideoData);
 char *save_image(guide_usb_frame_data_t *pVideoData);
 void send_message(char *img_file_name);
-char* create_subdirectory(char* dir_name);
+char *create_subdirectory(char *dir_name);
 int start_camera();
 // void img2video(char *input_files, int framerate, char *output_file, char *video_format, int crf);
 
@@ -340,7 +340,7 @@ char *save_image(guide_usb_frame_data_t *pVideoData)
         }
     }
 
-    char *img_file_name = malloc(strlen(save_dir_name) + 1 + sizeof(IMAGE_PREFIX) + 5 + sizeof(IMAGE_SUBFIX));
+    char *img_file_name = malloc(strlen(save_dir_name) + 1 + sizeof(IMAGE_PREFIX) + 10 + sizeof(IMAGE_SUBFIX));
     strcpy(img_file_name, save_dir_name);
     strcat(img_file_name, "/");
     strcat(img_file_name, IMAGE_PREFIX);
@@ -354,7 +354,7 @@ char *save_image(guide_usb_frame_data_t *pVideoData)
 }
 
 void send_message(char *img_file_name)
-{   
+{
     char *img_path = malloc(strlen(img_file_name) + 10);
     strcpy(img_path, img_file_name);
     strcat(img_path, ":");
@@ -367,20 +367,26 @@ void send_message(char *img_file_name)
     free(img_path);
 }
 
-char* create_subdirectory(char* directory) {
+char *create_subdirectory(char *directory)
+{
     DIR *dir = opendir(directory);
-    if (dir == NULL) {
+    if (dir == NULL)
+    {
         perror("Error opening directory");
         return NULL;
     }
 
     int max_number = -1;
     struct dirent *entry;
-    while ((entry = readdir(dir)) != NULL) {
-        if (entry->d_type == DT_DIR) {
-            if (strncmp(entry->d_name, "run", 3) == 0) {
+    while ((entry = readdir(dir)) != NULL)
+    {
+        if (entry->d_type == DT_DIR)
+        {
+            if (strncmp(entry->d_name, "run", 3) == 0)
+            {
                 int num = atoi(entry->d_name + 3);
-                if (num > max_number) {
+                if (num > max_number)
+                {
                     max_number = num;
                 }
             }
@@ -391,12 +397,13 @@ char* create_subdirectory(char* directory) {
     char new_directory[256];
     snprintf(new_directory, sizeof(new_directory), "%s/run%d", directory, max_number + 1);
 
-    if (mkdir(new_directory, 0777) == -1) {
+    if (mkdir(new_directory, 0777) == -1)
+    {
         perror("Error creating directory");
         return NULL;
     }
 
-    char* result = strdup(new_directory);
+    char *result = strdup(new_directory);
     return result;
 }
 
@@ -451,20 +458,6 @@ int start_camera()
         return -1;
     }
 
-    char * dir_name = create_subdirectory(RESULTS_DIRECTORY);
-    printf("save results to %s \n ", dir_name);
-
-    char new_directory[256];
-    snprintf(new_directory, sizeof(new_directory), "%s/images", dir_name);
-
-    if (mkdir(new_directory, 0777) == -1) {
-        perror("Error creating directory");
-        return -1;
-    }
-
-    save_dir_name = strdup(new_directory);
-    printf("save_dir_name: %s \n", save_dir_name);
-
     m_param = (guide_measure_external_param_t *)malloc(sizeof(guide_measure_external_param_t));
     m_param->emiss = 98;
     m_param->relHum = 60;
@@ -496,7 +489,7 @@ int start_camera()
         return -1;
     }
 
-    Overlay = SDL_CreateYUVOverlay(WIDTH, HEIGHT, SDL_UYVY_OVERLAY, Surface);
+    // Overlay = SDL_CreateYUVOverlay(WIDTH, HEIGHT, SDL_UYVY_OVERLAY, Surface);
     Rect.x = 0;
     Rect.y = 0;
     Rect.w = WIDTH;
@@ -539,8 +532,20 @@ int start_camera()
     }
     startTime = tick();
 
-    // Sleep for 10 seconds
-    // usleep(15000000);
+    char *dir_name = create_subdirectory(RESULTS_DIRECTORY);
+    printf("save results to %s \n ", dir_name);
+
+    char new_directory[256];
+    snprintf(new_directory, sizeof(new_directory), "%s/images", dir_name);
+
+    if (mkdir(new_directory, 0777) == -1)
+    {
+        perror("Error creating directory");
+        return -1;
+    }
+
+    save_dir_name = strdup(new_directory);
+    printf("save_dir_name: %s \n", save_dir_name);
 
     // Run forever
     socket_serve();

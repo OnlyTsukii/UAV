@@ -1,0 +1,208 @@
+[0.159s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.159s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f3d9698dd30>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f3d9698dd30>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f3d968cfc70>)
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.279s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/xs/UAV/ROS2'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extension 'ignore_ament_install'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extension 'colcon_pkg'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extensions ['colcon_meta']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extension 'colcon_meta'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extensions ['ros']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(location_msgs) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'location_msgs' with type 'ros.ament_cmake' and name 'location_msgs'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extensions ['ros']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(uav_patrol) by extension 'ros'
+[0.292s] DEBUG:colcon.colcon_core.package_identification:Package 'uav_patrol' with type 'ros.ament_python' and name 'uav_patrol'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extensions ['colcon_meta']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extension 'colcon_meta'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extensions ['ros']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extension 'ros'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extensions ['cmake', 'python']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extension 'cmake'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extension 'python'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extensions ['python_setup_py']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(weights) by extension 'python_setup_py'
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.315s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/xs/UAV/ROS2/install
+[0.316s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 277 installed packages in /opt/ros/galactic
+[0.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'cmake_target' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.361s] Level 5:colcon.colcon_core.verb:set package 'location_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.361s] DEBUG:colcon.colcon_core.verb:Building package 'location_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xs/UAV/ROS2/build/location_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xs/UAV/ROS2/install/location_msgs', 'merge_install': False, 'path': '/home/xs/UAV/ROS2/location_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'cmake_target' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'cmake_clean_cache' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'cmake_clean_first' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'cmake_force_configure' from command line to 'False'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'ament_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'catkin_cmake_args' from command line to 'None'
+[0.362s] Level 5:colcon.colcon_core.verb:set package 'uav_patrol' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.362s] DEBUG:colcon.colcon_core.verb:Building package 'uav_patrol' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xs/UAV/ROS2/build/uav_patrol', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xs/UAV/ROS2/install/uav_patrol', 'merge_install': False, 'path': '/home/xs/UAV/ROS2/uav_patrol', 'symlink_install': False, 'test_result_base': None}
+[0.362s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.363s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.363s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xs/UAV/ROS2/location_msgs' with build type 'ament_cmake'
+[0.363s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xs/UAV/ROS2/location_msgs'
+[0.364s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.365s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.365s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.373s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/location_msgs -- -j8 -l8
+[0.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic /usr/bin/cmake --build /home/xs/UAV/ROS2/build/location_msgs -- -j8 -l8
+[0.626s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xs/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/location_msgs
+[0.694s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(location_msgs)
+[0.695s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xs/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic /usr/bin/cmake --install /home/xs/UAV/ROS2/build/location_msgs
+[0.698s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs' for CMake module files
+[0.699s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs' for CMake config files
+[0.699s] Level 1:colcon.colcon_core.shell:create_environment_hook('location_msgs', 'cmake_prefix_path')
+[0.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/cmake_prefix_path.ps1'
+[0.700s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/cmake_prefix_path.dsv'
+[0.701s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/cmake_prefix_path.sh'
+[0.701s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/lib'
+[0.702s] Level 1:colcon.colcon_core.shell:create_environment_hook('location_msgs', 'ld_library_path_lib')
+[0.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/ld_library_path_lib.ps1'
+[0.702s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/ld_library_path_lib.dsv'
+[0.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/ld_library_path_lib.sh'
+[0.702s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/bin'
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/lib/pkgconfig/location_msgs.pc'
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages'
+[0.703s] Level 1:colcon.colcon_core.shell:create_environment_hook('location_msgs', 'pythonpath')
+[0.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/pythonpath.ps1'
+[0.703s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/pythonpath.dsv'
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/pythonpath.sh'
+[0.704s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/bin'
+[0.705s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.ps1'
+[0.705s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.dsv'
+[0.706s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.sh'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.bash'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.zsh'
+[0.708s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xs/UAV/ROS2/install/location_msgs/share/colcon-core/packages/location_msgs)
+[0.775s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(location_msgs)
+[0.775s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs' for CMake module files
+[0.776s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs' for CMake config files
+[0.776s] Level 1:colcon.colcon_core.shell:create_environment_hook('location_msgs', 'cmake_prefix_path')
+[0.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/cmake_prefix_path.ps1'
+[0.777s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/cmake_prefix_path.dsv'
+[0.777s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/cmake_prefix_path.sh'
+[0.777s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/lib'
+[0.777s] Level 1:colcon.colcon_core.shell:create_environment_hook('location_msgs', 'ld_library_path_lib')
+[0.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/ld_library_path_lib.ps1'
+[0.778s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/ld_library_path_lib.dsv'
+[0.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/ld_library_path_lib.sh'
+[0.778s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/bin'
+[0.778s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/lib/pkgconfig/location_msgs.pc'
+[0.778s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages'
+[0.778s] Level 1:colcon.colcon_core.shell:create_environment_hook('location_msgs', 'pythonpath')
+[0.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/pythonpath.ps1'
+[0.779s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/pythonpath.dsv'
+[0.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/hook/pythonpath.sh'
+[0.779s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/location_msgs/bin'
+[0.780s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.ps1'
+[0.780s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.dsv'
+[0.780s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.sh'
+[0.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.bash'
+[0.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.zsh'
+[0.781s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xs/UAV/ROS2/install/location_msgs/share/colcon-core/packages/location_msgs)
+[0.781s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/xs/UAV/ROS2/uav_patrol' with build type 'ament_python'
+[0.781s] Level 1:colcon.colcon_core.shell:create_environment_hook('uav_patrol', 'ament_prefix_path')
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/hook/ament_prefix_path.ps1'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/hook/ament_prefix_path.dsv'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/hook/ament_prefix_path.sh'
+[0.783s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.783s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.972s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/xs/UAV/ROS2/uav_patrol'
+[0.973s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.973s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xs/UAV/ROS2/uav_patrol': PYTHONPATH=/home/xs/UAV/ROS2/build/uav_patrol/prefix_override:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/uav_patrol build --build-base /home/xs/UAV/ROS2/build/uav_patrol/build install --record /home/xs/UAV/ROS2/build/uav_patrol/install.log --single-version-externally-managed install_data
+[1.569s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/uav_patrol' for CMake module files
+[1.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xs/UAV/ROS2/uav_patrol' returned '0': PYTHONPATH=/home/xs/UAV/ROS2/build/uav_patrol/prefix_override:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/uav_patrol build --build-base /home/xs/UAV/ROS2/build/uav_patrol/build install --record /home/xs/UAV/ROS2/build/uav_patrol/install.log --single-version-externally-managed install_data
+[1.570s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/uav_patrol' for CMake config files
+[1.570s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/uav_patrol/lib'
+[1.570s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/uav_patrol/bin'
+[1.571s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/uav_patrol/lib/pkgconfig/uav_patrol.pc'
+[1.571s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages'
+[1.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('uav_patrol', 'pythonpath')
+[1.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/hook/pythonpath.ps1'
+[1.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/hook/pythonpath.dsv'
+[1.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/hook/pythonpath.sh'
+[1.572s] Level 1:colcon.colcon_core.environment:checking '/home/xs/UAV/ROS2/install/uav_patrol/bin'
+[1.572s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(uav_patrol)
+[1.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/package.ps1'
+[1.573s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/package.dsv'
+[1.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/package.sh'
+[1.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/package.bash'
+[1.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol/package.zsh'
+[1.574s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xs/UAV/ROS2/install/uav_patrol/share/colcon-core/packages/uav_patrol)
+[1.575s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.575s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.575s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.575s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.579s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.579s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.580s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.580s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[1.580s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.581s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xs/UAV/ROS2/install/local_setup.ps1'
+[1.582s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xs/UAV/ROS2/install/_local_setup_util_ps1.py'
+[1.583s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xs/UAV/ROS2/install/setup.ps1'
+[1.584s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xs/UAV/ROS2/install/local_setup.sh'
+[1.585s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xs/UAV/ROS2/install/_local_setup_util_sh.py'
+[1.585s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xs/UAV/ROS2/install/setup.sh'
+[1.586s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xs/UAV/ROS2/install/local_setup.bash'
+[1.587s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xs/UAV/ROS2/install/setup.bash'
+[1.588s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xs/UAV/ROS2/install/local_setup.zsh'
+[1.588s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xs/UAV/ROS2/install/setup.zsh'

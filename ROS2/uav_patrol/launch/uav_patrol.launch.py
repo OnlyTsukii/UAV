@@ -34,10 +34,15 @@ def generate_launch_description():
             executable='dft_publisher',
             name='dft_publisher',
         ),
-        driver_node,
+        # driver_node,
+        Node(
+            package='uav_patrol',
+            executable='gps_simulator',
+            name='gps_simulator'
+        ),
         # Node(
         #     package='uav_patrol',
-        #     executable='gps_simulator',
-        #     name='gps_simulator'
+        #     executable='gps_handler',
+        #     name='gps_handler'
         # ),
     ])

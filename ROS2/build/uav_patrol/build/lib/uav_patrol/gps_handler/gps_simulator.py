@@ -1,5 +1,6 @@
 import rclpy
 import rclpy.logging
+import time
 
 from rclpy.node import Node
 from std_msgs.msg import Header, Int32, Float64
@@ -19,7 +20,7 @@ class GPS_Simulator(Node):
         self.ctrl_publisher = self.create_publisher(Int32, "ctrl_cmd", 10)
         self.yaw_publisher = self.create_publisher(Yaw, "yaw", 10)
 
-        self.timer = self.create_timer(3, self.timer_callback)
+        self.timer = self.create_timer(2, self.timer_callback)
         self.gps_id = 0
 
         self.init_lon = 120.652158
@@ -57,6 +58,7 @@ class GPS_Simulator(Node):
         self.send_ctrl(gps_fix)
 
     def send_ctrl(self, gps_fix):
+
         fix = GpsFix()
         fix.gps_fix = gps_fix
         fix.gps_id = self.gps_id

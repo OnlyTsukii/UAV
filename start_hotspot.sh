@@ -3,7 +3,7 @@
 # set hotspot name and password
 SSID="uav"
 PASSWORD="12345678"
+IFNAME="wlo1"
 
 # start hotspot
-nmcli device wifi hotspot ifname wlx0013ef1f2653 ssid "$SSID" password "$PASSWORD"
-
+nmcli device wifi hotspot ifname $IFNAME ssid "$SSID" password "$PASSWORD"

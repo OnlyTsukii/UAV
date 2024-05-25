@@ -58,18 +58,18 @@ class TF_Converter(Node):
         self.init_altitude = 0
         self.gps_count = 0
 
+        self.directory = None
+
     def get_directory(self) -> str:
         try:
             existing_numbers = [int(name[3:]) for name in os.listdir(RESULTS_PREFIX) if name.startswith("run")]
             max_number = max(existing_numbers) if existing_numbers else -1
-            new_directory = os.path.join(RESULTS_PREFIX, "run{}".format(max_number), "locations")
+            path = os.path.join(RESULTS_PREFIX, "run{}".format(max_number), "locations")
 
-            if not os.path.exists(new_directory):
-                os.mkdir(new_directory)
+            if not os.path.exists(path):
+                os.mkdir(path)
 
-            new_directory = os.path.join(RESULTS_PREFIX, "run{}".format(max_number))
-
-            return new_directory
+            return path
 
         except Exception as e:
             print("Error:", e)
@@ -82,7 +82,7 @@ class TF_Converter(Node):
 
             # Wait until gps message becomes reliable 
             self.gps_count += 1
-            if self.gps_count == 1:
+            if self.gps_count == 10:
                 self.init_longitude = msg.gps_fix.longitude
                 self.init_latitude = msg.gps_fix.latitude
                 self.init_altitude = msg.gps_fix.altitude
@@ -200,8 +200,8 @@ class TF_Converter(Node):
                         gps_n = gps_msg.gps_fix.latitude + target[1] * LAT_PER_METER
                         dfts_abs_pos.append((gps_e, gps_n, self.init_altitude))
                     
-                    location_path = self.get_directory()
-                    file = open(location_path+'/locations/location'+str(gps_msg.gps_id)+'.txt', "w")
+                    locations_path = self.get_directory()
+                    file = open(locations_path+'/location'+str(gps_msg.gps_id)+'.txt', "w")
 
                     file.write(message_to_yaml(gps_msg))
                     file.write("\n")

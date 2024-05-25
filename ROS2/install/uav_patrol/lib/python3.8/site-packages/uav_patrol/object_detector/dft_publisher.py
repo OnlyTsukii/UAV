@@ -27,17 +27,13 @@ class Dft_Publisher(Node):
     def get_directory(self) -> str:
         try:
             existing_numbers = [int(name[3:]) for name in os.listdir(RESULTS_PREFIX) if name.startswith("run")]
-
             max_number = max(existing_numbers) if existing_numbers else -1
+            path = os.path.join(RESULTS_PREFIX, "run{}".format(max_number), "labels")
 
-            new_directory = os.path.join(RESULTS_PREFIX, "run{}".format(max_number), "labels")
+            if not os.path.exists(path):
+                os.mkdir(path)
 
-            if not os.path.exists(new_directory):
-                os.mkdir(new_directory)
-
-            new_directory = os.path.join(RESULTS_PREFIX, "run{}".format(max_number))
-
-            return new_directory
+            return path
 
         except Exception as e:
             print("Error:", e)
@@ -49,8 +45,8 @@ class Dft_Publisher(Node):
         res = {}
         for result in results:
             boxes = result.boxes  
-            save_path = self.get_directory() +'/labels/results'+str(img_id)+'.bmp'
-            # self.get_logger().info(save_path)
+            save_path = self.get_directory()+'/results'+str(img_id)+'.bmp'
+            self.get_logger().info(save_path)
             result.save(filename=save_path) 
             res['boxes'] = boxes.xywh
             res['img_size'] = result.orig_shape
