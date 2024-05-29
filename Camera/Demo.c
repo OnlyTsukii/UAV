@@ -231,9 +231,9 @@ int frameCallBack(int id, guide_usb_frame_data_t *pVideoData)
         // Shoot a picture
         if (shutter)
         {
-            shutter = false;
-
             pthread_mutex_lock(&mutex);
+
+            shutter = false;
 
             // Save temperature matrix
             // save_temp_matrix(pVideoData);
@@ -241,8 +241,12 @@ int frameCallBack(int id, guide_usb_frame_data_t *pVideoData)
             // Convert binary array to bmp image
             char *img_file_name = save_image(pVideoData);
 
-            // Send image path to YOLOv8 detector
-            send_message(img_file_name);
+            int id = atoi(ctrl_id);
+            if (id % 2 == 0)
+            {
+                // Send image path to YOLOv8 detector
+                send_message(img_file_name);
+            }
 
             pthread_mutex_unlock(&mutex);
         }

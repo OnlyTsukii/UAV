@@ -1,0 +1,493 @@
+[0.000000] (-) TimerEvent: {}
+[0.000368] (location_msgs) JobQueued: {'identifier': 'location_msgs', 'dependencies': OrderedDict()}
+[0.000394] (uav_patrol) JobQueued: {'identifier': 'uav_patrol', 'dependencies': OrderedDict([('location_msgs', '/home/xs/UAV/ROS2/install/location_msgs')])}
+[0.000702] (location_msgs) JobStarted: {'identifier': 'location_msgs'}
+[0.007645] (location_msgs) JobProgress: {'identifier': 'location_msgs', 'progress': 'cmake'}
+[0.008021] (location_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/xs/UAV/ROS2/location_msgs', '-DCMAKE_INSTALL_PREFIX=/home/xs/UAV/ROS2/install/location_msgs'], 'cwd': '/home/xs/UAV/ROS2/build/location_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('C_INCLUDE_PATH', '/usr/include/libusb-1.0:/usr/include/libusb-1.0:'), ('no_proxy', 'localhost, 127.0.0.1'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'xs'), ('SSH_CLIENT', '192.168.137.1 39134 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/xs/UAV/ROS2/install/location_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('BROWSER', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/xs'), ('OLDPWD', '/home/xs'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-070a5ef4-0883-4240-9194-14ab0430a48b.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://192.168.137.1:5555'), ('COLCON_PREFIX_PATH', '/home/xs/UAV/ROS2/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'xs'), ('http_proxy', 'http://192.168.137.1:5555'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a9dec91ba3.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/xs/UAV/ROS2/install/uav_patrol:/home/xs/UAV/ROS2/install/location_msgs:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/xs/UAV/ROS2/build/location_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.137.1 39134 192.168.137.2 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xs/UAV/ROS2/install/location_msgs:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic')]), 'shell': False}
+[0.052528] (location_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.092213] (location_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.095480] (location_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.099950] (-) TimerEvent: {}
+[0.147142] (location_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.148115] (location_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200071] (-) TimerEvent: {}
+[0.220876] (location_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.234942] (location_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.235226] (location_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.237656] (location_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.300164] (-) TimerEvent: {}
+[0.301415] (location_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.302247] (location_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.381412] (location_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.396253] (location_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.396844] (location_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.399245] (location_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.400252] (-) TimerEvent: {}
+[0.426248] (location_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.426464] (location_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.482578] (location_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)\n'}
+[0.484726] (location_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.491757] (location_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[0.500379] (-) TimerEvent: {}
+[0.567952] (location_msgs) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.591599] (location_msgs) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/galactic/include  \n'}
+[0.600477] (-) TimerEvent: {}
+[0.659729] (location_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.681047] (location_msgs) StdoutLine: {'line': b'-- Found std_msgs: 2.2.4 (/opt/ros/galactic/share/std_msgs/cmake)\n'}
+[0.700590] (-) TimerEvent: {}
+[0.711046] (location_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)\n'}
+[0.800708] (-) TimerEvent: {}
+[0.835987] (location_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.900771] (-) TimerEvent: {}
+[1.001033] (-) TimerEvent: {}
+[1.048601] (location_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)\n'}
+[1.101147] (-) TimerEvent: {}
+[1.201448] (-) TimerEvent: {}
+[1.301756] (-) TimerEvent: {}
+[1.305467] (location_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.401855] (-) TimerEvent: {}
+[1.433255] (location_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.453342] (location_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.454221] (location_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)\n'}
+[1.475562] (location_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.475781] (location_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.475840] (location_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.475897] (location_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[1.492272] (location_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.502037] (-) TimerEvent: {}
+[1.602312] (-) TimerEvent: {}
+[1.606268] (location_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.661076] (location_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.664193] (location_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/xs/UAV/ROS2/build/location_msgs\n'}
+[1.673023] (location_msgs) CommandEnded: {'returncode': 0}
+[1.673596] (location_msgs) JobProgress: {'identifier': 'location_msgs', 'progress': 'build'}
+[1.674473] (location_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xs/UAV/ROS2/build/location_msgs', '--', '-j8', '-l8'], 'cwd': '/home/xs/UAV/ROS2/build/location_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('C_INCLUDE_PATH', '/usr/include/libusb-1.0:/usr/include/libusb-1.0:'), ('no_proxy', 'localhost, 127.0.0.1'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'xs'), ('SSH_CLIENT', '192.168.137.1 39134 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/xs/UAV/ROS2/install/location_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('BROWSER', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/xs'), ('OLDPWD', '/home/xs'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-070a5ef4-0883-4240-9194-14ab0430a48b.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://192.168.137.1:5555'), ('COLCON_PREFIX_PATH', '/home/xs/UAV/ROS2/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'xs'), ('http_proxy', 'http://192.168.137.1:5555'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a9dec91ba3.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/xs/UAV/ROS2/install/uav_patrol:/home/xs/UAV/ROS2/install/location_msgs:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/xs/UAV/ROS2/build/location_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.137.1 39134 192.168.137.2 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xs/UAV/ROS2/install/location_msgs:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic')]), 'shell': False}
+[1.702476] (-) TimerEvent: {}
+[1.707091] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__cpp\x1b[0m\n'}
+[1.708128] (location_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.717182] (location_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.802559] (-) TimerEvent: {}
+[1.902927] (-) TimerEvent: {}
+[2.003223] (-) TimerEvent: {}
+[2.042986] (location_msgs) StdoutLine: {'line': b'[  3%] Built target location_msgs__cpp\n'}
+[2.054826] (location_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.055059] (location_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.055140] (location_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.103319] (-) TimerEvent: {}
+[2.168344] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_generator_c\x1b[0m\n'}
+[2.184358] (location_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/gps_fix__functions.c.o\x1b[0m\n'}
+[2.196543] (location_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o\x1b[0m\n'}
+[2.202439] (location_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c.o\x1b[0m\n'}
+[2.202713] (location_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o\x1b[0m\n'}
+[2.203383] (-) TimerEvent: {}
+[2.203558] (location_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c.o\x1b[0m\n'}
+[2.275659] (location_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library liblocation_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.303493] (-) TimerEvent: {}
+[2.319544] (location_msgs) StdoutLine: {'line': b'[ 17%] Built target location_msgs__rosidl_generator_c\n'}
+[2.334256] (location_msgs) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.334446] (location_msgs) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.385377] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.403592] (-) TimerEvent: {}
+[2.416377] (location_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/gps_fix__type_support.cpp.o\x1b[0m\n'}
+[2.423200] (location_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defect_box__type_support.cpp.o\x1b[0m\n'}
+[2.423928] (location_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/defects__type_support.cpp.o\x1b[0m\n'}
+[2.424881] (location_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/pixel_point__type_support.cpp.o\x1b[0m\n'}
+[2.503684] (-) TimerEvent: {}
+[2.603948] (-) TimerEvent: {}
+[2.640416] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.679469] (location_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/gps_fix__type_support.cpp.o\x1b[0m\n'}
+[2.704063] (-) TimerEvent: {}
+[2.704533] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.733394] (location_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/gps_fix__type_support.cpp.o\x1b[0m\n'}
+[2.747767] (location_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/pixel_point__type_support.cpp.o\x1b[0m\n'}
+[2.762363] (location_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/defect_box__type_support.cpp.o\x1b[0m\n'}
+[2.764225] (location_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/defects__type_support.cpp.o\x1b[0m\n'}
+[2.772632] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[2.798611] (location_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/gps_fix__type_support.cpp.o\x1b[0m\n'}
+[2.804186] (-) TimerEvent: {}
+[2.840940] (location_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/pixel_point__type_support.cpp.o\x1b[0m\n'}
+[2.844769] (location_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/location_msgs/msg/yaw__type_support.cpp.o\x1b[0m\n'}
+[2.892401] (location_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defect_box__type_support.cpp.o\x1b[0m\n'}
+[2.904293] (-) TimerEvent: {}
+[2.940280] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.964162] (location_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/gps_fix__type_support.c.o\x1b[0m\n'}
+[2.975511] (location_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/defects__type_support.cpp.o\x1b[0m\n'}
+[3.004416] (-) TimerEvent: {}
+[3.028033] (location_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/location_msgs/msg/yaw__type_support.cpp.o\x1b[0m\n'}
+[3.045606] (location_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/pixel_point__type_support.cpp.o\x1b[0m\n'}
+[3.056693] (location_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/pixel_point__type_support.c.o\x1b[0m\n'}
+[3.091096] (location_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.104530] (-) TimerEvent: {}
+[3.105162] (location_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defect_box__type_support.c.o\x1b[0m\n'}
+[3.186055] (location_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/defects__type_support.c.o\x1b[0m\n'}
+[3.197326] (location_msgs) StdoutLine: {'line': b'[ 53%] Built target location_msgs__rosidl_typesupport_c\n'}
+[3.200279] (location_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/location_msgs/msg/detail/dds_fastrtps/yaw__type_support.cpp.o\x1b[0m\n'}
+[3.204652] (-) TimerEvent: {}
+[3.207529] (location_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/location_msgs/msg/detail/yaw__type_support.c.o\x1b[0m\n'}
+[3.210010] (location_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.228656] (location_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/defect_box__type_support.cpp.o\x1b[0m\n'}
+[3.246305] (location_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking C shared library liblocation_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.249717] (location_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/defects__type_support.cpp.o\x1b[0m\n'}
+[3.292592] (location_msgs) StdoutLine: {'line': b'[ 63%] Built target location_msgs__rosidl_typesupport_cpp\n'}
+[3.303417] (location_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/location_msgs/msg/detail/yaw__type_support.cpp.o\x1b[0m\n'}
+[3.304749] (-) TimerEvent: {}
+[3.350816] (location_msgs) StdoutLine: {'line': b'[ 65%] Built target location_msgs__rosidl_typesupport_introspection_c\n'}
+[3.404876] (-) TimerEvent: {}
+[3.505195] (-) TimerEvent: {}
+[3.564680] (location_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.596053] (location_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.605295] (-) TimerEvent: {}
+[3.640447] (location_msgs) StdoutLine: {'line': b'[ 68%] Built target location_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[3.649190] (location_msgs) StdoutLine: {'line': b'[ 69%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.658683] (location_msgs) StdoutLine: {'line': b'[ 69%] Built target location_msgs__rosidl_typesupport_introspection_cpp\n'}
+[3.705385] (-) TimerEvent: {}
+[3.805653] (-) TimerEvent: {}
+[3.888789] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[3.903394] (location_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/gps_fix__type_support_c.cpp.o\x1b[0m\n'}
+[3.904071] (location_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp.o\x1b[0m\n'}
+[3.904301] (location_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o\x1b[0m\n'}
+[3.904427] (location_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__type_support_c.cpp.o\x1b[0m\n'}
+[3.905727] (-) TimerEvent: {}
+[3.909781] (location_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o\x1b[0m\n'}
+[4.005858] (-) TimerEvent: {}
+[4.106376] (-) TimerEvent: {}
+[4.206814] (-) TimerEvent: {}
+[4.291415] (location_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.306915] (-) TimerEvent: {}
+[4.358407] (location_msgs) StdoutLine: {'line': b'[ 79%] Built target location_msgs__rosidl_typesupport_fastrtps_c\n'}
+[4.365392] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs\x1b[0m\n'}
+[4.372749] (location_msgs) StdoutLine: {'line': b'[ 79%] Built target location_msgs\n'}
+[4.380486] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__py\x1b[0m\n'}
+[4.388356] (location_msgs) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[4.407033] (-) TimerEvent: {}
+[4.507264] (-) TimerEvent: {}
+[4.607512] (-) TimerEvent: {}
+[4.707760] (-) TimerEvent: {}
+[4.807977] (-) TimerEvent: {}
+[4.906821] (location_msgs) StdoutLine: {'line': b'[ 80%] Built target location_msgs__py\n'}
+[4.908054] (-) TimerEvent: {}
+[4.914037] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__python\x1b[0m\n'}
+[4.933981] (location_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_yaw_s.c.o\x1b[0m\n'}
+[4.934260] (location_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_defect_box_s.c.o\x1b[0m\n'}
+[4.934342] (location_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_gps_fix_s.c.o\x1b[0m\n'}
+[4.934405] (location_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_pixel_point_s.c.o\x1b[0m\n'}
+[4.934466] (location_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/location_msgs__python.dir/rosidl_generator_py/location_msgs/msg/_defects_s.c.o\x1b[0m\n'}
+[5.008175] (-) TimerEvent: {}
+[5.036538] (location_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/location_msgs/liblocation_msgs__python.so\x1b[0m\n'}
+[5.069382] (location_msgs) StdoutLine: {'line': b'[ 90%] Built target location_msgs__python\n'}
+[5.076632] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[5.076849] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[5.076922] (location_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target location_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[5.091325] (location_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[5.093056] (location_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[5.094924] (location_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/location_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[5.108263] (-) TimerEvent: {}
+[5.158954] (location_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.188061] (location_msgs) StdoutLine: {'line': b'[ 96%] Built target location_msgs__rosidl_typesupport_c__pyext\n'}
+[5.192070] (location_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.196549] (location_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/location_msgs/location_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.208363] (-) TimerEvent: {}
+[5.221173] (location_msgs) StdoutLine: {'line': b'[100%] Built target location_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[5.247738] (location_msgs) StdoutLine: {'line': b'[100%] Built target location_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[5.256517] (location_msgs) CommandEnded: {'returncode': 0}
+[5.308477] (-) TimerEvent: {}
+[5.324020] (location_msgs) JobProgress: {'identifier': 'location_msgs', 'progress': 'install'}
+[5.331762] (location_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/xs/UAV/ROS2/build/location_msgs'], 'cwd': '/home/xs/UAV/ROS2/build/location_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('C_INCLUDE_PATH', '/usr/include/libusb-1.0:/usr/include/libusb-1.0:'), ('no_proxy', 'localhost, 127.0.0.1'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'xs'), ('SSH_CLIENT', '192.168.137.1 39134 22'), ('LC_TIME', 'zh_CN.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/xs/UAV/ROS2/install/location_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('BROWSER', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/xs'), ('OLDPWD', '/home/xs'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-070a5ef4-0883-4240-9194-14ab0430a48b.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://192.168.137.1:5555'), ('COLCON_PREFIX_PATH', '/home/xs/UAV/ROS2/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'xs'), ('http_proxy', 'http://192.168.137.1:5555'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('PAPERSIZE', 'a4'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'zh_CN.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a9dec91ba3.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/xs/UAV/ROS2/install/uav_patrol:/home/xs/UAV/ROS2/install/location_msgs:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/xs/UAV/ROS2/build/location_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.137.1 39134 192.168.137.2 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xs/UAV/ROS2/install/location_msgs:/home/xs/UAV/ROS2/install/uav_patrol:/opt/ros/galactic')]), 'shell': False}
+[5.339075] (location_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.339230] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/rosidl_interfaces/location_msgs\n'}
+[5.339316] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs\n'}
+[5.339396] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg\n'}
+[5.339441] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/yaw.h\n'}
+[5.339504] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defect_box.h\n'}
+[5.339548] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defects.h\n'}
+[5.339590] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail\n'}
+[5.339653] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__functions.c\n'}
+[5.339730] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__struct.h\n'}
+[5.339773] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.h\n'}
+[5.339815] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.h\n'}
+[5.339897] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__functions.h\n'}
+[5.339956] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__struct.h\n'}
+[5.339998] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__struct.h\n'}
+[5.340056] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__struct.h\n'}
+[5.340097] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__functions.h\n'}
+[5.340159] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.h\n'}
+[5.340233] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__functions.c\n'}
+[5.340275] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__functions.h\n'}
+[5.340317] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.h\n'}
+[5.340392] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__functions.c\n'}
+[5.340434] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__functions.h\n'}
+[5.340476] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__functions.c\n'}
+[5.340544] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__functions.c\n'}
+[5.340592] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__struct.h\n'}
+[5.340660] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.h\n'}
+[5.340704] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__functions.h\n'}
+[5.340769] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.340822] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/gps_fix.h\n'}
+[5.340861] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/pixel_point.h\n'}
+[5.340923] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/library_path.sh\n'}
+[5.340999] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/library_path.dsv\n'}
+[5.341129] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_generator_c.so\n'}
+[5.341340] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_generator_c.so" to ""\n'}
+[5.341410] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs\n'}
+[5.341453] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg\n'}
+[5.341530] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail\n'}
+[5.341572] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_c.h\n'}
+[5.341616] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_c.h\n'}
+[5.341682] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_c.h\n'}
+[5.341747] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h\n'}
+[5.341789] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_c.h\n'}
+[5.341852] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.341917] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[5.342115] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[5.342169] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs\n'}
+[5.342243] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg\n'}
+[5.342285] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail\n'}
+[5.342327] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.342404] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.342446] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.342488] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.342550] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.342618] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/dds_fastrtps\n'}
+[5.342659] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.342723] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.342941] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[5.343012] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs\n'}
+[5.343056] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg\n'}
+[5.343118] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.343193] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail\n'}
+[5.343234] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.c\n'}
+[5.343277] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.c\n'}
+[5.343345] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_c.h\n'}
+[5.343405] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_c.h\n'}
+[5.343448] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_c.h\n'}
+[5.343517] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.c\n'}
+[5.343559] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.c\n'}
+[5.343621] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_c.h\n'}
+[5.343691] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_c.h\n'}
+[5.343732] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.c\n'}
+[5.343791] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_c.so\n'}
+[5.344355] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[5.344416] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_c.so\n'}
+[5.344593] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_c.so" to ""\n'}
+[5.344663] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs\n'}
+[5.344706] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg\n'}
+[5.344776] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/yaw.hpp\n'}
+[5.344819] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/pixel_point.hpp\n'}
+[5.344887] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defects.hpp\n'}
+[5.344931] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/defect_box.hpp\n'}
+[5.345003] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail\n'}
+[5.345045] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__builder.hpp\n'}
+[5.345087] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__traits.hpp\n'}
+[5.345155] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__builder.hpp\n'}
+[5.345208] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__struct.hpp\n'}
+[5.345260] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__builder.hpp\n'}
+[5.345303] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__traits.hpp\n'}
+[5.345372] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__struct.hpp\n'}
+[5.345418] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__struct.hpp\n'}
+[5.345487] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__traits.hpp\n'}
+[5.345531] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__struct.hpp\n'}
+[5.345591] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__struct.hpp\n'}
+[5.345662] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__traits.hpp\n'}
+[5.345705] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__builder.hpp\n'}
+[5.345773] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__traits.hpp\n'}
+[5.345816] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__builder.hpp\n'}
+[5.345879] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/gps_fix.hpp\n'}
+[5.345954] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs\n'}
+[5.346006] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg\n'}
+[5.346047] (location_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail\n'}
+[5.346088] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__type_support.cpp\n'}
+[5.346163] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__type_support.cpp\n'}
+[5.346204] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/pixel_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.346245] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__type_support.cpp\n'}
+[5.346320] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/gps_fix__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.346362] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defect_box__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.346418] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__type_support.cpp\n'}
+[5.346470] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/yaw__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.346511] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__type_support.cpp\n'}
+[5.346573] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/include/location_msgs/msg/detail/defects__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.346671] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[5.347010] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[5.347098] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_cpp.so\n'}
+[5.347367] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[5.347433] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/pythonpath.sh\n'}
+[5.347536] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/pythonpath.dsv\n'}
+[5.347691] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/__init__.py\n'}
+[5.369229] (location_msgs) StdoutLine: {'line': b"Compiling '/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/__init__.py'...\n"}
+[5.371856] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg\n'}
+[5.372041] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_gps_fix.py\n'}
+[5.372122] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_yaw.py\n'}
+[5.372182] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defect_box_s.c\n'}
+[5.372240] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_pixel_point_s.c\n'}
+[5.372318] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/__init__.py\n'}
+[5.372399] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defects_s.c\n'}
+[5.372445] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defect_box.py\n'}
+[5.372489] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_yaw_s.c\n'}
+[5.372532] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_defects.py\n'}
+[5.372586] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_pixel_point.py\n'}
+[5.372642] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/msg/_gps_fix_s.c\n'}
+[5.372715] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[5.372876] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[5.373035] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[5.373351] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[5.373483] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[5.373789] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages/location_msgs/location_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[5.373852] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__python.so\n'}
+[5.374140] (location_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/xs/UAV/ROS2/install/location_msgs/lib/liblocation_msgs__python.so" to ""\n'}
+[5.374228] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/GpsFix.idl\n'}
+[5.374331] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/PixelPoint.idl\n'}
+[5.374430] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/DefectBox.idl\n'}
+[5.374525] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Defects.idl\n'}
+[5.374593] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Yaw.idl\n'}
+[5.374660] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/GpsFix.msg\n'}
+[5.374720] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/PixelPoint.msg\n'}
+[5.374783] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/DefectBox.msg\n'}
+[5.374848] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Defects.msg\n'}
+[5.374911] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/msg/Yaw.msg\n'}
+[5.375008] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/package_run_dependencies/location_msgs\n'}
+[5.375099] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/parent_prefix_path/location_msgs\n'}
+[5.375172] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/ament_prefix_path.sh\n'}
+[5.375239] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/ament_prefix_path.dsv\n'}
+[5.375307] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/path.sh\n'}
+[5.375373] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/environment/path.dsv\n'}
+[5.375438] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.bash\n'}
+[5.375504] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.sh\n'}
+[5.375569] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.zsh\n'}
+[5.375632] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/local_setup.dsv\n'}
+[5.375695] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.dsv\n'}
+[5.375783] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/ament_index/resource_index/packages/location_msgs\n'}
+[5.375907] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cExport.cmake\n'}
+[5.376103] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[5.376212] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.376283] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[5.376379] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cExport.cmake\n'}
+[5.376449] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[5.376550] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_generator_cppExport.cmake\n'}
+[5.376667] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.376732] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[5.376827] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[5.376899] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[5.376966] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[5.377032] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.377147] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.377226] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.377312] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.377394] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.377479] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.377569] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgsConfig.cmake\n'}
+[5.377630] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/cmake/location_msgsConfig-version.cmake\n'}
+[5.377711] (location_msgs) StdoutLine: {'line': b'-- Installing: /home/xs/UAV/ROS2/install/location_msgs/share/location_msgs/package.xml\n'}
+[5.379352] (location_msgs) CommandEnded: {'returncode': 0}
+[5.408605] (-) TimerEvent: {}
+[5.463075] (location_msgs) JobEnded: {'identifier': 'location_msgs', 'rc': 0}
+[5.463883] (uav_patrol) JobStarted: {'identifier': 'uav_patrol'}
+[5.508736] (-) TimerEvent: {}
+[5.609079] (-) TimerEvent: {}
+[5.709468] (-) TimerEvent: {}
+[5.809768] (-) TimerEvent: {}
+[5.910085] (-) TimerEvent: {}
+[5.950502] (uav_patrol) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/uav_patrol', 'build', '--build-base', '/home/xs/UAV/ROS2/build/uav_patrol/build', 'install', '--record', '/home/xs/UAV/ROS2/build/uav_patrol/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/xs/UAV/ROS2/uav_patrol', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'C_INCLUDE_PATH': '/usr/include/libusb-1.0:/usr/include/libusb-1.0:', 'no_proxy': 'localhost, 127.0.0.1', 'LANGUAGE': 'zh_CN:en_US:en', 'USER': 'xs', 'SSH_CLIENT': '192.168.137.1 39134 22', 'LC_TIME': 'zh_CN.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/xs/UAV/ROS2/install/location_msgs/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib', 'BROWSER': '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/xs', 'OLDPWD': '/home/xs', 'TERM_PROGRAM_VERSION': '1.89.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-070a5ef4-0883-4240-9194-14ab0430a48b.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'https_proxy': 'http://192.168.137.1:5555', 'COLCON_PREFIX_PATH': '/home/xs/UAV/ROS2/install', 'ROS_DISTRO': 'galactic', 'LOGNAME': 'xs', 'http_proxy': 'http://192.168.137.1:5555', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/xs/.vscode-server/cli/servers/Stable-dc96b837cf6bb4af9cd736aa3af08cf8279f7685/server/bin/remote-cli:/home/xs/.local/bin:/opt/ros/galactic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PAPERSIZE': 'a4', 'LC_ADDRESS': 'zh_CN.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'zh_CN.UTF-8', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-a9dec91ba3.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/xs/UAV/ROS2/install/uav_patrol:/home/xs/UAV/ROS2/install/location_msgs:/opt/ros/galactic', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/xs/UAV/ROS2/build/uav_patrol', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 39134 192.168.137.2 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/xs/UAV/ROS2/build/uav_patrol/prefix_override:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/location_msgs/lib/python3.8/site-packages:/home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/xs/UAV/ROS2/install/location_msgs'}, 'shell': False}
+[6.010262] (-) TimerEvent: {}
+[6.109015] (uav_patrol) StdoutLine: {'line': b'running egg_info\n'}
+[6.109280] (uav_patrol) StdoutLine: {'line': b'creating ../build/uav_patrol/uav_patrol.egg-info\n'}
+[6.109409] (uav_patrol) StdoutLine: {'line': b'writing ../build/uav_patrol/uav_patrol.egg-info/PKG-INFO\n'}
+[6.109482] (uav_patrol) StdoutLine: {'line': b'writing dependency_links to ../build/uav_patrol/uav_patrol.egg-info/dependency_links.txt\n'}
+[6.109572] (uav_patrol) StdoutLine: {'line': b'writing entry points to ../build/uav_patrol/uav_patrol.egg-info/entry_points.txt\n'}
+[6.109637] (uav_patrol) StdoutLine: {'line': b'writing requirements to ../build/uav_patrol/uav_patrol.egg-info/requires.txt\n'}
+[6.109698] (uav_patrol) StdoutLine: {'line': b'writing top-level names to ../build/uav_patrol/uav_patrol.egg-info/top_level.txt\n'}
+[6.110329] (-) TimerEvent: {}
+[6.110524] (uav_patrol) StdoutLine: {'line': b"writing manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'\n"}
+[6.134011] (uav_patrol) StdoutLine: {'line': b"reading manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'\n"}
+[6.134537] (uav_patrol) StdoutLine: {'line': b"writing manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'\n"}
+[6.134621] (uav_patrol) StdoutLine: {'line': b'running build\n'}
+[6.134672] (uav_patrol) StdoutLine: {'line': b'running build_py\n'}
+[6.134738] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/build/uav_patrol/build\n'}
+[6.134811] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/build/uav_patrol/build/lib\n'}
+[6.134855] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol\n'}
+[6.134897] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol\n'}
+[6.134958] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/ctrl_relayer\n'}
+[6.135026] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/ctrl_relayer/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/ctrl_relayer\n'}
+[6.135081] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/ctrl_relayer/cmd_subscriber.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/ctrl_relayer\n'}
+[6.135123] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler\n'}
+[6.135181] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/checksum_utils.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler\n'}
+[6.135240] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/driver.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler\n'}
+[6.135310] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/parser.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler\n'}
+[6.135351] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/gps_simulator.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler\n'}
+[6.135405] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/gps_handler.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler\n'}
+[6.135445] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler\n'}
+[6.135504] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes\n'}
+[6.135563] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/nodes/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes\n'}
+[6.135622] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/nodes/nmea_serial_driver.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes\n'}
+[6.135681] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/gps_handler/nodes/gps_path.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes\n'}
+[6.135748] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/object_detector\n'}
+[6.135791] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/object_detector/dft_publisher.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/object_detector\n'}
+[6.135849] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/object_detector/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/object_detector\n'}
+[6.135915] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter\n'}
+[6.135977] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/tf_converter/uav2cam_broadcaster.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter\n'}
+[6.136036] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/tf_converter/world2uav_broadcaster.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter\n'}
+[6.136097] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/tf_converter/__init__.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter\n'}
+[6.136138] (uav_patrol) StdoutLine: {'line': b'copying uav_patrol/tf_converter/tf_converter.py -> /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter\n'}
+[6.136383] (uav_patrol) StdoutLine: {'line': b'running install\n'}
+[6.136974] (uav_patrol) StdoutLine: {'line': b'running install_lib\n'}
+[6.137667] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol\n'}
+[6.137732] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler\n'}
+[6.137792] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/nodes\n'}
+[6.137987] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes/__init__.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/nodes\n'}
+[6.138045] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes/nmea_serial_driver.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/nodes\n'}
+[6.138109] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/nodes/gps_path.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/nodes\n'}
+[6.138152] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/checksum_utils.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler\n'}
+[6.138193] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/driver.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler\n'}
+[6.138263] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/parser.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler\n'}
+[6.138305] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/gps_simulator.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler\n'}
+[6.138346] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/gps_handler.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler\n'}
+[6.138387] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_handler/__init__.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler\n'}
+[6.138429] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/__init__.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol\n'}
+[6.138487] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/object_detector\n'}
+[6.138569] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/object_detector/dft_publisher.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/object_detector\n'}
+[6.138622] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/object_detector/__init__.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/object_detector\n'}
+[6.138663] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter\n'}
+[6.138704] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/uav2cam_broadcaster.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter\n'}
+[6.138746] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/world2uav_broadcaster.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter\n'}
+[6.138787] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/__init__.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter\n'}
+[6.138828] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/tf_converter.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter\n'}
+[6.138885] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/ctrl_relayer\n'}
+[6.138944] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/ctrl_relayer/__init__.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/ctrl_relayer\n'}
+[6.138984] (uav_patrol) StdoutLine: {'line': b'copying /home/xs/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/ctrl_relayer/cmd_subscriber.py -> /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/ctrl_relayer\n'}
+[6.139056] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/nodes/__init__.py to __init__.cpython-38.pyc\n'}
+[6.139859] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/nodes/nmea_serial_driver.py to nmea_serial_driver.cpython-38.pyc\n'}
+[6.140295] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/nodes/gps_path.py to gps_path.cpython-38.pyc\n'}
+[6.140839] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/checksum_utils.py to checksum_utils.cpython-38.pyc\n'}
+[6.140989] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/driver.py to driver.cpython-38.pyc\n'}
+[6.142205] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/parser.py to parser.cpython-38.pyc\n'}
+[6.142778] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/gps_simulator.py to gps_simulator.cpython-38.pyc\n'}
+[6.143360] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/gps_handler.py to gps_handler.cpython-38.pyc\n'}
+[6.143884] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/gps_handler/__init__.py to __init__.cpython-38.pyc\n'}
+[6.144038] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/__init__.py to __init__.cpython-38.pyc\n'}
+[6.144132] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/object_detector/dft_publisher.py to dft_publisher.cpython-38.pyc\n'}
+[6.144909] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/object_detector/__init__.py to __init__.cpython-38.pyc\n'}
+[6.144965] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter/uav2cam_broadcaster.py to uav2cam_broadcaster.cpython-38.pyc\n'}
+[6.145360] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter/world2uav_broadcaster.py to world2uav_broadcaster.cpython-38.pyc\n'}
+[6.145417] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter/__init__.py to __init__.cpython-38.pyc\n'}
+[6.145471] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/tf_converter/tf_converter.py to tf_converter.cpython-38.pyc\n'}
+[6.146912] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/ctrl_relayer/__init__.py to __init__.cpython-38.pyc\n'}
+[6.146971] (uav_patrol) StdoutLine: {'line': b'byte-compiling /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol/ctrl_relayer/cmd_subscriber.py to cmd_subscriber.cpython-38.pyc\n'}
+[6.147232] (uav_patrol) StdoutLine: {'line': b'running install_data\n'}
+[6.147328] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/share/ament_index\n'}
+[6.147514] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/share/ament_index/resource_index\n'}
+[6.147602] (uav_patrol) StdoutLine: {'line': b'creating /home/xs/UAV/ROS2/install/uav_patrol/share/ament_index/resource_index/packages\n'}
+[6.147679] (uav_patrol) StdoutLine: {'line': b'copying resource/uav_patrol -> /home/xs/UAV/ROS2/install/uav_patrol/share/ament_index/resource_index/packages\n'}
+[6.147784] (uav_patrol) StdoutLine: {'line': b'copying package.xml -> /home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol\n'}
+[6.147861] (uav_patrol) StdoutLine: {'line': b'copying launch/uav_patrol.launch.py -> /home/xs/UAV/ROS2/install/uav_patrol/share/uav_patrol\n'}
+[6.147937] (uav_patrol) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.149451] (uav_patrol) StdoutLine: {'line': b'Copying ../build/uav_patrol/uav_patrol.egg-info to /home/xs/UAV/ROS2/install/uav_patrol/lib/python3.8/site-packages/uav_patrol-0.0.0-py3.8.egg-info\n'}
+[6.149931] (uav_patrol) StdoutLine: {'line': b'running install_scripts\n'}
+[6.162202] (uav_patrol) StdoutLine: {'line': b'Installing cmd_subscriber script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol\n'}
+[6.162412] (uav_patrol) StdoutLine: {'line': b'Installing dft_publisher script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol\n'}
+[6.162507] (uav_patrol) StdoutLine: {'line': b'Installing gps_handler script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol\n'}
+[6.162629] (uav_patrol) StdoutLine: {'line': b'Installing gps_simulator script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol\n'}
+[6.162713] (uav_patrol) StdoutLine: {'line': b'Installing nmea_serial_driver script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol\n'}
+[6.162785] (uav_patrol) StdoutLine: {'line': b'Installing tf_converter script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol\n'}
+[6.162857] (uav_patrol) StdoutLine: {'line': b'Installing uav2cam_broadcaster script to /home/xs/UAV/ROS2/install/uav_patrol/lib/uav_patrol\n'}
+[6.163238] (uav_patrol) StdoutLine: {'line': b"writing list of installed files to '/home/xs/UAV/ROS2/build/uav_patrol/install.log'\n"}
+[6.179584] (uav_patrol) CommandEnded: {'returncode': 0}
+[6.185007] (uav_patrol) JobEnded: {'identifier': 'uav_patrol', 'rc': 0}
+[6.185528] (-) EventReactorShutdown: {}
