@@ -1,0 +1,69 @@
+id: 14
+gps_fix:
+  header:
+    stamp:
+      sec: 1722501408
+      nanosec: 868490200
+    frame_id: gps
+  status:
+    status: 0
+    service: 1
+  latitude: 31.309489370000037
+  longitude: 120.65457368999968
+  altitude: 10.0
+  position_covariance:
+  - 51.84
+  - 0.0
+  - 0.0
+  - 0.0
+  - 51.84
+  - 0.0
+  - 0.0
+  - 0.0
+  - 829.44
+  position_covariance_type: 1
+yaw: 90.31
+defects:
+  img_width: 640.0
+  img_height: 512.0
+  defects:
+  - center:
+      x: 491.55010986328125
+      y: 448.8394775390625
+    top_left:
+      x: 473.53521728515625
+      y: 430.8306884765625
+    top_right:
+      x: 509.56500244140625
+      y: 430.8306884765625
+    bottom_left:
+      x: 473.53521728515625
+      y: 466.8482666015625
+    bottom_right:
+      x: 509.56500244140625
+      y: 466.8482666015625
+
+----------------------------------------------------------- 
+DEFECT POSITION IN IMAGE: 
+center:
+  x: 491.55010986328125
+  y: 448.8394775390625
+top_left:
+  x: 473.53521728515625
+  y: 430.8306884765625
+top_right:
+  x: 509.56500244140625
+  y: 430.8306884765625
+bottom_left:
+  x: 473.53521728515625
+  y: 466.8482666015625
+bottom_right:
+  x: 509.56500244140625
+  y: 466.8482666015625
+
+DEFECT POSITION IN WORLD: 
+(array([120.65457699]), array([31.30949349]), 10.0)
+
+DISTANCE FROM THE START POINT: 
+(217.27856926622624, 217.45289767419874, 0.0, 307.40159296870087)
+

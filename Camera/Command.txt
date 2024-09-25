@@ -1,1 +1,1 @@
-gcc -I./include Demo.c libbmp.c -L./lib -lGuideSCUSB2 -lGuideMT -lusb-1.0 -lpthread -lm -ludev -lSDL -o Demo
+gcc -I./include Demo.c -L./lib -lGuideSCUSB2 -lGuideMT -lusb-1.0 -lpthread -lm -ludev -lSDL -lrt -o Demo

@@ -43,6 +43,7 @@ size_t get_serialized_size_location_msgs__msg__DefectBox(
 
 size_t max_serialized_size_location_msgs__msg__DefectBox(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -60,11 +61,6 @@ static bool _Defects__cdr_serialize(
     return false;
   }
   const _Defects__ros_msg_type * ros_message = static_cast<const _Defects__ros_msg_type *>(untyped_ros_message);
-  // Field name: defect_id
-  {
-    cdr << ros_message->defect_id;
-  }
-
   // Field name: img_width
   {
     cdr << ros_message->img_width;
@@ -106,11 +102,6 @@ static bool _Defects__cdr_deserialize(
     return false;
   }
   _Defects__ros_msg_type * ros_message = static_cast<_Defects__ros_msg_type *>(untyped_ros_message);
-  // Field name: defect_id
-  {
-    cdr >> ros_message->defect_id;
-  }
-
   // Field name: img_width
   {
     cdr >> ros_message->img_width;
@@ -165,12 +156,6 @@ size_t get_serialized_size_location_msgs__msg__Defects(
   (void)padding;
   (void)wchar_size;
 
-  // field.name defect_id
-  {
-    size_t item_size = sizeof(ros_message->defect_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // field.name img_width
   {
     size_t item_size = sizeof(ros_message->img_width);
@@ -209,27 +194,26 @@ static uint32_t _Defects__get_serialized_size(const void * untyped_ros_message)
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_location_msgs
 size_t max_serialized_size_location_msgs__msg__Defects(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
 
-  // member: defect_id
-  {
-    size_t array_size = 1;
+  full_bounded = true;
+  is_plain = true;
 
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
   // member: img_width
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
@@ -237,6 +221,7 @@ size_t max_serialized_size_location_msgs__msg__Defects(
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint32_t);
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
@@ -244,24 +229,55 @@ size_t max_serialized_size_location_msgs__msg__Defects(
   {
     size_t array_size = 0;
     full_bounded = false;
+    is_plain = false;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
         max_serialized_size_location_msgs__msg__DefectBox(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = location_msgs__msg__Defects;
+    is_plain =
+      (
+      offsetof(DataType, defects) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
-static size_t _Defects__max_serialized_size(bool & full_bounded)
+static size_t _Defects__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_location_msgs__msg__Defects(
-    full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_location_msgs__msg__Defects(
+    full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 

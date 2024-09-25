@@ -32,8 +32,6 @@ cdr_serialize(
   const location_msgs::msg::Yaw & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: yaw_id
-  cdr << ros_message.yaw_id;
   // Member: yaw
   cdr << ros_message.yaw;
   return true;
@@ -45,9 +43,6 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   location_msgs::msg::Yaw & ros_message)
 {
-  // Member: yaw_id
-  cdr >> ros_message.yaw_id;
-
   // Member: yaw
   cdr >> ros_message.yaw;
 
@@ -67,12 +62,6 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: yaw_id
-  {
-    size_t item_size = sizeof(ros_message.yaw_id);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // Member: yaw
   {
     size_t item_size = sizeof(ros_message.yaw);
@@ -87,34 +76,45 @@ size_t
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_location_msgs
 max_serialized_size_Yaw(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
 
+  full_bounded = true;
+  is_plain = true;
 
-  // Member: yaw_id
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
 
   // Member: yaw
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint64_t);
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = location_msgs::msg::Yaw;
+    is_plain =
+      (
+      offsetof(DataType, yaw) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
 static bool _Yaw__cdr_serialize(
@@ -146,9 +146,18 @@ static uint32_t _Yaw__get_serialized_size(
   return static_cast<uint32_t>(get_serialized_size(*typed_message, 0));
 }
 
-static size_t _Yaw__max_serialized_size(bool & full_bounded)
+static size_t _Yaw__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_Yaw(full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_Yaw(full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 static message_type_support_callbacks_t _Yaw__callbacks = {

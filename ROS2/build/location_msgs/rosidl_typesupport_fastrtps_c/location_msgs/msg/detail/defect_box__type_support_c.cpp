@@ -43,6 +43,7 @@ size_t get_serialized_size_location_msgs__msg__PixelPoint(
 
 size_t max_serialized_size_location_msgs__msg__PixelPoint(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 const rosidl_message_type_support_t *
@@ -263,25 +264,38 @@ static uint32_t _DefectBox__get_serialized_size(const void * untyped_ros_message
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_location_msgs
 size_t max_serialized_size_location_msgs__msg__DefectBox(
   bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment)
 {
   size_t initial_alignment = current_alignment;
 
   const size_t padding = 4;
   const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
   (void)padding;
   (void)wchar_size;
-  (void)full_bounded;
+
+  full_bounded = true;
+  is_plain = true;
 
   // member: center
   {
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
         max_serialized_size_location_msgs__msg__PixelPoint(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: top_left
@@ -289,10 +303,18 @@ size_t max_serialized_size_location_msgs__msg__DefectBox(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
         max_serialized_size_location_msgs__msg__PixelPoint(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: top_right
@@ -300,10 +322,18 @@ size_t max_serialized_size_location_msgs__msg__DefectBox(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
         max_serialized_size_location_msgs__msg__PixelPoint(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: bottom_left
@@ -311,10 +341,18 @@ size_t max_serialized_size_location_msgs__msg__DefectBox(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
         max_serialized_size_location_msgs__msg__PixelPoint(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
   // member: bottom_right
@@ -322,20 +360,50 @@ size_t max_serialized_size_location_msgs__msg__DefectBox(
     size_t array_size = 1;
 
 
+    last_member_size = 0;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
         max_serialized_size_location_msgs__msg__PixelPoint(
-        full_bounded, current_alignment);
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
     }
   }
 
-  return current_alignment - initial_alignment;
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = location_msgs__msg__DefectBox;
+    is_plain =
+      (
+      offsetof(DataType, bottom_right) +
+      last_member_size
+      ) == ret_val;
+  }
+
+  return ret_val;
 }
 
-static size_t _DefectBox__max_serialized_size(bool & full_bounded)
+static size_t _DefectBox__max_serialized_size(char & bounds_info)
 {
-  return max_serialized_size_location_msgs__msg__DefectBox(
-    full_bounded, 0);
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
+
+  ret_val = max_serialized_size_location_msgs__msg__DefectBox(
+    full_bounded, is_plain, 0);
+
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 

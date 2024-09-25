@@ -2,8 +2,8 @@ msg/DefectBox.idl
 msg/DefectBox.msg
 msg/Defects.idl
 msg/Defects.msg
-msg/GpsFix.idl
-msg/GpsFix.msg
+msg/Mix.idl
+msg/Mix.msg
 msg/PixelPoint.idl
 msg/PixelPoint.msg
 msg/Yaw.idl

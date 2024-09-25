@@ -1,2 +1,0 @@
-int32 gps_id
-sensor_msgs/NavSatFix gps_fix

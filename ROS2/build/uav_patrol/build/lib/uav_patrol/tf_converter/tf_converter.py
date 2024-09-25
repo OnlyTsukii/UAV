@@ -6,23 +6,20 @@ import numpy
 import os
 import shutil
 import json
+import rclpy.duration
+import rclpy.time
 
 from copy import deepcopy
 from geopy.distance import geodesic
 from queue import Queue
-import rclpy.duration
 from rclpy.node import Node
-from location_msgs.msg import Defects, DefectBox, GpsFix, Yaw
+from location_msgs.msg import Mix
 from typing import Tuple, List
-import rclpy.time
 from tf2_ros import TransformException
 from tf2_ros.buffer import Buffer
 from tf2_ros.transform_listener import TransformListener
-from sensor_msgs.msg import NavSatFix
 from rosidl_runtime_py.convert import message_to_yaml
 
-
-RESULTS_PREFIX = '/home/xs/UAV/Results'
 
 # unit: m 
 SOOCHOW_GROUND_ALTITUDE = 7
@@ -37,130 +34,71 @@ CAM_VER_ANGLE   = 26.6
 LAT_PER_METER = 0.000009019
 LON_PER_METER = 0.000010503
 
+RESULTS_FILE_PREFIX = "/home/x650/UAV/Results"
+LOCATIONS_FILE_PREFIX = "/locations"
+
 
 class TF_Converter(Node):
     def __init__(self):
         super().__init__("tf_converter")
 
-        self.dft_subscriber = self.create_subscription(Defects, "dfts", self.dft_callback, 10)
-        self.gps_subscriber = self.create_subscription(GpsFix, "gps", self.gps_callback, 10)
-        self.yaw_subscriber = self.create_subscription(Yaw, "yaw", self.yaw_callback, 10)
+        self.mix_sub = self.create_subscription(Mix, "/mix", self.mix_callback, 10)
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
-        self.queue = Queue()
-        self.map = {}
-        self.mutex = threading.Lock()
+        self.msg_queue = Queue()
         
         self.init_longitude = 0
         self.init_latitude = 0
         self.init_altitude = 0
-        self.gps_count = 0
 
-        self.directory = None
+        self.initialized = False
 
-    def get_directory(self) -> str:
+        self.rst_path = None
+
+    def mix_callback(self, msg: Mix):
+        self.rst_path = self.init_dir()
+
+        self.get_logger().info("Got a mix message from publisher")
+        self.msg_queue.put(msg)
+
+        if self.initialized == False:
+            self.init_altitude = msg.gps_fix.altitude
+            self.init_latitude = msg.gps_fix.latitude
+            self.init_longitude = msg.gps_fix.longitude
+            self.initialized = True
+
+    def init_dir(self) -> str:
         try:
-            existing_numbers = [int(name[3:]) for name in os.listdir(RESULTS_PREFIX) if name.startswith("run")]
-            max_number = max(existing_numbers) if existing_numbers else -1
-            path = os.path.join(RESULTS_PREFIX, "run{}".format(max_number), "locations")
+            existing_numbers = [int(name[3:]) for name in os.listdir(RESULTS_FILE_PREFIX) if name.startswith("run")]
+            max_number = max(existing_numbers) if existing_numbers else 0
 
-            if not os.path.exists(path):
-                os.mkdir(path)
-
+            path = os.path.join(RESULTS_FILE_PREFIX, "run{}".format(max_number))
             return path
-
+        
         except Exception as e:
-            print("Error:", e)
+            self.get_logger().error(e)
             return None
 
-    def gps_callback(self, msg: GpsFix):
-
-        if self.init_latitude == 0 and self.init_longitude == 0 and self.init_altitude == 0 \
-            and msg.gps_fix.latitude != 0 and msg.gps_fix.longitude != 0:
-
-            # Wait until gps message becomes reliable 
-            self.gps_count += 1
-            if self.gps_count == 6:
-                self.init_longitude = msg.gps_fix.longitude
-                self.init_latitude = msg.gps_fix.latitude
-                self.init_altitude = msg.gps_fix.altitude
-
-                self.get_logger().info(f"Initial gps location has been set.")
-
-        self.mutex.acquire()
-        try:
-            if self.map.get(msg.gps_id) is None:
-                self.map[msg.gps_id] = {'gps': msg}
-            else:
-                if 'dfts' in self.map[msg.gps_id] and 'yaw' in self.map[msg.gps_id]:
-                    dfts_msg = self.map[msg.gps_id]['dfts']
-                    yaw_msg = self.map[msg.gps_id]['yaw']
-                    self.queue.put((msg, dfts_msg, yaw_msg))
-                    del self.map[msg.gps_id]
-                else:
-                    self.map[msg.gps_id]['gps'] = msg
-        finally:
-            self.mutex.release()
-        self.get_logger().info(f"Got a gps message, id: {msg.gps_id}.")
-
-    def dft_callback(self, msg: Defects):
-        self.mutex.acquire()
-        try:
-            if self.map.get(msg.defect_id) is None:
-                self.map[msg.defect_id] = {'dfts': msg}
-            else:
-                if 'gps' in self.map[msg.defect_id] and 'yaw' in self.map[msg.defect_id]:
-                    gps_msg = self.map[msg.defect_id]['gps']
-                    yaw_msg = self.map[msg.defect_id]['yaw']
-                    self.queue.put((gps_msg, msg, yaw_msg))
-                    del self.map[msg.defect_id]
-                else:
-                    self.map[msg.defect_id]['dfts'] = msg
-        finally:
-            self.mutex.release()
-        self.get_logger().info(f"Got a defects message, id: {msg.defect_id}.")
-
-    def yaw_callback(self, msg: Yaw):
-        self.mutex.acquire()
-        try:
-            if self.map.get(msg.yaw_id) is None:
-                self.map[msg.yaw_id] = {'yaw': msg}
-            else:
-                if 'gps' in self.map[msg.yaw_id] and 'dfts' in self.map[msg.yaw_id]:
-                    gps_msg = self.map[msg.yaw_id]['gps']
-                    dfts_msg = self.map[msg.yaw_id]['dfts']
-                    self.queue.put((gps_msg, dfts_msg, msg))
-                    del self.map[msg.yaw_id]
-                else:
-                    self.map[msg.yaw_id]['yaw'] = msg
-        finally:
-            self.mutex.release()
-        self.get_logger().info(f"Got a yaw message, id: {msg.yaw_id}.")
-
     def handle_map(self):
-        while True:
-            if self.queue.empty():
+        while rclpy.ok():
+            if self.msg_queue.empty():
                 time.sleep(1.0)
             else:
-                self.get_logger().info("Got a tuple from queue.")
-                gps_msg, dfts_msg, yaw_msg = self.queue.get()
+                mix = self.msg_queue.get()
 
-                if len(dfts_msg.defects) == 0:
-                    self.get_logger().info('Received a defects message with empty defects.')
-                    continue
-                elif math.isnan(gps_msg.gps_fix.latitude) or math.isnan(gps_msg.gps_fix.longitude):
-                    self.get_logger().info("Got a invalid gps message.")
+                if len(mix.defects.defects) == 0:
+                    self.get_logger().info('Received a mix message with empty defects')
                     continue
 
-                self.get_logger().info("Got a GPS & Defects map, locating...")
-                self.get_logger().info(f"Gps fix: {gps_msg.gps_fix.longitude} {gps_msg.gps_fix.latitude} {gps_msg.gps_fix.altitude}.")
-                self.get_logger().info(f"Defects position: {dfts_msg.defects}.")
-                self.get_logger().info(f"Yaw: {yaw_msg.yaw}")
+                self.get_logger().info("Got a valid mix message, locating...")
+                self.get_logger().info(f"Gps fix: {mix.gps_fix.longitude} {mix.gps_fix.latitude} {mix.gps_fix.altitude}")
+                self.get_logger().info(f"Defects position: {mix.defects}")
+                self.get_logger().info(f"Yaw: {mix.yaw}")
 
                 # _, _, uav_z = self.get_transform(gps_msg)
-                uav_z = gps_msg.gps_fix.altitude
+                uav_z = mix.gps_fix.altitude
 
                 from_frame_rel = 'uav'
                 to_frame_rel = 'camera'
@@ -173,12 +111,16 @@ class TF_Converter(Node):
                         rclpy.time.Time())
                     
                     # Height relative to the solar panel
+                    # NEED TO BE RECACULATED WITH REAL PARAMS !!!
                     height_diff = uav_z + t.transform.translation.z - SOLAR_PANEL_HEIGHT - SOOCHOW_GROUND_ALTITUDE
+                    self.get_logger().info(f"current height: {height_diff}")
+
                     # Calculate defects position relative to camera frame
-                    dfts_rel_pos = self.calc_dfts_pos(height_diff, dfts_msg)
+                    dfts_rel_pos = self.calc_dfts_pos(height_diff, mix.defects)
+                    self.get_logger().info(f"defects relative position: {dfts_rel_pos}")
 
                     # UAV rotation matrix
-                    rot_angle = self.rad(yaw_msg.yaw)
+                    rot_angle = self.rad(mix.yaw)
                     R = numpy.array([
                         [math.cos(rot_angle), -1 * math.sin(rot_angle)],
                         [math.sin(rot_angle), -1 * math.cos(rot_angle)]
@@ -196,19 +138,18 @@ class TF_Converter(Node):
                         # Calculate GPS position of defects
                         offset = numpy.array([uav_x, uav_y]).reshape(-1, 1)
                         target = numpy.dot(R, offset)
-                        gps_e = gps_msg.gps_fix.longitude + target[0] * LON_PER_METER
-                        gps_n = gps_msg.gps_fix.latitude + target[1] * LAT_PER_METER
+                        gps_e = mix.gps_fix.longitude + target[0] * LON_PER_METER
+                        gps_n = mix.gps_fix.latitude + target[1] * LAT_PER_METER
                         dfts_abs_pos.append((gps_e, gps_n, self.init_altitude))
-                    
-                    locations_path = self.get_directory()
-                    file = open(locations_path+'/location'+str(gps_msg.gps_id)+'.txt', "w")
 
-                    file.write(message_to_yaml(gps_msg))
-                    file.write("\n")
-                    file.write(message_to_yaml(yaw_msg))
+                    self.get_logger().info(f"current height: {dfts_abs_pos}")
+                    
+                    file = open(self.rst_path+LOCATIONS_FILE_PREFIX+'/location'+str(mix.id)+'.txt', "w")
+
+                    file.write(message_to_yaml(mix))
                     file.write("\n")
                     
-                    for i, defect in enumerate(dfts_msg.defects):
+                    for i, defect in enumerate(mix.defects.defects):
                         file.write("----------------------------------------------------------- \n")
                         file.write("DEFECT POSITION IN IMAGE: \n")
                         file.write(message_to_yaml(defect))
@@ -236,23 +177,30 @@ class TF_Converter(Node):
     def rad(self, d):
         return d * math.pi / 180.0
     
-    def calc_dfts_pos(self, height, msg: Defects) -> List[Tuple[float, float]]:
+    def calc_dfts_pos(self, height, defects) -> List[Tuple[float, float]]:
         half_hon_rad = self.rad(CAM_HOR_ANGLE / 2)
         half_ver_rad = self.rad(CAM_VER_ANGLE / 2)
 
-        # a, b: Object size in real world
+        self.get_logger().info(f"half_hon_rad: {half_hon_rad}  half_ver_rad: {half_ver_rad}")
+
+        # Object size in real world
         a = 2 * height * math.tan(half_hon_rad)
         b = 2 * height * math.tan(half_ver_rad)
 
-        scale_x = a / msg.img_width
-        scale_y = b / msg.img_height
+        self.get_logger().info(f"a: {a}  b: {b}")
+
+        scale_x = a / defects.img_width
+        scale_y = b / defects.img_height
+
+        self.get_logger().info(f"scale_x: {scale_x}  scale_y: {scale_y}")
+        self.get_logger().info(f"msg.img_width: {defects.img_width}  msg.img_height: {defects.img_height}")
 
         res = []
 
         # Defects position relative to center of the image in real world
-        for dft in msg.defects:
-            x = dft.center.x - msg.img_width / 2
-            y = msg.img_height / 2 - dft.center.y
+        for dft in defects.defects:
+            x = dft.center.x - defects.img_width / 2
+            y = defects.img_height / 2 - dft.center.y
             res.append((scale_x * x, scale_y * y))
 
         return res

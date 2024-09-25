@@ -6,8 +6,6 @@
 module location_msgs {
   module msg {
     struct Yaw {
-      int32 yaw_id;
-
       double yaw;
     };
   };

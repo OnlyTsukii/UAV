@@ -9,10 +9,9 @@ setup(
     version='0.0.0',
     packages=[
         package_name, 
-        'uav_patrol.ctrl_relayer', 
-        'uav_patrol.gps_handler', 
-        'uav_patrol.gps_handler.nodes',
-        'uav_patrol.object_detector',
+        'uav_patrol.yolo_detector',
+        'uav_patrol.drone_controller',
+        'uav_patrol.gps_simulator',
         'uav_patrol.tf_converter'],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -29,13 +28,12 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'cmd_subscriber = uav_patrol.ctrl_relayer.cmd_subscriber:main',
-            'nmea_serial_driver = uav_patrol.gps_handler.nodes.nmea_serial_driver:main',
-            'gps_simulator = uav_patrol.gps_handler.gps_simulator:main',
-            'gps_handler = uav_patrol.gps_handler.gps_handler:main',
-            'dft_publisher = uav_patrol.object_detector.dft_publisher:main',
+            'yolo_detector = uav_patrol.yolo_detector.yolo_detector:main',
             'tf_converter = uav_patrol.tf_converter.tf_converter:main',
-            'uav2cam_broadcaster = uav_patrol.tf_converter.uav2cam_broadcaster:main'
+            'uav2cam_broadcaster = uav_patrol.tf_converter.uav2cam_broadcaster:main',
+            'gps_simulator = uav_patrol.gps_simulator.gps_simulator:main',
+            'drone_controller = uav_patrol.drone_controller.drone_controller:main',
+            'drone_controller_2 = uav_patrol.drone_controller.drone_controller_2:main'
         ],
     },
 )

@@ -1,5 +1,5 @@
-/home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/GpsFix.idl
-/home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/PixelPoint.idl
-/home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/DefectBox.idl
-/home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Defects.idl
-/home/xs/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Yaw.idl
+/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Mix.idl
+/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/PixelPoint.idl
+/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/DefectBox.idl
+/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Defects.idl
+/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Yaw.idl

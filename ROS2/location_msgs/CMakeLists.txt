@@ -14,7 +14,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-   "msg/GpsFix.msg"
+   "msg/Mix.msg"
    "msg/PixelPoint.msg"
    "msg/DefectBox.msg"
    "msg/Defects.msg"

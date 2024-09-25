@@ -1,0 +1,59 @@
+[0.500s] Invoking command in '/home/x650/UAV/ROS2/uav_patrol': PYTHONPATH=/home/x650/UAV/ROS2/build/uav_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/uav_patrol build --build-base /home/x650/UAV/ROS2/build/uav_patrol/build install --record /home/x650/UAV/ROS2/build/uav_patrol/install.log --single-version-externally-managed install_data
+[0.671s] running egg_info
+[0.672s] creating ../build/uav_patrol/uav_patrol.egg-info
+[0.680s] writing ../build/uav_patrol/uav_patrol.egg-info/PKG-INFO
+[0.680s] writing dependency_links to ../build/uav_patrol/uav_patrol.egg-info/dependency_links.txt
+[0.680s] writing entry points to ../build/uav_patrol/uav_patrol.egg-info/entry_points.txt
+[0.680s] writing requirements to ../build/uav_patrol/uav_patrol.egg-info/requires.txt
+[0.681s] writing top-level names to ../build/uav_patrol/uav_patrol.egg-info/top_level.txt
+[0.681s] writing manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'
+[0.699s] reading manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'
+[0.699s] writing manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'
+[0.700s] running build
+[0.700s] running build_py
+[0.700s] creating /home/x650/UAV/ROS2/build/uav_patrol/build
+[0.700s] creating /home/x650/UAV/ROS2/build/uav_patrol/build/lib
+[0.700s] creating /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol
+[0.700s] copying uav_patrol/__init__.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol
+[0.700s] creating /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/yolo_detector
+[0.700s] copying uav_patrol/yolo_detector/__init__.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/yolo_detector
+[0.700s] copying uav_patrol/yolo_detector/yolo_detector.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/yolo_detector
+[0.700s] creating /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[0.700s] copying uav_patrol/tf_converter/__init__.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[0.700s] copying uav_patrol/tf_converter/tf_converter.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[0.700s] copying uav_patrol/tf_converter/uav2cam_broadcaster.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[0.700s] copying uav_patrol/tf_converter/world2uav_broadcaster.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[0.701s] running install
+[0.704s] running install_lib
+[0.712s] creating /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol
+[0.712s] creating /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/yolo_detector
+[0.713s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/yolo_detector/__init__.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/yolo_detector
+[0.713s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/yolo_detector/yolo_detector.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/yolo_detector
+[0.713s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/__init__.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol
+[0.713s] creating /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter
+[0.713s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/__init__.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter
+[0.713s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/tf_converter.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter
+[0.713s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/uav2cam_broadcaster.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter
+[0.713s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter/world2uav_broadcaster.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter
+[0.713s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/yolo_detector/__init__.py to __init__.cpython-310.pyc
+[0.713s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/yolo_detector/yolo_detector.py to yolo_detector.cpython-310.pyc
+[0.715s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/__init__.py to __init__.cpython-310.pyc
+[0.715s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter/__init__.py to __init__.cpython-310.pyc
+[0.715s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter/tf_converter.py to tf_converter.cpython-310.pyc
+[0.716s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter/uav2cam_broadcaster.py to uav2cam_broadcaster.cpython-310.pyc
+[0.716s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter/world2uav_broadcaster.py to world2uav_broadcaster.cpython-310.pyc
+[0.716s] running install_data
+[0.716s] creating /home/x650/UAV/ROS2/install/uav_patrol/share/ament_index
+[0.716s] creating /home/x650/UAV/ROS2/install/uav_patrol/share/ament_index/resource_index
+[0.716s] creating /home/x650/UAV/ROS2/install/uav_patrol/share/ament_index/resource_index/packages
+[0.717s] copying resource/uav_patrol -> /home/x650/UAV/ROS2/install/uav_patrol/share/ament_index/resource_index/packages
+[0.717s] copying package.xml -> /home/x650/UAV/ROS2/install/uav_patrol/share/uav_patrol
+[0.717s] copying launch/uav_patrol.launch.py -> /home/x650/UAV/ROS2/install/uav_patrol/share/uav_patrol
+[0.717s] running install_egg_info
+[0.726s] Copying ../build/uav_patrol/uav_patrol.egg-info to /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol-0.0.0-py3.10.egg-info
+[0.727s] running install_scripts
+[0.819s] Installing tf_converter script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.819s] Installing uav2cam_broadcaster script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.819s] Installing yolo_detector script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.820s] writing list of installed files to '/home/x650/UAV/ROS2/build/uav_patrol/install.log'
+[0.863s] Invoked command in '/home/x650/UAV/ROS2/uav_patrol' returned '0': PYTHONPATH=/home/x650/UAV/ROS2/build/uav_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/uav_patrol build --build-base /home/x650/UAV/ROS2/build/uav_patrol/build install --record /home/x650/UAV/ROS2/build/uav_patrol/install.log --single-version-externally-managed install_data

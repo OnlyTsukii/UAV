@@ -7,8 +7,6 @@
 module location_msgs {
   module msg {
     struct Defects {
-      int32 defect_id;
-
       float img_width;
 
       float img_height;
