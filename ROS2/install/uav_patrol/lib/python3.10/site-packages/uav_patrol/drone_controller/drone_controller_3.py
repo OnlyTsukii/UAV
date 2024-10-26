@@ -157,7 +157,8 @@ class DroneController(Node):
         self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, 31.31048435998195, 120.6360023622856, 0.0))
 
         self.waypoint_timer = self.create_timer(PUBLISH_FREQUENCY, self.goto_waypoint)  # Publish pose at 10Hz
-        self.capture_timer = self.create_timer(PUBLISH_FREQUENCY, self.capture)
+        
+        self.capture_flag = True
 
         self.arm_drone()
 
@@ -229,12 +230,13 @@ class DroneController(Node):
         return True
 
     def capture(self):
-        ret, frame = self.cap.read()
-        if not ret:
-            self.get_logger().info("Read frame failed")
-            return
+        while self.capture_flag:
+            ret, frame = self.cap.read()
+            if not ret:
+                self.get_logger().info("Read frame failed")
+                return
 
-        self.frame = frame
+            self.frame = frame
 
     def write_frame(self):
         timestamp = time.time()
@@ -432,9 +434,17 @@ class DroneController(Node):
 
 def main(args=None):
     rclpy.init(args=args)
+
     drone_controller = DroneController()
+
+    capture_thread = threading.Thread(target=drone_controller.capture)
+    capture_thread.start()
+
     rclpy.spin(drone_controller)
+
+    drone_controller.capture_flag = False
     drone_controller.cap.release()
+
     rclpy.shutdown()
 
 if __name__ == '__main__':
