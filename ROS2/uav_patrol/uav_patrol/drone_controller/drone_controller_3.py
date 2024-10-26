@@ -34,7 +34,7 @@ MISSION_CLIMB       = 4
 MISSION_STAND       = 5
 
 FRAME_GLOBAL_INT            = 5
-FRAME_GLOBAL_REL_ALT        = 5
+FRAME_GLOBAL_REL_ALT        = 6
 FRAME_GLOBAL_TERRAIN_ALT    = 11
 
 FRAME_LOCAL_NED         = 1
@@ -56,6 +56,7 @@ IGNORE_YAW = 1024
 IGNORE_YAW_RATE = 2048
 
 PUBLISH_FREQUENCY   = 0.1
+FRAME_PER_SECOND    = 5
 
 THRESHOLD_POSITION  = 1
 THRESHOLD_LATITUDE  = 0.000001
@@ -106,6 +107,8 @@ class DroneController(Node):
         self.yaw = 0.0
         self.rel_alt = 0.0
 
+        self.frame = None
+
         self.yaw_reached_counter = 0
         self.stand_reached_counter = 0
 
@@ -139,15 +142,6 @@ class DroneController(Node):
             self.get_logger().info('Mode service not available, waiting...')
         
         self.get_logger().info('All services are available, ready to arm and take off.')
-        # 120.6359935433749,31.31054100212869,0 
-        # 120.6352954559126,31.31044089705391,0 
-        # 120.6353081936596,31.31038281180785,0 
-        # 120.6360023622856,31.31048435998195,0 
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_TAKEOFF, FRAME_GLOBAL_REL_ALT, 0, 0, 1, 31.31054100212869, 120.6359935433749, 30.0))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31044089705391, 120.6352954559126, 30.0))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31038281180785, 120.6353081936596, 30.0))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31048435998195, 120.6360023622856, 30.0))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, 31.31048435998195, 120.6360023622856, 0.0))
 
         res = self.init_camera()
         if not res:
@@ -155,9 +149,17 @@ class DroneController(Node):
 
         self.init_pose()
         self.set_mode('OFFBOARD')
-        self.arm_drone()
+
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_TAKEOFF, FRAME_GLOBAL_REL_ALT, 0, 0, 1, 31.31054100212869, 120.6359935433749, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31044089705391, 120.6352954559126, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31038281180785, 120.6353081936596, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31048435998195, 120.6360023622856, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, 31.31048435998195, 120.6360023622856, 0.0))
 
         self.waypoint_timer = self.create_timer(PUBLISH_FREQUENCY, self.goto_waypoint)  # Publish pose at 10Hz
+        self.capture_timer = self.create_timer(PUBLISH_FREQUENCY, self.capture)
+
+        self.arm_drone()
 
     def global_pos_callback(self, msg: NavSatFix):
         self.gps_fix = msg
@@ -193,7 +195,7 @@ class DroneController(Node):
                     rotate_wp.mission = MISSION_ROTATE
                     self.wp_queue.put(rotate_wp)
                     wp.yaw = yaw
-
+                
                 distance = get_distance(top.latitude, top.longitude, wp.latitude, wp.longitude)
                 num_waypoints = int(distance/4) - 1
                 for i in range(1, num_waypoints + 1):
@@ -204,10 +206,14 @@ class DroneController(Node):
                     new_wp.longitude = lon
                     new_wp.mission = MISSION_WAYPOINT
                     self.wp_queue.put(new_wp)
-            pass
-        pass
-        
-        self.wp_queue.put(wp)
+            self.wp_queue.put(wp)
+        elif wp.type == GLOBAL_WAYPOINT and self.gps_fix != None:
+            new_wp = deepcopy(wp)
+            wp.latitude = self.gps_fix.latitude
+            wp.longitude = self.gps_fix.longitude
+            self.wp_queue.put(wp)
+            new_wp.mission == MISSION_WAYPOINT
+            self.wp_queue.put(new_wp)
                 
     def init_camera(self) -> bool:
         self.cap = cv2.VideoCapture(0)
@@ -218,7 +224,7 @@ class DroneController(Node):
 
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
-        self.cap.set(cv2.CAP_PROP_FPS, 30)
+        self.cap.set(cv2.CAP_PROP_FPS, FRAME_PER_SECOND)
 
         return True
 
@@ -226,10 +232,11 @@ class DroneController(Node):
         ret, frame = self.cap.read()
         if not ret:
             self.get_logger().info("Read frame failed")
-        
-        self.write_frame(frame)
+            return
 
-    def write_frame(self, frame):
+        self.frame = frame
+
+    def write_frame(self):
         timestamp = time.time()
         if self.gps_fix is not None:
             f = open(DIRECTORY_PREFIX + str(timestamp) + ".txt", "w")
@@ -239,9 +246,9 @@ class DroneController(Node):
             f.write(f"longitude: {self.gps_fix.longitude} \n")
             f.write(f"AMSL altitude: {self.gps_fix.altitude} \n")
             f.write(f"REL altitude: {self.rel_alt} \n")
+            cv2.imwrite(DIRECTORY_PREFIX + str(timestamp) + ".jpg", self.frame)
             self.point_mutex.release()
             f.close()
-            cv2.imwrite(DIRECTORY_PREFIX + str(timestamp) + ".jpg", frame)
             self.get_logger().info('image saved')
 
     def init_pose(self):
@@ -265,12 +272,12 @@ class DroneController(Node):
 
         if isStand:
             self.stand_reached_counter += 1
-            if self.stand_reached_counter > 3 / PUBLISH_FREQUENCY:
-                # self.capture()
+            if self.stand_reached_counter > 4 / PUBLISH_FREQUENCY:
+                self.write_frame()
                 self.stand_reached_counter = 0
             else:
                 reached = False
-            # self.get_logger().info(f"reached {reached, self.stand_reached_counter}")
+            self.get_logger().info(f"{time.time()}")
             return reached
         
         self.point_mutex.acquire()
@@ -385,8 +392,6 @@ class DroneController(Node):
             land_wp = Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, lat, lon, 0)
             self.goto_global_point(land_wp)
 
-        self.cap.read()
-
     def goto_global_point(self, waypoint: Waypoint):
         point = GlobalPositionTarget()
         point.header = Header()
@@ -419,6 +424,7 @@ class DroneController(Node):
         point.type_mask = IGNORE_YAW
         if waypoint.mission == MISSION_ROTATE:
             point.yaw_rate = waypoint.yaw_rate
+            point.type_mask |= IGNORE_VX | IGNORE_VY | IGNORE_VZ
         elif waypoint.mission == MISSION_TAKEOFF or waypoint.mission == MISSION_LAND or waypoint.mission == MISSION_CLIMB:
             point.type_mask |= IGNORE_VX | IGNORE_VY | IGNORE_YAW_RATE
         elif waypoint.mission == MISSION_STAND:

@@ -1,0 +1,5 @@
+timestamp: 1729915335.8757746 
+latitude: 31.310535 
+longitude: 120.6359498 
+AMSL altitude: 39.672621667959646 
+REL altitude: 26.492 
