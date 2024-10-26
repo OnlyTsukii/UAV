@@ -1,0 +1,4 @@
+[0.000000] (-) TimerEvent: {}
+[0.000140] (-) JobUnselected: {'identifier': 'location_msgs'}
+[0.000174] (-) JobUnselected: {'identifier': 'uav_patrol'}
+[0.000208] (-) EventReactorShutdown: {}

@@ -1,62 +1,71 @@
-import asyncio
-import websockets
-import json
+# import math
+# from geopy.distance import geodesic
 
-MAV_CMD_NAV_WAYPOINT    = 16
-MAV_CMD_NAV_LAND        = 21
-MAV_CMD_NAV_TAKEOFF     = 22
 
-#  wp0 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_TAKEOFF, is_current=True, 
-#                        autocontinue=True, param4=float('nan'), x_lat=31.3104184, y_long=120.6358413, z_alt=3.0)
-#         wp1 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
-#                        autocontinue=True, param4=float('nan'), x_lat=31.3103428, y_long=120.6356525, z_alt=3.0)
-#         wp2 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
-#                        autocontinue=True, param4=float('nan'), x_lat=31.3102927, y_long=120.6358282, z_alt=3.0)
-#         wp3 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
-#                        autocontinue=True, param4=float('nan'), x_lat=31.3104184, y_long=120.6358413, z_alt=3.0)
-#         wp4 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_LAND, is_current=False, 
-#                        autocontinue=True, param4=float('nan'), x_lat=31.3104184, y_long=120.6358413, z_alt=0.0)
+# def calculate_local_yaw(current_x, current_y, next_x, next_y):
+#     delta_x = next_x - current_x
+#     delta_y = next_y - current_y
 
-async def send_message():
-    async with websockets.connect("ws://localhost:8765") as websocket:
-        while True:
-            data = {
-                "mission": [
-                    {
-                        "command": MAV_CMD_NAV_TAKEOFF,
-                        "x": 31.3104184,
-                        "y": 120.6358413,
-                        "z": 3.0
-                    },{
-                        "command": MAV_CMD_NAV_WAYPOINT,
-                        "x": 31.3103428,
-                        "y": 120.6356525,
-                        "z": 3.0
-                    },{
-                        "command": MAV_CMD_NAV_WAYPOINT,
-                        "x": 31.3102927,
-                        "y": 120.6358282,
-                        "z": 3.0
-                    },{
-                        "command": MAV_CMD_NAV_WAYPOINT,
-                        "x": 31.3104184,
-                        "y": 120.6358413,
-                        "z": 3.0
-                    },{
-                        "command": MAV_CMD_NAV_LAND,
-                        "x": 31.3104184,
-                        "y": 120.6358413,
-                        "z": 0.0
-                    }
-                ]
-            }
-            
-            await websocket.send(json.dumps(data))
-            print(f"Sent JSON data to server: {data}")
-            
-            response = await websocket.recv()
-            response_data = json.loads(response)
-            print(f"Received from server: {response_data}")
+#     target_yaw = math.atan2(delta_x, delta_y)  
+#     target_yaw = (target_yaw + math.pi) % (2 * math.pi) - math.pi
 
-if __name__ == "__main__":
-    asyncio.run(send_message())
+#     res = math.degrees(target_yaw)
+
+#     return res
+
+# def calculate_global_yaw(lat1, lon1, lat2, lon2):
+#     lat1 = math.radians(lat1)
+#     lon1 = math.radians(lon1)
+#     lat2 = math.radians(lat2)
+#     lon2 = math.radians(lon2)
+    
+#     delta_lon = lon2 - lon1
+    
+#     x = math.sin(delta_lon) * math.cos(lat2)
+#     y = math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(delta_lon)
+    
+#     target_yaw = math.atan2(x, y)
+#     target_yaw = (target_yaw + math.pi) % (2 * math.pi) - math.pi
+    
+#     res = math.degrees(target_yaw)
+    
+#     return res
+
+# def get_distance(lat1, lon1, lat2, lon2):
+#     point1 = (lat1, lon1)
+#     point2 = (lat2, lon2)
+
+#     distance = geodesic(point1, point2).m
+#     return distance
+
+# res = calculate_global_yaw(31.31043548050823, 120.6353190699221, 31.31039540855868, 120.6353257897984)
+# print(res)
+
+import cv2
+import time
+
+def start_capture():
+    cap = cv2.VideoCapture(0)
+
+    if not cap.isOpened():
+        exit()
+
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 2560)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1440)
+    cap.set(cv2.CAP_PROP_FPS, 30)
+
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        
+        print(time.time())
+        # self.write_frame(frame)
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+start_capture()

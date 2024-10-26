@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from location_msgs/msg/Yaw.msg
+// generated code does not contain a copyright notice
+
+
+module location_msgs {
+  module msg {
+    struct Yaw {
+      double yaw;
+    };
+  };
+};

@@ -1,0 +1,54 @@
+[0.628s] Invoking command in '/home/x650/UAV/ROS2/uav_patrol': AMENT_PREFIX_PATH=/home/x650/UAV/ROS2/install/location_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/x650/UAV/ROS2/install/location_msgs LD_LIBRARY_PATH=/home/x650/UAV/ROS2/install/location_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/x650/UAV/ROS2/build/uav_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages:/home/x650/UAV/ROS2/install/location_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/uav_patrol build --build-base /home/x650/UAV/ROS2/build/uav_patrol/build install --record /home/x650/UAV/ROS2/build/uav_patrol/install.log --single-version-externally-managed install_data
+[0.789s] running egg_info
+[0.799s] writing ../build/uav_patrol/uav_patrol.egg-info/PKG-INFO
+[0.800s] writing dependency_links to ../build/uav_patrol/uav_patrol.egg-info/dependency_links.txt
+[0.800s] writing entry points to ../build/uav_patrol/uav_patrol.egg-info/entry_points.txt
+[0.800s] writing requirements to ../build/uav_patrol/uav_patrol.egg-info/requires.txt
+[0.800s] writing top-level names to ../build/uav_patrol/uav_patrol.egg-info/top_level.txt
+[0.819s] reading manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'
+[0.820s] writing manifest file '../build/uav_patrol/uav_patrol.egg-info/SOURCES.txt'
+[0.820s] running build
+[0.820s] running build_py
+[0.820s] copying uav_patrol/yolo_detector/__init__.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/yolo_detector
+[0.820s] copying uav_patrol/yolo_detector/yolo_detector.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/yolo_detector
+[0.820s] copying uav_patrol/drone_controller/pid_controller.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller
+[0.821s] copying uav_patrol/drone_controller/__init__.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller
+[0.821s] copying uav_patrol/drone_controller/drone_controller_2.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller
+[0.821s] copying uav_patrol/drone_controller/drone_controller_3.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller
+[0.821s] copying uav_patrol/drone_controller/utils.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller
+[0.821s] copying uav_patrol/drone_controller/drone_controller.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller
+[0.821s] copying uav_patrol/gps_simulator/gps_simulator.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_simulator
+[0.822s] copying uav_patrol/gps_simulator/__init__.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/gps_simulator
+[0.822s] copying uav_patrol/tf_converter/tf_converter.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/tf_converter
+[0.822s] copying uav_patrol/usb_cam/opencv_test.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/usb_cam
+[0.822s] copying uav_patrol/usb_cam/usb_cam_test.py -> /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/usb_cam
+[0.823s] running install
+[0.826s] running install_lib
+[0.835s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller/pid_controller.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller
+[0.835s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller/drone_controller_3.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller
+[0.835s] copying /home/x650/UAV/ROS2/build/uav_patrol/build/lib/uav_patrol/drone_controller/utils.py -> /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller
+[0.836s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/pid_controller.py to pid_controller.cpython-310.pyc
+[0.836s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/drone_controller_3.py to drone_controller_3.cpython-310.pyc
+[0.838s] byte-compiling /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/utils.py to utils.cpython-310.pyc
+[0.838s]   File "/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/utils.py", line 41
+[0.838s]     def
+[0.839s]        ^
+[0.839s] SyntaxError: invalid syntax
+[0.839s] 
+[0.839s] running install_data
+[0.839s] copying launch/uav_patrol.launch.py -> /home/x650/UAV/ROS2/install/uav_patrol/share/uav_patrol
+[0.839s] running install_egg_info
+[0.849s] removing '/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol-0.0.0-py3.10.egg-info' (and everything under it)
+[0.849s] Copying ../build/uav_patrol/uav_patrol.egg-info to /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol-0.0.0-py3.10.egg-info
+[0.849s] running install_scripts
+[0.927s] Installing drone_controller script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.927s] Installing drone_controller_2 script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.927s] Installing drone_controller_3 script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.927s] Installing gps_simulator script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.927s] Installing opencv_test script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.927s] Installing tf_converter script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.927s] Installing uav2cam_broadcaster script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.927s] Installing usb_cam_test script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.927s] Installing yolo_detector script to /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol
+[0.928s] writing list of installed files to '/home/x650/UAV/ROS2/build/uav_patrol/install.log'
+[0.947s] Invoked command in '/home/x650/UAV/ROS2/uav_patrol' returned '0': AMENT_PREFIX_PATH=/home/x650/UAV/ROS2/install/location_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/x650/UAV/ROS2/install/location_msgs LD_LIBRARY_PATH=/home/x650/UAV/ROS2/install/location_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/x650/UAV/ROS2/build/uav_patrol/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages:/home/x650/UAV/ROS2/install/location_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/uav_patrol build --build-base /home/x650/UAV/ROS2/build/uav_patrol/build install --record /home/x650/UAV/ROS2/build/uav_patrol/install.log --single-version-externally-managed install_data

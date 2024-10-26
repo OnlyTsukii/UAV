@@ -1,0 +1,6 @@
+PixelPoint center
+
+PixelPoint top_left
+PixelPoint top_right
+PixelPoint bottom_left
+PixelPoint bottom_right

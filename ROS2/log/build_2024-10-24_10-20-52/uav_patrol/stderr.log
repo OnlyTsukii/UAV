@@ -1,0 +1,5 @@
+  File "/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/drone_controller_3.py", line 157
+    num_waypoints = 
+                    ^
+SyntaxError: invalid syntax
+
