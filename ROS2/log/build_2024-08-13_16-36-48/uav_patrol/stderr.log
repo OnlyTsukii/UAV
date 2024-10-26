@@ -1,5 +1,0 @@
-  File "/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/drone_controller_2.py", line 48
-    wp1 = Waypoint(frame=Waypoint.FRAME_LOCAL_ENU, command=16, is_current=True, autocontinue=True x_lat=0, y_long=0, z_alt=3)
-                                                                                             ^^^^^^^^^^
-SyntaxError: invalid syntax. Perhaps you forgot a comma?
-

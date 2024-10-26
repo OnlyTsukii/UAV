@@ -1,4 +1,0 @@
-Invoking command in '/home/x650/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/x650/UAV/ROS2/build/location_msgs -- -j16 -l16
-Invoked command in '/home/x650/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/x650/UAV/ROS2/build/location_msgs -- -j16 -l16
-Invoking command in '/home/x650/UAV/ROS2/build/location_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/x650/UAV/ROS2/build/location_msgs
-Invoked command in '/home/x650/UAV/ROS2/build/location_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/x650/UAV/ROS2/build/location_msgs

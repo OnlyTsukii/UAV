@@ -1,7 +1,0 @@
-[console_scripts]
-drone_controller = uav_patrol.drone_controller.drone_controller:main
-drone_controller_2 = uav_patrol.drone_controller.drone_controller_2:main
-gps_simulator = uav_patrol.gps_simulator.gps_simulator:main
-tf_converter = uav_patrol.tf_converter.tf_converter:main
-uav2cam_broadcaster = uav_patrol.tf_converter.uav2cam_broadcaster:main
-yolo_detector = uav_patrol.yolo_detector.yolo_detector:main
