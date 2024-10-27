@@ -1,7 +1,7 @@
 [console_scripts]
-drone_controller = uav_patrol.drone_controller.drone_controller:main
-drone_controller_2 = uav_patrol.drone_controller.drone_controller_2:main
-drone_controller_3 = uav_patrol.drone_controller.drone_controller_3:main
+drone_controller_local = uav_patrol.drone_controller.drone_controller_local:main
+drone_controller_mission = uav_patrol.drone_controller.drone_controller_mission:main
+drone_controller_raw = uav_patrol.drone_controller.drone_controller_raw:main
 gps_simulator = uav_patrol.gps_simulator.gps_simulator:main
 opencv_test = uav_patrol.usb_cam.opencv_test:main
 tf_converter = uav_patrol.tf_converter.tf_converter:main

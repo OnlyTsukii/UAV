@@ -8,18 +8,18 @@ def generate_launch_description():
     return LaunchDescription([
         # Node(
         #     package='uav_patrol',
-        #     executable='drone_controller',
-        #     name='drone_controller',
+        #     executable='drone_controller_local',
+        #     name='drone_controller_local',
         # ),
         # Node(
         #     package='uav_patrol',
-        #     executable='drone_controller_2',
-        #     name='drone_controller_2',
+        #     executable='drone_controller_mission',
+        #     name='drone_controller_mission',
         # ),
         Node(
             package='uav_patrol',
-            executable='drone_controller_3',
-            name='drone_controller_3',
+            executable='drone_controller_raw',
+            name='drone_controller_raw',
         ),
         # Node(
         #     package='uav_patrol',

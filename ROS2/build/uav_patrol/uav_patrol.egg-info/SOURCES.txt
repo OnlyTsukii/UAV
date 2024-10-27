@@ -15,9 +15,9 @@ test/test_flake8.py
 test/test_pep257.py
 uav_patrol/__init__.py
 uav_patrol/drone_controller/__init__.py
-uav_patrol/drone_controller/drone_controller.py
-uav_patrol/drone_controller/drone_controller_2.py
-uav_patrol/drone_controller/drone_controller_3.py
+uav_patrol/drone_controller/drone_controller_local.py
+uav_patrol/drone_controller/drone_controller_mission.py
+uav_patrol/drone_controller/drone_controller_raw.py
 uav_patrol/drone_controller/pid_controller.py
 uav_patrol/drone_controller/utils.py
 uav_patrol/gps_simulator/__init__.py
