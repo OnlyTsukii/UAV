@@ -79,19 +79,21 @@ class DroneController(Node):
        self.push_mission(msg.waypoints)
 
     def init_mission(self):
-        wp0 = Waypoint(frame=Waypoint.FRAME_BODY_NED, command=MAV_CMD_NAV_TAKEOFF_LOCAL, is_current=True, 
-                       autocontinue=True, param1=0.0, param2=float('nan'), param3=2.0, param4=float('nan'), x_lat=0.0, y_long=0.0, z_alt=10.0)
-        # wp1 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
+        wp0 = Waypoint(frame=Waypoint.FRAME_GLOBAL_RELATIVE_ALT_INT, command=MAV_CMD_NAV_TAKEOFF, is_current=True, 
+                       autocontinue=True, param1=0.0, param3=2.0, param4=float('nan'), x_lat=31.31054100212869, y_long=120.6359935433749, z_alt=3.0)
+        wp1 = Waypoint(frame=Waypoint.FRAME_BODY_OFFSET_NED, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
+                       autocontinue=True, param4=float('nan'), x_lat=3.0, y_long=3.0, z_alt=3.0)
+        # wp1 = Waypoint(frame=Waypoint.FRAME_GLOBAL_RELATIVE_ALT_INT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
         #                autocontinue=True, param4=float('nan'), x_lat=31.3103428, y_long=120.6356525, z_alt=3.0)
-        # wp2 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
+        # wp2 = Waypoint(frame=Waypoint.FRAME_GLOBAL_RELATIVE_ALT_INT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
         #                autocontinue=True, param4=float('nan'), x_lat=31.3102927, y_long=120.6358282, z_alt=3.0)
-        # wp3 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
+        # wp3 = Waypoint(frame=Waypoint.FRAME_GLOBAL_RELATIVE_ALT_INT, command=MAV_CMD_NAV_WAYPOINT, is_current=False, 
         #                autocontinue=True, param4=float('nan'), x_lat=31.3104184, y_long=120.6358413, z_alt=3.0)
-        # wp4 = Waypoint(frame=Waypoint.FRAME_GLOBAL_REL_ALT, command=MAV_CMD_NAV_LAND, is_current=False, 
+        # wp4 = Waypoint(frame=Waypoint.FRAME_GLOBAL_RELATIVE_ALT_INT, command=MAV_CMD_NAV_LAND, is_current=False, 
         #                autocontinue=True, param4=float('nan'), x_lat=31.3104184, y_long=120.6358413, z_alt=0.0)
        
         self.waypoints.append(wp0)
-        # self.waypoints.append(wp1)
+        self.waypoints.append(wp1)
         # self.waypoints.append(wp2)
         # self.waypoints.append(wp3)
         # self.waypoints.append(wp4)

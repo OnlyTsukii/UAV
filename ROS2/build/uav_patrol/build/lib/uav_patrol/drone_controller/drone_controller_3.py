@@ -36,7 +36,6 @@ MISSION_STAND       = 5
 FRAME_GLOBAL_INT            = 5
 FRAME_GLOBAL_REL_ALT        = 6
 FRAME_GLOBAL_TERRAIN_ALT    = 11
-
 FRAME_LOCAL_NED         = 1
 FRAME_LOCAL_OFFSET_NED  = 7
 FRAME_BODY_NED          = 8
@@ -208,6 +207,7 @@ class DroneController(Node):
                     new_wp.mission = MISSION_WAYPOINT
                     self.wp_queue.put(new_wp)
             self.wp_queue.put(wp)
+
         elif wp.type == GLOBAL_WAYPOINT and self.gps_fix != None:
             new_wp = deepcopy(wp)
             wp.latitude = self.gps_fix.latitude
@@ -274,12 +274,12 @@ class DroneController(Node):
 
         if isStand:
             self.stand_reached_counter += 1
-            if self.stand_reached_counter > 4 / PUBLISH_FREQUENCY:
+            if self.stand_reached_counter > 5 / PUBLISH_FREQUENCY:
                 self.write_frame()
                 self.stand_reached_counter = 0
             else:
                 reached = False
-            self.get_logger().info(f"{time.time()}")
+            # self.get_logger().info(f"{time.time()}")
             return reached
         
         self.point_mutex.acquire()
@@ -423,7 +423,7 @@ class DroneController(Node):
         self.local_point_publisher.publish(point)
 
     def setup_params(self, point, waypoint):
-        point.type_mask = IGNORE_YAW
+        point.type_mask = IGNORE_YAW | IGNORE_AFX | IGNORE_AFY | IGNORE_AFZ
         if waypoint.mission == MISSION_ROTATE:
             point.yaw_rate = waypoint.yaw_rate
             point.type_mask |= IGNORE_VX | IGNORE_VY | IGNORE_VZ
