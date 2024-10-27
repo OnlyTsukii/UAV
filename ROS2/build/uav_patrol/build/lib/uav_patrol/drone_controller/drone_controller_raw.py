@@ -32,6 +32,7 @@ MISSION_LAND        = 2
 MISSION_ROTATE      = 3
 MISSION_CLIMB       = 4
 MISSION_STAND       = 5
+MISSION_TRANSLATION = 6
 
 FRAME_GLOBAL_INT            = 5
 FRAME_GLOBAL_REL_ALT        = 6
@@ -60,7 +61,7 @@ FRAME_PER_SECOND    = 5
 THRESHOLD_POSITION  = 1
 THRESHOLD_LATITUDE  = 0.000001
 THRESHOLD_LONGITUDE = 0.000001
-THRESHOLD_ALTITUDE  = 3
+THRESHOLD_ALTITUDE  = 5
 THRESHOLD_YAW       = 5
 
 IMAGE_WIDTH         = 1920
@@ -149,17 +150,31 @@ class DroneController(Node):
         self.init_pose()
         self.set_mode('OFFBOARD')
 
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_TAKEOFF, FRAME_GLOBAL_REL_ALT, 0, 0, 1, 31.31054100212869, 120.6359935433749, 10))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31044089705391, 120.6352954559126, 10))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31038281180785, 120.6353081936596, 10))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31048435998195, 120.6360023622856, 10))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, 31.31048435998195, 120.6360023622856, 0))
+        # 120.6353107229669,31.31042380244442,0 
+        # 120.6359937333954,31.31052009867697,0 
+        # 120.6360121711551,31.31043048899635,0 
+        # 120.635327504867,31.31033174015581,0 
+        # 120.6353443654622,31.31024197255429,0 
+        # 120.6360313712927,31.31034231571467,0  
+
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_TAKEOFF, FRAME_GLOBAL_REL_ALT, 0, 0, 1, 31.31042380244442, 120.6353107229669, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31052009867697, 120.6359937333954, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31043048899635, 120.6360121711551, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31033174015581, 120.635327504867, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31024197255429, 120.6353443654622, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31034231571467, 120.6360313712927, 30))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, 31.31034231571467, 120.6360313712927, 0))
 
         self.waypoint_timer = self.create_timer(PUBLISH_FREQUENCY, self.goto_waypoint)  # Publish pose at 10Hz
         
         self.capture_flag = True
 
-        self.arm_drone()
+        for _ in range(3):
+            res = self.arm_drone()
+            if not res:
+                time.sleep(2)
+            else:
+                break
 
     def global_pos_callback(self, msg: NavSatFix):
         self.gps_fix = msg
@@ -213,7 +228,7 @@ class DroneController(Node):
             wp.latitude = self.gps_fix.latitude
             wp.longitude = self.gps_fix.longitude
             self.wp_queue.put(wp)
-            new_wp.mission == MISSION_WAYPOINT
+            new_wp.mission == MISSION_TRANSLATION
             self.wp_queue.put(new_wp)
                 
     def init_camera(self) -> bool:
@@ -269,12 +284,18 @@ class DroneController(Node):
             self.pose_publisher.publish(waypoint)
             time.sleep(0.05)
 
-    def reached_target(self, isYaw: bool, isStand: bool) -> bool:
+    def reached_target(self, isStand: bool) -> bool:
         reached = True
 
         if isStand:
             self.stand_reached_counter += 1
-            if self.stand_reached_counter > 5 / PUBLISH_FREQUENCY:
+            if  self.stand_reached_counter == 3 / PUBLISH_FREQUENCY:
+                self.write_frame()
+                reached = False
+            elif  self.stand_reached_counter == 4 / PUBLISH_FREQUENCY:
+                self.write_frame()
+                reached = False
+            elif self.stand_reached_counter == 5 / PUBLISH_FREQUENCY:
                 self.write_frame()
                 self.stand_reached_counter = 0
             else:
@@ -286,8 +307,13 @@ class DroneController(Node):
         if self.prev_type == LOCAL_WAYPOINT:
             if self.local_pose == None:
                 reached = False
-            elif isYaw:
+            elif self.prev_local_wp.mission == MISSION_ROTATE:
                 reached &= abs(self.prev_local_wp.yaw - self.yaw) <= THRESHOLD_YAW
+            elif self.prev_local_wp.mission == MISSION_WAYPOINT or self.prev_local_wp.mission == MISSION_TRANSLATION:
+                reached &= abs(self.prev_local_wp.position.x - self.local_pose.pose.position.x) <= THRESHOLD_POSITION
+                reached &= abs(self.prev_local_wp.position.y - self.local_pose.pose.position.y) <= THRESHOLD_POSITION
+            elif self.prev_local_wp.mission == MISSION_TAKEOFF or self.prev_local_wp.mission == MISSION_CLIMB or self.prev_local_wp == MISSION_LAND:
+                reached &= abs(self.prev_local_wp.position.z - self.local_pose.pose.position.z) <= THRESHOLD_POSITION
             else:
                 reached &= abs(self.prev_local_wp.position.x - self.local_pose.pose.position.x) <= THRESHOLD_POSITION
                 reached &= abs(self.prev_local_wp.position.y - self.local_pose.pose.position.y) <= THRESHOLD_POSITION
@@ -295,8 +321,13 @@ class DroneController(Node):
         elif self.prev_type == GLOBAL_WAYPOINT:
             if self.gps_fix == None:
                 reached = False
-            elif isYaw:
+            elif self.prev_global_wp.mission == MISSION_ROTATE:
                 reached &= abs(self.prev_global_wp.yaw - self.yaw) <= THRESHOLD_YAW
+            elif self.prev_global_wp.mission == MISSION_WAYPOINT or self.prev_global_wp.mission == MISSION_TRANSLATION:
+                reached &= abs(self.prev_global_wp.latitude - self.gps_fix.latitude) <= THRESHOLD_LATITUDE
+                reached &= abs(self.prev_global_wp.longitude - self.gps_fix.longitude) <= THRESHOLD_LONGITUDE
+            elif self.prev_global_wp.mission == MISSION_TAKEOFF or self.prev_global_wp.mission == MISSION_CLIMB or self.prev_global_wp == MISSION_LAND:
+                reached &= abs(self.prev_global_wp.altitude - self.rel_alt) <= THRESHOLD_ALTITUDE
             else:
                 reached &= abs(self.prev_global_wp.latitude - self.gps_fix.latitude) <= THRESHOLD_LATITUDE
                 reached &= abs(self.prev_global_wp.longitude - self.gps_fix.longitude) <= THRESHOLD_LONGITUDE
@@ -305,17 +336,14 @@ class DroneController(Node):
 
         if reached:
             self.get_logger().info('Drone has reached the target')
-            if isYaw:
-                self.get_logger().info(f'current {self.yaw}, target {self.prev_global_wp.yaw}')
-            else:
-                self.get_logger().info(f'current {self.gps_fix, self.rel_alt}, target {self.prev_global_wp.latitude, self.prev_global_wp.longitude, self.prev_global_wp.altitude}')
+            self.get_logger().info(f'current {self.gps_fix, self.rel_alt, self.yaw}, target {self.prev_global_wp.latitude, self.prev_global_wp.longitude, self.prev_global_wp.altitude, self.prev_global_wp.yaw}')
         # else:
         #     self.get_logger().info('Drone does not reached the target')
         #     self.get_logger().info(f'current {self.yaw}, target {self.prev_global_wp.yaw}')
 
         return reached
 
-    def arm_drone(self):
+    def arm_drone(self) -> bool:
         self.get_logger().info('Arming drone...')
         req = CommandBool.Request()
         req.value = True
@@ -323,8 +351,10 @@ class DroneController(Node):
         rclpy.spin_until_future_complete(self, future)
         if future.result().success:
             self.get_logger().info('Drone armed successfully.')
+            return True
         else:
             self.get_logger().error('Failed to arm drone.')
+            return False
 
     def disarm_drone(self):
         self.get_logger().info('Disarming drone...')
@@ -357,11 +387,8 @@ class DroneController(Node):
                     wp.yaw_rate = -1 * abs(wp.yaw_rate)
                 else:
                     wp.yaw_rate = abs(wp.yaw_rate)
-            if wp.type == LOCAL_WAYPOINT and (self.prev_local_wp == None or self.reached_target(self.prev_local_wp.mission == MISSION_ROTATE, self.prev_local_wp.mission == MISSION_STAND)):
-                if self.prev_local_wp == None:
-                    self.goto_local_point(wp)
-                    self.prev_local_wp = self.wp_queue.get()
-                elif wp.mission == MISSION_WAYPOINT and self.prev_local_wp.mission != MISSION_STAND:
+            if wp.type == LOCAL_WAYPOINT and (self.prev_local_wp == None or self.reached_target(self.prev_local_wp.mission == MISSION_STAND)):
+                if wp.mission == MISSION_WAYPOINT and self.prev_local_wp.mission != MISSION_STAND:
                     stand_wp = deepcopy(self.prev_local_wp)
                     stand_wp.mission = MISSION_STAND
                     self.goto_local_point(stand_wp)
@@ -370,11 +397,8 @@ class DroneController(Node):
                     self.goto_local_point(wp)
                     self.prev_local_wp = self.wp_queue.get()
                 self.prev_type = LOCAL_WAYPOINT
-            elif wp.type == GLOBAL_WAYPOINT and (self.prev_global_wp == None or self.reached_target(self.prev_global_wp.mission == MISSION_ROTATE, self.prev_global_wp.mission == MISSION_STAND)):
-                if self.prev_global_wp == None:
-                    self.goto_global_point(wp)
-                    self.prev_global_wp = self.wp_queue.get()
-                elif wp.mission == MISSION_WAYPOINT and self.prev_global_wp.mission != MISSION_STAND:
+            elif wp.type == GLOBAL_WAYPOINT and (self.prev_global_wp == None or self.reached_target(self.prev_global_wp.mission == MISSION_STAND)):
+                if wp.mission == MISSION_WAYPOINT and self.prev_global_wp.mission != MISSION_STAND:
                     stand_wp = deepcopy(self.prev_global_wp)
                     stand_wp.mission = MISSION_STAND
                     self.goto_global_point(stand_wp)
@@ -388,11 +412,11 @@ class DroneController(Node):
                     self.goto_local_point(self.prev_local_wp)
                 elif self.prev_type == GLOBAL_WAYPOINT and self.prev_global_wp != None:
                     self.goto_global_point(self.prev_global_wp)
-        else:
-            lat = self.gps_fix.latitude
-            lon = self.gps_fix.longitude
-            land_wp = Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, lat, lon, 0)
-            self.goto_global_point(land_wp)
+        # elif self.gps_fix != None:
+        #     lat = self.gps_fix.latitude
+        #     lon = self.gps_fix.longitude
+        #     land_wp = Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, lat, lon, 0)
+        #     self.goto_global_point(land_wp)
 
     def goto_global_point(self, waypoint: Waypoint):
         point = GlobalPositionTarget()
