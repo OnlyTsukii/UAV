@@ -21,16 +21,21 @@ def generate_launch_description():
         #     executable='drone_controller_raw',
         #     name='drone_controller_raw',
         # ),
-        Node(
-            package='uav_patrol',
-            executable='panel_detector',
-            name='panel_detector',
-        ),
+        # Node(
+        #     package='uav_patrol',
+        #     executable='panel_detector',
+        #     name='panel_detector',
+        # ),
         Node(
             package='uav_patrol',
             executable='drone_controller_body',
             name='drone_controller_body',
         ),
+        # Node(
+        #     package='uav_patrol',
+        #     executable='drone_controller_test',
+        #     name='drone_controller_test',
+        # ),
         # Node(
         #     package='uav_patrol',
         #     executable='usb_cam_test',

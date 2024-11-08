@@ -134,6 +134,8 @@ class DroneController(Node):
 
     def panel_callback(self, msg):
         if msg.x == 0 and msg.y == 0 and msg.w == 0 and msg.h == 0:
+            if not self.panel_detected:
+                self.panel_pos = None
             self.panel_loss += 1
             self.panel_found = 0
             if self.panel_loss == 20:
@@ -141,12 +143,14 @@ class DroneController(Node):
                 self.panel_loss = 0
                 self.panel_pos = None
         else:
+            if self.panel_detected:
+                self.panel_pos = msg
             self.panel_found += 1
             self.panel_loss = 0
             if self.panel_found == 5:
-                self.panel_loss = 0
-                self.panel_pos = msg
+                self.panel_found = 0
                 self.panel_detected = True
+                self.panel_pos = msg
 
     def add_to_list(self, type, mission, frame, vel_x, vel_y, vel_z, pos_x, pos_y, pos_z, yaw=float('nan'), yaw_rate=0.0):
         id = self.waypoint_id
@@ -174,7 +178,7 @@ class DroneController(Node):
             coefficient = 1
             if panel_pos.y < 0:
                 coefficient = -1
-            body_wp = Waypoint(-1, TYPE_BODY_MOVE, MISSION_NONE, FRAME_BODY_NED, 0.3*coefficient, 0, 0, 0.03, 0, 0)
+            body_wp = Waypoint(-1, TYPE_BODY_MOVE, MISSION_NONE, FRAME_BODY_NED, 0.3*coefficient, 0, 0, 0.3, 0, 0)
             self.goto_local_waypoint(body_wp)
             return False
         elif panel_pos.x > thres_x or panel_pos.x < -1 * thres_x:
@@ -182,11 +186,11 @@ class DroneController(Node):
             coefficient = 1
             if panel_pos.x < 0:
                 coefficient = -1
-            body_wp = Waypoint(-1, TYPE_BODY_MOVE, MISSION_NONE, FRAME_BODY_NED, 0, 0.3*coefficient, 0, 0, 0.03, 0)
+            body_wp = Waypoint(-1, TYPE_BODY_MOVE, MISSION_NONE, FRAME_BODY_NED, 0, 0.3*coefficient, 0, 0, 0.3, 0)
             self.goto_local_waypoint(body_wp)
             return False
         elif panel_pos.w < IMAGE_WIDTH/4 or panel_pos.h < IMAGE_HEIGHT/4:
-            body_wp = Waypoint(-1, TYPE_BODY_MOVE, MISSION_NONE, FRAME_BODY_NED, 0, 0, -0.8, 0, 0, 0.08)
+            body_wp = Waypoint(-1, TYPE_BODY_MOVE, MISSION_NONE, FRAME_BODY_NED, 0, 0, -0.5, 0, 0, 0.5)
             self.goto_local_waypoint(body_wp)
             return False
         else:

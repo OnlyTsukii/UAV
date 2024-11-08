@@ -20,6 +20,7 @@ uav_patrol/drone_controller/drone_controller_body.py
 uav_patrol/drone_controller/drone_controller_local.py
 uav_patrol/drone_controller/drone_controller_mission.py
 uav_patrol/drone_controller/drone_controller_raw.py
+uav_patrol/drone_controller/drone_controller_test.py
 uav_patrol/drone_controller/linkedlist.py
 uav_patrol/drone_controller/pid_controller.py
 uav_patrol/drone_controller/utils.py

@@ -12,6 +12,7 @@
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/drone_controller_local.py
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/constant.py
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/utils.py
+/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/drone_controller_test.py
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/gps_simulator/gps_simulator.py
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/gps_simulator/__init__.py
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter/__init__.py
@@ -34,6 +35,7 @@
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/__pycache__/drone_controller_local.cpython-310.pyc
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/__pycache__/constant.cpython-310.pyc
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/__pycache__/utils.cpython-310.pyc
+/home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/drone_controller/__pycache__/drone_controller_test.cpython-310.pyc
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/gps_simulator/__pycache__/gps_simulator.cpython-310.pyc
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/gps_simulator/__pycache__/__init__.cpython-310.pyc
 /home/x650/UAV/ROS2/install/uav_patrol/lib/python3.10/site-packages/uav_patrol/tf_converter/__pycache__/__init__.cpython-310.pyc
@@ -57,6 +59,7 @@
 /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol/drone_controller_local
 /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol/drone_controller_mission
 /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol/drone_controller_raw
+/home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol/drone_controller_test
 /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol/gps_simulator
 /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol/opencv_test
 /home/x650/UAV/ROS2/install/uav_patrol/lib/uav_patrol/panel_detector

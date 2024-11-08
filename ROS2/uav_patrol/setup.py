@@ -37,6 +37,7 @@ setup(
             'drone_controller_mission = uav_patrol.drone_controller.drone_controller_mission:main',
             'drone_controller_raw = uav_patrol.drone_controller.drone_controller_raw:main',
             'drone_controller_body = uav_patrol.drone_controller.drone_controller_body:main',
+            'drone_controller_test = uav_patrol.drone_controller.drone_controller_test:main',
             'usb_cam_test = uav_patrol.usb_cam.usb_cam_test:main',
             'opencv_test = uav_patrol.usb_cam.opencv_test:main',
             'panel_detector = uav_patrol.yolo_detector.panel_detector:main',
