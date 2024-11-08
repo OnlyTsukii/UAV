@@ -28,17 +28,9 @@
 # export TERM=xterm-256color
 # /home/x650/UAV/Camera/Demo &
 
-
-# /bin/sleep 3
-
-# source /opt/ros/humble/setup.bash
-# ros2 launch rosbridge_server rosbridge_websocket_launch.xml
-
 /bin/sleep 3
 
 source /opt/ros/humble/setup.bash
-
-# ros2 run usb_cam usb_cam_node_exe --ros-args --params-file /home/x650/cam2k_params.yaml &
 
 ros2 launch mavros px4.launch &
 
@@ -47,3 +39,6 @@ ros2 launch mavros px4.launch &
 source /home/x650/UAV/ROS2/install/setup.bash
 ros2 launch uav_patrol uav_patrol.launch.py 
 
+# /bin/sleep 3
+
+# python3 /home/x650/UAV/capture.py

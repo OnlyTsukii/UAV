@@ -3,3 +3,4 @@
 /home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/DefectBox.idl
 /home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Defects.idl
 /home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Yaw.idl
+/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/PanelBox.idl

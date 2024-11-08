@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/location_msgs/msg/_defects_s.c"
   "../rosidl_generator_py/location_msgs/msg/_mix.py"
   "../rosidl_generator_py/location_msgs/msg/_mix_s.c"
+  "../rosidl_generator_py/location_msgs/msg/_panel_box.py"
+  "../rosidl_generator_py/location_msgs/msg/_panel_box_s.c"
   "../rosidl_generator_py/location_msgs/msg/_pixel_point.py"
   "../rosidl_generator_py/location_msgs/msg/_pixel_point_s.c"
   "../rosidl_generator_py/location_msgs/msg/_yaw.py"

@@ -7,7 +7,8 @@
     "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/PixelPoint.idl",
     "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/DefectBox.idl",
     "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Defects.idl",
-    "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Yaw.idl"
+    "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/Yaw.idl",
+    "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs:msg/PanelBox.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/Bool.idl",
@@ -115,6 +116,7 @@
     "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs/msg/DefectBox.idl",
     "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs/msg/Defects.idl",
     "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs/msg/Yaw.idl",
+    "/home/x650/UAV/ROS2/build/location_msgs/rosidl_adapter/location_msgs/msg/PanelBox.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",
     "/opt/ros/humble/share/std_msgs/msg/Byte.idl",
     "/opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl",

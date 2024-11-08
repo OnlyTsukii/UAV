@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c.o" "gcc" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.c.o.d"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o" "gcc" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/defects__functions.c.o.d"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/mix__functions.c" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/mix__functions.c.o" "gcc" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/mix__functions.c.o.d"
+  "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/panel_box__functions.c" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/panel_box__functions.c.o" "gcc" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/panel_box__functions.c.o.d"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c.o" "gcc" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c.o.d"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o" "gcc" "CMakeFiles/location_msgs__rosidl_generator_c.dir/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.c.o.d"
   )
@@ -31,6 +32,10 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/mix__functions.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/mix__struct.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/mix__type_support.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
+  "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/panel_box__functions.c" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
+  "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/panel_box__functions.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
+  "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/panel_box__struct.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
+  "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/panel_box__type_support.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.c" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/pixel_point__functions.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/pixel_point__struct.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
@@ -39,6 +44,7 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__type_support.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
+  "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/panel_box.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/pixel_point.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/yaw.h" "/home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/mix.h"
   )

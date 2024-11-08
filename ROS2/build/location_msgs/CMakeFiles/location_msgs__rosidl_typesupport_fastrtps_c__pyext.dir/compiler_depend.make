@@ -263,8 +263,13 @@ CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_genera
   rosidl_generator_c/location_msgs/msg/detail/defects__functions.h \
   rosidl_generator_c/location_msgs/msg/detail/yaw__type_support.h \
   rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h \
-  rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h
+  rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h \
+  rosidl_generator_c/location_msgs/msg/detail/panel_box__type_support.h \
+  rosidl_generator_c/location_msgs/msg/detail/panel_box__struct.h \
+  rosidl_generator_c/location_msgs/msg/detail/panel_box__functions.h
 
+
+rosidl_generator_c/location_msgs/msg/detail/panel_box__struct.h:
 
 rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h:
 
@@ -299,6 +304,8 @@ rosidl_generator_c/location_msgs/msg/detail/defect_box__functions.h:
 /usr/include/linux/stat.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
+rosidl_generator_c/location_msgs/msg/detail/panel_box__functions.h:
 
 /usr/include/python3.10/cpython/bytesobject.h:
 
@@ -639,6 +646,8 @@ rosidl_generator_py/location_msgs/_location_msgs_s.ep.rosidl_typesupport_fastrtp
 /usr/include/python3.10/unicodeobject.h:
 
 /usr/include/ctype.h:
+
+rosidl_generator_c/location_msgs/msg/detail/panel_box__type_support.h:
 
 /usr/include/python3.10/listobject.h:
 

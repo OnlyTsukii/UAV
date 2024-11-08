@@ -86,6 +86,10 @@ CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/yaw.hpp
 CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__builder.hpp
 CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp
 CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp
+CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/panel_box.hpp
+CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/panel_box__builder.hpp
+CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/panel_box__struct.hpp
+CMakeFiles/location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/panel_box__traits.hpp
 
 rosidl_generator_cpp/location_msgs/msg/mix.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/location_msgs/msg/mix.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -107,6 +111,7 @@ rosidl_generator_cpp/location_msgs/msg/mix.hpp: rosidl_adapter/location_msgs/msg
 rosidl_generator_cpp/location_msgs/msg/mix.hpp: rosidl_adapter/location_msgs/msg/DefectBox.idl
 rosidl_generator_cpp/location_msgs/msg/mix.hpp: rosidl_adapter/location_msgs/msg/Defects.idl
 rosidl_generator_cpp/location_msgs/msg/mix.hpp: rosidl_adapter/location_msgs/msg/Yaw.idl
+rosidl_generator_cpp/location_msgs/msg/mix.hpp: rosidl_adapter/location_msgs/msg/PanelBox.idl
 rosidl_generator_cpp/location_msgs/msg/mix.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/location_msgs/msg/mix.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/location_msgs/msg/mix.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -257,6 +262,18 @@ rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp: rosidl_generator_
 rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp: rosidl_generator_cpp/location_msgs/msg/mix.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp
 
+rosidl_generator_cpp/location_msgs/msg/panel_box.hpp: rosidl_generator_cpp/location_msgs/msg/mix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/panel_box.hpp
+
+rosidl_generator_cpp/location_msgs/msg/detail/panel_box__builder.hpp: rosidl_generator_cpp/location_msgs/msg/mix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/detail/panel_box__builder.hpp
+
+rosidl_generator_cpp/location_msgs/msg/detail/panel_box__struct.hpp: rosidl_generator_cpp/location_msgs/msg/mix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/detail/panel_box__struct.hpp
+
+rosidl_generator_cpp/location_msgs/msg/detail/panel_box__traits.hpp: rosidl_generator_cpp/location_msgs/msg/mix.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/location_msgs/msg/detail/panel_box__traits.hpp
+
 location_msgs__cpp: CMakeFiles/location_msgs__cpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/defect_box.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/defects.hpp
@@ -269,6 +286,9 @@ location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/defects__trait
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/mix__builder.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/mix__struct.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/mix__traits.hpp
+location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/panel_box__builder.hpp
+location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/panel_box__struct.hpp
+location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/panel_box__traits.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__builder.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__struct.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/pixel_point__traits.hpp
@@ -276,6 +296,7 @@ location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__builder.h
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__struct.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/detail/yaw__traits.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/mix.hpp
+location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/panel_box.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/pixel_point.hpp
 location_msgs__cpp: rosidl_generator_cpp/location_msgs/msg/yaw.hpp
 location_msgs__cpp: CMakeFiles/location_msgs__cpp.dir/build.make

@@ -71,6 +71,7 @@ CMakeFiles/location_msgs: /home/x650/UAV/ROS2/location_msgs/msg/PixelPoint.msg
 CMakeFiles/location_msgs: /home/x650/UAV/ROS2/location_msgs/msg/DefectBox.msg
 CMakeFiles/location_msgs: /home/x650/UAV/ROS2/location_msgs/msg/Defects.msg
 CMakeFiles/location_msgs: /home/x650/UAV/ROS2/location_msgs/msg/Yaw.msg
+CMakeFiles/location_msgs: /home/x650/UAV/ROS2/location_msgs/msg/PanelBox.msg
 CMakeFiles/location_msgs: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/location_msgs: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 CMakeFiles/location_msgs: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl

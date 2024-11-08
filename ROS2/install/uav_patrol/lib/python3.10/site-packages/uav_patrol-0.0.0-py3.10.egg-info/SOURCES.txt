@@ -15,11 +15,15 @@ test/test_flake8.py
 test/test_pep257.py
 uav_patrol/__init__.py
 uav_patrol/drone_controller/__init__.py
+uav_patrol/drone_controller/constant.py
+uav_patrol/drone_controller/drone_controller_body.py
 uav_patrol/drone_controller/drone_controller_local.py
 uav_patrol/drone_controller/drone_controller_mission.py
 uav_patrol/drone_controller/drone_controller_raw.py
+uav_patrol/drone_controller/linkedlist.py
 uav_patrol/drone_controller/pid_controller.py
 uav_patrol/drone_controller/utils.py
+uav_patrol/drone_controller/waypoint.py
 uav_patrol/gps_simulator/__init__.py
 uav_patrol/gps_simulator/gps_simulator.py
 uav_patrol/tf_converter/__init__.py
@@ -29,4 +33,5 @@ uav_patrol/tf_converter/world2uav_broadcaster.py
 uav_patrol/usb_cam/opencv_test.py
 uav_patrol/usb_cam/usb_cam_test.py
 uav_patrol/yolo_detector/__init__.py
-uav_patrol/yolo_detector/yolo_detector.py
+uav_patrol/yolo_detector/anomaly_detector.py
+uav_patrol/yolo_detector/panel_detector.py

@@ -62,7 +62,9 @@ THRESHOLD_POSITION  = 1
 THRESHOLD_LATITUDE  = 0.000001
 THRESHOLD_LONGITUDE = 0.000001
 THRESHOLD_ALTITUDE  = 5
-THRESHOLD_YAW       = 5
+THRESHOLD_YAW       = 3
+
+DEFAULT_ALTITUDE    = 80
 
 IMAGE_WIDTH         = 1920
 IMAGE_HEIGHT        = 1080
@@ -147,34 +149,35 @@ class DroneController(Node):
         if not res:
             return
 
-        self.init_pose()
-        self.set_mode('OFFBOARD')
+        # 120.6353495753118,31.31041696335306,0 
+        # 120.6359676239316,31.31050509005673,0 
+        # 120.6360016733156,31.31034774154864,0 
+        # 120.6353770189573,31.31026177091162,0 
+        # 120.6354065205868,31.31010924713882,0 
+        # 120.6360225503857,31.3101925733875,0 
+        # 120.6359284918903,31.31025060677662,0 
 
-        # 120.6353107229669,31.31042380244442,0 
-        # 120.6359937333954,31.31052009867697,0 
-        # 120.6360121711551,31.31043048899635,0 
-        # 120.635327504867,31.31033174015581,0 
-        # 120.6353443654622,31.31024197255429,0 
-        # 120.6360313712927,31.31034231571467,0  
+        for _ in range(3):
+            self.init_pose()
+            res = self.set_mode('OFFBOARD')
+            if res:
+                break
+            time.sleep(3)
 
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_TAKEOFF, FRAME_GLOBAL_REL_ALT, 0, 0, 1, 31.31042380244442, 120.6353107229669, 30))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31052009867697, 120.6359937333954, 30))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31043048899635, 120.6360121711551, 30))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31033174015581, 120.635327504867, 30))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31024197255429, 120.6353443654622, 30))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_REL_ALT, 0, 0, 0, 31.31034231571467, 120.6360313712927, 30))
-        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_REL_ALT, 0, 0, -1, 31.31034231571467, 120.6360313712927, 0))
-
-        self.waypoint_timer = self.create_timer(PUBLISH_FREQUENCY, self.goto_waypoint)  # Publish pose at 10Hz
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_TAKEOFF, FRAME_GLOBAL_INT, 0, 0, 1, 31.31041696335306, 120.6353495753118, DEFAULT_ALTITUDE))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_INT, 0, 0, 0, 31.31050509005673, 120.6359676239316, DEFAULT_ALTITUDE))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_INT, 0, 0, 0, 31.31034774154864, 120.6360016733156, DEFAULT_ALTITUDE))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_INT, 0, 0, 0, 31.31026177091162, 120.6353770189573, DEFAULT_ALTITUDE))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_INT, 0, 0, 0, 31.31010924713882, 120.6354065205868, DEFAULT_ALTITUDE))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_INT, 0, 0, 0, 31.3101925733875, 120.6360225503857, DEFAULT_ALTITUDE))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_WAYPOINT, FRAME_GLOBAL_INT, 0, 0, 0, 31.31025060677662, 120.6359284918903, DEFAULT_ALTITUDE))
+        self.add_to_queue(Waypoint(GLOBAL_WAYPOINT, MISSION_LAND, FRAME_GLOBAL_INT, 0, 0, -1, 31.31025060677662, 120.6359284918903, 0))
         
         self.capture_flag = True
 
-        for _ in range(3):
-            res = self.arm_drone()
-            if not res:
-                time.sleep(2)
-            else:
-                break
+        self.arm_drone()
+
+        self.waypoint_timer = self.create_timer(PUBLISH_FREQUENCY, self.goto_waypoint)  # Publish pose at 10Hz
 
     def global_pos_callback(self, msg: NavSatFix):
         self.gps_fix = msg
@@ -200,13 +203,14 @@ class DroneController(Node):
                     self.wp_queue.put(climb_wp)
 
                 if wp.mission == MISSION_WAYPOINT:
-                    yaw = calculate_global_yaw(top.latitude, top.longitude, wp.latitude, wp.longitude)
+                    # yaw = calculate_global_yaw(top.latitude, top.longitude, wp.latitude, wp.longitude)
+                    yaw = 80
                     rotate_wp: Waypoint = deepcopy(top)
                     if yaw < 0:
                         rotate_wp.yaw = 360 + yaw
                     else:
                         rotate_wp.yaw = yaw
-                    rotate_wp.yaw_rate = 0.3
+                    rotate_wp.yaw_rate = 0.2
                     rotate_wp.mission = MISSION_ROTATE
                     self.wp_queue.put(rotate_wp)
                     wp.yaw = yaw
@@ -241,6 +245,8 @@ class DroneController(Node):
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
         self.cap.set(cv2.CAP_PROP_FPS, FRAME_PER_SECOND)
+        # self.cap.set(cv2.CAP_PROP_AUTO_EXPOSURE, 1.0)
+        # self.cap.set(cv2.CAP_PROP_EXPOSURE, 900)
 
         return True
 
@@ -280,7 +286,7 @@ class DroneController(Node):
         waypoint.pose.orientation.z = 0.0
         waypoint.pose.orientation.w = 1.0
 
-        for i in range(20):
+        for i in range(40):
             self.pose_publisher.publish(waypoint)
             time.sleep(0.05)
 
@@ -290,9 +296,6 @@ class DroneController(Node):
         if isStand:
             self.stand_reached_counter += 1
             if  self.stand_reached_counter == 3 / PUBLISH_FREQUENCY:
-                self.write_frame()
-                reached = False
-            elif  self.stand_reached_counter == 4 / PUBLISH_FREQUENCY:
                 self.write_frame()
                 reached = False
             elif self.stand_reached_counter == 5 / PUBLISH_FREQUENCY:
@@ -327,11 +330,11 @@ class DroneController(Node):
                 reached &= abs(self.prev_global_wp.latitude - self.gps_fix.latitude) <= THRESHOLD_LATITUDE
                 reached &= abs(self.prev_global_wp.longitude - self.gps_fix.longitude) <= THRESHOLD_LONGITUDE
             elif self.prev_global_wp.mission == MISSION_TAKEOFF or self.prev_global_wp.mission == MISSION_CLIMB or self.prev_global_wp == MISSION_LAND:
-                reached &= abs(self.prev_global_wp.altitude - self.rel_alt) <= THRESHOLD_ALTITUDE
+                reached &= abs(self.prev_global_wp.altitude - self.gps_fix.altitude) <= THRESHOLD_ALTITUDE
             else:
                 reached &= abs(self.prev_global_wp.latitude - self.gps_fix.latitude) <= THRESHOLD_LATITUDE
                 reached &= abs(self.prev_global_wp.longitude - self.gps_fix.longitude) <= THRESHOLD_LONGITUDE
-                reached &= abs(self.prev_global_wp.altitude - self.rel_alt) <= THRESHOLD_ALTITUDE
+                reached &= abs(self.prev_global_wp.altitude - self.gps_fix.altitude) <= THRESHOLD_ALTITUDE
         self.point_mutex.release()
 
         if reached:
@@ -343,7 +346,7 @@ class DroneController(Node):
 
         return reached
 
-    def arm_drone(self) -> bool:
+    def arm_drone(self):
         self.get_logger().info('Arming drone...')
         req = CommandBool.Request()
         req.value = True
@@ -351,10 +354,8 @@ class DroneController(Node):
         rclpy.spin_until_future_complete(self, future)
         if future.result().success:
             self.get_logger().info('Drone armed successfully.')
-            return True
         else:
             self.get_logger().error('Failed to arm drone.')
-            return False
 
     def disarm_drone(self):
         self.get_logger().info('Disarming drone...')
@@ -367,7 +368,7 @@ class DroneController(Node):
         else:
             self.get_logger().error('Failed to disarm drone.')
 
-    def set_mode(self, mode):
+    def set_mode(self, mode) -> bool:
         self.get_logger().info(f'Setting mode to {mode}...')
         req = SetMode.Request()
         req.custom_mode = mode
@@ -375,8 +376,10 @@ class DroneController(Node):
         rclpy.spin_until_future_complete(self, future)
         if future.result().mode_sent:
             self.get_logger().info(f'Mode set to {mode} successfully.')
+            return True
         else:
             self.get_logger().error(f'Failed to set mode to {mode}.')
+            return False
 
     def goto_waypoint(self):
         if not self.wp_queue.empty():

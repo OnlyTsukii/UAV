@@ -222,4 +222,7 @@ CMakeFiles/location_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/lo
  /home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/defects__functions.h \
  /home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__type_support.h \
  /home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__struct.h \
- /home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h
+ /home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/yaw__functions.h \
+ /home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/panel_box__type_support.h \
+ /home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/panel_box__struct.h \
+ /home/x650/UAV/ROS2/build/location_msgs/rosidl_generator_c/location_msgs/msg/detail/panel_box__functions.h

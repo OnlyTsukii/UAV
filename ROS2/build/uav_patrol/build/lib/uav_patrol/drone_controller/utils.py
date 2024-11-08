@@ -27,9 +27,12 @@ def calculate_global_yaw(lat1, lon1, lat2, lon2):
     target_yaw = math.atan2(x, y)
     target_yaw = (target_yaw + math.pi) % (2 * math.pi) - math.pi
     
-    res = math.degrees(target_yaw)
+    yaw = math.degrees(target_yaw)
+
+    if yaw < 0:
+        yaw = 360 + yaw
     
-    return res
+    return yaw
 
 def get_distance(lat1, lon1, lat2, lon2):
     point1 = (lat1, lon1)
@@ -37,4 +40,5 @@ def get_distance(lat1, lon1, lat2, lon2):
 
     distance = geodesic(point1, point2).m
     return distance
+
     

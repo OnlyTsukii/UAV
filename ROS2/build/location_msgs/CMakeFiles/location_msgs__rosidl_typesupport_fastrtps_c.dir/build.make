@@ -82,6 +82,7 @@ rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_f
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/location_msgs/msg/DefectBox.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/location_msgs/msg/Defects.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/location_msgs/msg/Yaw.idl
+rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/location_msgs/msg/PanelBox.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -202,6 +203,12 @@ rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__rosidl_typesupport_f
 rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp
 
+rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp
+
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__type_support_c.cpp.o: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__type_support_c.cpp
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__type_support_c.cpp.o: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
@@ -272,13 +279,28 @@ CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/x650/UAV/ROS2/build/location_msgs/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp -o CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.s
 
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o -MF CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o.d -o CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o -c /home/x650/UAV/ROS2/build/location_msgs/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp
+
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/x650/UAV/ROS2/build/location_msgs/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp > CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.i
+
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/x650/UAV/ROS2/build/location_msgs/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp -o CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.s
+
 # Object files for target location_msgs__rosidl_typesupport_fastrtps_c
 location_msgs__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__type_support_c.cpp.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__type_support_c.cpp.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp.o" \
 "CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o" \
-"CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o"
+"CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o" \
+"CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o"
 
 # External object files for target location_msgs__rosidl_typesupport_fastrtps_c
 location_msgs__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
@@ -288,6 +310,7 @@ liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__ro
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defect_box__type_support_c.cpp.o
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp.o
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__type_support_c.cpp.o
+liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp.o
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/build.make
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: liblocation_msgs__rosidl_generator_c.so
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libsensor_msgs__rosidl_typesupport_fastrtps_c.so
@@ -305,7 +328,7 @@ liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libbuilt
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librcutils.so
 liblocation_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/x650/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/x650/UAV/ROS2/build/location_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library liblocation_msgs__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -322,6 +345,8 @@ CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_types
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/defects__type_support_c.cpp
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/mix__type_support_c.cpp
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/panel_box__type_support_c.cpp
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/pixel_point__type_support_c.cpp
 CMakeFiles/location_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/location_msgs/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h

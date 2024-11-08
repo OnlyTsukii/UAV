@@ -4,6 +4,8 @@ msg/Defects.idl
 msg/Defects.msg
 msg/Mix.idl
 msg/Mix.msg
+msg/PanelBox.idl
+msg/PanelBox.msg
 msg/PixelPoint.idl
 msg/PixelPoint.msg
 msg/Yaw.idl

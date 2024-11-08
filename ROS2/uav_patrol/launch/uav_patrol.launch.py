@@ -16,10 +16,20 @@ def generate_launch_description():
         #     executable='drone_controller_mission',
         #     name='drone_controller_mission',
         # ),
+        # Node(
+        #     package='uav_patrol',
+        #     executable='drone_controller_raw',
+        #     name='drone_controller_raw',
+        # ),
         Node(
             package='uav_patrol',
-            executable='drone_controller_raw',
-            name='drone_controller_raw',
+            executable='panel_detector',
+            name='panel_detector',
+        ),
+        Node(
+            package='uav_patrol',
+            executable='drone_controller_body',
+            name='drone_controller_body',
         ),
         # Node(
         #     package='uav_patrol',
@@ -48,7 +58,7 @@ def generate_launch_description():
         # ),
         # Node(
         #     package='uav_patrol',
-        #     executable='yolo_detector',
-        #     name='yolo_detector',
+        #     executable='anomaly_detector',
+        #     name='anomaly_detector',
         # ),
     ])

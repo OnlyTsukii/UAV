@@ -5,6 +5,7 @@
     "/home/x650/UAV/ROS2/location_msgs:msg/PixelPoint.msg",
     "/home/x650/UAV/ROS2/location_msgs:msg/DefectBox.msg",
     "/home/x650/UAV/ROS2/location_msgs:msg/Defects.msg",
-    "/home/x650/UAV/ROS2/location_msgs:msg/Yaw.msg"
+    "/home/x650/UAV/ROS2/location_msgs:msg/Yaw.msg",
+    "/home/x650/UAV/ROS2/location_msgs:msg/PanelBox.msg"
   ]
 }
