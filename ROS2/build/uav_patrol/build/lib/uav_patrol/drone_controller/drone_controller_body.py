@@ -171,10 +171,9 @@ class DroneController(Node):
         self.mutex.acquire()
         panel_pos = deepcopy(self.panel_pos)
         self.mutex.release()
-        thres_y = 40
-        thres_x = 70
+        thres_y = 70
+        thres_x = 100
         if panel_pos.y > thres_y or panel_pos.y < -1 * thres_y:
-            # self.get_logger().info('forwarding...')
             coefficient = 1
             if panel_pos.y < 0:
                 coefficient = -1
@@ -182,14 +181,13 @@ class DroneController(Node):
             self.goto_local_waypoint(body_wp)
             return False
         elif panel_pos.x > thres_x or panel_pos.x < -1 * thres_x:
-            # self.get_logger().info('lefting...')
             coefficient = 1
             if panel_pos.x < 0:
                 coefficient = -1
             body_wp = Waypoint(-1, TYPE_BODY_MOVE, MISSION_NONE, FRAME_BODY_NED, 0, 0.3*coefficient, 0, 0, 0.3, 0)
             self.goto_local_waypoint(body_wp)
             return False
-        elif panel_pos.w < IMAGE_WIDTH/4 or panel_pos.h < IMAGE_HEIGHT/4:
+        elif panel_pos.w < IMAGE_WIDTH/2 or panel_pos.h < IMAGE_HEIGHT/2:
             body_wp = Waypoint(-1, TYPE_BODY_MOVE, MISSION_NONE, FRAME_BODY_NED, 0, 0, -0.5, 0, 0, 0.5)
             self.goto_local_waypoint(body_wp)
             return False

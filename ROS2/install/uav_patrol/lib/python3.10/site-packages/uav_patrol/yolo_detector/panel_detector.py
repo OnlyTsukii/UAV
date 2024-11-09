@@ -12,7 +12,7 @@ IMAGE_WIDTH         = 1920
 IMAGE_HEIGHT        = 1080
 FRAME_PER_SECOND    = 30
 
-CONF_THRESHOLD      = 0.8
+CONF_THRESHOLD      = 0.6
 
 MODEL_PATH          = '/home/x650/UAV/ROS2/weights/new_panel.pt'
 IMAGE_PATH          = '/home/x650/UAV/PV_IMAGE/'

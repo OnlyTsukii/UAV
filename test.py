@@ -8,7 +8,7 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 cap.set(cv2.CAP_PROP_FPS, 30)
 
-path = '/home/x650/UAV/ROS2/weights/new_panel.pt'
+path = '/home/x650/UAV/ROS2/weights/panel.pt'
 model = YOLO(path)
 
 # results = model('/home/x650/UAV/test_images')
